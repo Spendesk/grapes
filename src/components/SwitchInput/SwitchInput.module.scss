@@ -1,0 +1,80 @@
+@use '../../theme/placeholders';
+
+.switch {
+  --_thumb-gutter: 2px;
+  --_thumb-size: var(--unit-12);
+  position: relative;
+  display: flex;
+  text-align: left;
+  cursor: pointer;
+}
+
+.switchTrack {
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
+  width: var(--size-switch);
+  height: var(--unit-16);
+  border-radius: var(--unit-16);
+  box-sizing: border-box;
+  background-color: var(--color-content-secondary-bg-primary);
+}
+
+.switchTrack:has(+ :checked) {
+  background-color: var(--color-content-selected);
+}
+
+.switchThumb {
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
+  position: absolute;
+  top: var(--_thumb-gutter);
+  transform: translateX(var(--_thumb-gutter));
+  width: var(--_thumb-size);
+  height: var(--_thumb-size);
+  border-radius: 50%;
+  background-color: var(--color-background-primary-default);
+}
+
+.checkedSwitchThumb {
+  transform: translateX(
+    calc(var(--size-switch) - var(--_thumb-size) - var(--_thumb-gutter))
+  );
+}
+
+.switchInput {
+  appearance: none;
+  position: absolute;
+  width: var(--size-switch);
+  height: var(--unit-16);
+  cursor: inherit;
+  display: block;
+  border-radius: var(--unit-16);
+  outline: none;
+  margin: 0;
+
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+}
+
+.switch:has(:disabled) {
+  cursor: not-allowed;
+
+  .switchTrack {
+    @extend %disabled-container;
+  }
+
+  .switchThumb {
+    background-color: var(--color-content-disabled);
+    // The -1 compensates for the border which appears on the disabled switch.
+    transform: translateX(calc(var(--_thumb-gutter) - 1px));
+  }
+
+  .checkedSwitchThumb {
+    // The -1 compensates for the border which appears on the disabled switch.
+    transform: translateX(
+      calc(var(--size-switch) - var(--_thumb-size) - var(--_thumb-gutter) - 1px)
+    );
+  }
+}

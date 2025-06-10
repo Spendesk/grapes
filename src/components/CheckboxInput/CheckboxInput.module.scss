@@ -1,0 +1,54 @@
+@use '../../theme/placeholders';
+
+.checkbox {
+  height: var(--unit-16);
+  width: var(--unit-16);
+  display: flex;
+  flex: 0 0 auto;
+  color: var(--color-content-complementary);
+  cursor: pointer;
+  border-radius: var(--border-radius-4);
+  position: relative;
+  background-color: var(--color-background-primary-default);
+  outline: 1px var(--color-border-default) solid;
+  outline-offset: -1px;
+
+  &:hover {
+    background-color: var(--color-background-primary-hover);
+  }
+}
+
+:is(.checkbox:has(:checked), .checkbox:has([aria-checked='mixed'])):not(
+    :has(:disabled)
+  ) {
+  background-color: var(--color-content-selected);
+  outline: none;
+}
+
+.checkbox:has(:disabled) {
+  cursor: not-allowed;
+  color: var(--color-content-disabled);
+
+  .checkboxInput {
+    @extend %disabled-container;
+  }
+
+  .checkboxIcon {
+    position: absolute;
+  }
+}
+
+.checkboxInput {
+  position: absolute;
+  height: var(--unit-16);
+  width: var(--unit-16);
+  cursor: inherit;
+  appearance: none;
+  border-radius: inherit;
+  margin: 0;
+
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+}

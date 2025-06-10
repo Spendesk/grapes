@@ -1,0 +1,131 @@
+name: Validate
+
+on: [push]
+
+concurrency: ci-${{ github.ref }}
+env:
+  NODE_VERSION: 22
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN_RW }}
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      matrix:
+        react: [18, 19]
+    name: main (React ${{ matrix.react }})
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Runs-On Cache
+        uses: runs-on/action@v1
+
+      - name: Get Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup react
+        run: npm add react@${{ matrix.react }} react-dom@${{ matrix.react }} --legacy-peer-deps
+
+      - name: Lint
+        run: npm run lint -- --max-warnings 0
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm run test:ci
+
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Runs-On Cache
+        uses: runs-on/action@v1
+
+      - name: Get Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build && npm run build:tailwind
+
+  chromatic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Runs-On Cache
+        uses: runs-on/action@v1
+
+      - name: Get Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        env:
+          IS_CHROMATIC: true
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT }}
+          skip: '@(beta|alpha|0.x|dependabot/**)'
+          autoAcceptChanges: 'master'
+          buildScriptName: build-storybook-test
+
+  release:
+    needs: [main, build, chromatic]
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: ${{ contains('refs/heads/master,refs/heads/beta,refs/heads/alpha, refs/heads/0.x', github.ref) }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Runs-On Cache
+        uses: runs-on/action@v1
+
+      - name: Get Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build && npm run build:tailwind
+
+      - name: Release
+        run: npx -p semantic-release@^23 -p conventional-changelog-conventionalcommits@^7 -c semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ env.NPM_TOKEN }}

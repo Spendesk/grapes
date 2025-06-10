@@ -1,0 +1,88 @@
+.collapsibleList {
+  --_size-depth-effect-before: 6px;
+  --_size-depth-effect-after: 5px;
+  --_translate-depth-effect: calc(
+    -1 * (var(--_size-depth-effect-before) + var(--_size-depth-effect-after))
+  );
+  --_size-hover-effect: 1px;
+  position: relative;
+}
+
+.collapsibleList:has(.collapsibleListInner:not([open])) {
+  --_translate-depth-effect: 0;
+}
+
+.collapsibleListIsCollapsed:hover .collapsibleListDepthEffect::before {
+  transform: translateY(var(--_size-hover-effect));
+}
+.collapsibleListIsCollapsed:hover .collapsibleListDepthEffect::after {
+  transform: translateY(calc(2 * var(--_size-hover-effect)));
+}
+
+.collapsibleListInner {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--border-radius-8);
+  overflow: hidden;
+  background-color: var(--color-background-primary-default);
+  border: 1px solid var(--color-border-default);
+}
+
+.collapsibleListContent {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: var(--color-background-primary-default);
+  border-radius: var(--border-radius-8);
+}
+
+.item:last-child > * {
+  border-bottom: 0;
+  border-radius: 0 0 var(--border-radius-8) var(--border-radius-8);
+}
+
+.collapsibleListDepthEffect {
+  position: absolute;
+  top: calc(100% - 2 * var(--_size-hover-effect));
+  left: 0;
+  width: 100%;
+  height: 0;
+  transform: translateY(var(--_translate-depth-effect, 0));
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
+}
+
+.collapsibleListDepthEffect::before,
+.collapsibleListDepthEffect::after {
+  position: relative;
+  content: '';
+  display: block;
+  margin: 0 auto;
+  background-color: var(--color-background-primary-default);
+  border-radius: 0 0 var(--border-radius-8) var(--border-radius-8);
+  border: 1px solid var(--color-border-default);
+  box-shadow: none;
+  transition: inherit;
+}
+
+.collapsibleListDepthEffect::before {
+  width: 98%;
+  height: var(--_size-depth-effect-before);
+  z-index: 1;
+}
+
+.collapsibleListDepthEffect::after {
+  width: 96%;
+  height: var(--_size-depth-effect-after);
+  z-index: 0;
+  top: -2px;
+}
+
+.collapsibleListFooter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--unit-56);
+  border-top: 1px solid var(--color-border-default);
+}

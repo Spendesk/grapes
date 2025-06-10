@@ -1,0 +1,6 @@
+.Playground_Header {
+  background: url(logo.svg) var(--color-background-primary-brand-default);
+  height: var(--unit-40);
+  background-size: contain;
+  background-repeat: space;
+}

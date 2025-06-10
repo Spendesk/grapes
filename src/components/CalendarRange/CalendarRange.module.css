@@ -1,0 +1,38 @@
+.container {
+  --size-button: 36px;
+  --size-col-day: var(--unit-40);
+  --size-col-calendar: calc(
+    7 * var(--size-col-day) - (var(--size-button) + var(--unit-16)) * 2
+  );
+  display: grid;
+  grid-template-columns:
+    [lcalendar-start] var(--size-button)
+    [ltitle-start] var(--size-col-calendar) [ltitle-end] var(--size-button)
+    [lcalendar-end rcalendar-start] var(--size-button)
+    [rtitle-start] var(--size-col-calendar) [rtitle-end] var(--size-button)
+    [rcalendar-end];
+  gap: var(--unit-16);
+}
+
+.container > div:first-of-type {
+  grid-area: lcalendar;
+}
+
+.container > div:last-of-type {
+  grid-area: rcalendar;
+}
+
+.singleContainer {
+  grid-template-columns:
+    [rcalendar-start] var(--size-button)
+    [rtitle-start] var(--size-col-calendar)
+    [rtitle-end] var(--size-button)
+    [rcalendar-end];
+}
+
+.leftTitle {
+  grid-column: ltitle;
+}
+.rightTitle {
+  grid-column: rtitle;
+}

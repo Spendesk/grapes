@@ -1,0 +1,27 @@
+@use '../../theme/placeholders';
+
+.parentFitLabel {
+  width: 100%;
+}
+
+.hide {
+  @extend %visually-hidden;
+}
+
+.labelContainer {
+  display: inline-flex;
+  gap: var(--unit-8);
+  align-items: center;
+  padding-bottom: var(--unit-4);
+}
+
+.labelContainer > label {
+  font: var(--title-m);
+  color: var(--color-content-primary);
+}
+
+.labelContainer > span {
+  margin-left: auto;
+  font: var(--body-s);
+  color: var(--color-content-secondary-bg-primary);
+}

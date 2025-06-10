@@ -1,0 +1,36 @@
+name: Compare Size
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+env:
+  NODE_VERSION: 22
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN_RW }}
+
+jobs:
+  compare:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Runs-On Cache
+        uses: runs-on/action@v1
+
+      - name: Get Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Compare size
+        uses: preactjs/compressed-size-action@v2
+        with:
+          pattern: './dist/*.{mjs,css}'
+          minimum-change-threshold: 100

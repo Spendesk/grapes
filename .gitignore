@@ -1,0 +1,10 @@
+.DS_STORE
+
+node_modules/
+/dist/
+/storybook-static
+/storybook-static.zip
+/coverage/
+/.vscode
+build-storybook.log
+.idea/

@@ -1,0 +1,49 @@
+name: Bug Report
+description: File a bug report
+labels: ['bug']
+body:
+  - type: 'markdown'
+    attributes:
+      value: |
+        Thanks for creating an issue 🍇!
+
+        Please search open/closed issues before submitting. Someone
+        might have asked the same thing before.
+  - type: 'textarea'
+    id: 'description'
+    attributes:
+      label: 'Description'
+      description: 'A brief description of the issue.'
+      placeholder: |
+        When I ____, I expected ____ to happen but ____ happened instead.
+    validations:
+      required: true
+  - type: 'textarea'
+    id: 'steps'
+    attributes:
+      label: 'Steps to reproduce'
+      description: |
+        Explain how to cause the issue in the provided reproduction.
+      value: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+  - type: 'input'
+    id: 'grapes-version'
+    attributes:
+      label: 'Grapes Version'
+      description: 'The version of Grapes you use.'
+      placeholder: '0.5.1'
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge

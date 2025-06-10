@@ -1,0 +1,99 @@
+@use '../../theme/exports/css-variables.scss';
+
+.highlightIcon {
+  display: inline-grid;
+  place-items: center;
+  border-radius: var(--_border-radius, var(--border-radius-12));
+  box-sizing: border-box;
+  height: var(--_size, var(--unit-56));
+  width: var(--_size, var(--unit-56));
+  color: var(--color-content-primary);
+}
+
+.highlightIcon[data-size='24'] {
+  --_size: var(--unit-24);
+  --_border-radius: var(--border-radius-4);
+}
+
+.highlightIcon[data-size='32'] {
+  --_size: var(--unit-32);
+  --_border-radius: var(--border-radius-8);
+}
+
+.highlightIcon[data-size='40'] {
+  --_size: var(--unit-40);
+  --_border-radius: var(--border-radius-8);
+}
+
+.highlightIcon[data-size='56'] {
+  --_size: var(--unit-56);
+  --_border-radius: var(--border-radius-12);
+}
+
+.highlightIcon[data-variant='alert'] {
+  color: var(--color-content-alert-default);
+  background-color: var(--color-background-secondary-alert-default);
+}
+
+.highlightIcon[data-variant='info'] {
+  color: var(--color-content-info-default);
+  background: var(--color-background-secondary-info-default);
+}
+
+.highlightIcon[data-variant='success'] {
+  color: var(--color-content-success-default);
+  background-color: var(--color-background-secondary-success-default);
+}
+
+.highlightIcon[data-variant='warning'] {
+  color: var(--color-content-warning-default);
+  background-color: var(--color-background-secondary-warning-default);
+}
+
+.highlightIcon[data-variant='neutral'] {
+  background-color: var(--color-background-secondary-default);
+}
+
+.highlightIcon[data-variant='apricot'] {
+  background-color: css-variables.$color-apricot-20;
+}
+
+.highlightIcon[data-variant='blue'] {
+  background-color: css-variables.$color-blue-20;
+}
+
+.highlightIcon[data-variant='carbon'] {
+  background-color: css-variables.$color-carbon-7;
+}
+
+.highlightIcon[data-variant='emerald'] {
+  background-color: css-variables.$color-emerald-20;
+}
+
+.highlightIcon[data-variant='forest'] {
+  background-color: css-variables.$color-forest-bright;
+}
+
+.highlightIcon[data-variant='grolive'] {
+  background-color: css-variables.$color-grolive-bright;
+}
+
+.highlightIcon[data-variant='lemon'] {
+  background-color: css-variables.$color-lemon-bright;
+}
+
+.highlightIcon[data-variant='ocean'] {
+  background-color: css-variables.$color-ocean-bright;
+}
+
+.highlightIcon[data-variant='pink'] {
+  background-color: css-variables.$color-pink-bright;
+}
+
+.highlightIcon[data-variant='peach'] {
+  background-color: css-variables.$color-peach-bright;
+}
+
+.highlightIcon[data-variant='purple'] {
+  background-color: css-variables.$color-purple-20;
+}

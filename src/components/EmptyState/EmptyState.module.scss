@@ -1,0 +1,42 @@
+.emptyStateContainer {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emptyStateTitle {
+  font: var(--heading-l);
+  color: var(--color-content-primary);
+  text-align: center;
+  margin: var(--unit-48) 0 0;
+}
+
+.emptyStateSubtitle {
+  font: var(--body-m);
+  color: var(--color-content-secondary-bg-primary);
+  text-align: center;
+  margin: var(--unit-16) 0 0;
+  text-wrap: balance;
+}
+
+.emptyStateTitle,
+.emptyStateSubtitle {
+  max-width: 600px;
+}
+
+.emptyStateActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--unit-24);
+  gap: var(--unit-16);
+  padding-bottom: var(--unit-4);
+}

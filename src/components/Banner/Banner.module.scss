@@ -1,0 +1,32 @@
+.banner {
+  display: flex;
+  place-items: center start;
+  gap: var(--unit-24);
+  padding: var(--unit-24);
+  border-radius: var(--border-radius-12);
+  background: var(--color-background-secondary-brand-default);
+}
+
+.banner[data-variant='neutral'] {
+  background: var(--color-background-secondary-default);
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--unit-8);
+}
+
+.title {
+  font: var(--title-l);
+  color: var(--color-content-primary);
+  margin: 0;
+}
+
+.description {
+  font: var(--body-m);
+  color: var(--color-content-secondary-bg-secondary);
+  margin: 0;
+}

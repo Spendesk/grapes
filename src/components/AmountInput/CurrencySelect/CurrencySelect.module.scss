@@ -1,0 +1,6 @@
+@use '../../../theme/placeholders';
+
+.currencyValue {
+  font: var(--title-s);
+  color: var(--color-content-secondary-bg-primary);
+}

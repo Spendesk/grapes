@@ -1,0 +1,30 @@
+@use '../../theme/placeholders';
+
+.dropdownMenuContentWrapper {
+  list-style: none;
+  overflow-y: auto;
+  margin: 0;
+  transition:
+    opacity var(--transition-duration) var(--transition-timing-function),
+    transform var(--transition-duration) var(--transition-timing-function);
+  opacity: 0;
+  transform: translateY(calc(var(--orientation, -1) * var(--unit-16)));
+  position: absolute;
+  padding: var(--unit-8);
+  @extend %dropdown-content;
+  min-width: max(180px, 100%);
+}
+
+.dropdownMenuContentWrapper:empty {
+  padding: 0;
+  border-width: 0px;
+}
+
+.dropdownMenuContentWrapper[data-placement^='top-'] {
+  --orientation: 1;
+}
+
+.enter {
+  opacity: 1;
+  transform: translateY(0);
+}

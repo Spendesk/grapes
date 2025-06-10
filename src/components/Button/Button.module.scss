@@ -1,0 +1,304 @@
+@use '../../theme/placeholders';
+
+@keyframes loading {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.button {
+  @extend %ellipsis;
+  font: var(--body-m);
+  transition-property: background-color, color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  height: var(--unit-40);
+  position: relative;
+  border-radius: var(--border-radius-8);
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: var(--unit-8) var(--unit-16);
+  border: 1px solid transparent; // Transparent border, so that default button and disabled button have the same height
+
+  &:focus {
+    outline: 0;
+  }
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.button[data-variant]:disabled {
+  &:not(.loadingButton) {
+    cursor: not-allowed;
+    @extend %disabled-container;
+    @extend %disabled-text;
+  }
+}
+
+.button[data-variant^='tertiary']:disabled {
+  &:not(.loadingButton) {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+.negativeMarginsButton {
+  margin: 0 calc(-1 * var(--unit-16));
+}
+
+.parentFitButton {
+  width: 100%;
+}
+
+.negativeMarginsButton.parentFitButton {
+  width: calc(100% + 2 * var(--unit-8));
+}
+
+.loadingButton {
+  cursor: progress;
+
+  &::before {
+    animation: loading 1s infinite;
+  }
+}
+
+.noHorizontalPaddingButton {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.buttonTextWithMaxWidth {
+  @extend %ellipsis;
+}
+
+.leftButtonInnerIcon {
+  margin-right: var(--unit-8);
+}
+
+.rightButtonInnerIcon {
+  margin-left: var(--unit-8);
+}
+
+.button[data-variant='primaryBrand'] {
+  background-color: var(--color-background-primary-brand-default);
+  color: var(--color-content-complementary);
+
+  &:hover {
+    background-color: var(--color-background-primary-brand-hover);
+  }
+  &:active {
+    background-color: var(--color-background-primary-brand-pressed);
+  }
+  &::before {
+    background: var(--color-background-primary-brand-pressed);
+  }
+}
+.button[data-variant='primaryInfo'] {
+  background-color: var(--color-background-primary-info-default);
+  color: var(--color-content-complementary);
+
+  &:hover {
+    background-color: var(--color-background-primary-info-hover);
+  }
+  &:active {
+    background-color: var(--color-background-primary-info-pressed);
+  }
+  &::before {
+    background: var(--color-background-primary-info-pressed);
+  }
+}
+.button[data-variant='primarySuccess'] {
+  background-color: var(--color-background-primary-success-default);
+  color: var(--color-content-complementary);
+
+  &:hover {
+    background-color: var(--color-background-primary-success-hover);
+  }
+  &:active {
+    background-color: var(--color-background-primary-success-pressed);
+  }
+  &::before {
+    background: var(--color-background-primary-success-pressed);
+  }
+}
+.button[data-variant='primaryWarning'] {
+  background-color: var(--color-background-primary-warning-default);
+  color: var(--color-content-complementary);
+
+  &:hover {
+    background-color: var(--color-background-primary-warning-hover);
+  }
+  &:active {
+    background-color: var(--color-background-primary-warning-pressed);
+  }
+  &::before {
+    background: var(--color-background-primary-warning-pressed);
+  }
+}
+.button[data-variant='primaryAlert'] {
+  background-color: var(--color-background-primary-alert-default);
+  color: var(--color-content-complementary);
+
+  &:hover {
+    background-color: var(--color-background-primary-alert-hover);
+  }
+  &:active {
+    background-color: var(--color-background-primary-alert-pressed);
+  }
+  &::before {
+    background: var(--color-background-primary-alert-pressed);
+  }
+}
+
+.button[data-variant^='secondary'] {
+  background-color: var(--color-background-primary-default);
+  border: 1px solid var(--color-border-default);
+  box-shadow: var(--elevation-xs);
+
+  &:hover {
+    background-color: var(--color-background-primary-hover);
+  }
+  &:active {
+    background-color: var(--color-background-primary-pressed);
+  }
+  &::before {
+    background: var(--color-background-primary-pressed);
+  }
+}
+.button[data-variant='secondaryBrand'] {
+  color: var(--color-content-brand-default);
+}
+.button[data-variant='secondaryNeutral'] {
+  color: var(--color-content-primary);
+}
+.button[data-variant='secondaryInfo'] {
+  color: var(--color-content-info-default);
+}
+.button[data-variant='secondarySuccess'] {
+  color: var(--color-content-success-default);
+}
+.button[data-variant='secondaryWarning'] {
+  color: var(--color-content-warning-default);
+}
+.button[data-variant='secondaryAlert'] {
+  color: var(--color-content-alert-default);
+}
+
+.button[data-variant^='tertiary'] {
+  background-color: transparent;
+}
+.button[data-variant='tertiaryBrand'] {
+  color: var(--color-content-brand-default);
+
+  &:hover {
+    background-color: var(--color-background-secondary-brand-hover);
+  }
+  &:active {
+    background-color: var(--color-background-secondary-brand-pressed);
+  }
+  &::before {
+    background: var(--color-background-secondary-brand-pressed);
+  }
+}
+.button[data-variant='tertiaryNeutral'] {
+  color: var(--color-content-primary);
+
+  &:hover {
+    background-color: var(--color-background-tertiary-hover);
+  }
+  &:active {
+    background-color: var(--color-background-tertiary-pressed);
+  }
+  &::before {
+    background: var(--color-background-tertiary-pressed);
+  }
+}
+.button[data-variant='tertiaryInfo'] {
+  color: var(--color-content-info-default);
+
+  &:hover {
+    background-color: var(--color-background-secondary-info-hover);
+  }
+  &:active {
+    background-color: var(--color-background-secondary-info-pressed);
+  }
+  &::before {
+    background: var(--color-background-secondary-info-pressed);
+  }
+}
+.button[data-variant='tertiarySuccess'] {
+  color: var(--color-content-success-default);
+
+  &:hover {
+    background-color: var(--color-background-secondary-success-hover);
+  }
+  &:active {
+    background-color: var(--color-background-secondary-success-pressed);
+  }
+  &::before {
+    background: var(--color-background-secondary-success-pressed);
+  }
+}
+.button[data-variant='tertiaryWarning'] {
+  color: var(--color-content-warning-default);
+
+  &:hover {
+    background-color: var(--color-background-secondary-warning-hover);
+  }
+  &:active {
+    background-color: var(--color-background-secondary-warning-pressed);
+  }
+  &::before {
+    background: var(--color-background-secondary-warning-pressed);
+  }
+}
+.button[data-variant='tertiaryAlert'] {
+  color: var(--color-content-alert-default);
+
+  &:hover {
+    background-color: var(--color-background-secondary-alert-hover);
+  }
+  &:active {
+    background-color: var(--color-background-secondary-alert-pressed);
+  }
+  &::before {
+    background: var(--color-background-secondary-alert-pressed);
+  }
+}
+.button[data-variant='tertiaryComplementary'] {
+  color: var(--color-content-complementary);
+
+  &:hover {
+    background-color: var(--color-background-tertiary-hover);
+  }
+  &:active {
+    background-color: var(--color-background-tertiary-pressed);
+  }
+  &::before {
+    background: var(--color-background-tertiary-pressed);
+  }
+}

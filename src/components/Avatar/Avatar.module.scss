@@ -1,0 +1,93 @@
+@use '../../theme/exports/css-variables.scss';
+
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: var(--_size);
+  height: var(--_size);
+  color: var(--color-content-primary);
+  text-transform: uppercase;
+}
+.avatar[data-size='16'] {
+  font: var(--title-s);
+  --_size: var(--unit-16);
+}
+.avatar[data-size='24'] {
+  font: var(--title-s);
+  --_size: var(--unit-24);
+}
+.avatar[data-size='32'] {
+  font: var(--title-m);
+  --_size: var(--unit-32);
+}
+.avatar[data-size='40'] {
+  font: var(--title-l);
+  --_size: var(--unit-40);
+}
+.avatar[data-size='56'] {
+  font: var(--title-xl);
+  --_size: var(--unit-56);
+}
+
+.content {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content[data-variant='circle'] {
+  clip-path: circle(50%);
+}
+
+.content[data-variant='square'] {
+  border-radius: var(--border-radius-8);
+}
+
+.content:has(+ .avatarBadge) {
+  border-bottom-right-radius: 16px;
+}
+
+.backgroundContainer {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  background: var(--_bg);
+  color: var(--_color);
+}
+
+.apricot {
+  --_bg: #{css-variables.$color-apricot-20};
+}
+.lemon {
+  --_bg: #{css-variables.$color-lemon-bright};
+}
+.peach {
+  --_bg: #{css-variables.$color-peach-bright};
+}
+.blue {
+  --_bg: #{css-variables.$color-blue-20};
+}
+.pink {
+  --_bg: #{css-variables.$color-pink-bright};
+}
+.ocean {
+  --_bg: #{css-variables.$color-ocean-bright};
+}
+.forest {
+  --_bg: #{css-variables.$color-forest-bright};
+}
+.emerald {
+  --_bg: #{css-variables.$color-emerald-20};
+}
+.raspberry {
+  --_bg: #{css-variables.$color-raspberry-20};
+}
+
+.avatarBadge {
+  position: absolute;
+  overflow: initial;
+  bottom: 0px;
+  right: 0px;
+}

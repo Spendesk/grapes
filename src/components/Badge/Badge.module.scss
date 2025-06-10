@@ -1,0 +1,21 @@
+.badge {
+  font: var(--body-m);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: var(--unit-20);
+  padding: 0 var(--unit-8);
+  border-radius: var(--border-radius-12);
+  box-sizing: border-box;
+}
+
+.badge[data-variant='primary'] {
+  background-color: var(--color-background-primary-selected);
+  color: var(--color-content-selected);
+}
+
+.badge[data-variant='secondary'] {
+  background: var(--color-background-secondary-default);
+  color: var(--color-content-secondary-bg-secondary);
+}

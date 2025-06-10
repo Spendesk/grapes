@@ -1,0 +1,66 @@
+@use '../../theme/placeholders';
+
+.grid {
+  --size-col-day: var(--unit-40);
+  display: grid;
+  grid-template-columns: repeat(7, var(--size-col-day));
+  grid-template-rows: repeat(6, var(--size-col-day));
+  text-align: center;
+}
+
+.header {
+  font: var(--title-m);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--unit-16);
+  color: var(--color-content-primary);
+  text-transform: capitalize;
+}
+
+.month {
+  margin: 0;
+}
+.weekday {
+  font: var(--body-s);
+  margin: 0;
+  color: var(--color-content-secondary-bg-primary);
+  text-transform: capitalize;
+  padding-bottom: var(--unit-8);
+}
+
+.day {
+  font: var(--body-m);
+  color: var(--color-content-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  min-height: var(--unit-32); // For Safari < 15
+  margin: var(--unit-4);
+  aspect-ratio: 1;
+  padding: 0;
+  outline: none;
+  border-radius: var(--border-radius-4);
+
+  &:not(.selected):hover {
+    color: var(--color-content-selected);
+    background-color: var(--color-background-primary-hover);
+  }
+
+  &:not(.selected):focus-visible {
+    outline: var(--focus-ring);
+  }
+
+  &:disabled {
+    @extend %disabled-text;
+    margin: 0;
+    color: var(--color-content-secondary-bg-secondary);
+    background-color: var(--color-background-primary-disabled);
+    border-radius: 0;
+  }
+}
+
+.selected {
+  color: var(--color-content-complementary);
+  background-color: var(--color-background-primary-brand-default);
+}

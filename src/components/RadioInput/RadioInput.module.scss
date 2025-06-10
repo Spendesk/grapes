@@ -1,0 +1,57 @@
+@use '../../theme/placeholders';
+
+.radio {
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
+  height: var(--unit-16);
+  width: var(--unit-16);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  background-color: var(--color-background-primary-default);
+  border: 1px var(--color-border-default) solid;
+}
+
+.radio:has(:checked)::after {
+  content: '';
+  position: relative;
+  z-index: 1;
+  width: var(--unit-4);
+  height: var(--unit-4);
+  border-radius: 50%;
+  background-color: var(--bg, var(--color-background-primary-default));
+}
+
+.radio:has(:disabled) {
+  border: none;
+  --bg: var(--color-content-disabled);
+  cursor: not-allowed;
+}
+
+.radioInput {
+  position: absolute;
+  height: var(--unit-16);
+  width: var(--unit-16);
+  cursor: inherit;
+  appearance: none;
+  border-radius: inherit;
+  padding: 0;
+  margin: 0;
+
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  &:where(:checked) {
+    background-color: var(--color-border-selected);
+  }
+
+  &:disabled {
+    @extend %disabled-container;
+  }
+}

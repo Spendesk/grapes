@@ -1,0 +1,25 @@
+@use '../../../theme/placeholders';
+
+.grid {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.justifyBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  font: var(--title-m);
+  color: var(--color-content-primary);
+}
+
+.body {
+  font: var(--body-s);
+  color: var(--color-content-secondary-bg-primary);
+  margin-top: var(--unit-4);
+}

@@ -1,0 +1,25 @@
+.phoneInputWrapper {
+  display: inline-block;
+}
+
+.parentFitPhoneInputWrapper {
+  width: 100%;
+}
+
+.phoneInput input {
+  appearance: textfield;
+}
+
+.phoneInputCallingCode {
+  margin-left: 6px;
+  font: var(--body-m);
+  color: var(--color-content-secondary-bg-primary);
+}
+
+.phoneInputWrapper:has(:disabled) {
+  cursor: not-allowed;
+
+  .phoneInputCallingCode {
+    color: var(--color-content-secondary-bg-secondary);
+  }
+}

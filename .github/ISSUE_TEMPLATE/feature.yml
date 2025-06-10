@@ -1,0 +1,35 @@
+name: Feature Request
+description: Request a feature or enhancement
+labels: ['feature']
+body:
+  - type: 'markdown'
+    attributes:
+      value: |
+        Thanks for creating an issue 🍇!
+
+        Please search open/closed issues before submitting. Someone
+        might have asked the same thing before.
+  - type: 'textarea'
+    id: 'Summary'
+    attributes:
+      label: 'Summary'
+      description: 'One paragraph explanation of the feature.'
+    validations:
+      required: true
+  - type: 'textarea'
+    id: 'motivation'
+    attributes:
+      label: 'Motivation'
+      description: |
+        Why are we doing this? What use cases does it support?
+        Please provide specific examples. If you say "this would be more flexible" then give an example of something that becomes easier.
+        If you say "this would be make it easier to do X" then give an example of what that looks like today and what's hard about it.
+    validations:
+      required: true
+  - type: 'textarea'
+    id: 'implementation'
+    attributes:
+      label: 'Implementation'
+      description: |
+        Explain the design in enough detail
+        Or provide a Figma link

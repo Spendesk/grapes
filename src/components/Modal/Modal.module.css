@@ -1,0 +1,122 @@
+@keyframes opacityout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideout {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(var(--unit-16)) scale(0.97);
+  }
+}
+
+.modalContainer {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-modal);
+  overflow: auto;
+}
+
+.modalOverlay {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  background-color: var(--color-backdrop);
+  opacity: 1;
+  transition: opacity var(--transition-duration)
+    var(--transition-timing-function);
+}
+
+.modal {
+  box-shadow: var(--elevation-l);
+  position: relative;
+  background-color: var(--color-background-primary-default);
+  margin: var(--unit-48) 0;
+  border-radius: var(--border-radius-12);
+  width: 600px;
+  transform: translateY(0) scale(1);
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
+}
+
+@starting-style {
+  .modal {
+    transform: translateY(var(--unit-16)) scale(0.97);
+  }
+  .modalOverlay {
+    opacity: 0;
+  }
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: var(--unit-16);
+  right: var(--unit-16);
+  z-index: 1;
+}
+
+.modalHeaderWithIcon,
+.modalIllustration {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--border-radius-12) var(--border-radius-12) 0 0;
+  overflow: hidden;
+}
+
+.modalIllustration > img {
+  width: auto;
+  height: 424px;
+  margin: auto;
+}
+.modalHeaderWithIcon {
+  padding: var(--unit-32) 0 0;
+}
+
+.modalTitle,
+.modalIllustrationTitle {
+  font: var(--heading-l);
+  color: var(--color-content-primary);
+  text-align: center;
+  padding: var(--unit-24) var(--unit-32) 0;
+  margin: 0;
+}
+
+.modalSubtitle,
+.modalBody {
+  font: var(--body-m);
+  color: var(--color-content-secondary-bg-primary);
+  padding: var(--unit-8) var(--unit-32) 0;
+  margin: 0;
+  text-align: center;
+}
+
+.modalBody {
+  margin-bottom: var(--unit-8);
+}
+
+.modalActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: var(--unit-8);
+  margin: var(--unit-24) var(--unit-32) var(--unit-32);
+}
+
+.modalOverlay[data-closing='true'] {
+  animation: var(--transition-duration) opacityout
+    var(--transition-timing-function) forwards;
+}
+
+.modalOverlay[data-closing='true'] .modal {
+  animation: var(--transition-duration) slideout
+    var(--transition-timing-function) forwards;
+}

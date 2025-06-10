@@ -1,0 +1,7 @@
+.circleSkeletonAvatar {
+  border-radius: 50%;
+}
+
+.squareSkeletonAvatar {
+  border-radius: var(--border-radius-8);
+}

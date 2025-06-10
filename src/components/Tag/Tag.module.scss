@@ -1,0 +1,101 @@
+@use '../../theme/exports/css-variables.scss';
+
+.tag {
+  font: var(--body-m);
+  display: inline-block;
+  height: var(--unit-24);
+  color: var(--color-content-primary);
+  border-radius: var(--border-radius-12);
+  padding: 0 var(--unit-8);
+}
+
+.tag:has(.tagCloseButton) {
+  padding-right: var(--unit-4);
+}
+
+.tagContent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  gap: var(--unit-4);
+}
+
+.tagCloseButton {
+  cursor: pointer;
+  background-color: var(--color-background-primary-default);
+  outline: none;
+  border: none;
+  height: var(--unit-16);
+  width: var(--unit-16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+  color: inherit;
+
+  &:focus {
+    outline: 0;
+  }
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+  &:hover {
+    background-color: var(--color-background-primary-hover);
+  }
+  &:active {
+    background-color: var(--color-background-primary-pressed);
+  }
+}
+
+.tag[data-variant='neutral'] {
+  color: var(--color-content-secondary-bg-secondary);
+  background-color: var(--color-background-secondary-default);
+}
+.tag[data-variant='info'] {
+  color: var(--color-content-info-default);
+  background-color: var(--color-background-secondary-info-default);
+}
+.tag[data-variant='success'] {
+  color: var(--color-content-success-default);
+  background-color: var(--color-background-secondary-success-default);
+}
+.tag[data-variant='warning'] {
+  color: var(--color-content-warning-default);
+  background-color: var(--color-background-secondary-warning-default);
+}
+.tag[data-variant='alert'] {
+  color: var(--color-content-alert-default);
+  background-color: var(--color-background-secondary-alert-default);
+}
+
+.tag[data-variant='carbon'] {
+  background-color: css-variables.$color-carbon-7;
+}
+.tag[data-variant='grolive'] {
+  background-color: css-variables.$color-grolive-bright;
+}
+.tag[data-variant='forest'] {
+  background-color: css-variables.$color-forest-bright;
+}
+.tag[data-variant='lemon'] {
+  background-color: css-variables.$color-lemon-bright;
+}
+.tag[data-variant='ocean'] {
+  background-color: css-variables.$color-ocean-bright;
+}
+.tag[data-variant='purple'] {
+  background-color: css-variables.$color-purple-20;
+}
+.tag[data-variant='pink'] {
+  background-color: css-variables.$color-pink-bright;
+}
+.tag[data-variant='peach'] {
+  background-color: css-variables.$color-peach-bright;
+}
+.tag[data-variant='white'] {
+  background-color: var(--color-background-primary-default);
+}

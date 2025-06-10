@@ -1,0 +1,14 @@
+.autocompleteNoOptions {
+  font: var(--body-m);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--unit-24);
+  text-align: center;
+  color: var(--color-content-primary);
+}
+
+.autocompleteNoOptionsIcon {
+  margin-bottom: var(--unit-16);
+}

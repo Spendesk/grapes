@@ -1,0 +1,121 @@
+.panel {
+  --_unit-panel-padding: var(--unit-24);
+  --_heading-panel: var(--heading-l);
+
+  border: 1px solid var(--color-border-default);
+  background-color: var(--color-background-primary-default);
+  border-radius: var(--border-radius-8);
+  width: 368px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.sidePanel {
+  --_unit-panel-padding: var(--unit-32);
+  --_heading-panel: var(--heading-xl);
+
+  display: flex;
+  flex-direction: column;
+  width: var(--size-side-panel);
+  box-sizing: border-box;
+  border-left: 1px solid var(--color-border-default);
+  background-color: var(--color-background-primary-default);
+  box-shadow: var(--elevation-l);
+  position: fixed;
+  z-index: var(--z-index-side-panel);
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+.panelBody {
+  max-height: 100%;
+  flex-grow: 1;
+  overflow: auto;
+  border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
+}
+
+.panelScrolling .panelNavigation {
+  border-color: var(--color-border-default);
+}
+
+.panelNavigation {
+  display: grid;
+  grid-template-columns:
+    [lslot-start] 1fr [lslot-end close-start] var(--unit-40)
+    [close-end];
+  align-items: center;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  padding: var(--_unit-panel-padding);
+  background-color: var(--color-background-primary-default);
+  border-bottom: 1px solid transparent;
+}
+
+.close {
+  grid-area: close;
+}
+
+.panelNavigationLeftSlot {
+  grid-area: lslot;
+}
+
+.panelNavigationTitle {
+  font: var(--_heading-panel);
+  color: var(--color-content-primary);
+  margin: 0;
+}
+
+.panelHeader {
+  padding: var(--unit-8) var(--_unit-panel-padding) var(--_unit-panel-padding)
+    var(--_unit-panel-padding);
+}
+
+.panelArea {
+  padding: 0 var(--_unit-panel-padding) var(--_unit-panel-padding)
+    var(--_unit-panel-padding);
+}
+
+.sidePanel .panelBody,
+.sidePanel .panelArea {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.panelHeader + .panelArea {
+  padding-top: var(--_unit-panel-padding);
+}
+
+.panelArea > *:nth-child(n + 2)::before {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid var(--color-border-default);
+  margin: var(--unit-24) 0;
+}
+
+.panelFooter {
+  flex-shrink: 0;
+  padding: var(--unit-16) var(--_unit-panel-padding);
+  border-top: 1px solid var(--color-border-default);
+  background-color: var(--color-background-primary-default);
+  border-radius: 0 0 var(--border-radius-8) var(--border-radius-8);
+}
+
+.sidePanel .panelFooter {
+  border-radius: 0;
+}
+
+.panelFooterAccordion {
+  padding: var(--unit-16) var(--_unit-panel-padding);
+  border-top: 1px solid var(--color-border-default);
+  background-color: var(--color-background-secondary-default);
+  border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
+}
+
+.panelFooterAccordionWithoutFooter {
+  border-radius: var(--border-radius-8);
+}

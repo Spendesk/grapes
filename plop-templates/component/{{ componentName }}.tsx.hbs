@@ -1,0 +1,24 @@
+import React from 'react';
+import { classNames } from '../../utils';
+
+import styles from './{{componentName}}.module.scss';
+
+export type {{componentName}}Props = {
+  /**
+   * className for the element
+   */
+  className?: string;
+}
+
+/**
+ * TODO: Add description of component here.
+ */
+export const {{componentName}} = (props: {{componentName}}Props) => {
+  return (
+    <div
+      className={classNames(styles.myClass, props.className)} 
+    >
+      {{componentName}}
+    </div>
+  );
+}

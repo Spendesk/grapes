@@ -1,0 +1,32 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import React from 'react';
+import { {{componentName}} } from '../{{componentName}}';
+
+import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
+
+const meta: Meta<typeof {{componentName}}> = {
+  title: '{{categoryName}}/{{componentName}}',
+  component: {{componentName}},
+};
+
+export default meta;
+type Story = StoryObj<typeof {{componentName}}>;
+
+export const Primary: Story = {
+  args: {
+    className: 'myClassName'
+  },
+};
+
+export const Snapshot: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
+  render: () => (
+    <SnapshotContainer
+      stories={[Primary]}
+      meta={meta}
+    />
+  ),
+};
+

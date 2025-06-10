@@ -1,0 +1,17 @@
+@use '../../theme/placeholders';
+
+.autocompleteMultipleSelected {
+  font: var(--body-m);
+  @extend %ellipsis;
+  flex: 1;
+  border: none;
+  color: var(--color-content-primary);
+  text-align: left;
+  background: none;
+  cursor: text;
+  padding: 0;
+
+  &:active {
+    outline: none;
+  }
+}

@@ -1,0 +1,13 @@
+import React from 'react';
+
+import { render, screen } from '@testing-library/react';
+import { {{componentName}} } from './';
+
+describe('{{componentName}} component', () => {
+  // TODO: Implement real  tests here
+  it('should display the name of the component', () => {
+    render(<{{componentName}} />)
+
+    expect(screen.getByText('{{componentName}}')).toBeVisible()
+  })
+});

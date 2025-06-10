@@ -1,0 +1,33 @@
+@use '../../theme/placeholders';
+
+.popoverWrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.popoverWrapper[data-placement^='bottom'] {
+  --_animation-orientation: -1;
+}
+
+.popover {
+  position: absolute;
+  @extend %dropdown-content;
+  min-width: max(180px, 100%);
+  translate: 0 0;
+  opacity: 1;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  transition-property: opacity, translate;
+}
+
+@starting-style {
+  .popover {
+    opacity: 0;
+    translate: 0 calc(var(--_animation-orientation, 1) * var(--unit-16));
+  }
+}
+
+.popover[data-closing='true'] {
+  opacity: 0;
+  translate: 0 calc(var(--_animation-orientation, 1) * var(--unit-16));
+}

@@ -1,0 +1,10 @@
+.tooltipContent {
+  font: var(--body-m);
+  z-index: var(--z-index-tooltip);
+  padding: var(--unit-8);
+  box-shadow: var(--elevation-l);
+  border-radius: var(--border-radius-8);
+  background-color: var(--color-background-complementary-default);
+  color: var(--color-content-complementary);
+  text-align: center;
+}

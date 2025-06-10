@@ -1,0 +1,23 @@
+name: 'Stale PR handler'
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '40 23 * * *'
+
+jobs:
+  stale:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        id: stale
+        name: 'Close stale PR'
+        with:
+          stale-pr-message: 'This pull request has been automatically marked as state because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days.'
+          days-before-pr-close: 5
+          days-before-pr-stale: 30
+          days-before-issue-close: -1
+          days-before-issue-stale: -1
