@@ -19,9 +19,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Runs-On Cache
-        uses: runs-on/action@v1
-
       - name: Get Nodejs
         uses: actions/setup-node@v4
         with:
@@ -50,9 +47,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Runs-On Cache
-        uses: runs-on/action@v1
-
       - name: Get Nodejs
         uses: actions/setup-node@v4
         with:
@@ -73,9 +67,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Runs-On Cache
-        uses: runs-on/action@v1
 
       - name: Get Nodejs
         uses: actions/setup-node@v4
@@ -104,13 +95,10 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    if: ${{ contains('refs/heads/master,refs/heads/beta,refs/heads/alpha, refs/heads/0.x', github.ref) }}
+    if: ${{ contains('refs/heads/master,refs/heads/beta,refs/heads/alpha', github.ref) }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Setup Runs-On Cache
-        uses: runs-on/action@v1
 
       - name: Get Nodejs
         uses: actions/setup-node@v4
