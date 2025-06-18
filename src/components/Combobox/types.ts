@@ -1,5 +1,5 @@
-import { type FocusEventHandler, type HTMLProps, type ReactNode } from 'react';
-import { type Placement } from '../../utils';
+import type { FocusEventHandler, HTMLProps, ReactNode } from 'react';
+import type { Placement } from '../../utils';
 import type {
   GetInputPropsReturnValue,
   GetItemPropsReturnValue,
