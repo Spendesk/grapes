@@ -1,4 +1,9 @@
-import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
+import React, {
+  type ReactElement,
+  type ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import { createPortal } from 'react-dom';
 import { useSetInert } from '../GrapesProvider/hooks/useInert';
 

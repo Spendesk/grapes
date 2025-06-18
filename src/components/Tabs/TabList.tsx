@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef } from 'react';
+import React, { type ReactNode, useRef } from 'react';
 import { useId } from '../../hooks/useId';
 import { classNames } from '../../utils';
 

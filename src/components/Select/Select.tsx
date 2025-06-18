@@ -1,10 +1,10 @@
-import React, { type FocusEventHandler, ReactNode } from 'react';
+import React, { type FocusEventHandler, type ReactNode } from 'react';
 import { useCombobox } from 'downshift';
 import { classNames, type Placement } from '../../utils';
 
 import { Combobox } from '../Combobox';
 import { DropdownItem } from '../DropdownItem';
-import { Option, OptionGroup } from './option';
+import type { Option, OptionGroup } from './option';
 
 import styles from './Select.module.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Country } from '../country';
+import type { Country } from '../country';
 import { SelectAddon } from '../../SelectAddon';
 
 import styles from './CountrySelect.module.scss';

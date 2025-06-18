@@ -5,7 +5,7 @@ import {
   waitForElementToBeRemoved,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { CountryCode, getCountryCallingCode } from 'libphonenumber-js';
+import { type CountryCode, getCountryCallingCode } from 'libphonenumber-js';
 
 import { PhoneInput } from './';
 import { COUNTRIES } from './stories/country';

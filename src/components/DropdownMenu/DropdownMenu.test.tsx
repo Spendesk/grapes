@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 
 import { DropdownMenu } from './';
 import { Button } from '../Button';
-import { TriggerProps } from '../Popover';
+import type { TriggerProps } from '../Popover';
 
 describe('DropdownMenu component', () => {
   const options = [

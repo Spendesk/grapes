@@ -6,7 +6,7 @@ import { within, userEvent } from 'storybook/test';
 import { Button } from '../../Button';
 import {
   DropdownMenuSearch,
-  DropdownMenuSearchProps,
+  type DropdownMenuSearchProps,
 } from '../DropdownMenuSearch';
 import { AutocompleteNoOptions } from '../../AutocompleteNoOptions';
 import { Avatar } from '../../Avatar';

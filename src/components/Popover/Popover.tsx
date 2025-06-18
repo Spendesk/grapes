@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef } from 'react';
+import React, { type ReactNode, useRef } from 'react';
 import { classNames, getStyleFromPlacement, type Placement } from '../../utils';
 
 import { useId } from '../../hooks/useId';

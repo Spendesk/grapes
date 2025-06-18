@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React, { type MouseEventHandler } from 'react';
 import { classNames } from '../../utils';
 import { Icon } from '../Icon';
 import styles from './Anchor.module.css';

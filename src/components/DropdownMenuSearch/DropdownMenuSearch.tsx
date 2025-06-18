@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Autocomplete, Props as AutocompleteProps } from '../Autocomplete';
+import { Autocomplete, type Props as AutocompleteProps } from '../Autocomplete';
 import { Popover, type PopoverProps } from '../Popover';
 import type { ComboboxOption } from '../Combobox';
 

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
-import { Button, ButtonVariant } from '../Button';
-import { IconName } from '../Icon';
+import { Button, type ButtonVariant } from '../Button';
+import type { IconName } from '../Icon';
 
 import styles from './UploadButton.module.css';
 

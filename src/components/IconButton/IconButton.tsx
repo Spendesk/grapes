@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { classNames } from '../../utils';
 
-import { Icon, IconName } from '../Icon/Icon';
+import { Icon, type IconName } from '../Icon/Icon';
 
 import styles from './IconButton.module.scss';
 

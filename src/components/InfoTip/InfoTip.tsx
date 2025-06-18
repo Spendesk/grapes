@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 
 import { Icon } from '../Icon';
 import { Tooltip } from '../Tooltip';

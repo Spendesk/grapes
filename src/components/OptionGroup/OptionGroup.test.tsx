@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { OptionGroup, OptionGroupProps } from './';
+import { OptionGroup, type OptionGroupProps } from './';
 
 describe('OptionGroup component', () => {
   it('allows user to choose between option', async () => {

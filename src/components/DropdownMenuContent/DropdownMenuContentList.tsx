@@ -1,4 +1,4 @@
-import React, { HTMLProps, ReactNode, Fragment } from 'react';
+import React, { type HTMLProps, type ReactNode, Fragment } from 'react';
 
 import { DropdownItem } from '../DropdownItem';
 

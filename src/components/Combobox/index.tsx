@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Combobox as DefaultCombobox } from './Combobox';
 import { ComboboxNoDropdown } from './ComboboxNoDropdown';
-import { BaseComboboxProps, ComboboxOption, Variant } from './types';
+import type { BaseComboboxProps, ComboboxOption, Variant } from './types';
 
 import { type Placement } from '../../utils';
 export type { ComboboxOption, ComboboxOptionGroup } from './types';

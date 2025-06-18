@@ -1,14 +1,14 @@
 import React, {
-  ChangeEventHandler,
-  ClipboardEventHandler,
-  FocusEventHandler,
   forwardRef,
-  KeyboardEventHandler,
-  ReactNode,
+  type ChangeEventHandler,
+  type ClipboardEventHandler,
+  type FocusEventHandler,
+  type KeyboardEventHandler,
+  type ReactNode,
 } from 'react';
 import { classNames } from '../../utils';
 import Cleave from 'cleave.js/react';
-import { CleaveOptions } from 'cleave.js/options';
+import type { CleaveOptions } from 'cleave.js/options';
 
 import { useFormFieldContext } from '../FormField/FormFieldContext';
 

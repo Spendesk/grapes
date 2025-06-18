@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
-import { Icon, IconName } from '../Icon';
+import { Icon, type IconName } from '../Icon';
 import { useId } from '../../hooks/useId';
 
 import styles from './Callout.module.scss';

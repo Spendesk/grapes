@@ -2,7 +2,7 @@ import React from 'react';
 
 import { classNames } from '../../utils';
 import styles from './Table.module.scss';
-import { TableColumn, TableSortDirection } from './types';
+import type { TableColumn, TableSortDirection } from './types';
 import { SortIcon } from './SortIcon';
 import { useTableHeaderCellContext } from './TableProvider';
 

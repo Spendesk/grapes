@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { IconProps } from './iconProps';
+import type { IconProps } from './iconProps';
 
 export const Square3Stack3dIcon = /*@__PURE__*/ forwardRef<
   SVGSVGElement,

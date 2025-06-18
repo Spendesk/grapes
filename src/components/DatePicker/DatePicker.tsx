@@ -1,4 +1,4 @@
-import React, { useRef, ReactNode } from 'react';
+import React, { useRef, type ReactNode } from 'react';
 
 import { DatePickerInput } from './DatePickerInput';
 import { Calendar } from '../Calendar';

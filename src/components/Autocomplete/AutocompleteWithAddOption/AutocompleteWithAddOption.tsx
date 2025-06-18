@@ -1,9 +1,9 @@
-import React, { ReactChild } from 'react';
+import React, { type ReactChild } from 'react';
 
 import { DropdownItem } from '../../DropdownItem';
 import { Combobox } from '../../Combobox';
-import { AutocompleteProps } from '../Autocomplete';
-import { Option } from '../option';
+import type { AutocompleteProps } from '../Autocomplete';
+import type { Option } from '../option';
 import { useAutocompleteCombobox } from '../hooks';
 
 import styles from './AutocompleteWithAddOption.module.scss';

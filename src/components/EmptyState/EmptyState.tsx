@@ -1,7 +1,7 @@
-import React, { ReactElement, ReactNode } from 'react';
+import React, { type ReactElement, type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
-import { IconName } from '../Icon';
+import type { IconName } from '../Icon';
 import { HighlightIcon, type HighlightIconVariant } from '../HighlightIcon';
 import { useId } from '../../hooks/useId';
 

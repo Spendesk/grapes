@@ -2,7 +2,7 @@ import React, {
   forwardRef,
   isValidElement,
   cloneElement,
-  HTMLProps,
+  type HTMLProps,
 } from 'react';
 import { useMergeRefs } from '@floating-ui/react';
 

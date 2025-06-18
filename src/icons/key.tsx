@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { IconProps } from './iconProps';
+import type { IconProps } from './iconProps';
 
 export const KeyIcon = /*@__PURE__*/ forwardRef<SVGSVGElement, IconProps>(
   (

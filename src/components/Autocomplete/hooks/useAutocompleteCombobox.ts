@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useCombobox, UseComboboxProps } from 'downshift';
+import { useCombobox, type UseComboboxProps } from 'downshift';
 
 import usePrevious from '../../../hooks/usePrevious';
-import { ComboboxOption, ComboboxOptionGroup } from '../../Combobox';
+import type { ComboboxOption, ComboboxOptionGroup } from '../../Combobox';
 
 const { stateChangeTypes } = useCombobox;
 

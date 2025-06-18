@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import {
+import React, { type ReactNode } from 'react';
+import type {
   NextSortDirection,
   SortState,
   TableColumn,

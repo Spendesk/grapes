@@ -1,4 +1,4 @@
-import { PasswordRule } from '../passwordRule';
+import type { PasswordRule } from '../passwordRule';
 
 export const passwordRules: PasswordRule[] = [
   {

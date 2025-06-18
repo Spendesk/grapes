@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { Icon, type IconName, IconSize } from '../Icon';
+import { Icon, type IconName, type IconSize } from '../Icon';
 import { iconMap } from '../../../icons';
 
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';

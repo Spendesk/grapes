@@ -1,11 +1,11 @@
-import React, { ChangeEventHandler, ReactNode } from 'react';
+import React, { type ChangeEventHandler, type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
 import styles from './CheckboxBox.module.scss';
 import { CheckboxInput } from '../CheckboxInput';
 import { useId } from '../../hooks/useId';
 import { HighlightIcon } from '../HighlightIcon';
-import { IconName } from '../Icon';
+import type { IconName } from '../Icon';
 
 export type CheckboxBoxProps = {
   /**

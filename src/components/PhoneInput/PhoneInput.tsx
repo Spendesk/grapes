@@ -1,7 +1,7 @@
 import React, {
-  FocusEventHandler,
+  type FocusEventHandler,
+  type KeyboardEventHandler,
   forwardRef,
-  KeyboardEventHandler,
   useRef,
 } from 'react';
 import { classNames } from '../../utils';
@@ -9,7 +9,7 @@ import { classNames } from '../../utils';
 import { Input } from '../Input';
 
 import { CountrySelect } from './CountrySelect';
-import { Country } from './country';
+import type { Country } from './country';
 
 import styles from './PhoneInput.module.scss';
 

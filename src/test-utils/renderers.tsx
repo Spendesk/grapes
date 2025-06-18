@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, RenderResult } from '@testing-library/react';
+import { render, type RenderResult } from '@testing-library/react';
 
 import {
   GrapesProvider,
-  GrapesProviderProps,
+  type GrapesProviderProps,
 } from '../components/GrapesProvider';
 import { LOCALES } from '../components/GrapesProvider/exampleLocales';
 

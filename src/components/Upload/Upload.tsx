@@ -1,24 +1,21 @@
-import React, { ReactChild } from 'react';
+import React, { type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
 import { Icon } from '../Icon';
 
 import styles from './Upload.module.scss';
 
-export enum UploadType {
-  DragAndDrop = 'drag_and_drop',
-  Selection = 'selection',
-}
+export type UploadType = 'drag_and_drop' | 'selection';
 
 export type UploadProps = {
   /**
    * The contents of the Upload
    */
-  content: ReactChild;
+  content: ReactNode;
   /**
    * The contents of the Upload on drag
    */
-  activeDragContent: ReactChild;
+  activeDragContent: ReactNode;
   /**
    * Handler that is called when a file is submitted
    */
@@ -26,7 +23,7 @@ export type UploadProps = {
   /**
    * Illustration to use instead of the default icon
    */
-  illustration?: ReactChild;
+  illustration?: ReactNode;
   /**
    * Whether the input should allow multiple file
    * @default false
@@ -120,7 +117,7 @@ export const Upload = ({
         event.preventDefault();
 
         const { files } = event.dataTransfer;
-        handleUpload(files, UploadType.DragAndDrop);
+        handleUpload(files, 'drag_and_drop');
       }}
       onDragLeave={handleDragLeave}
       onDragEnter={handleDragEnter}
@@ -137,7 +134,7 @@ export const Upload = ({
         onChange={(event) => {
           const { files } = event.target;
           if (files) {
-            handleUpload(files, UploadType.Selection);
+            handleUpload(files, 'selection');
           }
         }}
       />

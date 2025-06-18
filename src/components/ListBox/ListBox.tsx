@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef } from 'react';
+import React, { type ReactNode, useRef } from 'react';
 import { classNames } from '../../utils';
 
 import { ListBoxGroup } from './ListBoxGroup';

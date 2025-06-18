@@ -1,11 +1,11 @@
-import React, { HTMLProps } from 'react';
+import React, { type HTMLProps } from 'react';
 import { classNames } from '../../../utils';
 
 import { useFormFieldContext } from '../../FormField/FormFieldContext';
 import { Icon } from '../../Icon';
 import { DropdownMenuContentList } from '../../DropdownMenuContent';
 import { SkeletonText } from '../../Skeleton';
-import { ComboboxNoDropdownProps, ComboboxOption } from '../types';
+import type { ComboboxNoDropdownProps, ComboboxOption } from '../types';
 import { colors } from '../../../colors';
 
 import styles from './ComboboxNoDropdown.module.scss';
