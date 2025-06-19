@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
 import { classNames } from '../../utils';
-import { Icon, IconName } from '../Icon';
+import { Icon, type IconName } from '../Icon';
 
 import styles from './HighlighIcon.module.scss';
-import { IconSize } from '../Icon/Icon';
+import type { IconSize } from '../Icon/Icon';
 
 export type HighlightIconVariant =
   | 'alert'

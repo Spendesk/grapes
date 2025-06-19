@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { classNames } from '../../utils';
-import { Icon, IconName } from '../Icon';
+import { Icon, type IconName } from '../Icon';
 
 import styles from './Avatar.module.scss';
 import useImage, { Status } from '../../hooks/useImage';
-import { IconSize } from '../Icon/Icon';
+import type { IconSize } from '../Icon/Icon';
 
 export type AvatarSize = 16 | 24 | 32 | 40 | 56;
 export type AvatarVariant = 'circle' | 'square';

@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { type ReactElement } from 'react';
 
 import { HighlightIcon, type HighlightIconVariant } from '../HighlightIcon';
 import type { IconName } from '../Icon/Icon';

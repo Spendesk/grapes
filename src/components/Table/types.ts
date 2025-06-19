@@ -1,4 +1,4 @@
-import { ReactChild } from 'react';
+import type { ReactChild } from 'react';
 
 export type TableSortDirection = 'ascending' | 'descending' | 'none';
 

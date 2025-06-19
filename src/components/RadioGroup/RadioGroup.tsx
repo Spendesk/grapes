@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, ReactElement } from 'react';
+import React, { type ChangeEventHandler, type ReactElement } from 'react';
 import { classNames } from '../../utils';
 
 import type { RadioFieldProps } from '../RadioField';

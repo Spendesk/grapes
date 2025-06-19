@@ -1,12 +1,12 @@
 import React, {
-  ReactElement,
-  MouseEventHandler,
+  type ReactElement,
+  type MouseEventHandler,
   Fragment,
   useState,
 } from 'react';
 
 import { ModalBody, ModalOverlay } from '../Modal';
-import { ModalSlideshowSlide } from './types';
+import type { ModalSlideshowSlide } from './types';
 
 import styles from './ModalSlideshow.module.scss';
 import { IconButton } from '../IconButton';

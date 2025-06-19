@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactNode, useId } from 'react';
+import React, { type MouseEventHandler, type ReactNode, useId } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslate } from '../../hooks/useTranslate';
 

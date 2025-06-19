@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 import { DropdownItem } from '../../DropdownItem';
 import { Select } from '../Select';
-import { Option } from '../option';
+import type { Option } from '../option';
 
 type CostCenter = Option & {
   owner: string;

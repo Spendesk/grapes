@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../../Icon';
-import { PasswordRule } from '../passwordRule';
+import type { PasswordRule } from '../passwordRule';
 import styles from './PasswordValidator.module.scss';
 import { classNames } from '../../../utils';
 

@@ -1,11 +1,11 @@
 import React, {
-  ChangeEventHandler,
-  KeyboardEventHandler,
-  MouseEventHandler,
+  type ChangeEventHandler,
+  type KeyboardEventHandler,
+  type MouseEventHandler,
 } from 'react';
 import { classNames } from '../../utils';
 
-import { Icon, IconName } from '../Icon';
+import { Icon, type IconName } from '../Icon';
 
 import styles from './CheckboxInput.module.scss';
 

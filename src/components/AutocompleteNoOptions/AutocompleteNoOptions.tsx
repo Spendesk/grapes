@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
-import { IconName } from '../Icon';
+import type { IconName } from '../Icon';
 import { HighlightIcon } from '../HighlightIcon';
 
 import styles from './AutocompleteNoOptions.module.scss';

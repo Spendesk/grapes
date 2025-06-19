@@ -1,10 +1,13 @@
-import React, { ReactChild, useEffect, useState } from 'react';
+import React, { type ReactChild, useEffect, useState } from 'react';
 
 import { useDebounce } from '../../hooks/useDebounce';
-import { Autocomplete, AutocompleteProps } from '../Autocomplete/Autocomplete';
+import {
+  Autocomplete,
+  type AutocompleteProps,
+} from '../Autocomplete/Autocomplete';
 import type { ComboboxOption } from '../Combobox';
 import { useLocale, useMapboxAccessToken } from '../GrapesProvider';
-import { getMatchingPlaces, MapboxPlace } from './mapbox';
+import { getMatchingPlaces, type MapboxPlace } from './mapbox';
 
 export type AutocompletePlaceProps<T extends ComboboxOption> = Omit<
   AutocompleteProps<T>,

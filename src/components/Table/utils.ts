@@ -1,4 +1,4 @@
-import { SortState, TableColumn } from './types';
+import type { SortState, TableColumn } from './types';
 
 export function getEnabledRowIds<T>(
   rows: T[],

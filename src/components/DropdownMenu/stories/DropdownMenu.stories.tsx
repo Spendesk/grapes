@@ -8,7 +8,7 @@ import { Button } from '../../Button';
 import { DropdownItem } from '../../DropdownItem';
 import { DropdownMenu } from '../DropdownMenu';
 import { CheckboxInput } from '../../CheckboxInput';
-import { TriggerProps } from '../../Popover';
+import type { TriggerProps } from '../../Popover';
 
 const costCenters = [
   { key: 'marketing', label: 'Marketing' },

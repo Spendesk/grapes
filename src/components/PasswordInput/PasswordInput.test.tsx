@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 
 import { PasswordInput } from '.';
 import { passwordRules } from './stories/passwordRules';
-import { PasswordRule } from './passwordRule';
+import { type PasswordRule } from './passwordRule';
 
 import { renderWithGrapesProvider } from '../../test-utils/renderers';
 

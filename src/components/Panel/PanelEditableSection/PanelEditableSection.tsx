@@ -1,7 +1,7 @@
 import React, {
-  MouseEventHandler,
-  ReactNode,
-  Reducer,
+  type MouseEventHandler,
+  type ReactNode,
+  type Reducer,
   useReducer,
 } from 'react';
 

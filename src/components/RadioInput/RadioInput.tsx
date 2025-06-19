@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler } from 'react';
+import React, { type ChangeEventHandler } from 'react';
 import { classNames } from '../../utils';
 
 import styles from './RadioInput.module.scss';

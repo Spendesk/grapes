@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactNode } from 'react';
+import React, { type MouseEventHandler, type ReactNode } from 'react';
 
 import { useId } from '../../hooks/useId';
 import { classNames } from '../../utils';
@@ -6,8 +6,8 @@ import { IconButton } from '../IconButton';
 
 import styles from './FileCard.module.scss';
 import { useTranslate } from '../../hooks/useTranslate';
-import { HighlightIcon, HighlightIconVariant } from '../HighlightIcon';
-import { IconName } from '../Icon';
+import { HighlightIcon, type HighlightIconVariant } from '../HighlightIcon';
+import type { IconName } from '../Icon';
 
 export type FileCardVariant = 'alert' | 'neutral';
 

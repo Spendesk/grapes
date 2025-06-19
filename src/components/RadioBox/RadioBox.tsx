@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { useId } from '../../hooks/useId';
 import { classNames } from '../../utils';
-import { IconName } from '../Icon';
+import type { IconName } from '../Icon';
 import { RadioInput } from '../RadioInput';
 import { useRadioCheckState } from '../RadioGroup/useRadioCheckState';
 

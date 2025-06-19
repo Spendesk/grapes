@@ -1,8 +1,8 @@
 import React, {
   forwardRef,
-  ChangeEventHandler,
-  FocusEventHandler,
-  KeyboardEventHandler,
+  type ChangeEventHandler,
+  type FocusEventHandler,
+  type KeyboardEventHandler,
 } from 'react';
 import { classNames } from '../../utils';
 

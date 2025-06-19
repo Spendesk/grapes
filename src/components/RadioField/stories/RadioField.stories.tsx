@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { action } from 'storybook/actions';
 import React, { useState } from 'react';
 
-import { RadioField, RadioFieldProps } from '../RadioField';
+import { RadioField, type RadioFieldProps } from '../RadioField';
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
 
 const meta: Meta<typeof RadioField> = {

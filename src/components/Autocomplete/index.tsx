@@ -2,13 +2,13 @@ import React from 'react';
 
 import {
   Autocomplete as BaseAutocomplete,
-  AutocompleteProps,
+  type AutocompleteProps,
 } from './Autocomplete';
 import {
   AutocompleteWithAddOption,
-  AutocompleteWithAddOptionProps,
+  type AutocompleteWithAddOptionProps,
 } from './AutocompleteWithAddOption';
-import { Option } from './option';
+import type { Option } from './option';
 
 export type Props<T extends Option> =
   | AutocompleteWithAddOptionProps<T>

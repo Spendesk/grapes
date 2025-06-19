@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
 import styles from './ActionBar.module.css';
-import { IconName } from '../Icon';
+import type { IconName } from '../Icon';
 import { Button } from '../Button';
 import { useId } from '../../hooks/useId';
 

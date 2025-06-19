@@ -1,6 +1,10 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 
-import { TooltipContext, TooltipOptions, useTooltip } from './TooltipContext';
+import {
+  TooltipContext,
+  type TooltipOptions,
+  useTooltip,
+} from './TooltipContext';
 import { TooltipTrigger } from './TooltipTrigger';
 import { TooltipContent } from './TooltipContent';
 

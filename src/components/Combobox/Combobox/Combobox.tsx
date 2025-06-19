@@ -5,7 +5,7 @@ import { useFormFieldContext } from '../../FormField/FormFieldContext';
 import { DropdownMenuContent } from '../../DropdownMenuContent';
 import { SkeletonText } from '../../Skeleton';
 import { Icon } from '../../Icon';
-import { ComboboxWithDropdownProps, ComboboxOption } from '../types';
+import type { ComboboxWithDropdownProps, ComboboxOption } from '../types';
 import { colors } from '../../../colors';
 
 import styles from './Combobox.module.scss';

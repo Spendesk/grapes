@@ -1,11 +1,11 @@
 import React, {
-  HTMLProps,
-  ReactNode,
+  type HTMLProps,
+  type ReactNode,
   useEffect,
   useRef,
   useState,
 } from 'react';
-import { GetPropsCommonOptions, GetMenuPropsOptions } from 'downshift';
+import type { GetPropsCommonOptions, GetMenuPropsOptions } from 'downshift';
 
 import { DropdownMenuContentList } from './DropdownMenuContentList';
 import { classNames, getStyleFromPlacement, type Placement } from '../../utils';

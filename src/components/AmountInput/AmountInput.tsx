@@ -1,13 +1,13 @@
 import React, {
-  ChangeEvent,
-  FocusEventHandler,
-  KeyboardEventHandler,
-  ReactNode,
+  type ChangeEvent,
+  type FocusEventHandler,
+  type KeyboardEventHandler,
+  type ReactNode,
   useRef,
 } from 'react';
 import { classNames } from '../../utils';
 
-import { Input, InputVariant } from '../Input';
+import { Input, type InputVariant } from '../Input';
 import { useLocale } from '../GrapesProvider';
 
 import { CurrencySelect } from './CurrencySelect';

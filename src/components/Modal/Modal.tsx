@@ -1,6 +1,10 @@
-import React, { MouseEventHandler, ReactElement, ReactNode } from 'react';
+import React, {
+  type MouseEventHandler,
+  type ReactElement,
+  type ReactNode,
+} from 'react';
 
-import { IconName } from '../Icon/Icon';
+import type { IconName } from '../Icon/Icon';
 import { useId } from '../../hooks/useId';
 
 import { ModalOverlay } from './ModalOverlay';

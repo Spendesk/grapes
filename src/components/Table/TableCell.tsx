@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TableColumn, TableVariant } from './types';
+import type { TableColumn, TableVariant } from './types';
 import { classNames } from '../../utils';
 
 import styles from './Table.module.scss';

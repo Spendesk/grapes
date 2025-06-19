@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactNode } from 'react';
+import React, { type MouseEventHandler, type ReactNode } from 'react';
 
 import { PanelArea } from './PanelArea';
 

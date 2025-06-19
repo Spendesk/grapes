@@ -1,4 +1,8 @@
-import React, { MouseEventHandler, ReactElement, ReactNode } from 'react';
+import React, {
+  type MouseEventHandler,
+  type ReactElement,
+  type ReactNode,
+} from 'react';
 import { classNames } from '../../utils';
 
 import { IconButton } from '../IconButton';

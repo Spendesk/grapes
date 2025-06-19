@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo, useRef, useState } from 'react';
+import React, { type ReactNode, useMemo, useRef, useState } from 'react';
 
 import { useLocale } from '../GrapesProvider';
 import { classNames } from '../../utils';

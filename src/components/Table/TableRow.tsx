@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import styles from './Table.module.scss';
-import { TableVariant } from './types';
+import type { TableVariant } from './types';
 import { classNames } from '../../utils';
 import { TableCell } from './TableCell';
 import { useTableRowContext } from './TableProvider';

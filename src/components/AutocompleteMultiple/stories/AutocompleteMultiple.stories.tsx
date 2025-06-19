@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import {
   AutocompleteMultiple,
-  AutocompleteMultipleProps,
+  type AutocompleteMultipleProps,
 } from '../AutocompleteMultiple';
 import { userEvent, within } from 'storybook/test';
 

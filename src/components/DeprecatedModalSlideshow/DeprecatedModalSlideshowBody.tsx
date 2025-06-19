@@ -1,11 +1,11 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, { type MouseEventHandler, useState } from 'react';
 
 import { Button } from '../Button';
 import { Dots } from '../Dots';
 import { ModalBody } from '../Modal/ModalBody';
 import { ModalHeaderWithIllustration } from '../Modal/ModalHeaderWithIllustration';
 import { ModalFooter } from '../Modal/ModalFooter';
-import { DeprecatedModalSlideshowSlide } from './types';
+import type { DeprecatedModalSlideshowSlide } from './types';
 import { useId } from '../../hooks/useId';
 
 import styles from './DeprecatedModalSlideShowBody.module.scss';

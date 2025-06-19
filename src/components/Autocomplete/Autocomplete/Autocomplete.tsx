@@ -1,11 +1,11 @@
-import React, { FocusEventHandler, ReactNode } from 'react';
+import React, { type FocusEventHandler, type ReactNode } from 'react';
 
 import { DropdownItem } from '../../DropdownItem';
 import {
   Combobox,
   type ComboboxProps,
   type ComboboxOption,
-  ComboboxOptionGroup,
+  type ComboboxOptionGroup,
 } from '../../Combobox';
 import { useAutocompleteCombobox } from '../hooks';
 import { type Placement } from '../../../utils';

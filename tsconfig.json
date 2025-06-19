@@ -1,23 +1,25 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "target": "es2020",
+    "esModuleInterop": true,
+    "allowJs": false,
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+
     "declaration": true,
     "declarationMap": true,
-    "module": "esnext",
-    "target": "es2020",
-    "jsx": "react",
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "lib": ["dom", "esnext"],
+
     "strict": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "allowImportingTsExtensions": true,
-    "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "allowJs": false,
+    "noImplicitReturns": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+
+    "moduleResolution": "node",
+
+    "lib": ["dom", "esnext"],
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": ["./src"]

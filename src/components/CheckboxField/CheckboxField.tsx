@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, ReactNode } from 'react';
+import React, { type ChangeEventHandler, type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
 import { CheckboxInput } from '../CheckboxInput';

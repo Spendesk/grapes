@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AmountInputCurrency } from '../currency';
+import type { AmountInputCurrency } from '../currency';
 import { SelectAddon } from '../../SelectAddon';
 
 import styles from './CurrencySelect.module.scss';

@@ -1,8 +1,8 @@
-import React, { ChangeEventHandler } from 'react';
+import React, { type ChangeEventHandler } from 'react';
 
 import { classNames } from '../../utils';
 import { useFormFieldContext } from '../FormField/FormFieldContext';
-import { Icon, IconName } from '../Icon';
+import { Icon, type IconName } from '../Icon';
 
 import styles from './OptionGroup.module.scss';
 

@@ -1,7 +1,11 @@
-import React, { forwardRef, MouseEventHandler, ReactNode } from 'react';
+import React, {
+  forwardRef,
+  type MouseEventHandler,
+  type ReactNode,
+} from 'react';
 import { classNames } from '../../utils';
 
-import { Icon, IconName } from '../Icon';
+import { Icon, type IconName } from '../Icon';
 import { useId } from '../../hooks/useId';
 import { useTranslate } from '../../hooks/useTranslate';
 

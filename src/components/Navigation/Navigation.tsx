@@ -1,4 +1,4 @@
-import React, { Children, ReactNode } from 'react';
+import React, { Children, type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
 import styles from './Navigation.module.css';

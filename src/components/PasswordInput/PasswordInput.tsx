@@ -1,8 +1,8 @@
 import React, {
-  ChangeEventHandler,
-  FocusEventHandler,
+  type ChangeEventHandler,
+  type FocusEventHandler,
+  type KeyboardEventHandler,
   forwardRef,
-  KeyboardEventHandler,
   useState,
 } from 'react';
 import { classNames } from '../../utils';
@@ -12,7 +12,7 @@ import { Input } from '../Input';
 import styles from './PasswordInput.module.scss';
 import { IconButton } from '../IconButton';
 import { useTranslate } from '../../hooks/useTranslate';
-import { PasswordRule } from './passwordRule';
+import type { PasswordRule } from './passwordRule';
 import { PasswordValidator } from './PasswordValidator/PasswordValidator';
 import { colors } from '../../colors';
 

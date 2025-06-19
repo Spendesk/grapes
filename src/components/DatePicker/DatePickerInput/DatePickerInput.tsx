@@ -1,10 +1,10 @@
 import React, {
   useMemo,
-  ChangeEvent,
   useState,
   useRef,
   useEffect,
-  ReactNode,
+  type ChangeEvent,
+  type ReactNode,
 } from 'react';
 
 import { Input, type InputVariant } from '../../Input';

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import type { OptionVariant } from './ListBox';
 import { type DirectionKey, getIndexFromDirectionKey } from './utils';
 

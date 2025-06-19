@@ -2,7 +2,7 @@ import React, { createElement } from 'react';
 import { classNames, type PropsOf, type As } from '../../utils';
 import styles from './Anchor.module.css';
 
-import { Anchor, AnchorProps } from './Anchor';
+import { Anchor, type AnchorProps } from './Anchor';
 
 export type LinkProps<T extends As> = PropsOf<T> | AnchorProps;
 

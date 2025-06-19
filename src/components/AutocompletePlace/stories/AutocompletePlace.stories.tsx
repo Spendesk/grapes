@@ -10,9 +10,9 @@ import { TextInput } from '../../TextInput/TextInput';
 import { GrapesProvider } from '../../GrapesProvider/GrapesProvider';
 import { FormField } from '../../FormField/FormField';
 import { LOCALES } from '../../GrapesProvider/exampleLocales';
-import { MapboxPlace } from '../mapbox';
 import { COUNTRIES } from './country';
-import { Option } from '../../Autocomplete/option';
+import type { MapboxPlace } from '../mapbox';
+import type { Option } from '../../Autocomplete/option';
 
 const meta: Meta<typeof AutocompletePlace> = {
   title: 'Form/AutocompletePlace',

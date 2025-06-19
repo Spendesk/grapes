@@ -1,11 +1,11 @@
 import React from 'react';
 import {
   PanelSimpleSection,
-  PanelSimpleSectionProps,
+  type PanelSimpleSectionProps,
 } from './PanelSimpleSection';
 import {
   PanelEditableSection,
-  PanelEditableSectionProps,
+  type PanelEditableSectionProps,
 } from './PanelEditableSection';
 
 export type PanelSectionProps =

@@ -3,7 +3,7 @@ import { classNames } from '../../../utils';
 
 import { Icon } from '../../Icon';
 
-import { SortState, TableColumn } from '../types';
+import type { SortState, TableColumn } from '../types';
 
 import styles from '../Table.module.scss';
 

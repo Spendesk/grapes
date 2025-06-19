@@ -1,8 +1,12 @@
-import React, { ReactElement, MouseEventHandler, Fragment } from 'react';
+import React, {
+  type ReactElement,
+  type MouseEventHandler,
+  Fragment,
+} from 'react';
 
 import { ModalContent } from '../Modal/ModalContent';
 import { ModalOverlay } from '../Modal/ModalOverlay';
-import { DeprecatedModalSlideshowSlide } from './types';
+import type { DeprecatedModalSlideshowSlide } from './types';
 import {
   DeprecatedModalSlideshowBody,
   type DeprecatedModalSlideshowBodyProps,

@@ -1,15 +1,15 @@
-import React, { useState, ReactNode, type FocusEventHandler } from 'react';
+import React, { useState, type ReactNode, type FocusEventHandler } from 'react';
 import { useCombobox } from 'downshift';
 
 import { DropdownItem } from '../DropdownItem';
 import { CheckboxInput } from '../CheckboxInput';
 import { Combobox } from '../Combobox';
 import {
-  Option,
   ALL_KEY,
   isAllOption,
   getIsOptionSelected,
-  OptionGroup,
+  type Option,
+  type OptionGroup,
 } from './option';
 
 import styles from './AutocompleteMultiple.module.scss';

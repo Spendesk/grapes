@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CalendarRange, DateRange } from '../CalendarRange';
+import { CalendarRange, type DateRange } from '../CalendarRange';
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
 import React, { useState } from 'react';
 

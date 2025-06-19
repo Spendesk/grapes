@@ -1,9 +1,9 @@
-import React, { ReactNode, useState } from 'react';
+import React, { type ReactNode, useState } from 'react';
 
-import { TranslationDefinition } from '../../hooks/useTranslate';
+import type { TranslationDefinition } from '../../hooks/useTranslate';
 import { supportInert } from '../../utils';
 
-import { GrapesContext, GrapesContextType } from './GrapesContext';
+import { GrapesContext, type GrapesContextType } from './GrapesContext';
 
 export type GrapesProviderProps = {
   /**
