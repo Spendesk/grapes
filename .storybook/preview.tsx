@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react';
 import { GrapesProvider } from '../src/components/GrapesProvider';
 import { LOCALES } from '../src/components/GrapesProvider/exampleLocales';
 
