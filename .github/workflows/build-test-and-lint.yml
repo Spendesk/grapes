@@ -85,6 +85,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT }}
           skip: '@(beta|alpha|0.x|dependabot/**)'
           autoAcceptChanges: 'master'
+          exitOnceUploaded: true
           buildScriptName: build-storybook-test
 
   release:
