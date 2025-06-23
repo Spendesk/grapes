@@ -24,8 +24,6 @@ Pull requests are welcome. See the [contributing guidelines](CONTRIBUTING.md) fo
 ## Resources
 
 - [Storybook](https://storybook.spendesk.design)
-- [Figma UI Kit](https://www.figma.com/files/910916912733890296/team/930856372776001193/Grapes)
-- [Roadmap](https://www.notion.so/spendesk/fffe916ba8b18157b305f9cf14fecdea?v=fffe916ba8b181b28f28000c73119c62)
 
 ---
 
