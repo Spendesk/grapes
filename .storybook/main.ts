@@ -4,7 +4,11 @@ import { mergeConfig } from 'vite';
 const config: StorybookConfig = {
   staticDirs: ['./assets'],
   stories: ['../src/**/*.stories.tsx'],
-  addons: ['@storybook/addon-a11y', './addon-locale/manager.tsx'],
+  addons: [
+    '@storybook/addon-a11y',
+    '@storybook/addon-themes',
+    './addon-locale/manager.tsx',
+  ],
   framework: {
     name: '@storybook/react-vite',
     options: {},
