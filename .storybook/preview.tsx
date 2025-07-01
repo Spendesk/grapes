@@ -1,8 +1,9 @@
-import React from 'react';
-
 import type { Preview } from '@storybook/react';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
+
 import { GrapesProvider } from '../src/components/GrapesProvider';
 import { LOCALES } from '../src/components/GrapesProvider/exampleLocales';
+import { allModes } from './modes';
 
 import './styles.scss';
 import '../src/tailwind.css';
@@ -32,7 +33,18 @@ const withProvider = (Story, { globals: { locale = 'en-US' } }) => (
 );
 
 const preview: Preview = {
-  decorators: [withMargin, withProvider],
+  decorators: [
+    withMargin,
+    withProvider,
+    withThemeByDataAttribute({
+      themes: {
+        light: '',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+      attributeName: 'data-theme',
+    }),
+  ],
   parameters: {
     options: {
       storySort: {
@@ -41,7 +53,20 @@ const preview: Preview = {
     },
     chromatic: {
       disableSnapshot: true,
+      modes: {
+        light: allModes.light,
+        dark: allModes.dark,
+      },
     },
+    backgrounds: {
+      options: {
+        dark: { name: 'Dark', value: '#303232' },
+        light: { name: 'Light', value: '#fff' },
+      },
+    },
+  },
+  initialGlobals: {
+    backgrounds: { value: 'light' },
   },
   globalTypes: {
     locale: {
