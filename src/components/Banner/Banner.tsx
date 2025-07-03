@@ -1,9 +1,8 @@
-import React, { type MouseEventHandler, type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
 import styles from './Banner.module.scss';
 import { useId } from '../../hooks/useId';
-import { Button, type ButtonVariant } from '../Button';
 
 export type BannerVariant = 'brand' | 'neutral';
 
@@ -18,14 +17,6 @@ export type BannerProps = {
    */
   title: ReactNode;
   /**
-   * Content of the button
-   */
-  actionText: string;
-  /**
-   * Handler that is called when the button is clicked
-   */
-  onClick: MouseEventHandler<HTMLElement>;
-  /**
    * Illustration on the left side of the Banner.
    * Illustration will be centered vertically with margin on both left and right
    */
@@ -39,10 +30,9 @@ export type BannerProps = {
    */
   className?: string;
   /**
-   * The visual style of the button
-   * @default secondaryNeutral
+   * Action buttons to be displayed in the Banner
    */
-  buttonVariant?: ButtonVariant;
+  actions: ReactNode;
 };
 
 /**
@@ -52,11 +42,9 @@ export const Banner = ({
   variant = 'brand',
   title,
   children,
-  actionText,
   className,
   illustration,
-  onClick,
-  buttonVariant = 'secondaryNeutral',
+  actions,
 }: BannerProps) => {
   const titleId = useId();
   const descriptionId = useId();
@@ -76,7 +64,7 @@ export const Banner = ({
         <p className={styles.description} id={descriptionId}>
           {children}
         </p>
-        <Button variant={buttonVariant} text={actionText} onClick={onClick} />
+        <div className={styles.actions}>{actions}</div>
       </div>
     </aside>
   );

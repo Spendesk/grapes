@@ -3,6 +3,7 @@ import React from 'react';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Banner } from './';
+import { Button } from '../Button';
 
 describe('Banner component', () => {
   it('displays a title and a description', () => {
@@ -10,9 +11,14 @@ describe('Banner component', () => {
     render(
       <Banner
         title="Hello world"
-        onClick={vi.fn()}
-        actionText="Say Hello"
         illustration={<img src="" alt="nothing" />}
+        actions={
+          <Button
+            variant="secondaryNeutral"
+            onClick={vi.fn()}
+            text="Say Hello"
+          />
+        }
       >
         {randomDescription}
       </Banner>,
@@ -29,21 +35,37 @@ describe('Banner component', () => {
     ).toBeVisible();
   });
 
-  it('calls onClick when user click on the button', async () => {
-    const handleClick = vi.fn();
+  it('calls onClick when user click on actions', async () => {
+    const handleClick1 = vi.fn();
+    const handleClick2 = vi.fn();
     render(
       <Banner
         title="Hello world"
-        onClick={handleClick}
-        actionText="Say Hello"
         illustration={<img src="" alt="nothing" />}
+        actions={
+          <>
+            <Button
+              variant="secondaryNeutral"
+              onClick={handleClick1}
+              text="Say Hello"
+            />
+            <Button
+              variant="tertiaryNeutral"
+              onClick={handleClick2}
+              text="Say Goodbye"
+            />
+          </>
+        }
       >
         Sunt quia cum aliquid vitae.
       </Banner>,
     );
 
-    expect(handleClick).not.toHaveBeenCalled();
+    expect(handleClick1).not.toHaveBeenCalled();
     await userEvent.click(screen.getByRole('button', { name: 'Say Hello' }));
-    expect(handleClick).toHaveBeenCalled();
+    expect(handleClick1).toHaveBeenCalled();
+    expect(handleClick2).not.toHaveBeenCalled();
+    await userEvent.click(screen.getByRole('button', { name: 'Say Goodbye' }));
+    expect(handleClick2).toHaveBeenCalled();
   });
 });

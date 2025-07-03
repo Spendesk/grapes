@@ -3,6 +3,7 @@ import React from 'react';
 import illustration from './illustration.webp';
 
 import { Banner } from '../Banner';
+import { Button } from '../../Button';
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
 
 const meta: Meta<typeof Banner> = {
@@ -23,7 +24,13 @@ export const Brand: Story = {
   ],
   args: {
     title: 'Track your budgets',
-    actionText: 'Set up sub-budgets',
+    actions: (
+      <Button
+        variant="secondaryNeutral"
+        onClick={() => {}}
+        text="Set up sub-budgets"
+      />
+    ),
     illustration: <img src={illustration} alt="" height="100px" />,
     children:
       'You can now track sub-budgets based on expense categories. It will help you track your budgets with more granularity and precision.',
@@ -35,7 +42,13 @@ export const Neutral: Story = {
   args: {
     variant: 'neutral',
     title: 'Track your budget with Spendesk',
-    actionText: 'See my budget',
+    actions: (
+      <Button
+        variant="secondaryNeutral"
+        onClick={() => {}}
+        text="See my budget"
+      />
+    ),
     illustration: <img src={illustration} alt="" height="100px" />,
     children:
       'You can now experience accurate and efficient expense tracking. Try it out!',
@@ -47,11 +60,33 @@ export const WithPrimaryButton: Story = {
   args: {
     variant: 'neutral',
     title: 'Track your budget with Spendesk',
-    actionText: 'See my budget',
+    actions: (
+      <Button variant="primaryBrand" onClick={() => {}} text="See my budget" />
+    ),
     illustration: <img src={illustration} alt="" height="100px" />,
     children:
       'You can now experience accurate and efficient expense tracking. Try it out!',
-    buttonVariant: 'primaryBrand',
+  },
+};
+
+export const WithTwoButtons: Story = {
+  ...Brand,
+  args: {
+    variant: 'neutral',
+    title: 'Track your budget with Spendesk',
+    actions: (
+      <>
+        <Button onClick={() => {}} text="See my budget" />
+        <Button
+          variant="tertiaryNeutral"
+          onClick={() => {}}
+          text="Click here for more info"
+        />
+      </>
+    ),
+    illustration: <img src={illustration} alt="" height="100px" />,
+    children:
+      'You can now experience accurate and efficient expense tracking. Try it out!',
   },
 };
 
@@ -60,7 +95,13 @@ export const WithoutIllustration: Story = {
   args: {
     variant: 'neutral',
     title: 'Track your budget with Spendesk',
-    actionText: 'See my budget',
+    actions: (
+      <Button
+        variant="secondaryNeutral"
+        onClick={() => {}}
+        text="See my budget"
+      />
+    ),
     children:
       'You can now experience accurate and efficient expense tracking. Try it out!',
   },
