@@ -1,6 +1,7 @@
 @use '../../theme/exports/css-variables.scss';
 
 .highlightIcon {
+  color-scheme: light;
   display: inline-grid;
   place-items: center;
   border-radius: var(--_border-radius, var(--border-radius-12));

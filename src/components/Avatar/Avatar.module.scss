@@ -1,6 +1,7 @@
 @use '../../theme/exports/css-variables.scss';
 
 .avatar {
+  color-scheme: light;
   position: relative;
   display: inline-block;
   width: var(--_size);

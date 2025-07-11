@@ -97,6 +97,8 @@ $color-raspberry-100: #5c051b;
 $color-white-100: #ffffff;
 
 :root {
+  color-scheme: light;
+
   --color-background-primary-default: #{$color-white-100};
   --color-background-primary-hover: #{$color-carbon-3-80};
   --color-background-primary-pressed: rgb(232 232 232 / 80%);
@@ -169,15 +171,16 @@ $color-white-100: #ffffff;
   --color-border-warning: #{$color-apricot-70};
   --color-border-alert: #{$color-raspberry-70};
 
-  --border-radius-4: 4px;
-  --border-radius-8: 8px;
-  --border-radius-12: 12px;
-
   --color-backdrop: rgb(23 17 78 / 0.7);
   --color-skeleton: rgb(230 230 233 / 0.5);
   --color-gradient-magic:
     linear-gradient(white, white) padding-box,
     linear-gradient(90deg, #6f86ff, #e473ff 50%, #41d9cc 100%) border-box;
+
+  --border-radius-4: 4px;
+  --border-radius-8: 8px;
+  --border-radius-12: 12px;
+
   --focus-ring: 2px solid #{$color-purple-40};
   --focus-ring-offset: 2px;
 
@@ -262,76 +265,289 @@ $color-white-100: #ffffff;
   --popover-offset: var(--unit-8);
 }
 
+@supports (background-color: light-dark(#fff, #eee)) {
+  :root {
+    --color-background-primary-default: light-dark(
+      #{$color-white-100},
+      #{$color-carbon-90}
+    );
+    --color-background-primary-hover: light-dark(
+      #{$color-carbon-3-80},
+      #{$color-carbon-80}
+    );
+    --color-background-primary-pressed: light-dark(
+      gb(232 232 232 / 80%),
+      #{$color-carbon-70}
+    );
+    --color-background-primary-selected: light-dark(
+      #{$color-purple-10},
+      #{$color-purple-70}
+    );
+    --color-background-primary-disabled: light-dark(
+      #{$color-carbon-5},
+      #{$color-carbon-90}
+    );
+    --color-background-primary-readonly: light-dark(
+      #{$color-carbon-3},
+      #{$color-carbon-100}
+    );
+    --color-background-secondary-default: light-dark(
+      #{$color-carbon-3},
+      #{$color-carbon-80}
+    );
+    --color-background-secondary-hover: light-dark(
+      #{$color-carbon-3-80},
+      #{$color-carbon-70}
+    );
+    --color-background-tertiary-default: light-dark(
+      #{$color-carbon-10},
+      #{$color-carbon-90}
+    );
+    --color-background-tertiary-hover: light-dark(
+      rgb(239 239 239 / 15%),
+      #{$color-carbon-80}
+    );
+    --color-background-tertiary-pressed: light-dark(
+      rgb(232 232 232 / 25%),
+      #{$color-carbon-90}
+    );
+    --color-background-complementary-default: light-dark(
+      #{$color-carbon-100},
+      #{$color-white-100}
+    );
+    --color-background-complementary-hover: light-dark(
+      #{$color-carbon-3-80},
+      #{$color-carbon-80}
+    );
+    --color-background-complementary-pressed: light-dark(
+      #{$color-carbon-90},
+      #{$color-carbon-3-80}
+    );
+    --color-background-complementary-disabled: light-dark(
+      #{$color-carbon-100},
+      #{$color-carbon-5}
+    );
+    --color-background-primary-brand-default: light-dark(
+      #{$color-purple-70},
+      #{$color-purple-40}
+    );
+    --color-background-primary-brand-hover: light-dark(
+      #{$color-purple-80},
+      #{$color-purple-20}
+    );
+    --color-background-primary-brand-pressed: light-dark(
+      #{$color-purple-90},
+      #{$color-purple-10}
+    );
+    --color-background-primary-info-default: light-dark(
+      #{$color-blue-70},
+      #{$color-blue-40}
+    );
+    --color-background-primary-info-hover: light-dark(
+      #{$color-blue-80},
+      #{$color-blue-20}
+    );
+    --color-background-primary-info-pressed: light-dark(
+      #{$color-blue-90},
+      #{$color-blue-30}
+    );
+    --color-background-primary-success-default: light-dark(
+      #{$color-emerald-70},
+      #{$color-emerald-40}
+    );
+    --color-background-primary-success-hover: light-dark(
+      #{$color-emerald-80},
+      #{$color-emerald-20}
+    );
+    --color-background-primary-success-pressed: light-dark(
+      #{$color-emerald-90},
+      #{$color-emerald-30}
+    );
+    --color-background-primary-warning-default: light-dark(
+      #{$color-apricot-70},
+      #{$color-apricot-40}
+    );
+    --color-background-primary-warning-hover: light-dark(
+      #{$color-apricot-80},
+      #{$color-apricot-20}
+    );
+    --color-background-primary-warning-pressed: light-dark(
+      #{$color-apricot-90},
+      #{$color-apricot-30}
+    );
+    --color-background-primary-alert-default: light-dark(
+      #{$color-raspberry-70},
+      #{$color-raspberry-40}
+    );
+    --color-background-primary-alert-hover: light-dark(
+      #{$color-raspberry-80},
+      #{$color-raspberry-20}
+    );
+    --color-background-primary-alert-pressed: light-dark(
+      #{$color-raspberry-90},
+      #{$color-raspberry-30}
+    );
+    --color-background-secondary-brand-default: light-dark(
+      #{$color-purple-10},
+      #{$color-purple-30}
+    );
+    --color-background-secondary-brand-hover: light-dark(
+      rgb(243 240 255 / 80%),
+      #{$color-purple-10}
+    );
+    --color-background-secondary-brand-pressed: light-dark(
+      rgb(228 221 255 / 80%),
+      #{$color-purple-20}
+    );
+    --color-background-secondary-info-default: light-dark(
+      #{$color-blue-10},
+      #{$color-blue-30}
+    );
+    --color-background-secondary-info-hover: light-dark(
+      rgb(239 241 254 / 80%),
+      #{$color-blue-10}
+    );
+    --color-background-secondary-info-pressed: light-dark(
+      rgb(218 224 255 / 80%),
+      #{$color-blue-20}
+    );
+    --color-background-secondary-success-default: light-dark(
+      #{$color-emerald-10},
+      #{$color-emerald-30}
+    );
+    --color-background-secondary-success-hover: light-dark(
+      rgb(233 246 236 / 80%),
+      #{$color-emerald-10}
+    );
+    --color-background-secondary-success-pressed: light-dark(
+      rgb(199 234 206 / 80%),
+      #{$color-emerald-20}
+    );
+    --color-background-secondary-warning-default: light-dark(
+      #{$color-apricot-10},
+      #{$color-apricot-30}
+    );
+    --color-background-secondary-warning-hover: light-dark(
+      rgb(248 238 233 / 80%),
+      #{$color-apricot-10}
+    );
+    --color-background-secondary-warning-pressed: light-dark(
+      rgb(250 207 184 / 80%),
+      #{$color-apricot-20}
+    );
+    --color-background-secondary-alert-default: light-dark(
+      #{$color-raspberry-10},
+      #{$color-raspberry-30}
+    );
+    --color-background-secondary-alert-hover: light-dark(
+      rgb(250 240 243 / 80%),
+      #{$color-raspberry-10}
+    );
+    --color-background-secondary-alert-pressed: light-dark(
+      rgb(239 215 223 / 80%),
+      #{$color-raspberry-20}
+    );
+    --color-background-navigation-item-active: light-dark(
+      #{$color-carbon-7},
+      rgb(48 50 50 / 0.4)
+    );
+    --color-background-navigation-item-hover: light-dark(
+      #{$color-carbon-5},
+      rgb(48 50 50 / 0.7)
+    );
+
+    --color-content-primary: light-dark(
+      #{$color-carbon-100},
+      #{$color-white-100}
+    );
+    --color-content-secondary-bg-primary: light-dark(
+      #{$color-carbon-60},
+      #{$color-carbon-20}
+    );
+    --color-content-secondary-bg-secondary: light-dark(
+      #{$color-carbon-70},
+      #{$color-carbon-30}
+    );
+    --color-content-decorative-icon: light-dark(
+      #{$color-carbon-50},
+      #{$color-carbon-60}
+    );
+    --color-content-complementary: light-dark(
+      #{$color-white-100},
+      #{$color-carbon-100}
+    );
+    --color-content-selected: light-dark(
+      #{$color-purple-70},
+      #{$color-purple-20}
+    );
+    --color-content-disabled: light-dark(
+      #{$color-carbon-20},
+      #{$color-carbon-20}
+    );
+    --color-content-brand-default: light-dark(
+      #{$color-purple-70},
+      #{$color-purple-40}
+    );
+    --color-content-brand-hover: light-dark(
+      #{$color-purple-90},
+      #{$color-purple-10}
+    );
+    --color-content-brand-pressed: light-dark(
+      #{$color-purple-90},
+      #{$color-purple-20}
+    );
+    --color-content-info-default: light-dark(
+      #{$color-blue-70},
+      #{$color-blue-40}
+    );
+    --color-content-success-default: light-dark(
+      #{$color-emerald-70},
+      #{$color-emerald-40}
+    );
+    --color-content-warning-default: light-dark(
+      #{$color-apricot-70},
+      #{$color-apricot-40}
+    );
+    --color-content-alert-default: light-dark(
+      #{$color-raspberry-70},
+      #{$color-raspberry-40}
+    );
+
+    --color-border-default: light-dark(
+      #{$color-carbon-15},
+      #{$color-carbon-80}
+    );
+    --color-border-hover: light-dark(#{$color-purple-90}, #{$color-purple-20});
+    --color-border-selected: light-dark(
+      #{$color-purple-70},
+      #{$color-purple-40}
+    );
+    --color-border-complementary: light-dark(
+      #{$color-carbon-90},
+      #{$color-carbon-10}
+    );
+    --color-border-info: light-dark(#{$color-blue-70}, #{$color-blue-40});
+    --color-border-success: light-dark(
+      #{$color-emerald-70},
+      #{$color-emerald-40}
+    );
+    --color-border-warning: light-dark(
+      #{$color-apricot-70},
+      #{$color-apricot-40}
+    );
+    --color-border-alert: light-dark(
+      #{$color-raspberry-70},
+      #{$color-raspberry-40}
+    );
+
+    --color-backdrop: light-dark(rgb(23 17 78 / 0.7), rgb(25 27 27 / 0.6));
+  }
+}
+
 :root[data-theme='dark'] {
-  --color-background-primary-default: #{$color-carbon-90};
-  --color-background-primary-hover: #{$color-carbon-80};
-  --color-background-primary-pressed: #{$color-carbon-70};
-  --color-background-primary-selected: #{$color-purple-70};
-  --color-background-primary-disabled: #{$color-carbon-90};
-  --color-background-primary-readonly: #{$color-carbon-100};
-  --color-background-secondary-default: #{$color-carbon-100};
-  --color-background-secondary-hover: #{$color-carbon-80};
-  --color-background-tertiary-default: #{$color-carbon-90};
-  --color-background-tertiary-hover: #{$color-carbon-80};
-  --color-background-tertiary-pressed: #{$color-carbon-90};
-  --color-background-complementary-default: #{$color-white-100};
-  --color-background-complementary-hover: #{$color-carbon-3-80};
-  --color-background-complementary-pressed: #{$color-carbon-3-80};
-  --color-background-complementary-disabled: #{$color-carbon-5};
-  --color-background-primary-brand-default: #{$color-purple-40};
-  --color-background-primary-brand-hover: #{$color-purple-20};
-  --color-background-primary-brand-pressed: #{$color-purple-10};
-  --color-background-primary-info-default: #{$color-blue-40};
-  --color-background-primary-info-hover: #{$color-blue-20};
-  --color-background-primary-info-pressed: #{$color-blue-30};
-  --color-background-primary-success-default: #{$color-emerald-40};
-  --color-background-primary-success-hover: #{$color-emerald-20};
-  --color-background-primary-success-pressed: #{$color-emerald-30};
-  --color-background-primary-warning-default: #{$color-apricot-40};
-  --color-background-primary-warning-hover: #{$color-apricot-20};
-  --color-background-primary-warning-pressed: #{$color-apricot-30};
-  --color-background-primary-alert-default: #{$color-raspberry-40};
-  --color-background-primary-alert-hover: #{$color-raspberry-20};
-  --color-background-primary-alert-pressed: #{$color-raspberry-30};
-  --color-background-secondary-brand-default: #{$color-purple-30};
-  --color-background-secondary-brand-hover: #{$color-purple-10};
-  --color-background-secondary-brand-pressed: #{$color-purple-20};
-  --color-background-secondary-info-default: #{$color-blue-30};
-  --color-background-secondary-info-hover: #{$color-blue-10};
-  --color-background-secondary-info-pressed: #{$color-blue-20};
-  --color-background-secondary-success-default: #{$color-emerald-30};
-  --color-background-secondary-success-hover: #{$color-emerald-10};
-  --color-background-secondary-success-pressed: #{$color-emerald-20};
-  --color-background-secondary-warning-default: #{$color-apricot-30};
-  --color-background-secondary-warning-hover: #{$color-apricot-10};
-  --color-background-secondary-warning-pressed: #{$color-apricot-20};
-  --color-background-secondary-alert-default: #{$color-raspberry-30};
-  --color-background-secondary-alert-hover: #{$color-raspberry-10};
-  --color-background-secondary-alert-pressed: #{$color-raspberry-20};
-  --color-background-navigation-item-active: rgb(48 50 50 / 0.4);
-  --color-background-navigation-item-hover: rgb(48 50 50 / 0.7);
+  color-scheme: dark;
+}
 
-  --color-content-primary: #{$color-white-100};
-  --color-content-secondary-bg-primary: #{$color-carbon-20};
-  --color-content-secondary-bg-secondary: #{$color-carbon-30};
-  --color-content-decorative-icon: #{$color-carbon-60};
-  --color-content-complementary: #{$color-carbon-100};
-  --color-content-selected: #{$color-purple-20};
-  --color-content-disabled: #{$color-carbon-20};
-  --color-content-brand-default: #{$color-purple-40};
-  --color-content-brand-hover: #{$color-purple-10};
-  --color-content-brand-pressed: #{$color-purple-20};
-  --color-content-info-default: #{$color-blue-40};
-  --color-content-success-default: #{$color-emerald-40};
-  --color-content-warning-default: #{$color-apricot-40};
-  --color-content-alert-default: #{$color-raspberry-40};
-
-  --color-border-default: #{$color-carbon-80};
-  --color-border-hover: #{$color-purple-90};
-  --color-border-selected: #{$color-purple-40};
-  --color-border-complementary: #{$color-carbon-10};
-  --color-border-info: #{$color-blue-40};
-  --color-border-success: #{$color-emerald-40};
-  --color-border-warning: #{$color-apricot-40};
-  --color-border-alert: #{$color-raspberry-40};
+:root[data-theme='system'] {
+  color-scheme: light dark;
 }
