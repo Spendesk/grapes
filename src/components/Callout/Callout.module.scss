@@ -10,24 +10,36 @@
 
 .callout[data-variant='alert'] {
   background-color: var(--color-background-secondary-alert-default);
+}
+.callout[data-variant='alert'] :is(.calloutTitle, .icon) {
   color: var(--color-content-alert-default);
 }
 
 .callout[data-variant='info'] {
   background-color: var(--color-background-secondary-info-default);
+}
+.callout[data-variant='info'] :is(.calloutTitle, .icon) {
   color: var(--color-content-info-default);
 }
 
 .callout[data-variant='success'] {
   background-color: var(--color-background-secondary-success-default);
+}
+.callout[data-variant='success'] :is(.calloutTitle, .icon) {
   color: var(--color-content-success-default);
 }
 
 .callout[data-variant='warning'] {
   background: var(--color-background-secondary-warning-default);
+}
+.callout[data-variant='warning'] :is(.calloutTitle, .icon) {
   color: var(--color-content-warning-default);
 }
 
+.calloutTitle,
+.icon {
+  color-scheme: light;
+}
 .calloutTitle {
   font: var(--title-m);
 }

@@ -71,7 +71,11 @@ export const Callout = ({
       className={classNames(styles.callout, className)}
       {...rest}
     >
-      <Icon name={iconName ?? getIcon(variant)} aria-hidden="true" />
+      <Icon
+        name={iconName ?? getIcon(variant)}
+        aria-hidden="true"
+        className={styles.icon}
+      />
       <span id={id} className={styles.calloutTitle}>
         {title}
       </span>
