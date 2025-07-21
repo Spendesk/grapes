@@ -48,7 +48,7 @@
   "dependencies": {
     "@floating-ui/react": "^0.27.13",
     "cleave.js": "^1.6.0",
-    "downshift": "^9.0.9"
+    "downshift": "^9.0.10"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^9.0.17",
