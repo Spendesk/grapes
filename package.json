@@ -46,6 +46,7 @@
     ]
   },
   "dependencies": {
+    "@figma/code-connect": "^1.3.4",
     "@floating-ui/react": "^0.27.13",
     "cleave.js": "^1.6.0",
     "downshift": "^9.0.9"
