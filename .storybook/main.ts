@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
   staticDirs: ['./assets'],
@@ -17,6 +16,8 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
   async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+
     return mergeConfig(config, {
       define: { 'process.env.IS_CHROMATIC': process.env.IS_CHROMATIC },
     });
