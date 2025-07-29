@@ -46,7 +46,7 @@
     ]
   },
   "dependencies": {
-    "@floating-ui/react": "^0.27.13",
+    "@floating-ui/react": "^0.27.14",
     "cleave.js": "^1.6.0",
     "downshift": "^9.0.10"
   },
