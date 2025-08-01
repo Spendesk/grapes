@@ -8,6 +8,7 @@ import { ArrowPathIcon } from './arrow-path.tsx';
 import { ArrowRightRectangleIcon } from './arrow-right-rectangle.tsx';
 import { ArrowRightIcon } from './arrow-right.tsx';
 import { ArrowSplitIcon } from './arrow-split.tsx';
+import { ArrowMergeIcon } from './arrow-merge.tsx';
 import { ArrowTopRightSquareIcon } from './arrow-top-right-square.tsx';
 import { ArrowTurnRightIcon } from './arrow-turn-right.tsx';
 import { ArrowUpIcon } from './arrow-up.tsx';
@@ -166,6 +167,7 @@ export const iconMap = {
   'arrow-right-rectangle': ArrowRightRectangleIcon,
   'arrow-right': ArrowRightIcon,
   'arrow-split': ArrowSplitIcon,
+  'arrow-merge': ArrowMergeIcon,
   'arrow-top-right-square': ArrowTopRightSquareIcon,
   'arrow-turn-right': ArrowTurnRightIcon,
   'arrow-up': ArrowUpIcon,
