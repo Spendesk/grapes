@@ -7,6 +7,8 @@ import { Button } from '../../Button';
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
 
 import styles from './ListBox.module.scss';
+import { Select } from '../../Select';
+import { action } from 'storybook/actions';
 
 type Data = {
   id: string;
@@ -319,4 +321,89 @@ export const Snapshot: Story = {
       meta={meta}
     />
   ),
+};
+
+const costCenters = [
+  { key: 'marketing', label: 'Marketing' },
+  { key: 'legal', label: 'Legal' },
+  { key: 'office', label: 'Office' },
+  { key: 'platform', label: 'Platform' },
+  { key: 'finance', label: 'Finance' },
+  { key: 'product', label: 'Product' },
+  { key: 'engineering', label: 'Engineering' },
+];
+
+export const WithDropdownInside: Story = {
+  render: (props) => {
+    return <ListBox {...props} aria-label="Employees" />;
+  },
+  args: {
+    options: [
+      {
+        id: 'michael',
+        name: 'Michael Murphy',
+        birthDate: '1979-09-19',
+        avatar: 'images/aurelien.webp',
+        description: 'Growth team',
+      },
+      {
+        id: 'nayden',
+        name: 'Nayden Lennart',
+        birthDate: '1980-03-01',
+        avatar: 'images/bertrand.webp',
+        description: 'Design team',
+      },
+      {
+        id: 'nicolas',
+        name: 'Nicolas Harvey',
+        birthDate: '1980-06-05',
+        avatar: 'images/mahedine.webp',
+        description: 'Growth team',
+      },
+      {
+        id: 'lewis',
+        name: 'Lewis Barker',
+        birthDate: '1980-07-30',
+        avatar: 'images/jean.webp',
+        description: 'Design team',
+      },
+      {
+        id: 'george',
+        name: 'George Gray',
+        birthDate: '1980-07-31',
+        avatar: 'images/laurent.webp',
+        description: 'Design team',
+      },
+      {
+        id: 'laura',
+        name: 'Laura Lagarde',
+        birthDate: '1981-02-13',
+        avatar: 'images/chloe.webp',
+        description: 'Marketing team',
+      },
+    ],
+    getOptionId: (option) => option.id,
+    children: (option, titleId) => {
+      return (
+        <div className={styles.grid}>
+          <Avatar variant="circle" src={option.avatar} text={option.name} />
+          <div className={styles.centeredJustifyBetween}>
+            <span id={titleId}>{option.name}</span>
+            <div
+              style={{
+                padding: '16px',
+                minWidth: '400px',
+              }}
+            >
+              <Select
+                value={undefined}
+                onSelect={action('onSelect')}
+                options={costCenters}
+              />
+            </div>
+          </div>
+        </div>
+      );
+    },
+  },
 };

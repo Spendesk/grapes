@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 
 import { Button } from '../../Button';
 import { Modal } from '../Modal';
+import { Select } from '../../Select';
 
 const meta: Meta<typeof Modal> = {
   title: 'Feedback/Modal',
@@ -102,4 +103,72 @@ export const WithoutButtons: Story = {
   },
   play: Default.play,
   render: Default.render,
+};
+
+const costCenters = [
+  { key: 'marketing', label: 'Marketing' },
+  { key: 'legal', label: 'Legal' },
+  { key: 'office', label: 'Office' },
+  { key: 'platform', label: 'Platform' },
+  { key: 'finance', label: 'Finance' },
+  { key: 'product', label: 'Product' },
+  { key: 'engineering', label: 'Engineering' },
+];
+
+export const WithDropdownInside: Story = {
+  args: {
+    iconName: 'sparkle',
+    iconVariant: 'info',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button', {
+      name: 'Open the modal',
+    });
+    await userEvent.click(openButton);
+  },
+  render: (args) => {
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+      <>
+        <Button
+          variant="primaryBrand"
+          text="Open the modal"
+          onClick={() => setIsOpen(true)}
+        />
+        <Modal
+          {...args}
+          isOpen={isOpen}
+          onClose={args.onClose ? () => setIsOpen(false) : undefined}
+          portalContainer={
+            document.getElementById('storybook-root') ?? undefined
+          }
+          actions={
+            args.actions === null ? undefined : (
+              <>
+                <Button
+                  variant="primaryBrand"
+                  text="Ok"
+                  onClick={() => setIsOpen(false)}
+                />
+              </>
+            )
+          }
+        >
+          <div
+            style={{
+              padding: '16px',
+              minWidth: '400px',
+            }}
+          >
+            <Select
+              value={undefined}
+              onSelect={action('onSelect')}
+              options={costCenters}
+            />
+          </div>
+        </Modal>
+      </>
+    );
+  },
 };
