@@ -96,7 +96,18 @@ npm run typecheck
 
 ### Chromatic
 
-We use [Chromatic](https://www.chromatic.com) to check for visual bugs. Only stories named `Snapshot` are submitted to Chromatic for review and test. However, for components that require interaction, every story is submitted to Chromatic. Examples include, but are not limited to: Autocomplete, Modal, PageModal.
+We use [Chromatic](https://www.chromatic.com) to check for visual bugs. In order to significantly reduce the number of screenshots taken, only one story per component named `Snapshot` is taken by Chromatic.
+
+This special story contain every variant and state of a specific component.
+
+For instance, if a component have 10 variants and 10 corresponding stories, everything is consolidate into a single story `Snapshot` in order to only take 1 screenshot instead of 10 separate screenshot for each variant.
+
+The code for this special story `Snapshot` can be found here: https://github.com/Spendesk/grapes/blob/master/src/test-utils/SnapshotsContainer.tsx.
+
+However, this solution doesn't work this [interative stories](https://storybook.js.org/docs/writing-stories/play-function). In some cases, user interaction is required before a screenshot can be taken, such as selecting an option from a dropdown menu or opening a modal. For these types of stories, we kept the traditional approach of taking a screenshot per story.
+
+Please note that Grapes is tested against both light and dark modes. Consequently, for every screenshot taken, two screenshots are actually generated: one for light mode and one for dark mode."
+This setup is automated and configured within the [Storybook preview file](https://github.com/Spendesk/grapes/blob/258622afaa064bbb6a4fd5a40fc4bb310f98c54b/.storybook/preview.tsx#L56-L59).
 
 ### Storybook
 
