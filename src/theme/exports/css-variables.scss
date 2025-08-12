@@ -276,7 +276,7 @@ $color-white-100: #ffffff;
       #{$color-carbon-80}
     );
     --color-background-primary-pressed: light-dark(
-      gb(232 232 232 / 80%),
+      rgb(232 232 232 / 80%),
       #{$color-carbon-70}
     );
     --color-background-primary-selected: light-dark(
