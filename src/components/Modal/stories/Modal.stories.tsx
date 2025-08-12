@@ -126,6 +126,10 @@ export const WithDropdownInside: Story = {
       name: 'Open the modal',
     });
     await userEvent.click(openButton);
+    const dropdown = canvas.getByRole('button', {
+      name: 'Show options',
+    });
+    await userEvent.click(dropdown);
   },
   render: (args) => {
     const [isOpen, setIsOpen] = useState(false);
