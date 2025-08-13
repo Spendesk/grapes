@@ -13,6 +13,12 @@
   justify-content: space-between;
 }
 
+.centeredJustifyBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header {
   font: var(--title-m);
   color: var(--color-content-primary);
