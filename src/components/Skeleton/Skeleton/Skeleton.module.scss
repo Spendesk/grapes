@@ -16,6 +16,7 @@ $background-width: 240px;
 }
 
 :where(.skeleton) {
+  color-scheme: light;
   display: inline-block;
   width: var(--width-skeleton);
   height: var(--height-skeleton);

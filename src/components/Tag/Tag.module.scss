@@ -1,6 +1,7 @@
 @use '../../theme/exports/css-variables.scss';
 
 .tag {
+  color-scheme: light;
   font: var(--body-m);
   display: inline-block;
   height: var(--unit-24);
