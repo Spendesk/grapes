@@ -1,3 +1,5 @@
+@use '../../theme/exports/css-variables.scss';
+
 .callout {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -46,6 +48,6 @@
 
 .calloutContent {
   font: var(--body-m);
-  color: var(--color-content-primary);
+  color: css-variables.$color-carbon-100;
   grid-column-start: 2;
 }

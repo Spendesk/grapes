@@ -174,7 +174,11 @@ $color-white-100: #ffffff;
   --color-backdrop: rgb(23 17 78 / 0.7);
   --color-skeleton: rgb(230 230 233 / 0.5);
   --color-gradient-magic:
-    linear-gradient(white, white) padding-box,
+    linear-gradient(
+        var(--color-background-primary-default),
+        var(--color-background-primary-default)
+      )
+      padding-box,
     linear-gradient(90deg, #6f86ff, #e473ff 50%, #41d9cc 100%) border-box;
 
   --border-radius-4: 4px;
@@ -478,7 +482,7 @@ $color-white-100: #ffffff;
     );
     --color-content-selected: light-dark(
       #{$color-purple-70},
-      #{$color-purple-20}
+      #{$color-purple-30}
     );
     --color-content-disabled: light-dark(
       #{$color-carbon-20},

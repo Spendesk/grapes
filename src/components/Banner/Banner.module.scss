@@ -19,6 +19,10 @@
   gap: var(--unit-8);
 }
 
+.banner[data-variant='brand'] :is(.title, .description) {
+  color-scheme: light;
+}
+
 .title {
   font: var(--title-l);
   color: var(--color-content-primary);

@@ -10,6 +10,7 @@
   --_block-size-separator: var(--unit-24);
   --_gap: var(--unit-8);
 
+  color-scheme: light;
   display: inline-flex;
   border-radius: var(--border-radius-12);
   padding: var(--unit-8);
