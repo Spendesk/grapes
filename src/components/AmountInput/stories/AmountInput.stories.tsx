@@ -42,8 +42,8 @@ export const Default: Story = {
           <AmountInput
             {...args}
             value={selectedValue}
-            onChange={(event) => {
-              setSelectedValue(event.target.valueAsNumber);
+            onChange={(_, newValue) => {
+              setSelectedValue(newValue);
             }}
           />
         </FormField>
@@ -89,8 +89,8 @@ export const InADisabledFieldset: Story = {
             <AmountInput
               {...args}
               value={selectedValue}
-              onChange={(event) => {
-                setSelectedValue(event.target.valueAsNumber);
+              onChange={(_, newValue) => {
+                setSelectedValue(newValue);
               }}
             />
           </FormField>
@@ -120,8 +120,8 @@ export const EditableCurrency: Story = {
         <FormField label="Amount input">
           <AmountInput
             {...args}
-            onChange={(event) => {
-              setAmount(event.target.valueAsNumber);
+            onChange={(_, newValue) => {
+              setAmount(newValue);
             }}
             value={amount}
             currency={currency}
