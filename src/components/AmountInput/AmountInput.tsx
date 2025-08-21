@@ -67,7 +67,7 @@ export type AmountInputProps = {
    */
   value: number | null;
   /**
-   * Handler that is called when the value changes.
+   * Handler that is called when the value changes. When reading the new value, it is recommended to use the 'newValue' parameter rather than event.target.valueAsNumber to ensure the value is correctly formatted.
    */
   onChange: (event: ChangeEvent<HTMLInputElement>, newValue: number) => void;
   /**
