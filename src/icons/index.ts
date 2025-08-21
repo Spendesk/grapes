@@ -5,6 +5,7 @@ import { ArrowDownIcon } from './arrow-down.tsx';
 import { ArrowLeftRightIcon } from './arrow-left-right.tsx';
 import { ArrowLeftIcon } from './arrow-left.tsx';
 import { ArrowPathIcon } from './arrow-path.tsx';
+import { ArrowPointingOutIcon } from './arrow-pointing-out.tsx';
 import { ArrowRightRectangleIcon } from './arrow-right-rectangle.tsx';
 import { ArrowRightIcon } from './arrow-right.tsx';
 import { ArrowSplitIcon } from './arrow-split.tsx';
@@ -72,6 +73,7 @@ import { GearIcon } from './gear.tsx';
 import { GlobeEuAfricaIcon } from './globe-eu-africa.tsx';
 import { ArrowUturnRightTopIcon } from './arrow-uturn-right-top.tsx';
 import { DesktopIcon } from './desktop.tsx';
+import { DocumentUturnLeftTopIcon } from './document-uturn-left-top.tsx';
 import { DocumentIcon } from './document.tsx';
 import { DocumentDuplicateIcon } from './document-duplicate.tsx';
 import { DocumentPlusIcon } from './document-plus.tsx';
@@ -164,6 +166,7 @@ export const iconMap = {
   'arrow-left-right': ArrowLeftRightIcon,
   'arrow-left': ArrowLeftIcon,
   'arrow-path': ArrowPathIcon,
+  'arrow-pointing-out': ArrowPointingOutIcon,
   'arrow-right-rectangle': ArrowRightRectangleIcon,
   'arrow-right': ArrowRightIcon,
   'arrow-split': ArrowSplitIcon,
@@ -230,6 +233,7 @@ export const iconMap = {
   cross: CrossIcon,
   cube: CubeIcon,
   desktop: DesktopIcon,
+  'document-uturn-left-top': DocumentUturnLeftTopIcon,
   document: DocumentIcon,
   'document-duplicate': DocumentDuplicateIcon,
   'document-plus': DocumentPlusIcon,
