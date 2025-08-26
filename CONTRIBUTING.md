@@ -100,7 +100,7 @@ We use [Chromatic](https://www.chromatic.com) to check for visual bugs. In order
 
 This special story contains every variant and state of a specific component.
 
-For instance, if a component have 10 variants and 10 corresponding stories, everything is consolidate into a single story `Snapshot` in order to only take 1 screenshot instead of 10 separate screenshot for each variant.
+For instance, if a component have 10 variants and 10 corresponding stories, everything is consolidated into a single story `Snapshot` in order to only take 1 screenshot instead of 10 separate screenshots for each variant.
 
 The code for this special story `Snapshot` can be found here: https://github.com/Spendesk/grapes/blob/master/src/test-utils/SnapshotsContainer.tsx.
 
