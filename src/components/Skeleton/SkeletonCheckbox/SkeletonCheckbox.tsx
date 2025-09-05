@@ -13,8 +13,8 @@ export const SkeletonCheckbox = ({ className }: SkeletonCheckboxProps) => {
   return (
     <Skeleton
       className={className}
-      width="var(--unit-16)"
-      height="var(--unit-16)"
+      width="var(--grapes-unit-16)"
+      height="var(--grapes-unit-16)"
     />
   );
 };

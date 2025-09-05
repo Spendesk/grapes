@@ -10,7 +10,7 @@
 
 .skeletonTableHeaderCell {
   @extend %table-header-cell;
-  border-bottom: $table-border-width solid var(--color-border-default);
+  border-bottom: $table-border-width solid var(--grapes-color-border-default);
 
   &.borderedSkeletonTableHeaderCell:not(:last-child) {
     @extend %table-cell-separator;

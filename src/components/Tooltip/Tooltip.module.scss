@@ -1,11 +1,11 @@
 .tooltipContent {
   color-scheme: light;
-  font: var(--body-m);
-  z-index: var(--z-index-tooltip);
-  padding: var(--unit-8);
-  box-shadow: var(--elevation-l);
-  border-radius: var(--border-radius-8);
-  background-color: var(--color-background-complementary-default);
-  color: var(--color-content-complementary);
+  font: var(--grapes-body-m);
+  z-index: var(--grapes-z-index-tooltip);
+  padding: var(--grapes-unit-8);
+  box-shadow: var(--grapes-elevation-l);
+  border-radius: var(--grapes-border-radius-8);
+  background-color: var(--grapes-color-background-complementary-default);
+  color: var(--grapes-color-content-complementary);
   text-align: center;
 }

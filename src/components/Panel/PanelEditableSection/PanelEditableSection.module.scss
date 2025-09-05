@@ -1,9 +1,9 @@
 @use '../../../theme/placeholders';
 
 .panelEditableSectionTitle {
-  font: var(--title-l);
-  margin-bottom: var(--unit-16);
-  color: var(--color-content-primary);
+  font: var(--grapes-title-l);
+  margin-bottom: var(--grapes-unit-16);
+  color: var(--grapes-color-content-primary);
   display: flex;
   justify-content: space-between;
 }
@@ -15,6 +15,6 @@
 .panelEditableSectionActions {
   display: flex;
   justify-content: space-between;
-  margin-top: var(--unit-24);
-  gap: var(--unit-8);
+  margin-top: var(--grapes-unit-24);
+  gap: var(--grapes-unit-8);
 }

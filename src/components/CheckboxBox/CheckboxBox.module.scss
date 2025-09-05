@@ -1,25 +1,25 @@
 .checkboxBox {
   width: 100%;
-  padding: var(--unit-16);
-  background-color: var(--color-background-primary-default);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--border-radius-8);
+  padding: var(--grapes-unit-16);
+  background-color: var(--grapes-color-background-primary-default);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-8);
   cursor: pointer;
-  transition: border var(--transition-duration)
-    var(--transition-timing-function);
+  transition: border var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
   display: grid;
-  grid-template-columns: var(--unit-16) auto;
+  grid-template-columns: var(--grapes-unit-16) auto;
   align-items: center;
   align-content: start;
-  gap: var(--unit-16);
+  gap: var(--grapes-unit-16);
   box-sizing: border-box;
   text-align: left;
-  --_color-description: var(--color-content-secondary-bg-primary);
+  --_color-description: var(--grapes-color-content-secondary-bg-primary);
 
   &:has(:focus-visible) {
-    background-color: var(--color-background-primary-default);
-    outline: var(--focus-ring);
-    outline-offset: var(--focus-ring-offset);
+    background-color: var(--grapes-color-background-primary-default);
+    outline: var(--grapes-focus-ring);
+    outline-offset: var(--grapes-focus-ring-offset);
 
     input[type='checkbox'] {
       outline: 0;
@@ -27,14 +27,14 @@
   }
 
   &:hover {
-    background-color: var(--color-background-primary-hover);
-    border: 1px solid var(--color-border-hover);
-    --_color-description: var(--color-content-secondary-bg-secondary);
+    background-color: var(--grapes-color-background-primary-hover);
+    border: 1px solid var(--grapes-color-border-hover);
+    --_color-description: var(--grapes-color-content-secondary-bg-secondary);
   }
 }
 
 .checkboxBoxWithIcon {
-  grid-template-columns: var(--unit-32) auto var(--unit-16);
+  grid-template-columns: var(--grapes-unit-32) auto var(--grapes-unit-16);
 
   .checkboxInput {
     order: 3;
@@ -42,27 +42,27 @@
 }
 
 .checkboxBox:has(:checked) {
-  background-color: var(--color-background-primary-selected);
-  border: 1px solid var(--color-border-selected);
-  --_color-description: var(--color-content-secondary-bg-secondary);
+  background-color: var(--grapes-color-background-primary-selected);
+  border: 1px solid var(--grapes-color-border-selected);
+  --_color-description: var(--grapes-color-content-secondary-bg-secondary);
 }
 
 .checkboxBox:has(:disabled),
 .checkboxBox:has(:disabled):is(:hover, :focus-within) {
   cursor: not-allowed;
-  background-color: var(--color-background-primary-disabled);
-  border: 1px solid var(--color-border-default);
-  --_color-description: var(--color-content-secondary-bg-secondary);
+  background-color: var(--grapes-color-background-primary-disabled);
+  border: 1px solid var(--grapes-color-border-default);
+  --_color-description: var(--grapes-color-content-secondary-bg-secondary);
   outline: none;
 }
 
 .label {
-  font: var(--title-m);
-  color: var(--color-content-primary);
+  font: var(--grapes-title-m);
+  color: var(--grapes-color-content-primary);
 }
 
 .description {
-  font: var(--body-s);
+  font: var(--grapes-body-s);
   color: var(--_color-description);
-  margin-top: var(--unit-8);
+  margin-top: var(--grapes-unit-8);
 }

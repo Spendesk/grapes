@@ -8,8 +8,10 @@ export default () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="p-48 bg-neutral-lightest">
-      <div></div>
+    <div className="p-48 bg-background-secondary-default">
+      <div className="heading-xl h-48 w-48 text-content-complementary box">
+        Dr_Plop
+      </div>
       <Button
         variant="primaryBrand"
         text="Click me!"

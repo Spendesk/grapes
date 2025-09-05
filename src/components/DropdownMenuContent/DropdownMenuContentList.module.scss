@@ -1,11 +1,11 @@
 @use '../../theme/placeholders';
 
 .dropdownItemGroup {
-  font: var(--title-s);
-  color: var(--color-content-secondary-bg-secondary);
-  padding: var(--unit-4) var(--unit-8);
-  background-color: var(--color-background-secondary-default);
+  font: var(--grapes-title-s);
+  color: var(--grapes-color-content-secondary-bg-secondary);
+  padding: var(--grapes-unit-4) var(--grapes-unit-8);
+  background-color: var(--grapes-color-background-secondary-default);
   pointer-events: none;
   text-transform: uppercase;
-  min-height: var(--unit-32);
+  min-height: var(--grapes-unit-32);
 }

@@ -1,7 +1,8 @@
 .datePickerInputIcon {
-  transition: color var(--transition-duration) var(--transition-timing-function);
-  margin: 0 var(--unit-8);
-  color: var(--color-content-decorative-icon);
+  transition: color var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
+  margin: 0 var(--grapes-unit-8);
+  color: var(--grapes-color-content-decorative-icon);
 }
 
 .toggleCalendar {
