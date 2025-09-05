@@ -2,7 +2,7 @@
 
 .timelineItem {
   display: flex;
-  margin-bottom: var(--unit-16);
+  margin-bottom: var(--grapes-unit-16);
 }
 
 .contentGrow {
@@ -10,13 +10,13 @@
 }
 
 .timelineItemContent {
-  margin-left: var(--unit-16);
+  margin-left: var(--grapes-unit-16);
 }
 
 .timelineItemDate {
-  font: var(--body-s);
-  color: var(--color-content-secondary-bg-primary);
-  margin-bottom: var(--unit-8);
+  font: var(--grapes-body-s);
+  color: var(--grapes-color-content-secondary-bg-primary);
+  margin-bottom: var(--grapes-unit-8);
 
   &:first-letter {
     text-transform: capitalize;
@@ -24,15 +24,15 @@
 }
 
 .timelineItemEvent {
-  font: var(--body-m);
-  color: var(--color-content-primary);
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-primary);
 }
 
 .timelineItemSeparator {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: var(--unit-12);
+  gap: var(--grapes-unit-12);
   padding-top: 2px;
 }
 
@@ -40,13 +40,13 @@
   content: '';
   width: 1px;
   flex-grow: 1;
-  background-color: var(--color-border-default);
+  background-color: var(--grapes-color-border-default);
 }
 
 .timelineItemDot {
-  width: var(--unit-12);
-  height: var(--unit-12);
-  border: 1px solid var(--color-border-default);
+  width: var(--grapes-unit-12);
+  height: var(--grapes-unit-12);
+  border: 1px solid var(--grapes-color-border-default);
   border-radius: 50%;
   box-sizing: border-box;
 }

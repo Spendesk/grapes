@@ -1,187 +1,207 @@
 @theme inline {
   --*: initial;
 
-  --spacing: var(--unit-4);
+  --spacing: var(--grapes-unit-4);
 
-  --radius-4: var(--border-radius-4);
-  --radius-8: var(--border-radius-8);
-  --radius-12: var(--border-radius-12);
+  --radius-4: var(--grapes-border-radius-4);
+  --radius-8: var(--grapes-border-radius-8);
+  --radius-12: var(--grapes-border-radius-12);
 
-  --drop-shadow-xs: var(--elevation-xs);
-  --drop-shadow-s: var(--elevation-s);
-  --drop-shadow-m: var(--elevation-m);
-  --drop-shadow-l: var(--elevation-l);
-  --drop-shadow-xl: var(--elevation-xl);
+  --drop-shadow-xs: var(--grapes-elevation-xs);
+  --drop-shadow-s: var(--grapes-elevation-s);
+  --drop-shadow-m: var(--grapes-elevation-m);
+  --drop-shadow-l: var(--grapes-elevation-l);
+  --drop-shadow-xl: var(--grapes-elevation-xl);
 
-  --container-md: var(--unit-container-md);
-  --container-lg: var(--unit-container-lg);
+  --container-md: var(--grapes-unit-container-md);
+  --container-lg: var(--grapes-unit-container-lg);
 
-  --color-background-primary-default: var(--color-background-primary-default);
-  --color-background-primary-hover: var(--color-background-primary-hover);
-  --color-background-primary-pressed: var(--color-background-primary-pressed);
-  --color-background-primary-selected: var(--color-background-primary-selected);
-  --color-background-primary-disabled: var(--color-background-primary-disabled);
-  --color-background-primary-readonly: var(--color-background-primary-readonly);
-  --color-background-secondary-default: var(
-    --color-background-secondary-default
+  --color-background-primary-default: var(
+    --grapes-color-background-primary-default
   );
-  --color-background-secondary-hover: var(--color-background-secondary-hover);
-  --color-background-tertiary-default: var(--color-background-tertiary-default);
-  --color-background-tertiary-hover: var(--color-background-tertiary-hover);
-  --color-background-tertiary-pressed: var(--color-background-tertiary-pressed);
+  --color-background-primary-hover: var(
+    --grapes-color-background-primary-hover
+  );
+  --color-background-primary-pressed: var(
+    --grapes-color-background-primary-pressed
+  );
+  --color-background-primary-selected: var(
+    --grapes-color-background-primary-selected
+  );
+  --color-background-primary-disabled: var(
+    --grapes-color-background-primary-disabled
+  );
+  --color-background-primary-readonly: var(
+    --grapes-color-background-primary-readonly
+  );
+  --color-background-secondary-default: var(
+    --grapes-color-background-secondary-default
+  );
+  --color-background-secondary-hover: var(
+    --grapes-color-background-secondary-hover
+  );
+  --color-background-tertiary-default: var(
+    --grapes-color-background-tertiary-default
+  );
+  --color-background-tertiary-hover: var(
+    --grapes-color-background-tertiary-hover
+  );
+  --color-background-tertiary-pressed: var(
+    --grapes-color-background-tertiary-pressed
+  );
   --color-background-complementary-default: var(
-    --color-background-complementary-default
+    --grapes-color-background-complementary-default
   );
   --color-background-complementary-hover: var(
-    --color-background-complementary-hover
+    --grapes-color-background-complementary-hover
   );
   --color-background-complementary-pressed: var(
-    --color-background-complementary-pressed
+    --grapes-color-background-complementary-pressed
   );
   --color-background-complementary-disabled: var(
-    --color-background-complementary-disabled
+    --grapes-color-background-complementary-disabled
   );
   --color-background-primary-brand-default: var(
     --color-background-primary-brand-default
   );
   --color-background-primary-brand-hover: var(
-    --color-background-primary-brand-hover
+    --grapes-color-background-primary-brand-hover
   );
   --color-background-primary-brand-pressed: var(
-    --color-background-primary-brand-pressed
+    --grapes-color-background-primary-brand-pressed
   );
   --color-background-primary-info-default: var(
-    --color-background-primary-info-default
+    --grapes-color-background-primary-info-default
   );
   --color-background-primary-info-hover: var(
-    --color-background-primary-info-hover
+    --grapes-color-background-primary-info-hover
   );
   --color-background-primary-info-pressed: var(
-    --color-background-primary-info-pressed
+    --grapes-color-background-primary-info-pressed
   );
   --color-background-primary-success-default: var(
-    --color-background-primary-success-default
+    --grapes-color-background-primary-success-default
   );
   --color-background-primary-success-hover: var(
-    --color-background-primary-success-hover
+    --grapes-color-background-primary-success-hover
   );
   --color-background-primary-success-pressed: var(
-    --color-background-primary-success-pressed
+    --grapes-color-background-primary-success-pressed
   );
   --color-background-primary-warning-default: var(
-    --color-background-primary-warning-default
+    --grapes-color-background-primary-warning-default
   );
   --color-background-primary-warning-hover: var(
-    --color-background-primary-warning-hover
+    --grapes-color-background-primary-warning-hover
   );
   --color-background-primary-warning-pressed: var(
-    --color-background-primary-warning-pressed
+    --grapes-color-background-primary-warning-pressed
   );
   --color-background-primary-alert-default: var(
-    --color-background-primary-alert-default
+    --grapes-color-background-primary-alert-default
   );
   --color-background-primary-alert-hover: var(
-    --color-background-primary-alert-hover
+    --grapes-color-background-primary-alert-hover
   );
   --color-background-primary-alert-pressed: var(
     --color-background-primary-alert-pressed
   );
   --color-background-secondary-brand-default: var(
-    --color-background-secondary-brand-default
+    --grapes-color-background-secondary-brand-default
   );
   --color-background-secondary-brand-hover: var(
-    --color-background-secondary-brand-hover
+    --grapes-color-background-secondary-brand-hover
   );
   --color-background-secondary-brand-pressed: var(
-    --color-background-secondary-brand-pressed
+    --grapes-color-background-secondary-brand-pressed
   );
   --color-background-secondary-info-default: var(
-    --color-background-secondary-info-default
+    --grapes-color-background-secondary-info-default
   );
   --color-background-secondary-info-hover: var(
-    --color-background-secondary-info-hover
+    --grapes-color-background-secondary-info-hover
   );
   --color-background-secondary-info-pressed: var(
-    --color-background-secondary-info-pressed
+    --grapes-color-background-secondary-info-pressed
   );
   --color-background-secondary-success-default: var(
-    --color-background-secondary-success-default
+    --grapes-color-background-secondary-success-default
   );
   --color-background-secondary-success-hover: var(
-    --color-background-secondary-success-hover
+    --grapes-color-background-secondary-success-hover
   );
   --color-background-secondary-success-pressed: var(
-    --color-background-secondary-success-pressed
+    --grapes-color-background-secondary-success-pressed
   );
   --color-background-secondary-warning-default: var(
-    --color-background-secondary-warning-default
+    --grapes-color-background-secondary-warning-default
   );
   --color-background-secondary-warning-hover: var(
-    --color-background-secondary-warning-hover
+    --grapes-color-background-secondary-warning-hover
   );
   --color-background-secondary-warning-pressed: var(
-    --color-background-secondary-warning-pressed
+    --grapes-color-background-secondary-warning-pressed
   );
   --color-background-secondary-alert-default: var(
-    --color-background-secondary-alert-default
+    --grapes-color-background-secondary-alert-default
   );
   --color-background-secondary-alert-hover: var(
-    --color-background-secondary-alert-hover
+    --grapes-color-background-secondary-alert-hover
   );
   --color-background-secondary-alert-pressed: var(
-    --color-background-secondary-alert-pressed
+    --grapes-color-background-secondary-alert-pressed
   );
   --color-background-navigation-item-active: var(
-    --color-background-navigation-item-active
+    --grapes-color-background-navigation-item-active
   );
   --color-background-navigation-item-hover: var(
-    --color-background-navigation-item-hover
+    --grapes-color-background-navigation-item-hover
   );
 
-  --color-content-primary: var(--color-content-primary);
+  --color-content-primary: var(--grapes-color-content-primary);
   --color-content-secondary-bg-primary: var(
-    --color-content-secondary-bg-primary
+    --grapes-color-content-secondary-bg-primary
   );
   --color-content-secondary-bg-secondary: var(
-    --color-content-secondary-bg-secondary
+    --grapes-color-content-secondary-bg-secondary
   );
-  --color-content-decorative-icon: var(--color-content-decorative-icon);
-  --color-content-complementary: var(--color-content-complementary);
-  --color-content-selected: var(--color-content-selected);
-  --color-content-disabled: var(--color-content-disabled);
-  --color-content-brand-default: var(--color-content-brand-default);
-  --color-content-brand-hover: var(--color-content-brand-hover);
-  --color-content-brand-pressed: var(--color-content-brand-pressed);
-  --color-content-info-default: var(--color-content-info-default);
-  --color-content-success-default: var(--color-content-success-default);
-  --color-content-warning-default: var(--color-content-warning-default);
-  --color-content-alert-default: var(--color-content-alert-default);
+  --color-content-decorative-icon: var(--grapes-color-content-decorative-icon);
+  --color-content-complementary: var(--grapes-color-content-complementary);
+  --color-content-selected: var(--grapes-color-content-selected);
+  --color-content-disabled: var(--grapes-color-content-disabled);
+  --color-content-brand-default: var(--grapes-color-content-brand-default);
+  --color-content-brand-hover: var(--grapes-color-content-brand-hover);
+  --color-content-brand-pressed: var(--grapes-color-content-brand-pressed);
+  --color-content-info-default: var(--grapes-color-content-info-default);
+  --color-content-success-default: var(--grapes-color-content-success-default);
+  --color-content-warning-default: var(--grapes-color-content-warning-default);
+  --color-content-alert-default: var(--grapes-color-content-alert-default);
 
-  --color-border-default: var(--color-border-default);
-  --color-border-hover: var(--color-border-hover);
-  --color-border-selected: var(--color-border-selected);
-  --color-border-complementary: var(--color-border-complementary);
-  --color-border-info: var(--color-border-info);
-  --color-border-success: var(--color-border-success);
-  --color-border-warning: var(--color-border-warning);
-  --color-border-alert: var(--color-border-alert);
+  --color-border-default: var(--grapes-color-border-default);
+  --color-border-hover: var(--grapes-color-border-hover);
+  --color-border-selected: var(--grapes-color-border-selected);
+  --color-border-complementary: var(--grapes-color-border-complementary);
+  --color-border-info: var(--grapes-color-border-info);
+  --color-border-success: var(--grapes-color-border-success);
+  --color-border-warning: var(--grapes-color-border-warning);
+  --color-border-alert: var(--grapes-color-border-alert);
 
-  --body-s: var(--body-s);
-  --body-m: var(--body-m);
-  --body-l: var(--body-l);
-  --body-xl: var(--body-xl);
-  --body-xxl: var(--body-xxl);
+  --body-s: var(--grapes-body-s);
+  --body-m: var(--grapes-body-m);
+  --body-l: var(--grapes-body-l);
+  --body-xl: var(--grapes-body-xl);
+  --body-xxl: var(--grapes-body-xxl);
 
-  --title-s: var(--title-s);
-  --title-m: var(--title-m);
-  --title-l: var(--title-l);
-  --title-xl: var(--title-xl);
-  --title-xxl: var(--title-xxl);
+  --title-s: var(--grapes-title-s);
+  --title-m: var(--grapes-title-m);
+  --title-l: var(--grapes-title-l);
+  --title-xl: var(--grapes-title-xl);
+  --title-xxl: var(--grapes-title-xxl);
 
-  --heading-m: var(--heading-m);
-  --heading-l: var(--heading-l);
-  --heading-xl: var(--heading-xl);
-  --heading-xxl: var(--heading-xxl);
+  --heading-m: var(--grapes-heading-m);
+  --heading-l: var(--grapes-heading-l);
+  --heading-xl: var(--grapes-heading-xl);
+  --heading-xxl: var(--grapes-heading-xxl);
 }
 
 @utility body-* {
@@ -202,13 +222,13 @@
 
 @layer components {
   .box {
-    border: 1px solid var(--color-border-default);
-    background-color: var(--color-background-primary-default);
-    border-radius: var(--border-radius-12);
-    padding: var(--unit-24);
+    border: 1px solid var(--grapes-color-border-default);
+    background-color: var(--grapes-color-background-primary-default);
+    border-radius: var(--grapes-border-radius-12);
+    padding: var(--grapes-unit-24);
   }
   .separator {
     width: 100%;
-    border-bottom: 1px solid var(--color-border-default);
+    border-bottom: 1px solid var(--grapes-color-border-default);
   }
 }

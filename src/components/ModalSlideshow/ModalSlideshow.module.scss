@@ -2,29 +2,29 @@
   --_modal-width: 864px;
   --_modal-height: 560px;
 
-  box-shadow: var(--elevation-l);
+  box-shadow: var(--grapes-elevation-l);
   position: relative;
-  background-color: var(--color-background-primary-default);
-  margin: var(--unit-48) 0;
-  border-radius: var(--unit-12);
+  background-color: var(--grapes-color-background-primary-default);
+  margin: var(--grapes-unit-48) 0;
+  border-radius: var(--grapes-unit-12);
   width: var(--_modal-width);
   height: var(--_modal-height);
   transform: translateY(0) scale(1);
-  transition: transform var(--transition-duration)
-    var(--transition-timing-function);
+  transition: transform var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
   overflow: hidden;
 }
 
 @starting-style {
   .modal {
-    transform: translateY(var(--unit-16)) scale(0.97);
+    transform: translateY(var(--grapes-unit-16)) scale(0.97);
   }
 }
 
 .modalCloseButton {
   position: absolute;
-  top: var(--unit-16);
-  right: var(--unit-16);
+  top: var(--grapes-unit-16);
+  right: var(--grapes-unit-16);
   z-index: 1;
 }
 
@@ -33,8 +33,8 @@
   grid-template-rows: 1fr;
   grid-auto-columns: var(--_modal-width);
   height: 100%;
-  transition: transform var(--transition-duration)
-    var(--transition-timing-function);
+  transition: transform var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
   --_grid-translate-x: calc(var(--_slide, 0) * -1 * var(--_modal-width));
   transform: translateX(var(--_grid-translate-x));
 }
@@ -50,14 +50,14 @@
   display: grid;
   grid-template-rows: 1fr max-content;
   align-items: center;
-  gap: var(--unit-16);
-  height: calc(var(--_modal-height) - 2 * var(--unit-32));
+  gap: var(--grapes-unit-16);
+  height: calc(var(--_modal-height) - 2 * var(--grapes-unit-32));
 }
 
 .title {
-  font: var(--heading-l);
-  color: var(--color-content-primary);
-  margin: 0 0 var(--unit-24);
+  font: var(--grapes-heading-l);
+  color: var(--grapes-color-content-primary);
+  margin: 0 0 var(--grapes-unit-24);
 }
 
 .content {
@@ -78,7 +78,7 @@
   justify-content: center;
   list-style: none;
   padding: 0;
-  gap: var(--unit-12);
+  gap: var(--grapes-unit-12);
 }
 
 .modalIllustration {

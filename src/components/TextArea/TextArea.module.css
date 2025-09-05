@@ -1,10 +1,10 @@
 .textArea {
-  padding: var(--unit-8);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--border-radius-8);
-  background-color: var(--color-background-primary-default);
-  font: var(--body-m);
-  color: var(--color-content-primary);
+  padding: var(--grapes-unit-8);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-8);
+  background-color: var(--grapes-color-background-primary-default);
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-primary);
 
   display: block;
   width: 100%;
@@ -14,35 +14,35 @@
 }
 
 .textArea:hover {
-  border-color: var(--color-border-hover);
+  border-color: var(--grapes-color-border-hover);
 }
 
 .textArea:focus {
-  border-color: var(--color-border-default);
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-ring-offset);
+  border-color: var(--grapes-color-border-default);
+  outline: var(--grapes-focus-ring);
+  outline-offset: var(--grapes-focus-ring-offset);
 }
 
 .textArea:read-only {
-  background-color: var(--color-background-primary-readonly);
+  background-color: var(--grapes-color-background-primary-readonly);
 }
 
 .textArea:disabled {
   pointer-events: none;
-  background-color: var(--color-background-primary-disabled);
-  border: 1px solid var(--color-border-default);
-  color: var(--color-content-secondary-bg-secondary);
-  -webkit-text-fill-color: var(--color-content-secondary-bg-secondary);
+  background-color: var(--grapes-color-background-primary-disabled);
+  border: 1px solid var(--grapes-color-border-default);
+  color: var(--grapes-color-content-secondary-bg-secondary);
+  -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
 }
 
 .textArea[aria-invalid='true'] {
-  border-color: var(--color-border-alert);
+  border-color: var(--grapes-color-border-alert);
 }
 
 @supports (field-sizing: content) {
   .textArea {
     field-sizing: content;
     /* Set min-height to 3 rows + padding as field-sizing ignores rows attribut */
-    min-height: calc(3lh + var(--unit-8) * 2 + 2px);
+    min-height: calc(3lh + var(--grapes-unit-8) * 2 + 2px);
   }
 }

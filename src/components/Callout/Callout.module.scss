@@ -4,38 +4,38 @@
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;
-  gap: var(--unit-8);
-  padding: var(--unit-16);
-  border-radius: var(--border-radius-8);
+  gap: var(--grapes-unit-8);
+  padding: var(--grapes-unit-16);
+  border-radius: var(--grapes-border-radius-8);
   text-align: left;
 }
 
 .callout[data-variant='alert'] {
-  background-color: var(--color-background-secondary-alert-default);
+  background-color: var(--grapes-color-background-secondary-alert-default);
 }
 .callout[data-variant='alert'] :is(.calloutTitle, .icon) {
-  color: var(--color-content-alert-default);
+  color: var(--grapes-color-content-alert-default);
 }
 
 .callout[data-variant='info'] {
-  background-color: var(--color-background-secondary-info-default);
+  background-color: var(--grapes-color-background-secondary-info-default);
 }
 .callout[data-variant='info'] :is(.calloutTitle, .icon) {
-  color: var(--color-content-info-default);
+  color: var(--grapes-color-content-info-default);
 }
 
 .callout[data-variant='success'] {
-  background-color: var(--color-background-secondary-success-default);
+  background-color: var(--grapes-color-background-secondary-success-default);
 }
 .callout[data-variant='success'] :is(.calloutTitle, .icon) {
-  color: var(--color-content-success-default);
+  color: var(--grapes-color-content-success-default);
 }
 
 .callout[data-variant='warning'] {
-  background: var(--color-background-secondary-warning-default);
+  background: var(--grapes-color-background-secondary-warning-default);
 }
 .callout[data-variant='warning'] :is(.calloutTitle, .icon) {
-  color: var(--color-content-warning-default);
+  color: var(--grapes-color-content-warning-default);
 }
 
 .calloutTitle,
@@ -43,11 +43,11 @@
   color-scheme: light;
 }
 .calloutTitle {
-  font: var(--title-m);
+  font: var(--grapes-title-m);
 }
 
 .calloutContent {
-  font: var(--body-m);
+  font: var(--grapes-body-m);
   color: css-variables.$color-carbon-100;
   grid-column-start: 2;
 }
