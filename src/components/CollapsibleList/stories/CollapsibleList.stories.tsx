@@ -14,7 +14,7 @@ const meta: Meta<typeof CollapsibleList> = {
     const [activeListItem, setActiveListItem] = useState<number | null>(null);
 
     return (
-      <div className="w-[360px]">
+      <div style={{ width: '360px' }}>
         <CollapsibleList
           {...args}
           renderHeader={(toggle, isCollapsed) => (
@@ -76,7 +76,7 @@ export const WithVariant: Story = {
   render: (args) => {
     const [activeListItem, setActiveListItem] = useState<number | null>(null);
     return (
-      <div className="w-[360px]">
+      <div style={{ width: '360px' }}>
         <CollapsibleList
           {...args}
           renderHeader={(toggle, isCollapsed) => (
@@ -119,7 +119,7 @@ export const Selectable: Story = {
     }
 
     return (
-      <div className="w-[360px]">
+      <div style={{ width: '360px' }}>
         <CollapsibleList
           {...args}
           renderHeader={(toggle, isCollapsed) => (
