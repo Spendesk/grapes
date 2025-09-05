@@ -20,7 +20,7 @@ export const Default: Story = {
         <div
           style={{
             padding:
-              'var(--unit-8) var(--unit-24) var(--unit-24) var(--unit-24)',
+              'var(--grapes-unit-8) var(--grapes-unit-24) var(--grapes-unit-24) var(--grapes-unit-24)',
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
@@ -31,7 +31,7 @@ export const Default: Story = {
         <div
           style={{
             padding:
-              'var(--unit-8) var(--unit-24) var(--unit-24) var(--unit-24)',
+              'var(--grapes-unit-8) var(--grapes-unit-24) var(--grapes-unit-24) var(--grapes-unit-24)',
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
@@ -42,7 +42,7 @@ export const Default: Story = {
         <div
           style={{
             padding:
-              'var(--unit-8) var(--unit-24) var(--unit-24) var(--unit-24)',
+              'var(--grapes-unit-8) var(--grapes-unit-24) var(--grapes-unit-24) var(--grapes-unit-24)',
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
@@ -62,7 +62,7 @@ export const DefaultOpen: Story = {
           <div
             style={{
               padding:
-                'var(--unit-8) var(--unit-24) var(--unit-24) var(--unit-24)',
+                'var(--grapes-unit-8) var(--grapes-unit-24) var(--grapes-unit-24) var(--grapes-unit-24)',
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
@@ -73,7 +73,7 @@ export const DefaultOpen: Story = {
           <div
             style={{
               padding:
-                'var(--unit-8) var(--unit-24) var(--unit-24) var(--unit-24)',
+                'var(--grapes-unit-8) var(--grapes-unit-24) var(--grapes-unit-24) var(--grapes-unit-24)',
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
@@ -84,7 +84,7 @@ export const DefaultOpen: Story = {
           <div
             style={{
               padding:
-                'var(--unit-8) var(--unit-24) var(--unit-24) var(--unit-24)',
+                'var(--grapes-unit-8) var(--grapes-unit-24) var(--grapes-unit-24) var(--grapes-unit-24)',
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
@@ -103,7 +103,7 @@ export const SingleItem: Story = {
         <div
           style={{
             padding:
-              'var(--unit-8) var(--unit-24) var(--unit-24) var(--unit-24)',
+              'var(--grapes-unit-8) var(--grapes-unit-24) var(--grapes-unit-24) var(--grapes-unit-24)',
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec

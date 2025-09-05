@@ -1,14 +1,14 @@
 .banner {
   display: flex;
   place-items: center start;
-  gap: var(--unit-24);
-  padding: var(--unit-24);
-  border-radius: var(--border-radius-12);
-  background: var(--color-background-secondary-brand-default);
+  gap: var(--grapes-unit-24);
+  padding: var(--grapes-unit-24);
+  border-radius: var(--grapes-border-radius-12);
+  background: var(--grapes-color-background-secondary-brand-default);
 }
 
 .banner[data-variant='neutral'] {
-  background: var(--color-background-secondary-default);
+  background: var(--grapes-color-background-secondary-default);
 }
 
 .container {
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: var(--unit-8);
+  gap: var(--grapes-unit-8);
 }
 
 .banner[data-variant='brand'] :is(.title, .description) {
@@ -24,18 +24,18 @@
 }
 
 .title {
-  font: var(--title-l);
-  color: var(--color-content-primary);
+  font: var(--grapes-title-l);
+  color: var(--grapes-color-content-primary);
   margin: 0;
 }
 
 .description {
-  font: var(--body-m);
-  color: var(--color-content-secondary-bg-secondary);
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-secondary-bg-secondary);
   margin: 0;
 }
 
 .actions {
   display: flex;
-  gap: var(--unit-8);
+  gap: var(--grapes-unit-8);
 }

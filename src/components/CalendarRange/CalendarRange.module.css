@@ -1,17 +1,22 @@
 .container {
-  --size-button: 36px;
-  --size-col-day: var(--unit-40);
-  --size-col-calendar: calc(
-    7 * var(--size-col-day) - (var(--size-button) + var(--unit-16)) * 2
+  --grapes-size-button: 36px;
+  --grapes-size-col-day: var(--grapes-unit-40);
+  --grapes-size-col-calendar: calc(
+    7 * var(--grapes-size-col-day) -
+      (var(--grapes-size-button) + var(--grapes-unit-16)) * 2
   );
   display: grid;
   grid-template-columns:
-    [lcalendar-start] var(--size-button)
-    [ltitle-start] var(--size-col-calendar) [ltitle-end] var(--size-button)
-    [lcalendar-end rcalendar-start] var(--size-button)
-    [rtitle-start] var(--size-col-calendar) [rtitle-end] var(--size-button)
+    [lcalendar-start] var(--grapes-size-button)
+    [ltitle-start] var(--grapes-size-col-calendar) [ltitle-end] var(
+      --grapes-size-button
+    )
+    [lcalendar-end rcalendar-start] var(--grapes-size-button)
+    [rtitle-start] var(--grapes-size-col-calendar) [rtitle-end] var(
+      --grapes-size-button
+    )
     [rcalendar-end];
-  gap: var(--unit-16);
+  gap: var(--grapes-unit-16);
 }
 
 .container > div:first-of-type {
@@ -24,9 +29,9 @@
 
 .singleContainer {
   grid-template-columns:
-    [rcalendar-start] var(--size-button)
-    [rtitle-start] var(--size-col-calendar)
-    [rtitle-end] var(--size-button)
+    [rcalendar-start] var(--grapes-size-button)
+    [rtitle-start] var(--grapes-size-col-calendar)
+    [rtitle-end] var(--grapes-size-button)
     [rcalendar-end];
 }
 

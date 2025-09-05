@@ -1,9 +1,9 @@
 .list {
   width: 100%;
   box-sizing: border-box;
-  background-color: var(--color-background-primary-default);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--border-radius-8);
+  background-color: var(--grapes-color-background-primary-default);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-8);
 }
 
 .subList,
@@ -14,23 +14,23 @@
 }
 
 .groupHeader {
-  font: var(--body-s);
-  height: var(--unit-32);
-  color: var(--color-content-secondary-bg-secondary);
+  font: var(--grapes-body-s);
+  height: var(--grapes-unit-32);
+  color: var(--grapes-color-content-secondary-bg-secondary);
   text-transform: uppercase;
-  background-color: var(--color-background-secondary-default);
-  border-top: 1px solid var(--color-border-default);
-  border-bottom: 1px solid var(--color-border-default);
+  background-color: var(--grapes-color-background-secondary-default);
+  border-top: 1px solid var(--grapes-color-border-default);
+  border-bottom: 1px solid var(--grapes-color-border-default);
   margin: 0;
 }
 
 .group:first-child .groupHeader {
-  border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
+  border-radius: var(--grapes-border-radius-8) var(--grapes-border-radius-8) 0 0;
   border-top: none;
 }
 
 .list:has(.group) .footerItem {
-  border-top: 1px solid var(--color-border-default);
+  border-top: 1px solid var(--grapes-color-border-default);
 }
 
 .list:has(.group) .item.headerItem {
@@ -43,7 +43,7 @@
   display: grid;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 var(--unit-16);
+  padding: 0 var(--grapes-unit-16);
 }
 
 .targetZone {
@@ -51,35 +51,35 @@
   display: grid;
   place-content: center;
   height: 100%;
-  width: calc(var(--unit-16) + 2 * var(--unit-16));
-  margin-left: calc(-1 * var(--unit-16));
+  width: calc(var(--grapes-unit-16) + 2 * var(--grapes-unit-16));
+  margin-left: calc(-1 * var(--grapes-unit-16));
 }
 
 .item {
-  font: var(--body-m);
+  font: var(--grapes-body-m);
 }
 
 .list > .item:first-child {
-  border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
+  border-radius: var(--grapes-border-radius-8) var(--grapes-border-radius-8) 0 0;
 }
 
 .group:last-child .item:last-child,
 .list > .item:last-child {
-  border-radius: 0 0 var(--border-radius-8) var(--border-radius-8);
+  border-radius: 0 0 var(--grapes-border-radius-8) var(--grapes-border-radius-8);
 }
 
 .item[role='option'] {
-  color: var(--color-content-primary);
-  min-height: var(--unit-64);
+  color: var(--grapes-color-content-primary);
+  min-height: var(--grapes-unit-64);
 }
 
 .compactItem[role='option'] {
-  min-height: var(--unit-48);
+  min-height: var(--grapes-unit-48);
 }
 
 .item[role='presentation'] {
-  color: var(--color-content-secondary-bg-primary);
-  min-height: var(--unit-40);
+  color: var(--grapes-color-content-secondary-bg-primary);
+  min-height: var(--grapes-unit-40);
 }
 
 .list[aria-multiselectable='true'] :not(.footerItem).item {
@@ -87,22 +87,22 @@
 }
 
 .item:not(:last-child) {
-  border-bottom: 1px solid var(--color-border-default);
+  border-bottom: 1px solid var(--grapes-color-border-default);
 }
 
 .item:where([data-variant='alert']) {
-  background-color: var(--color-background-secondary-alert-default);
+  background-color: var(--grapes-color-background-secondary-alert-default);
 }
 .item:where([data-variant='warning']) {
-  background-color: var(--color-background-secondary-warning-default);
+  background-color: var(--grapes-color-background-secondary-warning-default);
 }
 
 .item[aria-disabled='true'] {
   cursor: not-allowed;
-  background-color: var(--color-background-primary-disabled);
+  background-color: var(--grapes-color-background-primary-disabled);
 }
 .item[aria-selected='true'] {
-  background-color: var(--color-background-primary-selected);
+  background-color: var(--grapes-color-background-primary-selected);
   outline: none;
 }
 
@@ -114,16 +114,16 @@
     :hover,
     :focus-visible
   ) {
-  background-color: var(--color-background-primary-hover);
+  background-color: var(--grapes-color-background-primary-hover);
 }
 
 .emptyTitle {
-  font: var(--title-l);
-  color: var(--color-content-primary);
+  font: var(--grapes-title-l);
+  color: var(--grapes-color-content-primary);
 }
 .emptyBody {
-  font: var(--body-m);
-  color: var(--color-content-secondary-bg-primary);
-  padding: var(--unit-64);
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-secondary-bg-primary);
+  padding: var(--grapes-unit-64);
   text-align: center;
 }

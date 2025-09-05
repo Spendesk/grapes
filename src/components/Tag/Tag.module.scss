@@ -2,16 +2,16 @@
 
 .tag {
   color-scheme: light;
-  font: var(--body-m);
+  font: var(--grapes-body-m);
   display: inline-block;
-  height: var(--unit-24);
-  color: var(--color-content-primary);
-  border-radius: var(--border-radius-12);
-  padding: 0 var(--unit-8);
+  height: var(--grapes-unit-24);
+  color: var(--grapes-color-content-primary);
+  border-radius: var(--grapes-border-radius-12);
+  padding: 0 var(--grapes-unit-8);
 }
 
 .tag:has(.tagCloseButton) {
-  padding-right: var(--unit-4);
+  padding-right: var(--grapes-unit-4);
 }
 
 .tagContent {
@@ -20,16 +20,16 @@
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  gap: var(--unit-4);
+  gap: var(--grapes-unit-4);
 }
 
 .tagCloseButton {
   cursor: pointer;
-  background-color: var(--color-background-primary-default);
+  background-color: var(--grapes-color-background-primary-default);
   outline: none;
   border: none;
-  height: var(--unit-16);
-  width: var(--unit-16);
+  height: var(--grapes-unit-16);
+  width: var(--grapes-unit-16);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -41,36 +41,36 @@
     outline: 0;
   }
   &:focus-visible {
-    outline: var(--focus-ring);
-    outline-offset: var(--focus-ring-offset);
+    outline: var(--grapes-focus-ring);
+    outline-offset: var(--grapes-focus-ring-offset);
   }
   &:hover {
-    background-color: var(--color-background-primary-hover);
+    background-color: var(--grapes-color-background-primary-hover);
   }
   &:active {
-    background-color: var(--color-background-primary-pressed);
+    background-color: var(--grapes-color-background-primary-pressed);
   }
 }
 
 .tag[data-variant='neutral'] {
-  color: var(--color-content-secondary-bg-secondary);
-  background-color: var(--color-background-secondary-default);
+  color: var(--grapes-color-content-secondary-bg-secondary);
+  background-color: var(--grapes-color-background-secondary-default);
 }
 .tag[data-variant='info'] {
-  color: var(--color-content-info-default);
-  background-color: var(--color-background-secondary-info-default);
+  color: var(--grapes-color-content-info-default);
+  background-color: var(--grapes-color-background-secondary-info-default);
 }
 .tag[data-variant='success'] {
-  color: var(--color-content-success-default);
-  background-color: var(--color-background-secondary-success-default);
+  color: var(--grapes-color-content-success-default);
+  background-color: var(--grapes-color-background-secondary-success-default);
 }
 .tag[data-variant='warning'] {
-  color: var(--color-content-warning-default);
-  background-color: var(--color-background-secondary-warning-default);
+  color: var(--grapes-color-content-warning-default);
+  background-color: var(--grapes-color-background-secondary-warning-default);
 }
 .tag[data-variant='alert'] {
-  color: var(--color-content-alert-default);
-  background-color: var(--color-background-secondary-alert-default);
+  color: var(--grapes-color-content-alert-default);
+  background-color: var(--grapes-color-background-secondary-alert-default);
 }
 
 .tag[data-variant='carbon'] {
@@ -98,5 +98,5 @@
   background-color: css-variables.$color-peach-bright;
 }
 .tag[data-variant='white'] {
-  background-color: var(--color-background-primary-default);
+  background-color: var(--grapes-color-background-primary-default);
 }

@@ -165,7 +165,7 @@ export const GroupByWithHeaderAndFooter: Story = {
     ...Primary.args,
     header: <div className={styles.header}>Members</div>,
     footer: (
-      <div style={{ margin: 'var(--unit-8) auto' }}>
+      <div style={{ margin: 'var(--grapes-unit-8) auto' }}>
         <Button text="Load more" variant="secondaryNeutral" fit="content" />
       </div>
     ),
@@ -192,7 +192,7 @@ export const WithAFooter: Story = {
   args: {
     ...Primary.args,
     footer: (
-      <div style={{ margin: 'var(--unit-8) auto' }}>
+      <div style={{ margin: 'var(--grapes-unit-8) auto' }}>
         <Button text="Load more" variant="secondaryNeutral" fit="content" />
       </div>
     ),

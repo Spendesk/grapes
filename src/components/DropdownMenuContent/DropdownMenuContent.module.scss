@@ -5,12 +5,14 @@
   overflow-y: auto;
   margin: 0;
   transition:
-    opacity var(--transition-duration) var(--transition-timing-function),
-    transform var(--transition-duration) var(--transition-timing-function);
+    opacity var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function),
+    transform var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function);
   opacity: 0;
-  transform: translateY(calc(var(--orientation, -1) * var(--unit-16)));
+  transform: translateY(calc(var(--orientation, -1) * var(--grapes-unit-16)));
   position: absolute;
-  padding: var(--unit-8);
+  padding: var(--grapes-unit-8);
   @extend %dropdown-content;
   min-width: max(180px, 100%);
 }

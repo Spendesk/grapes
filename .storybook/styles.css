@@ -1,12 +1,10 @@
-@use '../src/theme/placeholders';
-
 /**
 * Change the default font family, font size, font weight and line height
 * Change the default text color
 */
 html {
-  font: var(--body-m);
-  color: var(--color-content-primary);
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-primary);
 }
 
 /**

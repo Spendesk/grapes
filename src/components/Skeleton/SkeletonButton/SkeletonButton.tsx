@@ -21,7 +21,7 @@ export const SkeletonButton = ({ className, width }: SkeletonButtonProps) => {
     <Skeleton
       className={classNames(styles.skeletonButton, className)}
       width={width ?? '128px'}
-      height="var(--unit-40)"
+      height="var(--grapes-unit-40)"
     />
   );
 };

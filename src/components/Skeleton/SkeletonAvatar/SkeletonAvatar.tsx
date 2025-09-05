@@ -48,11 +48,11 @@ export const SkeletonAvatar = ({
 const getWidth = (size: Size): string => {
   switch (size) {
     case 's':
-      return 'var(--unit-24)';
+      return 'var(--grapes-unit-24)';
     case 'm':
-      return 'var(--unit-32)';
+      return 'var(--grapes-unit-32)';
     case 'l':
-      return 'var(--unit-56)';
+      return 'var(--grapes-unit-56)';
     default:
       throw new UnknownSizeError(size);
   }

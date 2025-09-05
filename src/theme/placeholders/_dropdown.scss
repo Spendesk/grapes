@@ -1,8 +1,8 @@
 %dropdown-content {
-  box-shadow: var(--elevation-l);
-  background-color: var(--color-background-primary-default);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--border-radius-12);
-  z-index: var(--z-index-dropdown);
+  box-shadow: var(--grapes-elevation-l);
+  background-color: var(--grapes-color-background-primary-default);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-12);
+  z-index: var(--grapes-z-index-dropdown);
   box-sizing: border-box;
 }

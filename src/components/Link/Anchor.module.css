@@ -8,27 +8,27 @@
   opacity: 1;
   display: inline-flex;
   align-items: center;
-  gap: var(--unit-8);
+  gap: var(--grapes-unit-8);
 }
 
 .anchor:focus-visible {
-  border-radius: var(--border-radius-4);
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-ring-offset);
+  border-radius: var(--grapes-border-radius-4);
+  outline: var(--grapes-focus-ring);
+  outline-offset: var(--grapes-focus-ring-offset);
 }
 
 .anchor[data-variant]:hover {
-  color: var(--color-content-brand-hover);
+  color: var(--grapes-color-content-brand-hover);
 }
 
 .anchor[data-variant]:visited {
-  color: var(--color-content-brand-pressed);
+  color: var(--grapes-color-content-brand-pressed);
 }
 
 .anchor[data-variant='primary'] {
-  color: var(--color-content-brand-default);
+  color: var(--grapes-color-content-brand-default);
 }
 
 .anchor[data-variant='secondary'] {
-  color: var(--color-content-primary);
+  color: var(--grapes-color-content-primary);
 }
