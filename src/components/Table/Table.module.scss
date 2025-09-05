@@ -28,22 +28,22 @@
 .tableHeaderCellContent {
   display: flex;
   align-items: center;
-  height: var(--unit-32);
-  max-height: var(--unit-32);
+  height: var(--grapes-unit-32);
+  max-height: var(--grapes-unit-32);
 }
 
 .tableHeaderCellContentSort {
   width: 100%;
-  margin: var(--unit-4) 0;
-  padding: var(--unit-8);
+  margin: var(--grapes-unit-4) 0;
+  padding: var(--grapes-unit-8);
   position: relative;
-  left: calc(-1 * var(--unit-8));
+  left: calc(-1 * var(--grapes-unit-8));
 }
 
 .tableHeaderCellContentSort:hover {
-  background-color: var(--color-background-primary-hover);
-  padding: var(--unit-8);
-  border-radius: var(--border-radius-4);
+  background-color: var(--grapes-color-background-primary-hover);
+  padding: var(--grapes-unit-8);
+  border-radius: var(--grapes-border-radius-4);
   cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .tableHeaderCellContentSort.tableHeaderCellContentAlignRight {
-  right: calc(-1 * var(--unit-8));
+  right: calc(-1 * var(--grapes-unit-8));
   left: initial;
 }
 
@@ -63,12 +63,12 @@
 .tableHeaderSortIcons {
   display: flex;
   flex-direction: column;
-  width: var(--unit-12);
+  width: var(--grapes-unit-12);
   margin-left: auto;
 }
 
 .tableHeaderCellSortIcon {
-  margin-left: var(--unit-4);
+  margin-left: var(--grapes-unit-4);
 }
 
 .tableHeaderCellSortIconDown {
@@ -89,17 +89,17 @@
 }
 
 .tableBodyGroupedCell {
-  min-height: var(--unit-32);
+  min-height: var(--grapes-unit-32);
   box-sizing: border-box;
-  padding: 0 var(--unit-16);
-  font: var(--body-s);
-  color: var(--color-content-secondary-bg-secondary);
-  background-color: var(--color-background-secondary-default);
-  border-bottom: 1px solid var(--color-border-default);
+  padding: 0 var(--grapes-unit-16);
+  font: var(--grapes-body-s);
+  color: var(--grapes-color-content-secondary-bg-secondary);
+  background-color: var(--grapes-color-background-secondary-default);
+  border-bottom: 1px solid var(--grapes-color-border-default);
 }
 
 .tableBodyRow:last-of-type .tableBodyCell {
-  border-radius: 0 0 0 var(--border-radius-8);
+  border-radius: 0 0 0 var(--grapes-border-radius-8);
 }
 
 .compactTableBodyCell {
@@ -116,28 +116,28 @@
   width: 100%;
 
   .primaryTableBodyCell {
-    background-color: var(--color-background-primary-selected);
+    background-color: var(--grapes-color-background-primary-selected);
   }
 
   .alertTableBodyCell {
-    background-color: var(--color-background-secondary-alert-default);
+    background-color: var(--grapes-color-background-secondary-alert-default);
   }
 
   .infoTableBodyCell {
-    background-color: var(--color-background-secondary-info-default);
+    background-color: var(--grapes-color-background-secondary-info-default);
   }
 
   .successTableBodyCell {
-    background-color: var(--color-background-secondary-success-default);
+    background-color: var(--grapes-color-background-secondary-success-default);
   }
 
   .warningTableBodyCell {
-    background-color: var(--color-background-secondary-warning-default);
+    background-color: var(--grapes-color-background-secondary-warning-default);
   }
 }
 
 .tableBodyRow:last-child {
-  border-radius: 0 0 var(--border-radius-8) var(--border-radius-8);
+  border-radius: 0 0 var(--grapes-border-radius-8) var(--grapes-border-radius-8);
 }
 
 .tableBodyRow:not(:last-child) .tableBodyCell {
@@ -145,39 +145,39 @@
 }
 
 .clickableTableBodyRow:hover {
-  transition: background-color var(--transition-duration)
-    var(--transition-timing-function);
+  transition: background-color var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
   cursor: pointer;
 
   &:not(.activeTableBodyRow):hover {
-    background-color: var(--color-background-primary-hover);
+    background-color: var(--grapes-color-background-primary-hover);
   }
 }
 
 .disabledTableBodyRow {
   cursor: not-allowed;
-  background-color: var(--color-background-primary-disabled);
+  background-color: var(--grapes-color-background-primary-disabled);
 }
 
 .primaryTableBodyRow,
 .activeTableBodyRow {
-  background-color: var(--color-background-secondary-brand-default);
+  background-color: var(--grapes-color-background-secondary-brand-default);
 }
 
 .infoTableBodyRow {
-  background-color: var(--color-background-secondary-info-default);
+  background-color: var(--grapes-color-background-secondary-info-default);
 }
 
 .warningTableBodyRow {
-  background-color: var(--color-background-secondary-warning-default);
+  background-color: var(--grapes-color-background-secondary-warning-default);
 }
 
 .alertTableBodyRow {
-  background-color: var(--color-background-secondary-alert-default);
+  background-color: var(--grapes-color-background-secondary-alert-default);
 }
 
 .successTableBodyRow {
-  background-color: var(--color-background-secondary-success-default);
+  background-color: var(--grapes-color-background-secondary-success-default);
 }
 
 .tableFooterRow,
@@ -188,20 +188,20 @@
 
 .tableFooterCell,
 .tableEmptyStateCell {
-  padding: var(--unit-16);
+  padding: var(--grapes-unit-16);
   text-align: center;
 }
 
 .tableEmptyStateCell {
-  padding: var(--unit-64) 0;
+  padding: var(--grapes-unit-64) 0;
 }
 .tableEmptyStateTitle {
-  font: var(--title-l);
-  color: var(--color-content-primary);
+  font: var(--grapes-title-l);
+  color: var(--grapes-color-content-primary);
 }
 .tableEmptyStateSubtitle {
-  font: var(--body-m);
-  color: var(--color-content-secondary-bg-primary);
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-secondary-bg-primary);
 }
 
 .tableCellWrapper {
@@ -225,10 +225,10 @@
 .tableCheckboxLabel {
   cursor: pointer;
   display: inline-flex;
-  padding: var(--unit-16);
+  padding: var(--grapes-unit-16);
 }
 
 .tableCheckboxLabelHeader {
   display: inline-block;
-  padding: var(--unit-4) var(--unit-16);
+  padding: var(--grapes-unit-4) var(--grapes-unit-16);
 }

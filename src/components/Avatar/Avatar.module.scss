@@ -6,28 +6,28 @@
   display: inline-block;
   width: var(--_size);
   height: var(--_size);
-  color: var(--color-content-primary);
+  color: var(--grapes-color-content-primary);
   text-transform: uppercase;
 }
 .avatar[data-size='16'] {
-  font: var(--title-s);
-  --_size: var(--unit-16);
+  font: var(--grapes-title-s);
+  --_size: var(--grapes-unit-16);
 }
 .avatar[data-size='24'] {
-  font: var(--title-s);
-  --_size: var(--unit-24);
+  font: var(--grapes-title-s);
+  --_size: var(--grapes-unit-24);
 }
 .avatar[data-size='32'] {
-  font: var(--title-m);
-  --_size: var(--unit-32);
+  font: var(--grapes-title-m);
+  --_size: var(--grapes-unit-32);
 }
 .avatar[data-size='40'] {
-  font: var(--title-l);
-  --_size: var(--unit-40);
+  font: var(--grapes-title-l);
+  --_size: var(--grapes-unit-40);
 }
 .avatar[data-size='56'] {
-  font: var(--title-xl);
-  --_size: var(--unit-56);
+  font: var(--grapes-title-xl);
+  --_size: var(--grapes-unit-56);
 }
 
 .content {
@@ -43,7 +43,7 @@
 }
 
 .content[data-variant='square'] {
-  border-radius: var(--border-radius-8);
+  border-radius: var(--grapes-border-radius-8);
 }
 
 .content:has(+ .avatarBadge) {

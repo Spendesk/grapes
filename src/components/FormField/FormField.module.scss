@@ -1,22 +1,22 @@
 .description {
-  font: var(--body-s);
-  padding-bottom: var(--unit-4);
+  font: var(--grapes-body-s);
+  padding-bottom: var(--grapes-unit-4);
   margin: 0;
-  color: var(--color-content-secondary-bg-primary);
+  color: var(--grapes-color-content-secondary-bg-primary);
 }
 
 .formFieldMessage {
-  font: var(--body-m);
-  margin-top: var(--unit-4);
+  font: var(--grapes-body-m);
+  margin-top: var(--grapes-unit-4);
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;
-  gap: var(--unit-8);
+  gap: var(--grapes-unit-8);
 }
 
 .formFieldMessage[data-severity='alert'] {
-  color: var(--color-content-alert-default);
+  color: var(--grapes-color-content-alert-default);
 }
 .formFieldMessage[data-severity='warning'] {
-  color: var(--color-content-warning-default);
+  color: var(--grapes-color-content-warning-default);
 }

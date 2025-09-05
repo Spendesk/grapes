@@ -20,13 +20,13 @@ $background-width: 240px;
   display: inline-block;
   width: var(--width-skeleton);
   height: var(--height-skeleton);
-  border-radius: var(--border-radius-4);
-  background: var(--color-skeleton)
+  border-radius: var(--grapes-border-radius-4);
+  background: var(--grapes-color-skeleton)
     linear-gradient(
       90deg,
-      var(--color-skeleton) 0%,
-      var(--color-background-tertiary-default) 50%,
-      var(--color-skeleton) 100%
+      var(--grapes-color-skeleton) 0%,
+      var(--grapes-color-background-tertiary-default) 50%,
+      var(--grapes-color-skeleton) 100%
     )
     0 0 / #{$background-width} 100vh no-repeat;
   animation: 1.5s linear infinite forwards loadingSkeleton;

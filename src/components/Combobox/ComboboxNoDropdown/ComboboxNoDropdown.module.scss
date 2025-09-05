@@ -1,7 +1,7 @@
 @use '../../../theme/placeholders';
 
 .ComboboxNoDropdownContainer {
-  padding-top: var(--unit-8);
+  padding-top: var(--grapes-unit-8);
 }
 
 .combobox {
@@ -27,7 +27,7 @@
   list-style: none;
   padding: 0;
   overflow-y: auto;
-  margin-top: var(--unit-8);
+  margin-top: var(--grapes-unit-8);
 }
 
 .invalidCombobox {
@@ -43,7 +43,7 @@
 }
 
 .inputContainer {
-  padding: 0 var(--unit-8);
+  padding: 0 var(--grapes-unit-8);
   &.disabledInputContainer {
     cursor: not-allowed;
   }
@@ -71,8 +71,8 @@
   align-self: center;
   align-items: center;
   justify-content: center;
-  margin: calc(-1 * var(--unit-8));
-  padding: var(--unit-8);
+  margin: calc(-1 * var(--grapes-unit-8));
+  padding: var(--grapes-unit-8);
   border: none;
   background: none;
   cursor: pointer;
@@ -83,6 +83,6 @@
 }
 
 .loadingItem {
-  margin: var(--unit-8) var(--unit-8) 0;
-  width: calc(100% - 2 * var(--unit-8));
+  margin: var(--grapes-unit-8) var(--grapes-unit-8) 0;
+  width: calc(100% - 2 * var(--grapes-unit-8));
 }

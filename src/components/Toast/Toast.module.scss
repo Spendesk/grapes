@@ -1,29 +1,30 @@
 .toast {
-  font: var(--body-m);
+  font: var(--grapes-body-m);
   position: relative;
-  box-shadow: var(--elevation-l);
+  box-shadow: var(--grapes-elevation-l);
   display: grid;
   grid-template-columns: 16px 1fr auto;
-  gap: 0 var(--unit-8);
+  gap: 0 var(--grapes-unit-8);
   align-items: center;
   justify-items: start;
-  width: var(--size-toast);
-  border-radius: var(--border-radius-8);
-  color: var(--color-content-complementary);
+  width: var(--grapes-size-toast);
+  border-radius: var(--grapes-border-radius-8);
+  color: var(--grapes-color-content-complementary);
   overflow: hidden;
-  padding: var(--unit-8) var(--unit-8) var(--unit-8) var(--unit-16);
+  padding: var(--grapes-unit-8) var(--grapes-unit-8) var(--grapes-unit-8)
+    var(--grapes-unit-16);
   box-sizing: border-box;
 }
 
 .toast:has(.toastContent):not(:has(.toastAction)) {
-  padding-bottom: var(--unit-16);
+  padding-bottom: var(--grapes-unit-16);
 }
 
 .toast[data-variant='success'] {
-  background: var(--color-background-primary-success-default);
+  background: var(--grapes-color-background-primary-success-default);
 }
 .toast[data-variant='alert'] {
-  background: var(--color-background-primary-alert-default);
+  background: var(--grapes-color-background-primary-alert-default);
 }
 
 .toastContent,

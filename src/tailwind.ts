@@ -10,45 +10,45 @@ export default {
       lg: '1000px',
     },
     fontSize: {
-      12: 'var(--font-size-12)',
-      14: 'var(--font-size-14)',
-      16: 'var(--font-size-16)',
-      20: 'var(--font-size-20)',
-      24: 'var(--font-size-24)',
-      32: 'var(--font-size-32)',
-      40: 'var(--font-size-40)',
+      12: 'var(--grapes-font-size-12)',
+      14: 'var(--grapes-font-size-14)',
+      16: 'var(--grapes-font-size-16)',
+      20: 'var(--grapes-font-size-20)',
+      24: 'var(--grapes-font-size-24)',
+      32: 'var(--grapes-font-size-32)',
+      40: 'var(--grapes-font-size-40)',
     },
     boxShadow: {
-      xs: 'var(--elevation-xs)',
-      s: 'var(--elevation-s)',
-      m: 'var(--elevation-m)',
-      l: 'var(--elevation-l)',
-      xl: 'var(--elevation-xl)',
+      xs: 'var(--grapes-elevation-xs)',
+      s: 'var(--grapes-elevation-s)',
+      m: 'var(--grapes-elevation-m)',
+      l: 'var(--grapes-elevation-l)',
+      xl: 'var(--grapes-elevation-xl)',
     },
     borderRadius: {
-      4: 'var(--border-radius-4)',
-      DEFAULT: 'var(--border-radius-4)',
-      8: 'var(--border-radius-8)',
-      12: 'var(--border-radius-12)',
+      4: 'var(--grapes-border-radius-4)',
+      DEFAULT: 'var(--grapes-border-radius-4)',
+      8: 'var(--grapes-border-radius-8)',
+      12: 'var(--grapes-border-radius-12)',
       full: '9999px',
     },
     spacing: {
       '0': '0px',
-      '4': 'var(--unit-4)',
-      '8': 'var(--unit-8)',
-      '12': 'var(--unit-12)',
-      '16': 'var(--unit-16)',
-      '20': 'var(--unit-20)',
-      '24': 'var(--unit-24)',
-      '32': 'var(--unit-32)',
-      '40': 'var(--unit-40)',
-      '48': 'var(--unit-48)',
-      '56': 'var(--unit-56)',
-      '64': 'var(--unit-64)',
+      '4': 'var(--grapes-unit-4)',
+      '8': 'var(--grapes-unit-8)',
+      '12': 'var(--grapes-unit-12)',
+      '16': 'var(--grapes-unit-16)',
+      '20': 'var(--grapes-unit-20)',
+      '24': 'var(--grapes-unit-24)',
+      '32': 'var(--grapes-unit-32)',
+      '40': 'var(--grapes-unit-40)',
+      '48': 'var(--grapes-unit-48)',
+      '56': 'var(--grapes-unit-56)',
+      '64': 'var(--grapes-unit-64)',
     },
     maxWidth: {
-      md: 'var(--unit-container-md)',
-      lg: 'var(--unit-container-lg)',
+      md: 'var(--grapes-unit-container-md)',
+      lg: 'var(--grapes-unit-container-lg)',
     },
     textColor: {
       primary: colors.contentPrimary,
@@ -174,7 +174,7 @@ export default {
       const baseSelectors = Object.entries(values).reduce(
         (acc, [key, value]) => {
           acc[`.title-${key}`] = {
-            font: `var(--title-${value})`,
+            font: `var(--grapes-title-${value})`,
           };
           return acc;
         },
@@ -192,7 +192,7 @@ export default {
       const baseSelectors = Object.entries(values).reduce(
         (acc, [key, value]) => {
           acc[`.body-${key}`] = {
-            font: `var(--body-${value})`,
+            font: `var(--grapes-body-${value})`,
           };
           return acc;
         },
@@ -210,7 +210,7 @@ export default {
       const baseSelectors = Object.entries(values).reduce(
         (acc, [key, value]) => {
           acc[`.heading-${key}`] = {
-            font: `var(--heading-${value})`,
+            font: `var(--grapes-heading-${value})`,
           };
           return acc;
         },
@@ -240,17 +240,17 @@ export default {
     plugin(({ addComponents }) => {
       const box = {
         '.box': {
-          border: `1px solid var(--color-border-default)`,
-          backgroundColor: 'var(--color-background-primary-default)',
-          borderRadius: 'var(--border-radius-12)',
-          padding: 'var(--unit-24)',
+          border: `1px solid var(--grapes-color-border-default)`,
+          backgroundColor: 'var(--grapes-color-background-primary-default)',
+          borderRadius: 'var(--grapes-border-radius-12)',
+          padding: 'var(--grapes-unit-24)',
         },
       };
 
       const separator = {
         '.separator': {
           width: '100%',
-          borderBottom: `1px solid var(--color-border-default)`,
+          borderBottom: `1px solid var(--grapes-color-border-default)`,
         },
       };
 

@@ -7,7 +7,7 @@
 .combobox {
   @extend %input-layout;
   display: inline-grid;
-  grid-template-columns: 1fr var(--unit-40);
+  grid-template-columns: 1fr var(--grapes-unit-40);
   padding: 0;
 
   &:not(:focus-within, .invalidCombobox):hover {
@@ -28,12 +28,12 @@
 
 .combobox[data-variant='magicGradient'] {
   border: 1px solid transparent;
-  background: var(--color-gradient-magic);
+  background: var(--grapes-color-gradient-magic);
 }
 
 .comboboxInputContainer {
   display: flex;
-  padding-left: var(--unit-8);
+  padding-left: var(--grapes-unit-8);
   overflow: hidden;
   height: 100%;
 }
@@ -67,7 +67,7 @@
   border: none;
   background: none;
   cursor: pointer;
-  color: var(--color-content-secondary-bg-primary);
+  color: var(--grapes-color-content-secondary-bg-primary);
 
   &:focus {
     outline: none;
@@ -75,8 +75,8 @@
 }
 
 .loadingItem {
-  margin: var(--unit-8) var(--unit-8) 0;
-  width: calc(100% - 2 * var(--unit-8));
+  margin: var(--grapes-unit-8) var(--grapes-unit-8) 0;
+  width: calc(100% - 2 * var(--grapes-unit-8));
 }
 
 .comboboxWrapper:has(.comboboxInput:disabled) {

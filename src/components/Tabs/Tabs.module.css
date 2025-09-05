@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   align-items: end;
-  gap: var(--unit-24);
+  gap: var(--grapes-unit-24);
 }
 
 .tabList::after {
@@ -13,36 +13,36 @@
   height: var(--_size-separator);
   left: 0;
   bottom: 0px;
-  background: var(--color-border-default);
+  background: var(--grapes-color-border-default);
 }
 
 .tab {
-  font: var(--body-m);
+  font: var(--grapes-body-m);
   flex-grow: var(--_tab-grow, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: var(--unit-4);
-  margin: 0 0 calc(var(--unit-16) - var(--_size-separator));
-  border-radius: var(--border-radius-4);
+  padding: var(--grapes-unit-4);
+  margin: 0 0 calc(var(--grapes-unit-16) - var(--_size-separator));
+  border-radius: var(--grapes-border-radius-4);
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--_color-tab, var(--color-content-primary));
+  color: var(--_color-tab, var(--grapes-color-content-primary));
 }
 
 .tab:hover {
-  background-color: var(--color-background-primary-hover);
+  background-color: var(--grapes-color-background-primary-hover);
   outline: none;
 }
 .tab:focus-visible {
-  outline: var(--focus-ring);
+  outline: var(--grapes-focus-ring);
 }
 
 .tab[aria-selected='true'] {
-  font: var(--title-m);
-  --_color-tab: var(--color-content-selected);
+  font: var(--grapes-title-m);
+  --_color-tab: var(--grapes-color-content-selected);
 }
 
 .indicator {
@@ -50,15 +50,15 @@
   left: 0;
   bottom: 0;
   z-index: 1;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--grapes-transition-duration);
+  transition-timing-function: var(--grapes-transition-timing-function);
   transition-property: transform, width, background-color;
   transform: translateX(var(--_offset-indicator, 0px));
   will-change: transform;
   height: calc(var(--_size-separator) * 2);
   background: var(
     --_color-indicator,
-    var(--color-background-primary-brand-default)
+    var(--grapes-color-background-primary-brand-default)
   );
   width: var(--_size-indicator);
 }
