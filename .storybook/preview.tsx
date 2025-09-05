@@ -15,7 +15,7 @@ import '../src/theme/exports/css-variables.scss';
 
 const withMargin = (Story) => {
   const hideFocusRing = process.env.IS_CHROMATIC
-    ? { ['--focus-ring']: '0px solid transparent' }
+    ? { ['--grapes-focus-ring']: '0px solid transparent' }
     : {};
 
   return (

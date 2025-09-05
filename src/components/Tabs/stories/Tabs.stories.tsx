@@ -131,7 +131,7 @@ export const ControlledTabs: Story = {
           variant="info"
           title="A tab's state can be controlled. Make sure to include tabIndex and an onChange as well."
         />
-        <label htmlFor="indexControl" className="mt-m flex items-center gap-xs">
+        <label htmlFor="indexControl">
           Index
           <input
             id="indexControl"

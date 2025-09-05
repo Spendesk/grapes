@@ -3,8 +3,8 @@
 * Change the default text color
 */
 html {
-  font: var(--body-m);
-  color: var(--color-content-primary);
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-primary);
 }
 
 /**
