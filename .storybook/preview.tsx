@@ -5,8 +5,7 @@ import { GrapesProvider } from '../src/components/GrapesProvider';
 import { LOCALES } from '../src/components/GrapesProvider/exampleLocales';
 import { allModes } from './modes';
 
-import './styles.scss';
-import '../src/tailwind.css';
+import './styles.css';
 
 /**
  * Manually import CSS variable as we don't use the entry point

@@ -1,3 +1,10 @@
+@import 'tailwindcss';
+@import '../../public/tailwind-grapes.css';
+
+:root {
+  color-scheme: light dark;
+}
+
 .Playground_Header {
   background: url(logo.svg) var(--color-background-primary-brand-default);
   height: var(--unit-40);
