@@ -1,7 +1,17 @@
 @theme inline {
   --*: initial;
 
-  --spacing: var(--grapes-unit-4);
+  --spacing-4: var(--grapes-unit-4);
+  --spacing-8: var(--grapes-unit-8);
+  --spacing-12: var(--grapes-unit-12);
+  --spacing-16: var(--grapes-unit-16);
+  --spacing-20: var(--grapes-unit-20);
+  --spacing-24: var(--grapes-unit-24);
+  --spacing-32: var(--grapes-unit-32);
+  --spacing-40: var(--grapes-unit-40);
+  --spacing-48: var(--grapes-unit-48);
+  --spacing-56: var(--grapes-unit-56);
+  --spacing-64: var(--grapes-unit-64);
 
   --radius-4: var(--grapes-border-radius-4);
   --radius-8: var(--grapes-border-radius-8);
