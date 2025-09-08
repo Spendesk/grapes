@@ -1,6 +1,8 @@
 @theme inline {
   --*: initial;
 
+  --spacing-0: 0;
+  --spacing-1: 1px;
   --spacing-4: var(--grapes-unit-4);
   --spacing-8: var(--grapes-unit-8);
   --spacing-12: var(--grapes-unit-12);

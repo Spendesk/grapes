@@ -22,6 +22,5 @@
     "lib": ["dom", "esnext"],
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["./src"],
-  "exclude": ["./src/tailwind.ts"]
+  "include": ["./src"]
 }

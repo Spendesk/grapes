@@ -6,13 +6,7 @@ import jsxa11y from 'eslint-plugin-jsx-a11y';
 
 export default tseslint.config(
   {
-    ignores: [
-      '**/scripts/**',
-      '**/dist/**',
-      '**/coverage/**',
-      '**/tooling/**',
-      '**/tailwind.ts',
-    ],
+    ignores: ['**/scripts/**', '**/dist/**', '**/coverage/**', '**/tooling/**'],
   },
   {
     files: ['src/**/*.ts', 'src/**/*.tsx'],
