@@ -4,13 +4,13 @@
   justify-content: center;
   list-style: none;
   padding: 0;
-  gap: var(--unit-12);
+  gap: var(--grapes-unit-12);
 }
 
 .list li {
   position: relative;
-  background: var(--color-content-disabled);
-  width: var(--unit-8);
+  background: var(--grapes-color-content-disabled);
+  width: var(--grapes-unit-8);
   aspect-ratio: 1;
   border-radius: 50%;
 }
@@ -19,13 +19,13 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: var(--color-content-selected);
+  background: var(--grapes-color-content-selected);
   content: '';
   display: block;
   opacity: 0;
   transform: scale(0);
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--grapes-transition-duration);
+  transition-timing-function: var(--grapes-transition-timing-function);
   transition-property: opacity, transform;
 }
 

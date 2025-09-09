@@ -12,10 +12,12 @@ const meta: Meta<typeof Upload> = {
   component: Upload,
   args: {
     content: (
-      <span style={{ color: 'var(--color-content-secondary-bg-primary)' }}>
+      <span
+        style={{ color: 'var(--grapes-color-content-secondary-bg-primary)' }}
+      >
         Drag & drop file(s) here <br />
         or{' '}
-        <u style={{ color: 'var(--color-content-primary)' }}>
+        <u style={{ color: 'var(--grapes-color-content-primary)' }}>
           import them from your computer
         </u>
       </span>

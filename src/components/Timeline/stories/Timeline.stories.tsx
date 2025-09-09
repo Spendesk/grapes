@@ -27,7 +27,7 @@ const meta: Meta<typeof Timeline> = {
           </section>
         </TimelineItem>
         <TimelineItem date={new Date('2021-01-08T09:24:00')}>
-          <div className="flex items-center gap-4">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
             <Tag variant="success" iconName="circle-check">
               Validated
             </Tag>

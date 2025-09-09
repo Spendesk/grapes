@@ -42,15 +42,15 @@ export const SkeletonText = ({
 const getHeight = (size: Size): string => {
   switch (size) {
     case 's':
-      return 'var(--font-size-12)';
+      return 'var(--grapes-font-size-12)';
     case 'm':
-      return 'var(--font-size-14)';
+      return 'var(--grapes-font-size-14)';
     case 'l':
-      return 'var(--font-size-16)';
+      return 'var(--grapes-font-size-16)';
     case 'xl':
-      return 'var(--font-size-20)';
+      return 'var(--grapes-font-size-20)';
     case 'xxl':
-      return 'var(--font-size-32)';
+      return 'var(--grapes-font-size-32)';
     default:
       throw new UnknownSizeError(size);
   }

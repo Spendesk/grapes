@@ -21,7 +21,7 @@ export const SkeletonTag = ({ className, width }: SkeletonTagProps) => {
     <Skeleton
       className={classNames(styles.skeletonTag, className)}
       width={width ?? '80px'}
-      height="var(--unit-24)"
+      height="var(--grapes-unit-24)"
     />
   );
 };

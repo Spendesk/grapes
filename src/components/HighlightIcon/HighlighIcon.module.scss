@@ -4,55 +4,55 @@
   color-scheme: light;
   display: inline-grid;
   place-items: center;
-  border-radius: var(--_border-radius, var(--border-radius-12));
+  border-radius: var(--_border-radius, var(--grapes-border-radius-12));
   box-sizing: border-box;
-  height: var(--_size, var(--unit-56));
-  width: var(--_size, var(--unit-56));
-  color: var(--color-content-primary);
+  height: var(--_size, var(--grapes-unit-56));
+  width: var(--_size, var(--grapes-unit-56));
+  color: var(--grapes-color-content-primary);
 }
 
 .highlightIcon[data-size='24'] {
-  --_size: var(--unit-24);
-  --_border-radius: var(--border-radius-4);
+  --_size: var(--grapes-unit-24);
+  --_border-radius: var(--grapes-border-radius-4);
 }
 
 .highlightIcon[data-size='32'] {
-  --_size: var(--unit-32);
-  --_border-radius: var(--border-radius-8);
+  --_size: var(--grapes-unit-32);
+  --_border-radius: var(--grapes-border-radius-8);
 }
 
 .highlightIcon[data-size='40'] {
-  --_size: var(--unit-40);
-  --_border-radius: var(--border-radius-8);
+  --_size: var(--grapes-unit-40);
+  --_border-radius: var(--grapes-border-radius-8);
 }
 
 .highlightIcon[data-size='56'] {
-  --_size: var(--unit-56);
-  --_border-radius: var(--border-radius-12);
+  --_size: var(--grapes-unit-56);
+  --_border-radius: var(--grapes-border-radius-12);
 }
 
 .highlightIcon[data-variant='alert'] {
-  color: var(--color-content-alert-default);
-  background-color: var(--color-background-secondary-alert-default);
+  color: var(--grapes-color-content-alert-default);
+  background-color: var(--grapes-color-background-secondary-alert-default);
 }
 
 .highlightIcon[data-variant='info'] {
-  color: var(--color-content-info-default);
-  background: var(--color-background-secondary-info-default);
+  color: var(--grapes-color-content-info-default);
+  background: var(--grapes-color-background-secondary-info-default);
 }
 
 .highlightIcon[data-variant='success'] {
-  color: var(--color-content-success-default);
-  background-color: var(--color-background-secondary-success-default);
+  color: var(--grapes-color-content-success-default);
+  background-color: var(--grapes-color-background-secondary-success-default);
 }
 
 .highlightIcon[data-variant='warning'] {
-  color: var(--color-content-warning-default);
-  background-color: var(--color-background-secondary-warning-default);
+  color: var(--grapes-color-content-warning-default);
+  background-color: var(--grapes-color-background-secondary-warning-default);
 }
 
 .highlightIcon[data-variant='neutral'] {
-  background-color: var(--color-background-secondary-default);
+  background-color: var(--grapes-color-background-secondary-default);
 }
 
 .highlightIcon[data-variant='apricot'] {

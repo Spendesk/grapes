@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import fs from 'node:fs';
+import tailwindcss from '@tailwindcss/vite';
 import { getReducedClassName } from './tooling/getReducedClassName.mjs';
 
 const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
@@ -19,13 +20,8 @@ export default defineConfig({
     modules: {
       generateScopedName: getReducedClassName,
     },
-    preprocessorOptions: {
-      scss: {
-        api: 'modern',
-      },
-    },
   },
-  plugins: [react(), dts()],
+  plugins: [react(), dts(), tailwindcss()],
   test: {
     pool: 'threads',
     globals: true,

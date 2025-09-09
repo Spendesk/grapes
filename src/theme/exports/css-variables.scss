@@ -99,452 +99,466 @@ $color-white-100: #ffffff;
 :root {
   color-scheme: light;
 
-  --color-background-primary-default: #{$color-white-100};
-  --color-background-primary-hover: #{$color-carbon-3-80};
-  --color-background-primary-pressed: rgb(232 232 232 / 80%);
-  --color-background-primary-selected: #{$color-purple-10};
-  --color-background-primary-disabled: #{$color-carbon-5};
-  --color-background-primary-readonly: #{$color-carbon-3};
-  --color-background-secondary-default: #{$color-carbon-3};
-  --color-background-secondary-hover: #{$color-carbon-3-80};
-  --color-background-tertiary-default: #{$color-carbon-10};
-  --color-background-tertiary-hover: rgb(239 239 239 / 15%);
-  --color-background-tertiary-pressed: rgb(232 232 232 / 25%);
-  --color-background-complementary-default: #{$color-carbon-100};
-  --color-background-complementary-hover: #{$color-carbon-80};
-  --color-background-complementary-pressed: #{$color-carbon-90};
-  --color-background-complementary-disabled: #{$color-carbon-100};
-  --color-background-primary-brand-default: #{$color-purple-70};
-  --color-background-primary-brand-hover: #{$color-purple-80};
-  --color-background-primary-brand-pressed: #{$color-purple-90};
-  --color-background-primary-info-default: #{$color-blue-70};
-  --color-background-primary-info-hover: #{$color-blue-80};
-  --color-background-primary-info-pressed: #{$color-blue-90};
-  --color-background-primary-success-default: #{$color-emerald-70};
-  --color-background-primary-success-hover: #{$color-emerald-80};
-  --color-background-primary-success-pressed: #{$color-emerald-90};
-  --color-background-primary-warning-default: #{$color-apricot-70};
-  --color-background-primary-warning-hover: #{$color-apricot-80};
-  --color-background-primary-warning-pressed: #{$color-apricot-90};
-  --color-background-primary-alert-default: #{$color-raspberry-70};
-  --color-background-primary-alert-hover: #{$color-raspberry-80};
-  --color-background-primary-alert-pressed: #{$color-raspberry-90};
-  --color-background-secondary-brand-default: #{$color-purple-10};
-  --color-background-secondary-brand-hover: rgb(243 240 255 / 80%);
-  --color-background-secondary-brand-pressed: rgb(228 221 255 / 80%);
-  --color-background-secondary-info-default: #{$color-blue-10};
-  --color-background-secondary-info-hover: rgb(239 241 254 / 80%);
-  --color-background-secondary-info-pressed: rgb(218 224 255 / 80%);
-  --color-background-secondary-success-default: #{$color-emerald-10};
-  --color-background-secondary-success-hover: rgb(233 246 236 / 80%);
-  --color-background-secondary-success-pressed: rgb(199 234 206 / 80%);
-  --color-background-secondary-warning-default: #{$color-apricot-10};
-  --color-background-secondary-warning-hover: rgb(248 238 233 / 80%);
-  --color-background-secondary-warning-pressed: rgb(250 207 184 / 80%);
-  --color-background-secondary-alert-default: #{$color-raspberry-10};
-  --color-background-secondary-alert-hover: rgb(250 240 243 / 80%);
-  --color-background-secondary-alert-pressed: rgb(239 215 223 / 80%);
-  --color-background-navigation-item-active: #{$color-carbon-7};
-  --color-background-navigation-item-hover: #{$color-carbon-5};
+  --grapes-color-background-primary-default: #{$color-white-100};
+  --grapes-color-background-primary-hover: #{$color-carbon-3-80};
+  --grapes-color-background-primary-pressed: rgb(232 232 232 / 80%);
+  --grapes-color-background-primary-selected: #{$color-purple-10};
+  --grapes-color-background-primary-disabled: #{$color-carbon-5};
+  --grapes-color-background-primary-readonly: #{$color-carbon-3};
+  --grapes-color-background-secondary-default: #{$color-carbon-3};
+  --grapes-color-background-secondary-hover: #{$color-carbon-3-80};
+  --grapes-color-background-tertiary-default: #{$color-carbon-10};
+  --grapes-color-background-tertiary-hover: rgb(239 239 239 / 15%);
+  --grapes-color-background-tertiary-pressed: rgb(232 232 232 / 25%);
+  --grapes-color-background-complementary-default: #{$color-carbon-100};
+  --grapes-color-background-complementary-hover: #{$color-carbon-80};
+  --grapes-color-background-complementary-pressed: #{$color-carbon-90};
+  --grapes-color-background-complementary-disabled: #{$color-carbon-100};
+  --grapes-color-background-primary-brand-default: #{$color-purple-70};
+  --grapes-color-background-primary-brand-hover: #{$color-purple-80};
+  --grapes-color-background-primary-brand-pressed: #{$color-purple-90};
+  --grapes-color-background-primary-info-default: #{$color-blue-70};
+  --grapes-color-background-primary-info-hover: #{$color-blue-80};
+  --grapes-color-background-primary-info-pressed: #{$color-blue-90};
+  --grapes-color-background-primary-success-default: #{$color-emerald-70};
+  --grapes-color-background-primary-success-hover: #{$color-emerald-80};
+  --grapes-color-background-primary-success-pressed: #{$color-emerald-90};
+  --grapes-color-background-primary-warning-default: #{$color-apricot-70};
+  --grapes-color-background-primary-warning-hover: #{$color-apricot-80};
+  --grapes-color-background-primary-warning-pressed: #{$color-apricot-90};
+  --grapes-color-background-primary-alert-default: #{$color-raspberry-70};
+  --grapes-color-background-primary-alert-hover: #{$color-raspberry-80};
+  --grapes-color-background-primary-alert-pressed: #{$color-raspberry-90};
+  --grapes-color-background-secondary-brand-default: #{$color-purple-10};
+  --grapes-color-background-secondary-brand-hover: rgb(243 240 255 / 80%);
+  --grapes-color-background-secondary-brand-pressed: rgb(228 221 255 / 80%);
+  --grapes-color-background-secondary-info-default: #{$color-blue-10};
+  --grapes-color-background-secondary-info-hover: rgb(239 241 254 / 80%);
+  --grapes-color-background-secondary-info-pressed: rgb(218 224 255 / 80%);
+  --grapes-color-background-secondary-success-default: #{$color-emerald-10};
+  --grapes-color-background-secondary-success-hover: rgb(233 246 236 / 80%);
+  --grapes-color-background-secondary-success-pressed: rgb(199 234 206 / 80%);
+  --grapes-color-background-secondary-warning-default: #{$color-apricot-10};
+  --grapes-color-background-secondary-warning-hover: rgb(248 238 233 / 80%);
+  --grapes-color-background-secondary-warning-pressed: rgb(250 207 184 / 80%);
+  --grapes-color-background-secondary-alert-default: #{$color-raspberry-10};
+  --grapes-color-background-secondary-alert-hover: rgb(250 240 243 / 80%);
+  --grapes-color-background-secondary-alert-pressed: rgb(239 215 223 / 80%);
+  --grapes-color-background-navigation-item-active: #{$color-carbon-7};
+  --grapes-color-background-navigation-item-hover: #{$color-carbon-5};
 
-  --color-content-primary: #{$color-carbon-100};
-  --color-content-secondary-bg-primary: #{$color-carbon-60};
-  --color-content-secondary-bg-secondary: #{$color-carbon-70};
-  --color-content-decorative-icon: #{$color-carbon-50};
-  --color-content-complementary: #{$color-white-100};
-  --color-content-selected: #{$color-purple-70};
-  --color-content-disabled: #{$color-carbon-20};
-  --color-content-brand-default: #{$color-purple-70};
-  --color-content-brand-hover: #{$color-purple-90};
-  --color-content-brand-pressed: #{$color-purple-90};
-  --color-content-info-default: #{$color-blue-70};
-  --color-content-success-default: #{$color-emerald-70};
-  --color-content-warning-default: #{$color-apricot-70};
-  --color-content-alert-default: #{$color-raspberry-70};
+  --grapes-color-content-primary: #{$color-carbon-100};
+  --grapes-color-content-secondary-bg-primary: #{$color-carbon-60};
+  --grapes-color-content-secondary-bg-secondary: #{$color-carbon-70};
+  --grapes-color-content-decorative-icon: #{$color-carbon-50};
+  --grapes-color-content-complementary: #{$color-white-100};
+  --grapes-color-content-selected: #{$color-purple-70};
+  --grapes-color-content-disabled: #{$color-carbon-20};
+  --grapes-color-content-brand-default: #{$color-purple-70};
+  --grapes-color-content-brand-hover: #{$color-purple-90};
+  --grapes-color-content-brand-pressed: #{$color-purple-90};
+  --grapes-color-content-info-default: #{$color-blue-70};
+  --grapes-color-content-success-default: #{$color-emerald-70};
+  --grapes-color-content-warning-default: #{$color-apricot-70};
+  --grapes-color-content-alert-default: #{$color-raspberry-70};
 
-  --color-border-default: #{$color-carbon-15};
-  --color-border-hover: #{$color-purple-90};
-  --color-border-selected: #{$color-purple-70};
-  --color-border-complementary: #{$color-carbon-90};
-  --color-border-info: #{$color-blue-70};
-  --color-border-success: #{$color-emerald-70};
-  --color-border-warning: #{$color-apricot-70};
-  --color-border-alert: #{$color-raspberry-70};
+  --grapes-color-border-default: #{$color-carbon-15};
+  --grapes-color-border-hover: #{$color-purple-90};
+  --grapes-color-border-selected: #{$color-purple-70};
+  --grapes-color-border-complementary: #{$color-carbon-90};
+  --grapes-color-border-info: #{$color-blue-70};
+  --grapes-color-border-success: #{$color-emerald-70};
+  --grapes-color-border-warning: #{$color-apricot-70};
+  --grapes-color-border-alert: #{$color-raspberry-70};
 
-  --color-backdrop: rgb(23 17 78 / 0.7);
-  --color-skeleton: rgb(230 230 233 / 0.5);
-  --color-gradient-magic:
+  --grapes-color-backdrop: rgb(23 17 78 / 0.7);
+  --grapes-color-skeleton: rgb(230 230 233 / 0.5);
+  --grapes-color-gradient-magic:
     linear-gradient(
-        var(--color-background-primary-default),
-        var(--color-background-primary-default)
+        var(--grapes-color-background-primary-default),
+        var(--grapes-color-background-primary-default)
       )
       padding-box,
     linear-gradient(90deg, #6f86ff, #e473ff 50%, #41d9cc 100%) border-box;
 
-  --border-radius-4: 4px;
-  --border-radius-8: 8px;
-  --border-radius-12: 12px;
+  --grapes-border-radius-4: 4px;
+  --grapes-border-radius-8: 8px;
+  --grapes-border-radius-12: 12px;
 
-  --focus-ring: 2px solid #{$color-purple-40};
-  --focus-ring-offset: 2px;
+  --grapes-focus-ring: 2px solid #{$color-purple-40};
+  --grapes-focus-ring-offset: 2px;
 
-  --font-size-12: 12px;
-  --font-size-14: 14px;
-  --font-size-16: 16px;
-  --font-size-20: 20px;
-  --font-size-24: 24px;
-  --font-size-32: 32px;
-  --font-size-40: 40px;
-  --ff-base: 'Inter', Helvetica, sans-serif;
-  --ff-heading: 'Roobert', Helvetica, sans-serif;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --body-s: var(--fw-medium) var(--font-size-12) / var(--lh-16) var(--ff-base);
-  --body-m: var(--fw-medium) var(--font-size-14) / var(--lh-20) var(--ff-base);
-  --body-l: var(--fw-medium) var(--font-size-16) / var(--lh-24) var(--ff-base);
-  --body-xl: var(--fw-medium) var(--font-size-20) / var(--lh-24) var(--ff-base);
-  --body-xxl: var(--fw-medium) var(--font-size-32) / var(--lh-40) var(--ff-base);
-  --title-s: var(--fw-semibold) var(--font-size-12) / var(--lh-16)
-    var(--ff-base);
-  --title-m: var(--fw-semibold) var(--font-size-14) / var(--lh-20)
-    var(--ff-base);
-  --title-l: var(--fw-semibold) var(--font-size-16) / var(--lh-24)
-    var(--ff-base);
-  --title-xl: var(--fw-semibold) var(--font-size-20) / var(--lh-24)
-    var(--ff-base);
-  --title-xxl: var(--fw-semibold) var(--font-size-32) / var(--lh-40)
-    var(--ff-base);
-  --heading-m: var(--fw-medium) var(--font-size-20) / var(--lh-24)
-    var(--ff-heading);
-  --heading-l: var(--fw-medium) var(--font-size-24) / var(--lh-32)
-    var(--ff-heading);
-  --heading-xl: var(--fw-medium) var(--font-size-32) / var(--lh-40)
-    var(--ff-heading);
-  --heading-xxl: var(--fw-medium) var(--font-size-40) / var(--lh-48)
-    var(--ff-heading);
-  --transition-duration: 0.2s;
-  --transition-duration-long: 0.3s;
-  --transition-timing-function: ease-in-out;
-  --z-index-tooltip: 10000;
-  --z-index-modal: 9000;
-  --z-index-side-panel: 8000;
-  --z-index-floating-action-bar: 7000;
-  --z-index-dropdown: 10;
-  --lh-16: 16px;
-  --lh-20: 20px;
-  --lh-24: 24px;
-  --lh-32: 32px;
-  --lh-40: 40px;
-  --lh-48: 48px;
-  --unit-4: 4px;
-  --unit-8: 8px;
-  --unit-12: 12px;
-  --unit-16: 16px;
-  --unit-20: 20px;
-  --unit-24: 24px;
-  --unit-32: 32px;
-  --unit-40: 40px;
-  --unit-48: 48px;
-  --unit-56: 56px;
-  --unit-64: 64px;
+  --grapes-font-size-12: 12px;
+  --grapes-font-size-14: 14px;
+  --grapes-font-size-16: 16px;
+  --grapes-font-size-20: 20px;
+  --grapes-font-size-24: 24px;
+  --grapes-font-size-32: 32px;
+  --grapes-font-size-40: 40px;
+  --grapes-ff-base: 'Inter', Helvetica, sans-serif;
+  --grapes-ff-heading: 'Roobert', Helvetica, sans-serif;
+  --grapes-fw-medium: 500;
+  --grapes-fw-semibold: 600;
+  --grapes-body-s: var(--grapes-fw-medium) var(--grapes-font-size-12) /
+    var(--grapes-lh-16) var(--grapes-ff-base);
+  --grapes-body-m: var(--grapes-fw-medium) var(--grapes-font-size-14) /
+    var(--grapes-lh-20) var(--grapes-ff-base);
+  --grapes-body-l: var(--grapes-fw-medium) var(--grapes-font-size-16) /
+    var(--grapes-lh-24) var(--grapes-ff-base);
+  --grapes-body-xl: var(--grapes-fw-medium) var(--grapes-font-size-20) /
+    var(--grapes-lh-24) var(--grapes-ff-base);
+  --grapes-body-xxl: var(--grapes-fw-medium) var(--grapes-font-size-32) /
+    var(--grapes-lh-40) var(--grapes-ff-base);
+  --grapes-title-s: var(--grapes-fw-semibold) var(--grapes-font-size-12) /
+    var(--grapes-lh-16) var(--grapes-ff-base);
+  --grapes-title-m: var(--grapes-fw-semibold) var(--grapes-font-size-14) /
+    var(--grapes-lh-20) var(--grapes-ff-base);
+  --grapes-title-l: var(--grapes-fw-semibold) var(--grapes-font-size-16) /
+    var(--grapes-lh-24) var(--grapes-ff-base);
+  --grapes-title-xl: var(--grapes-fw-semibold) var(--grapes-font-size-20) /
+    var(--grapes-lh-24) var(--grapes-ff-base);
+  --grapes-title-xxl: var(--grapes-fw-semibold) var(--grapes-font-size-32) /
+    var(--grapes-lh-40) var(--grapes-ff-base);
+  --grapes-heading-m: var(--grapes-fw-medium) var(--grapes-font-size-20) /
+    var(--grapes-lh-24) var(--grapes-ff-heading);
+  --grapes-heading-l: var(--grapes-fw-medium) var(--grapes-font-size-24) /
+    var(--grapes-lh-32) var(--grapes-ff-heading);
+  --grapes-heading-xl: var(--grapes-fw-medium) var(--grapes-font-size-32) /
+    var(--grapes-lh-40) var(--grapes-ff-heading);
+  --grapes-heading-xxl: var(--grapes-fw-medium) var(--grapes-font-size-40) /
+    var(--grapes-lh-48) var(--grapes-ff-heading);
+  --grapes-transition-duration: 0.2s;
+  --grapes-transition-duration-long: 0.3s;
+  --grapes-transition-timing-function: ease-in-out;
+  --grapes-z-index-tooltip: 10000;
+  --grapes-z-index-modal: 9000;
+  --grapes-z-index-side-panel: 8000;
+  --grapes-z-index-floating-action-bar: 7000;
+  --grapes-z-index-dropdown: 10;
+  --grapes-lh-16: 16px;
+  --grapes-lh-20: 20px;
+  --grapes-lh-24: 24px;
+  --grapes-lh-32: 32px;
+  --grapes-lh-40: 40px;
+  --grapes-lh-48: 48px;
+  --grapes-unit-4: 4px;
+  --grapes-unit-8: 8px;
+  --grapes-unit-12: 12px;
+  --grapes-unit-16: 16px;
+  --grapes-unit-20: 20px;
+  --grapes-unit-24: 24px;
+  --grapes-unit-32: 32px;
+  --grapes-unit-40: 40px;
+  --grapes-unit-48: 48px;
+  --grapes-unit-56: 56px;
+  --grapes-unit-64: 64px;
 
-  --unit-container-lg: 1000px;
-  --unit-container-md: 632px;
+  --grapes-unit-container-lg: 1000px;
+  --grapes-unit-container-md: 632px;
 
-  --elevation-xs: 0px 1px 2px rgb(25 27 27 / 0.05);
-  --elevation-s:
+  --grapes-elevation-xs: 0px 1px 2px rgb(25 27 27 / 0.05);
+  --grapes-elevation-s:
     0px 1px 2px rgb(25 27 27 / 0.06), 0px 1px 3px rgb(25 27 27 / 0.1);
-  --elevation-m:
+  --grapes-elevation-m:
     0px 2px 4px -1px rgb(25 27 27 / 0.06), 0px 4px 6px -1px rgb(25 27 27 / 0.1);
-  --elevation-l:
+  --grapes-elevation-l:
     0px 4px 6px -2px rgb(25 27 27 / 0.05),
     0px 10px 15px -3px rgb(25 27 27 / 0.1);
-  --elevation-xl:
+  --grapes-elevation-xl:
     0px 10px 10px -5px rgb(25 27 27 / 0.04),
     0px 20px 25px -5px rgb(25 27 27 / 0.1);
 
-  --size-switch: 30px;
-  --size-toast: clamp(464px, 25vw, 600px);
-  --size-side-panel: 576px;
-  --popover-offset: var(--unit-8);
+  --grapes-size-switch: 30px;
+  --grapes-size-toast: clamp(464px, 25vw, 600px);
+  --grapes-size-side-panel: 576px;
+  --grapes-popover-offset: var(--grapes-unit-8);
 }
 
 @supports (background-color: light-dark(#fff, #eee)) {
   :root {
-    --color-background-primary-default: light-dark(
+    --grapes-color-background-primary-default: light-dark(
       #{$color-white-100},
       #{$color-carbon-90}
     );
-    --color-background-primary-hover: light-dark(
+    --grapes-color-background-primary-hover: light-dark(
       #{$color-carbon-3-80},
       #{$color-carbon-80}
     );
-    --color-background-primary-pressed: light-dark(
+    --grapes-color-background-primary-pressed: light-dark(
       rgb(232 232 232 / 80%),
       #{$color-carbon-70}
     );
-    --color-background-primary-selected: light-dark(
+    --grapes-color-background-primary-selected: light-dark(
       #{$color-purple-10},
       #{$color-purple-70}
     );
-    --color-background-primary-disabled: light-dark(
+    --grapes-color-background-primary-disabled: light-dark(
       #{$color-carbon-5},
       #{$color-carbon-90}
     );
-    --color-background-primary-readonly: light-dark(
+    --grapes-color-background-primary-readonly: light-dark(
       #{$color-carbon-3},
       #{$color-carbon-100}
     );
-    --color-background-secondary-default: light-dark(
+    --grapes-color-background-secondary-default: light-dark(
       #{$color-carbon-3},
       #{$color-carbon-80}
     );
-    --color-background-secondary-hover: light-dark(
+    --grapes-color-background-secondary-hover: light-dark(
       #{$color-carbon-3-80},
       #{$color-carbon-70}
     );
-    --color-background-tertiary-default: light-dark(
+    --grapes-color-background-tertiary-default: light-dark(
       #{$color-carbon-10},
       #{$color-carbon-90}
     );
-    --color-background-tertiary-hover: light-dark(
+    --grapes-color-background-tertiary-hover: light-dark(
       rgb(239 239 239 / 15%),
       #{$color-carbon-80}
     );
-    --color-background-tertiary-pressed: light-dark(
+    --grapes-color-background-tertiary-pressed: light-dark(
       rgb(232 232 232 / 25%),
       #{$color-carbon-90}
     );
-    --color-background-complementary-default: light-dark(
+    --grapes-color-background-complementary-default: light-dark(
       #{$color-carbon-100},
       #{$color-white-100}
     );
-    --color-background-complementary-hover: light-dark(
+    --grapes-color-background-complementary-hover: light-dark(
       #{$color-carbon-3-80},
       #{$color-carbon-80}
     );
-    --color-background-complementary-pressed: light-dark(
+    --grapes-color-background-complementary-pressed: light-dark(
       #{$color-carbon-90},
       #{$color-carbon-3-80}
     );
-    --color-background-complementary-disabled: light-dark(
+    --grapes-color-background-complementary-disabled: light-dark(
       #{$color-carbon-100},
       #{$color-carbon-5}
     );
-    --color-background-primary-brand-default: light-dark(
+    --grapes-color-background-primary-brand-default: light-dark(
       #{$color-purple-70},
       #{$color-purple-40}
     );
-    --color-background-primary-brand-hover: light-dark(
+    --grapes-color-background-primary-brand-hover: light-dark(
       #{$color-purple-80},
       #{$color-purple-20}
     );
-    --color-background-primary-brand-pressed: light-dark(
+    --grapes-color-background-primary-brand-pressed: light-dark(
       #{$color-purple-90},
       #{$color-purple-10}
     );
-    --color-background-primary-info-default: light-dark(
+    --grapes-color-background-primary-info-default: light-dark(
       #{$color-blue-70},
       #{$color-blue-40}
     );
-    --color-background-primary-info-hover: light-dark(
+    --grapes-color-background-primary-info-hover: light-dark(
       #{$color-blue-80},
       #{$color-blue-20}
     );
-    --color-background-primary-info-pressed: light-dark(
+    --grapes-color-background-primary-info-pressed: light-dark(
       #{$color-blue-90},
       #{$color-blue-30}
     );
-    --color-background-primary-success-default: light-dark(
+    --grapes-color-background-primary-success-default: light-dark(
       #{$color-emerald-70},
       #{$color-emerald-40}
     );
-    --color-background-primary-success-hover: light-dark(
+    --grapes-color-background-primary-success-hover: light-dark(
       #{$color-emerald-80},
       #{$color-emerald-20}
     );
-    --color-background-primary-success-pressed: light-dark(
+    --grapes-color-background-primary-success-pressed: light-dark(
       #{$color-emerald-90},
       #{$color-emerald-30}
     );
-    --color-background-primary-warning-default: light-dark(
+    --grapes-color-background-primary-warning-default: light-dark(
       #{$color-apricot-70},
       #{$color-apricot-40}
     );
-    --color-background-primary-warning-hover: light-dark(
+    --grapes-color-background-primary-warning-hover: light-dark(
       #{$color-apricot-80},
       #{$color-apricot-20}
     );
-    --color-background-primary-warning-pressed: light-dark(
+    --grapes-color-background-primary-warning-pressed: light-dark(
       #{$color-apricot-90},
       #{$color-apricot-30}
     );
-    --color-background-primary-alert-default: light-dark(
+    --grapes-color-background-primary-alert-default: light-dark(
       #{$color-raspberry-70},
       #{$color-raspberry-40}
     );
-    --color-background-primary-alert-hover: light-dark(
+    --grapes-color-background-primary-alert-hover: light-dark(
       #{$color-raspberry-80},
       #{$color-raspberry-20}
     );
-    --color-background-primary-alert-pressed: light-dark(
+    --grapes-color-background-primary-alert-pressed: light-dark(
       #{$color-raspberry-90},
       #{$color-raspberry-30}
     );
-    --color-background-secondary-brand-default: light-dark(
+    --grapes-color-background-secondary-brand-default: light-dark(
       #{$color-purple-10},
       #{$color-purple-30}
     );
-    --color-background-secondary-brand-hover: light-dark(
+    --grapes-color-background-secondary-brand-hover: light-dark(
       rgb(243 240 255 / 80%),
       #{$color-purple-10}
     );
-    --color-background-secondary-brand-pressed: light-dark(
+    --grapes-color-background-secondary-brand-pressed: light-dark(
       rgb(228 221 255 / 80%),
       #{$color-purple-20}
     );
-    --color-background-secondary-info-default: light-dark(
+    --grapes-color-background-secondary-info-default: light-dark(
       #{$color-blue-10},
       #{$color-blue-30}
     );
-    --color-background-secondary-info-hover: light-dark(
+    --grapes-color-background-secondary-info-hover: light-dark(
       rgb(239 241 254 / 80%),
       #{$color-blue-10}
     );
-    --color-background-secondary-info-pressed: light-dark(
+    --grapes-color-background-secondary-info-pressed: light-dark(
       rgb(218 224 255 / 80%),
       #{$color-blue-20}
     );
-    --color-background-secondary-success-default: light-dark(
+    --grapes-color-background-secondary-success-default: light-dark(
       #{$color-emerald-10},
       #{$color-emerald-30}
     );
-    --color-background-secondary-success-hover: light-dark(
+    --grapes-color-background-secondary-success-hover: light-dark(
       rgb(233 246 236 / 80%),
       #{$color-emerald-10}
     );
-    --color-background-secondary-success-pressed: light-dark(
+    --grapes-color-background-secondary-success-pressed: light-dark(
       rgb(199 234 206 / 80%),
       #{$color-emerald-20}
     );
-    --color-background-secondary-warning-default: light-dark(
+    --grapes-color-background-secondary-warning-default: light-dark(
       #{$color-apricot-10},
       #{$color-apricot-30}
     );
-    --color-background-secondary-warning-hover: light-dark(
+    --grapes-color-background-secondary-warning-hover: light-dark(
       rgb(248 238 233 / 80%),
       #{$color-apricot-10}
     );
-    --color-background-secondary-warning-pressed: light-dark(
+    --grapes-color-background-secondary-warning-pressed: light-dark(
       rgb(250 207 184 / 80%),
       #{$color-apricot-20}
     );
-    --color-background-secondary-alert-default: light-dark(
+    --grapes-color-background-secondary-alert-default: light-dark(
       #{$color-raspberry-10},
       #{$color-raspberry-30}
     );
-    --color-background-secondary-alert-hover: light-dark(
+    --grapes-color-background-secondary-alert-hover: light-dark(
       rgb(250 240 243 / 80%),
       #{$color-raspberry-10}
     );
-    --color-background-secondary-alert-pressed: light-dark(
+    --grapes-color-background-secondary-alert-pressed: light-dark(
       rgb(239 215 223 / 80%),
       #{$color-raspberry-20}
     );
-    --color-background-navigation-item-active: light-dark(
+    --grapes-color-background-navigation-item-active: light-dark(
       #{$color-carbon-7},
       rgb(48 50 50 / 0.4)
     );
-    --color-background-navigation-item-hover: light-dark(
+    --grapes-color-background-navigation-item-hover: light-dark(
       #{$color-carbon-5},
       rgb(48 50 50 / 0.7)
     );
 
-    --color-content-primary: light-dark(
+    --grapes-color-content-primary: light-dark(
       #{$color-carbon-100},
       #{$color-white-100}
     );
-    --color-content-secondary-bg-primary: light-dark(
+    --grapes-color-content-secondary-bg-primary: light-dark(
       #{$color-carbon-60},
       #{$color-carbon-20}
     );
-    --color-content-secondary-bg-secondary: light-dark(
+    --grapes-color-content-secondary-bg-secondary: light-dark(
       #{$color-carbon-70},
       #{$color-carbon-30}
     );
-    --color-content-decorative-icon: light-dark(
+    --grapes-color-content-decorative-icon: light-dark(
       #{$color-carbon-50},
       #{$color-carbon-60}
     );
-    --color-content-complementary: light-dark(
+    --grapes-color-content-complementary: light-dark(
       #{$color-white-100},
       #{$color-carbon-100}
     );
-    --color-content-selected: light-dark(
+    --grapes-color-content-selected: light-dark(
       #{$color-purple-70},
       #{$color-purple-30}
     );
-    --color-content-disabled: light-dark(
+    --grapes-color-content-disabled: light-dark(
       #{$color-carbon-20},
       #{$color-carbon-20}
     );
-    --color-content-brand-default: light-dark(
+    --grapes-color-content-brand-default: light-dark(
       #{$color-purple-70},
       #{$color-purple-40}
     );
-    --color-content-brand-hover: light-dark(
+    --grapes-color-content-brand-hover: light-dark(
       #{$color-purple-90},
       #{$color-purple-10}
     );
-    --color-content-brand-pressed: light-dark(
+    --grapes-color-content-brand-pressed: light-dark(
       #{$color-purple-90},
       #{$color-purple-20}
     );
-    --color-content-info-default: light-dark(
+    --grapes-color-content-info-default: light-dark(
       #{$color-blue-70},
       #{$color-blue-40}
     );
-    --color-content-success-default: light-dark(
+    --grapes-color-content-success-default: light-dark(
       #{$color-emerald-70},
       #{$color-emerald-40}
     );
-    --color-content-warning-default: light-dark(
+    --grapes-color-content-warning-default: light-dark(
       #{$color-apricot-70},
       #{$color-apricot-40}
     );
-    --color-content-alert-default: light-dark(
+    --grapes-color-content-alert-default: light-dark(
       #{$color-raspberry-70},
       #{$color-raspberry-40}
     );
 
-    --color-border-default: light-dark(
+    --grapes-color-border-default: light-dark(
       #{$color-carbon-15},
       #{$color-carbon-80}
     );
-    --color-border-hover: light-dark(#{$color-purple-90}, #{$color-purple-20});
-    --color-border-selected: light-dark(
+    --grapes-color-border-hover: light-dark(
+      #{$color-purple-90},
+      #{$color-purple-20}
+    );
+    --grapes-color-border-selected: light-dark(
       #{$color-purple-70},
       #{$color-purple-40}
     );
-    --color-border-complementary: light-dark(
+    --grapes-color-border-complementary: light-dark(
       #{$color-carbon-90},
       #{$color-carbon-10}
     );
-    --color-border-info: light-dark(#{$color-blue-70}, #{$color-blue-40});
-    --color-border-success: light-dark(
+    --grapes-color-border-info: light-dark(
+      #{$color-blue-70},
+      #{$color-blue-40}
+    );
+    --grapes-color-border-success: light-dark(
       #{$color-emerald-70},
       #{$color-emerald-40}
     );
-    --color-border-warning: light-dark(
+    --grapes-color-border-warning: light-dark(
       #{$color-apricot-70},
       #{$color-apricot-40}
     );
-    --color-border-alert: light-dark(
+    --grapes-color-border-alert: light-dark(
       #{$color-raspberry-70},
       #{$color-raspberry-40}
     );
 
-    --color-backdrop: light-dark(rgb(23 17 78 / 0.7), rgb(25 27 27 / 0.6));
+    --grapes-color-backdrop: light-dark(
+      rgb(23 17 78 / 0.7),
+      rgb(25 27 27 / 0.6)
+    );
   }
 }
 

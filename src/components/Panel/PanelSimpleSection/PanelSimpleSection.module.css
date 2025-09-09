@@ -1,13 +1,13 @@
 .panelSimpleSectionTitle {
-  font: var(--title-l);
-  margin-bottom: var(--unit-16);
-  color: var(--color-content-primary);
+  font: var(--grapes-title-l);
+  margin-bottom: var(--grapes-unit-16);
+  color: var(--grapes-color-content-primary);
 }
 
 .panelSimpleSectionIcon {
   flex: 0 0 auto;
-  transition: rotate var(--transition-duration)
-    var(--transition-timing-function);
+  transition: rotate var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
 }
 
 details[open] .panelSimpleSectionIcon {

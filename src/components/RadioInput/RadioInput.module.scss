@@ -1,10 +1,10 @@
 @use '../../theme/placeholders';
 
 .radio {
-  transition: background-color var(--transition-duration)
-    var(--transition-timing-function);
-  height: var(--unit-16);
-  width: var(--unit-16);
+  transition: background-color var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
+  height: var(--grapes-unit-16);
+  width: var(--grapes-unit-16);
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -12,30 +12,30 @@
   position: relative;
   isolation: isolate;
   box-sizing: border-box;
-  background-color: var(--color-background-primary-default);
-  border: 1px var(--color-border-default) solid;
+  background-color: var(--grapes-color-background-primary-default);
+  border: 1px var(--grapes-color-border-default) solid;
 }
 
 .radio:has(:checked)::after {
   content: '';
   position: relative;
   z-index: 1;
-  width: var(--unit-4);
-  height: var(--unit-4);
+  width: var(--grapes-unit-4);
+  height: var(--grapes-unit-4);
   border-radius: 50%;
-  background-color: var(--bg, var(--color-background-primary-default));
+  background-color: var(--bg, var(--grapes-color-background-primary-default));
 }
 
 .radio:has(:disabled) {
   border: none;
-  --bg: var(--color-content-disabled);
+  --bg: var(--grapes-color-content-disabled);
   cursor: not-allowed;
 }
 
 .radioInput {
   position: absolute;
-  height: var(--unit-16);
-  width: var(--unit-16);
+  height: var(--grapes-unit-16);
+  width: var(--grapes-unit-16);
   cursor: inherit;
   appearance: none;
   border-radius: inherit;
@@ -43,12 +43,12 @@
   margin: 0;
 
   &:focus-visible {
-    outline: var(--focus-ring);
-    outline-offset: var(--focus-ring-offset);
+    outline: var(--grapes-focus-ring);
+    outline-offset: var(--grapes-focus-ring-offset);
   }
 
   &:where(:checked) {
-    background-color: var(--color-border-selected);
+    background-color: var(--grapes-color-border-selected);
   }
 
   &:disabled {
