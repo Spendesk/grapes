@@ -73,6 +73,7 @@ export type BaseComboboxProps<T extends ComboboxOption> = {
    * Function to render options in a loading state.
    */
   renderLoadingOption?({ key }: { key: string | number }): ReactNode;
+  renderDropdownHeader?: () => ReactNode;
   propsGetters: PropsGetters<T>;
   /**
    * Handler that is called when the element receives focus.
