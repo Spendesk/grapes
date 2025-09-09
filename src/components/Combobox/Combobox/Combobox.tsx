@@ -12,7 +12,9 @@ import styles from './Combobox.module.scss';
 import { useTranslate } from '../../../hooks/useTranslate';
 
 export const Combobox = <T extends ComboboxOption>(
-  props: ComboboxWithDropdownProps<T>,
+  props: ComboboxWithDropdownProps<T> & {
+    renderDropdownHeader?: () => React.ReactNode;
+  },
 ) => {
   const {
     className,
@@ -36,6 +38,7 @@ export const Combobox = <T extends ComboboxOption>(
     renderLoadingOption = ({ key }: { key: string | number }) => (
       <SkeletonText key={key} size="xl" className={styles.loadingItem} />
     ),
+    renderDropdownHeader,
     propsGetters: {
       getInputProps,
       getToggleButtonProps,
@@ -140,6 +143,7 @@ export const Combobox = <T extends ComboboxOption>(
             renderLoadingOption({ key: i }),
           );
         }}
+        renderHeader={renderDropdownHeader}
       />
     </div>
   );

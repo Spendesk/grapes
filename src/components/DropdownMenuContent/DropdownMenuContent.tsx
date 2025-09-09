@@ -37,6 +37,7 @@ export type Props<T extends Option> = {
   renderOptionGroup?(optionGroup: OptionGroup<T>): ReactNode;
   renderNoOptions?(): ReactNode;
   renderLoadingOptions?(): ReactNode;
+  renderHeader?: () => ReactNode;
 };
 
 export const DropdownMenuContent = <T extends Option>({
@@ -52,6 +53,7 @@ export const DropdownMenuContent = <T extends Option>({
   renderOptionGroup,
   renderNoOptions,
   renderLoadingOptions,
+  renderHeader,
 }: Props<T>) => {
   const [visible, setVisible] = useState(isOpen);
   const refTimeout = useRef<NodeJS.Timeout>();
@@ -95,6 +97,7 @@ export const DropdownMenuContent = <T extends Option>({
         }
       }}
     >
+      {renderHeader && renderHeader()}
       {visible ? (
         <DropdownMenuContentList
           options={options}

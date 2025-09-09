@@ -1,4 +1,5 @@
-import React, { type FocusEventHandler, type ReactNode } from 'react';
+import React, { useState, type FocusEventHandler, type ReactNode } from 'react';
+import type { ChangeEvent } from 'react';
 
 import { DropdownItem } from '../../DropdownItem';
 import {
@@ -105,6 +106,14 @@ export const Autocomplete = <T extends ComboboxOption>({
   onFocus,
   ...comboboxProps
 }: AutocompleteProps<T>) => {
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    setSearchValue(newValue);
+    onSearch(newValue);
+  };
+
   const internalOptions =
     options.length === 0 && value && !isAutocompletePlace ? [value] : options;
 
@@ -160,7 +169,7 @@ export const Autocomplete = <T extends ComboboxOption>({
       }}
       renderOptionGroup={renderOptionGroup}
       renderNoOptions={() =>
-        renderNoOptions ? renderNoOptions(inputValue) : null
+        renderNoOptions ? renderNoOptions(searchValue) : null
       }
       propsGetters={{
         getInputProps: () =>
@@ -175,6 +184,16 @@ export const Autocomplete = <T extends ComboboxOption>({
       onClearSelection={
         showClearSelectionButton && inputValue !== '' ? reset : undefined
       }
+      renderDropdownHeader={() => (
+        <input
+          type="text"
+          value={searchValue}
+          onChange={handleSearchChange}
+          placeholder={placeholder || 'Search...'}
+          className={styles.autocompleteSearchInput}
+          style={{ marginBottom: 8, width: '100%' }}
+        />
+      )}
     />
   );
 };
