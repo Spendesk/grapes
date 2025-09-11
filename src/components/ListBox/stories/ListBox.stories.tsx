@@ -6,7 +6,7 @@ import { Button } from '../../Button';
 
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
 
-import styles from './ListBox.module.css';
+import styles from '../ListBox.module.css';
 import { Select } from '../../Select';
 import { action } from 'storybook/actions';
 
