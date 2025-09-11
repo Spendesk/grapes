@@ -6,7 +6,7 @@ import type { AutocompleteProps } from '../Autocomplete';
 import type { Option } from '../option';
 import { useAutocompleteCombobox } from '../hooks';
 
-import styles from './AutocompleteWithAddOption.module.scss';
+import styles from './AutocompleteWithAddOption.module.css';
 
 export const addOptionItemKey = 'add-option-item';
 

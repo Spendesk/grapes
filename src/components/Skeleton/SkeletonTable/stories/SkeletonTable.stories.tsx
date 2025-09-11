@@ -5,7 +5,7 @@ import { SkeletonCheckbox } from '../../SkeletonCheckbox';
 import { SkeletonText } from '../../SkeletonText';
 import { SkeletonTable } from '../SkeletonTable';
 
-import styles from './DemoSkeletonTable.module.scss';
+import styles from './DemoSkeletonTable.module.css';
 
 const meta: Meta<typeof SkeletonTable> = {
   title: 'Skeleton/Table',

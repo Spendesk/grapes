@@ -1,7 +1,7 @@
 import React, { type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
-import styles from './DropdownItem.module.scss';
+import styles from './DropdownItem.module.css';
 
 export type DropdownItemProps = {
   /**

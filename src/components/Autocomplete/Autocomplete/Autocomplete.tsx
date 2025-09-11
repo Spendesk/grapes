@@ -10,7 +10,7 @@ import {
 import { useAutocompleteCombobox } from '../hooks';
 import { type Placement } from '../../../utils';
 
-import styles from './Autocomplete.module.scss';
+import styles from './Autocomplete.module.css';
 
 export type AutocompleteProps<T extends ComboboxOption> = Omit<
   ComboboxProps<T>,

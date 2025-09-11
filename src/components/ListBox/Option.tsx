@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useId } from '../../hooks/useId';
 import { CheckboxInput } from '../CheckboxInput';
 
-import styles from './ListBox.module.scss';
+import styles from './ListBox.module.css';
 import { useOptionContext } from './ListBoxProvider';
 import { classNames } from '../../utils';
 

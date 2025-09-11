@@ -2,7 +2,7 @@ import React, { type HTMLProps, type ReactNode, Fragment } from 'react';
 
 import { DropdownItem } from '../DropdownItem';
 
-import styles from './DropdownMenuContentList.module.scss';
+import styles from './DropdownMenuContentList.module.css';
 
 type Option = { key: string; label: string };
 

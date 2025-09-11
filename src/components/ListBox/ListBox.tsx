@@ -9,7 +9,7 @@ import { ListBoxHeader } from './ListBoxHeader';
 import { EmptyListBox } from './EmptyListBox';
 import { Options } from './Options';
 
-import styles from './ListBox.module.scss';
+import styles from './ListBox.module.css';
 
 export type OptionVariant = 'alert' | 'warning' | undefined;
 

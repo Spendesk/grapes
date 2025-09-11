@@ -7,7 +7,7 @@ import React, {
 import { classNames } from '../../../utils';
 import { CheckboxInput } from '../../CheckboxInput';
 
-import styles from './CollapsibleListItem.module.scss';
+import styles from './CollapsibleListItem.module.css';
 
 type CollapsibleListItemVariant = 'alert';
 

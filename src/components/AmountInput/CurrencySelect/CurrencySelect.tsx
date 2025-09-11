@@ -3,7 +3,7 @@ import React from 'react';
 import type { AmountInputCurrency } from '../currency';
 import { SelectAddon } from '../../SelectAddon';
 
-import styles from './CurrencySelect.module.scss';
+import styles from './CurrencySelect.module.css';
 import { useTranslate } from '../../../hooks/useTranslate';
 
 type Props = {
