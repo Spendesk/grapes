@@ -14,17 +14,17 @@
   padding: var(--grapes-unit-8) var(--grapes-unit-8) var(--grapes-unit-8)
     var(--grapes-unit-16);
   box-sizing: border-box;
-}
 
-.toast:has(.toastContent):not(:has(.toastAction)) {
-  padding-bottom: var(--grapes-unit-16);
-}
+  &:has(.toastContent):not(:has(.toastAction)) {
+    padding-bottom: var(--grapes-unit-16);
+  }
 
-.toast[data-variant='success'] {
-  background: var(--grapes-color-background-primary-success-default);
-}
-.toast[data-variant='alert'] {
-  background: var(--grapes-color-background-primary-alert-default);
+  &[data-variant='success'] {
+    background: var(--grapes-color-background-primary-success-default);
+  }
+  &[data-variant='alert'] {
+    background: var(--grapes-color-background-primary-alert-default);
+  }
 }
 
 .toastContent,

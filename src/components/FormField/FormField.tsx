@@ -3,7 +3,7 @@ import React, { type ReactNode } from 'react';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
 
-import styles from './FormField.module.scss';
+import styles from './FormField.module.css';
 import { FormFieldProvider } from './FormFieldContext';
 import { useId } from '../../hooks/useId';
 

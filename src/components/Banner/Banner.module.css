@@ -5,10 +5,10 @@
   padding: var(--grapes-unit-24);
   border-radius: var(--grapes-border-radius-12);
   background: var(--grapes-color-background-secondary-brand-default);
-}
 
-.banner[data-variant='neutral'] {
-  background: var(--grapes-color-background-secondary-default);
+  &[data-variant='neutral'] {
+    background: var(--grapes-color-background-secondary-default);
+  }
 }
 
 .container {

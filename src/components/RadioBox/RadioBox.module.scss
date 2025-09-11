@@ -30,31 +30,31 @@
       outline: 0;
     }
   }
-}
 
-.radioBox:has(svg) {
-  grid-template-columns: var(--grapes-unit-32) auto var(--grapes-unit-16);
+  &:has(svg) {
+    grid-template-columns: var(--grapes-unit-32) auto var(--grapes-unit-16);
 
-  .radioInput {
-    order: 3;
+    .radioInput {
+      order: 3;
+    }
   }
-}
 
-.radioBox:has(:checked),
-.radioBox:has(:checked):is(:hover, :focus-within) {
-  background-color: var(--grapes-color-background-primary-selected);
-  border: 1px solid var(--grapes-color-border-selected);
-  --_color-description: var(--grapes-color-content-secondary-bg-secondary);
-  cursor: default;
-}
+  &:has(:checked),
+  &:has(:checked):is(:hover, :focus-within) {
+    background-color: var(--grapes-color-background-primary-selected);
+    border: 1px solid var(--grapes-color-border-selected);
+    --_color-description: var(--grapes-color-content-secondary-bg-secondary);
+    cursor: default;
+  }
 
-.radioBox:has(:disabled),
-.radioBox:has(:disabled):is(:hover, :focus-within) {
-  cursor: not-allowed;
-  background-color: var(--grapes-color-background-primary-disabled);
-  border: 1px solid var(--grapes-color-border-default);
-  --_color-description: var(--grapes-color-content-secondary-bg-secondary);
-  outline: none;
+  &:has(:disabled),
+  &:has(:disabled):is(:hover, :focus-within) {
+    cursor: not-allowed;
+    background-color: var(--grapes-color-background-primary-disabled);
+    border: 1px solid var(--grapes-color-border-default);
+    --_color-description: var(--grapes-color-content-secondary-bg-secondary);
+    outline: none;
+  }
 }
 
 .label {

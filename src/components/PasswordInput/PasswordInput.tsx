@@ -9,7 +9,7 @@ import { classNames } from '../../utils';
 
 import { Input } from '../Input';
 
-import styles from './PasswordInput.module.scss';
+import styles from './PasswordInput.module.css';
 import { IconButton } from '../IconButton';
 import { useTranslate } from '../../hooks/useTranslate';
 import type { PasswordRule } from './passwordRule';

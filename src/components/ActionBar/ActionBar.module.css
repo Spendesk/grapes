@@ -42,20 +42,20 @@
 
 .container li {
   position: relative;
-}
 
-.container li::before {
-  --_height: var(--grapes-unit-24);
-  position: absolute;
-  inset-inline-start: calc(
-    -1 * (var(--_gap) / 2 + var(--_inline-size-separator))
-  );
-  inset-block-start: calc(
-    (var(--grapes-unit-40) - var(--_block-size-separator)) / 2
-  );
-  content: '';
-  display: block;
-  inline-size: var(--_inline-size-separator);
-  block-size: var(--_block-size-separator);
-  background-color: var(--grapes-color-border-complementary);
+  &::before {
+    --_height: var(--grapes-unit-24);
+    position: absolute;
+    inset-inline-start: calc(
+      -1 * (var(--_gap) / 2 + var(--_inline-size-separator))
+    );
+    inset-block-start: calc(
+      (var(--grapes-unit-40) - var(--_block-size-separator)) / 2
+    );
+    content: '';
+    display: block;
+    inline-size: var(--_inline-size-separator);
+    block-size: var(--_block-size-separator);
+    background-color: var(--grapes-color-border-complementary);
+  }
 }

@@ -12,11 +12,11 @@
   grid-template-columns: max-content 1fr;
   align-items: center;
   gap: var(--grapes-unit-8);
-}
 
-.formFieldMessage[data-severity='alert'] {
-  color: var(--grapes-color-content-alert-default);
-}
-.formFieldMessage[data-severity='warning'] {
-  color: var(--grapes-color-content-warning-default);
+  &[data-severity='alert'] {
+    color: var(--grapes-color-content-alert-default);
+  }
+  &[data-severity='warning'] {
+    color: var(--grapes-color-content-warning-default);
+  }
 }

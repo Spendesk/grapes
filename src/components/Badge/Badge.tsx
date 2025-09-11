@@ -1,7 +1,7 @@
 import React from 'react';
 import { classNames } from '../../utils';
 
-import styles from './Badge.module.scss';
+import styles from './Badge.module.css';
 
 export type BadgeVariant = 'primary' | 'secondary';
 

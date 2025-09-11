@@ -1,7 +1,6 @@
 .fileCard {
   display: grid;
-  // Always leave white space in case the delete icon appears.
-  // iconbutton size + left margin + right margin
+  /* Always leave white space in case the delete icon appears. iconbutton size + left margin + right margin */
   grid-template-columns: 1fr calc(
       var(--grapes-unit-40) + var(--grapes-unit-8) + var(--grapes-unit-16)
     );

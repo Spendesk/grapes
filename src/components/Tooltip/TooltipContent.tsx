@@ -8,7 +8,7 @@ import {
 import { useTooltipContext } from './TooltipContext';
 import { colors } from '../../colors';
 
-import styles from './Tooltip.module.scss';
+import styles from './Tooltip.module.css';
 
 export const TooltipContent = /*@__PURE__*/ forwardRef<
   HTMLDivElement,
