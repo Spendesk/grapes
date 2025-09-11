@@ -1,10 +1,11 @@
 import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import reactPlugin from 'eslint-plugin-react';
 import hooksPlugin from 'eslint-plugin-react-hooks';
 import jsxa11y from 'eslint-plugin-jsx-a11y';
 
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: ['**/scripts/**', '**/dist/**', '**/coverage/**', '**/tooling/**'],
   },
@@ -27,7 +28,7 @@ export default tseslint.config(
         version: '18',
       },
     },
-    extends: [eslint.configs.recommended, ...tseslint.configs.recommended],
+    extends: [eslint.configs.recommended, ...tseslint.configs.strict],
     rules: {
       ...jsxa11y.configs.recommended.rules,
       ...hooksPlugin.configs.recommended.rules,
