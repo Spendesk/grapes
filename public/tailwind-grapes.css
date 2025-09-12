@@ -74,7 +74,7 @@
     --grapes-color-background-complementary-disabled
   );
   --color-background-primary-brand-default: var(
-    --color-background-primary-brand-default
+    --grapes-color-background-primary-brand-default
   );
   --color-background-primary-brand-hover: var(
     --grapes-color-background-primary-brand-hover
@@ -116,7 +116,7 @@
     --grapes-color-background-primary-alert-hover
   );
   --color-background-primary-alert-pressed: var(
-    --color-background-primary-alert-pressed
+    --grapes-color-background-primary-alert-pressed
   );
   --color-background-secondary-brand-default: var(
     --grapes-color-background-secondary-brand-default
