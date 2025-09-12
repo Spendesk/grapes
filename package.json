@@ -3,6 +3,19 @@
   "version": "0.0.0",
   "description": "Spendesk components library",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spendesk/grapes.git"
+  },
+  "homepage": "https://grapes.spendesk.design/",
+  "keywords": [
+    "react",
+    "ui",
+    "design-system",
+    "react-components",
+    "components",
+    "library"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
