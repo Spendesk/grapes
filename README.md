@@ -16,11 +16,6 @@ For full documentation, visit [our documentation website](https://grapes.spendes
 
 Pull requests are welcome. See the [contributing guidelines](CONTRIBUTING.md) for more information.
 
-## Authors
-
-- Pauline Ménage ([@pmenage](https://github.com/pmenage))
-- Thibault Patois ([@drplop](https://github.com/drplop))
-
 ## Resources
 
 - [Storybook](https://storybook.spendesk.design)
