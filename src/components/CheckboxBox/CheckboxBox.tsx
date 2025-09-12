@@ -1,7 +1,7 @@
 import React, { type ChangeEventHandler, type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
-import styles from './CheckboxBox.module.scss';
+import styles from './CheckboxBox.module.css';
 import { CheckboxInput } from '../CheckboxInput';
 import { useId } from '../../hooks/useId';
 import { HighlightIcon } from '../HighlightIcon';

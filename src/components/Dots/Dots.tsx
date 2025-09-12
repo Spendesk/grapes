@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Dots.module.scss';
+import styles from './Dots.module.css';
 
 export type DotsProps = {
   /**

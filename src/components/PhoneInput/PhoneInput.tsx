@@ -11,7 +11,7 @@ import { Input } from '../Input';
 import { CountrySelect } from './CountrySelect';
 import type { Country } from './country';
 
-import styles from './PhoneInput.module.scss';
+import styles from './PhoneInput.module.css';
 
 export type PhoneInputProps = {
   /**

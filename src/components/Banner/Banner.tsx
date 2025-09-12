@@ -1,7 +1,7 @@
 import React, { type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
-import styles from './Banner.module.scss';
+import styles from './Banner.module.css';
 import { useId } from '../../hooks/useId';
 
 export type BannerVariant = 'brand' | 'neutral';

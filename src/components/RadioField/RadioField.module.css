@@ -17,26 +17,26 @@
   color: var(--grapes-color-content-primary);
   background-color: transparent;
   cursor: pointer;
-}
 
-.radioField:hover {
-  background-color: var(--grapes-color-background-primary-hover);
-}
+  &:hover {
+    background-color: var(--grapes-color-background-primary-hover);
+  }
 
-.radioField:has(:focus-visible) {
-  background-color: var(--grapes-color-background-primary-default);
-  outline: var(--grapes-focus-ring);
-  outline-offset: var(--grapes-focus-ring-offset);
-}
+  &:has(:focus-visible) {
+    background-color: var(--grapes-color-background-primary-default);
+    outline: var(--grapes-focus-ring);
+    outline-offset: var(--grapes-focus-ring-offset);
+  }
 
-.radioField:has(:focus-visible) input[type='radio'] {
-  outline: 0;
-}
+  &:has(:focus-visible) input[type='radio'] {
+    outline: 0;
+  }
 
-.radioField:has(:disabled) {
-  color: var(--grapes-color-content-secondary-bg-primary);
-  cursor: not-allowed;
-  background-color: transparent;
+  &:has(:disabled) {
+    color: var(--grapes-color-content-secondary-bg-primary);
+    cursor: not-allowed;
+    background-color: transparent;
+  }
 }
 
 .radioInput {

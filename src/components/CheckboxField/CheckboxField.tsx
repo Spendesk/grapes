@@ -3,7 +3,7 @@ import { classNames } from '../../utils';
 
 import { CheckboxInput } from '../CheckboxInput';
 
-import styles from './CheckboxField.module.scss';
+import styles from './CheckboxField.module.css';
 
 export type CheckboxFieldProps = Readonly<{
   /**

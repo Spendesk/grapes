@@ -1,7 +1,7 @@
 import React, { type ReactNode } from 'react';
 import { CheckboxInput } from '../CheckboxInput';
 
-import styles from './ListBox.module.scss';
+import styles from './ListBox.module.css';
 import { useOptionHeaderContext } from './ListBoxProvider';
 import { useId } from '../../hooks/useId';
 import { classNames } from '../../utils';

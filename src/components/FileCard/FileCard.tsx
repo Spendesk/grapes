@@ -4,7 +4,7 @@ import { useId } from '../../hooks/useId';
 import { classNames } from '../../utils';
 import { IconButton } from '../IconButton';
 
-import styles from './FileCard.module.scss';
+import styles from './FileCard.module.css';
 import { useTranslate } from '../../hooks/useTranslate';
 import { HighlightIcon, type HighlightIconVariant } from '../HighlightIcon';
 import type { IconName } from '../Icon';

@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .dropdownItemGroup {
   font: var(--grapes-title-s);
   color: var(--grapes-color-content-secondary-bg-secondary);

@@ -12,7 +12,7 @@ import {
   type DeprecatedModalSlideshowBodyProps,
 } from './DeprecatedModalSlideshowBody';
 
-import styles from './DeprecatedModalSlideShowBody.module.scss';
+import styles from './DeprecatedModalSlideShowBody.module.css';
 
 export type DeprecatedModalSlideshowProps = Omit<
   DeprecatedModalSlideshowBodyProps,

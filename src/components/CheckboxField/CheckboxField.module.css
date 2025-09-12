@@ -1,13 +1,15 @@
-.switchField {
+.checkboxField {
   transition:
     background-color var(--grapes-transition-duration)
       var(--grapes-transition-timing-function),
     color var(--grapes-transition-duration)
       var(--grapes-transition-timing-function);
-  display: inline-grid;
-  grid-template-columns: 1fr var(--grapes-size-switch);
-  gap: var(--grapes-unit-4) var(--grapes-unit-8);
+  font: var(--grapes-body-m);
+
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
+  gap: var(--grapes-unit-8);
   text-align: left;
   padding: var(--grapes-unit-8);
   margin: 0 calc(-1 * var(--grapes-unit-8));
@@ -17,11 +19,8 @@
 
   &:hover {
     background-color: var(--grapes-color-background-primary-hover);
-
-    .switchFieldHelpText {
-      color: var(--grapes-color-content-secondary-bg-secondary);
-    }
   }
+
   &:has(:focus-visible) {
     background-color: var(--grapes-color-background-primary-default);
     outline: var(--grapes-focus-ring);
@@ -31,27 +30,18 @@
       outline: 0;
     }
   }
+
+  &:has(:disabled) {
+    color: var(--grapes-color-content-secondary-bg-primary);
+    cursor: not-allowed;
+    background-color: transparent;
+  }
+
+  &[data-fit='parent'] {
+    display: flex;
+  }
 }
 
-.switchField:has(:checked) {
-  color: var(--grapes-color-content-primary);
-}
-
-.switchField:has(:disabled) {
-  cursor: not-allowed;
-  color: var(--grapes-color-content-secondary-bg-primary);
-  background-color: transparent;
-}
-
-.switchField[data-fit='parent'] {
-  display: grid;
-}
-
-.switchFieldText {
-  font: var(--grapes-title-m);
-}
-
-.switchFieldHelpText {
-  font: var(--grapes-body-m);
-  color: var(--grapes-color-content-secondary-bg-primary);
+.checkboxField .checkboxFieldText {
+  flex: 1 1 auto;
 }

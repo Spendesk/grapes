@@ -5,7 +5,7 @@ import { useId } from '../../../hooks/useId';
 import { useLocale } from '../../GrapesProvider';
 import { useTimelineItemContext } from './useTimelineItemContext';
 
-import styles from './TimelineItem.module.scss';
+import styles from './TimelineItem.module.css';
 
 export type TimelineItemProps = {
   /**

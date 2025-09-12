@@ -4,7 +4,7 @@ import { classNames } from '../../utils';
 import { Icon } from '../Icon';
 import { Button } from '../Button';
 import { IconButton } from '../IconButton';
-import styles from './Toast.module.scss';
+import styles from './Toast.module.css';
 import { useId } from '../../hooks/useId';
 import { useTranslate } from '../../hooks/useTranslate';
 import { colors } from '../../colors';

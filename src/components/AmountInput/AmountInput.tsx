@@ -13,7 +13,7 @@ import { useLocale } from '../GrapesProvider';
 import { CurrencySelect } from './CurrencySelect';
 import type { AmountInputCurrency } from './currency';
 
-import styles from './AmountInput.module.scss';
+import styles from './AmountInput.module.css';
 
 export type AmountInputProps = {
   /**

@@ -1,5 +1,5 @@
 import React, { type ReactNode } from 'react';
-import styles from './ListBox.module.scss';
+import styles from './ListBox.module.css';
 import { classNames } from '../../utils';
 
 export type ListBoxFooterProps = {
