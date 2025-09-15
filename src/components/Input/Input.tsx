@@ -12,7 +12,7 @@ import type { CleaveOptions } from 'cleave.js/options';
 
 import { useFormFieldContext } from '../FormField/FormFieldContext';
 
-import styles from './Input.module.scss';
+import styles from './Input.module.css';
 
 export type InputVariant = 'default' | 'magicGradient';
 

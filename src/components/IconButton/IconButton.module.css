@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .iconButton {
   transition: background-color var(--grapes-transition-duration)
     var(--grapes-transition-timing-function);
@@ -38,10 +36,14 @@
 }
 
 .iconButton[data-variant]:disabled {
-  @extend %disabled-container;
+  pointer-events: none;
+  background-color: var(--grapes-color-background-primary-disabled);
+  border: 1px solid var(--grapes-color-border-default);
+  box-shadow: none;
 
   .iconButtonIcon {
-    @extend %disabled-text;
+    color: var(--grapes-color-content-secondary-bg-secondary);
+    -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
   }
 }
 

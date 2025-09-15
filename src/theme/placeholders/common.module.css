@@ -22,3 +22,16 @@
   z-index: var(--grapes-z-index-dropdown);
   box-sizing: border-box;
 }
+
+.disabledContainer {
+  pointer-events: none;
+  background-color: var(--grapes-color-background-primary-disabled);
+  border: 1px solid var(--grapes-color-border-default);
+  box-shadow: none;
+}
+
+.disabledText {
+  pointer-events: none;
+  color: var(--grapes-color-content-secondary-bg-secondary);
+  -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
+}

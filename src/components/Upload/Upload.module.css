@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .upload {
   font: var(--grapes-body-m);
   transition-property: background-color, color, border-color;
@@ -53,11 +51,15 @@
 
 .upload:active:not(.isInvalid) {
   box-shadow: var(--grapes-elevation-s);
-  @extend %input-focus;
+  outline: var(--grapes-focus-ring);
+  border-color: var(--grapes-color-border-default);
+  outline-offset: var(--grapes-focus-ring-offset);
 }
 
 .upload:active {
-  @extend %input-invalid-focus;
+  outline: var(--grapes-focus-ring);
+  border-color: var(--grapes-color-border-default);
+  outline-offset: var(--grapes-focus-ring-offset);
 }
 
 .uploadIcon {

@@ -1,5 +1,3 @@
-@use '../../../theme/placeholders';
-
 .grid {
   display: grid;
   grid-template-columns: 32px 1fr;

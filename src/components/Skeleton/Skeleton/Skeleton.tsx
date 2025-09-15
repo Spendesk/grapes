@@ -1,7 +1,7 @@
 import React from 'react';
 import { classNames } from '../../../utils';
 
-import styles from './Skeleton.module.scss';
+import styles from './Skeleton.module.css';
 
 export type SkeletonProps = {
   /**

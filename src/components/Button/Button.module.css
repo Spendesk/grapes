@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 @keyframes loading {
   from {
     width: 0;
@@ -29,7 +27,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--grapes-unit-8) var(--grapes-unit-16);
-  border: 1px solid transparent; // Transparent border, so that default button and disabled button have the same height
+  border: 1px solid transparent; /* Transparent border, so that default button and disabled button have the same height */
 
   &:focus {
     outline: 0;
@@ -53,8 +51,11 @@
 .button[data-variant]:disabled {
   &:not(.loadingButton) {
     cursor: not-allowed;
-    @extend %disabled-container;
-    @extend %disabled-text;
+    background-color: var(--grapes-color-background-primary-disabled);
+    border: 1px solid var(--grapes-color-border-default);
+    box-shadow: none;
+    color: var(--grapes-color-content-secondary-bg-secondary);
+    -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
   }
 }
 

@@ -7,7 +7,7 @@ import { classNames } from '../../utils';
 
 import { Icon, type IconName } from '../Icon';
 
-import styles from './CheckboxInput.module.scss';
+import styles from './CheckboxInput.module.css';
 
 export type CheckboxInputProps = Readonly<{
   /**

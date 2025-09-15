@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .switch {
   --_thumb-gutter: 2px;
   --_thumb-size: var(--grapes-unit-12);
@@ -62,17 +60,19 @@
   cursor: not-allowed;
 
   .switchTrack {
-    @extend %disabled-container;
+    pointer-events: none;
+    background-color: var(--grapes-color-background-primary-disabled);
+    border: 1px solid var(--grapes-color-border-default);
   }
 
   .switchThumb {
     background-color: var(--grapes-color-content-disabled);
-    // The -1 compensates for the border which appears on the disabled switch.
+    /* The -1 compensates for the border which appears on the disabled switch. */
     transform: translateX(calc(var(--_thumb-gutter) - 1px));
   }
 
   .checkedSwitchThumb {
-    // The -1 compensates for the border which appears on the disabled switch.
+    /* The -1 compensates for the border which appears on the disabled switch. */
     transform: translateX(
       calc(
         var(--grapes-size-switch) - var(--_thumb-size) - var(--_thumb-gutter) -

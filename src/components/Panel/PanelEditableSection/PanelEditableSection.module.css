@@ -1,5 +1,3 @@
-@use '../../../theme/placeholders';
-
 .panelEditableSectionTitle {
   font: var(--grapes-title-l);
   margin-bottom: var(--grapes-unit-16);

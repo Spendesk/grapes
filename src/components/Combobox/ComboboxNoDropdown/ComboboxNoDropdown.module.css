@@ -1,25 +1,32 @@
-@use '../../../theme/placeholders';
-
 .ComboboxNoDropdownContainer {
   padding-top: var(--grapes-unit-8);
 }
 
 .combobox {
-  @extend %input-layout;
+  height: var(--grapes-unit-40);
+  padding: var(--grapes-unit-8);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-8);
+  background-color: var(--grapes-color-background-primary-default);
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
 
   &:not(:focus-within, .invalidCombobox):hover {
-    @extend %input-hover;
+    border-color: var(--grapes-color-border-hover);
   }
 
   &.disabledCombobox {
-    @extend %input-disabled;
+    pointer-events: none;
+    background-color: var(--grapes-color-background-primary-disabled);
+    border: 1px solid var(--grapes-color-border-default);
+    box-shadow: none;
   }
 
   &:focus-within {
-    @extend %input-focus;
+    outline: var(--grapes-focus-ring);
+    border-color: var(--grapes-color-border-default);
+    outline-offset: var(--grapes-focus-ring-offset);
   }
 }
 
@@ -31,10 +38,10 @@
 }
 
 .invalidCombobox {
-  @extend %input-invalid;
+  border-color: var(--grapes-color-border-alert);
 
   &:focus-within {
-    @extend %input-invalid-focus;
+    border-color: var(--grapes-color-border-default);
   }
 }
 
@@ -50,13 +57,22 @@
 }
 
 .comboboxInput {
-  @extend %input-text;
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-primary);
   flex: 1;
   border: none;
   background: none;
 
   &:focus {
     outline: none;
+  }
+  &::placeholder {
+    color: var(--grapes-color-content-secondary-bg-primary);
+  }
+  &:disabled {
+    pointer-events: none;
+    color: var(--grapes-color-content-secondary-bg-secondary);
+    -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
   }
 }
 

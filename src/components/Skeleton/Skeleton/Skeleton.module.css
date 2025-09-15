@@ -1,17 +1,15 @@
-$background-width: 240px;
-
 @keyframes loadingSkeleton {
   0% {
-    background-position: calc(0% - #{$background-width}) 0;
+    background-position: calc(0% - 240px) 0;
   }
   20% {
-    background-position: calc(0% - #{$background-width}) 0;
+    background-position: calc(0% - 240px) 0;
   }
   80% {
-    background-position: calc(100% + #{$background-width}) 0;
+    background-position: calc(100% + 240px) 0;
   }
   100% {
-    background-position: calc(100% + #{$background-width}) 0;
+    background-position: calc(100% + 240px) 0;
   }
 }
 
@@ -28,6 +26,6 @@ $background-width: 240px;
       var(--grapes-color-background-tertiary-default) 50%,
       var(--grapes-color-skeleton) 100%
     )
-    0 0 / #{$background-width} 100vh no-repeat;
+    0 0 / 240px 100vh no-repeat;
   animation: 1.5s linear infinite forwards loadingSkeleton;
 }

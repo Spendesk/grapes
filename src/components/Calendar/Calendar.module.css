@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .grid {
   --grapes-size-col-day: var(--grapes-unit-40);
   display: grid;
@@ -35,7 +33,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  min-height: var(--grapes-unit-32); // For Safari < 15
+  min-height: var(--grapes-unit-32); /* For Safari < 15 */
   margin: var(--grapes-unit-4);
   aspect-ratio: 1;
   padding: 0;
@@ -52,9 +50,10 @@
   }
 
   &:disabled {
-    @extend %disabled-text;
+    pointer-events: none;
     margin: 0;
     color: var(--grapes-color-content-secondary-bg-secondary);
+    -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
     background-color: var(--grapes-color-background-primary-disabled);
     border-radius: 0;
   }

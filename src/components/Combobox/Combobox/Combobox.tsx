@@ -10,7 +10,7 @@ import { colors } from '../../../colors';
 
 import { useTranslate } from '../../../hooks/useTranslate';
 
-import styles from './Combobox.module.scss';
+import styles from './Combobox.module.css';
 import commonStyles from '../../../theme/placeholders/common.module.css';
 
 export const Combobox = <T extends ComboboxOption>(

@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .checkbox {
   height: var(--grapes-unit-16);
   width: var(--grapes-unit-16);
@@ -30,7 +28,9 @@
   color: var(--grapes-color-content-disabled);
 
   .checkboxInput {
-    @extend %disabled-container;
+    pointer-events: none;
+    background-color: var(--grapes-color-background-primary-disabled);
+    border: 1px solid var(--grapes-color-border-default);
   }
 
   .checkboxIcon {

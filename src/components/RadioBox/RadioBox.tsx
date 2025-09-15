@@ -5,7 +5,7 @@ import type { IconName } from '../Icon';
 import { RadioInput } from '../RadioInput';
 import { useRadioCheckState } from '../RadioGroup/useRadioCheckState';
 
-import styles from './RadioBox.module.scss';
+import styles from './RadioBox.module.css';
 import { HighlightIcon } from '../HighlightIcon';
 import type { HighlightIconVariant } from '../HighlightIcon';
 

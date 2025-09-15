@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .grid {
   display: grid;
   grid-template-columns: repeat(7, var(--grapes-size-col-day));
@@ -26,7 +24,9 @@
   background-clip: content-box;
 
   &:disabled {
-    @extend %disabled-text;
+    pointer-events: none;
+    color: var(--grapes-color-content-secondary-bg-secondary);
+    -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
     color: var(--grapes-color-content-secondary-bg-secondary);
     background-color: var(--grapes-color-background-primary-disabled);
     border-radius: 0;

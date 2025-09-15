@@ -5,7 +5,7 @@ import { classNames, type Placement } from '../../utils';
 import { DropdownMenuContent } from '../DropdownMenuContent';
 import { DropdownItem } from '../DropdownItem';
 
-import styles from './DropdownMenu.module.scss';
+import styles from './DropdownMenu.module.css';
 
 type OptionGroup<T> = { key: string; label: string; options: T[] };
 
