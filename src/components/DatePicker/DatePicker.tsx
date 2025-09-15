@@ -143,10 +143,7 @@ export const DatePicker = ({
   }
 
   return (
-    <div
-      className={classNames(styles.container, commonStyles.dropdownContent)}
-      ref={rootRef}
-    >
+    <div className={styles.container} ref={rootRef}>
       <DatePickerInput
         placeholder={placeholder}
         isInvalid={isInvalid}
@@ -163,7 +160,7 @@ export const DatePicker = ({
       {isVisible && (
         <div
           id={calendarId}
-          className={styles.calendar}
+          className={classNames(styles.calendar, commonStyles.dropdownContent)}
           role="dialog"
           aria-labelledby={formFieldContext?.labelId}
           style={getStyleFromPlacement(placement)}
