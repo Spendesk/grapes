@@ -24,7 +24,7 @@ import { TableMini } from './TableMini';
 import { groupByFn } from '../ListBox/utils';
 
 import styles from './Table.module.css';
-import tableStyles from '../../theme/placeholders/table.module.css';
+import tableStyles from '../../theme/table.module.css';
 
 const NEXT_SORT_DIRECTIONS: NextSortDirection = {
   // when you click on an unsorted column, it goes to Descending order

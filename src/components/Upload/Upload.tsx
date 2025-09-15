@@ -4,7 +4,7 @@ import { classNames } from '../../utils';
 import { Icon } from '../Icon';
 
 import styles from './Upload.module.css';
-import commonStyles from '../../theme/placeholders/common.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type UploadType = 'drag_and_drop' | 'selection';
 

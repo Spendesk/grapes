@@ -2,7 +2,7 @@ import React, { type ReactNode } from 'react';
 import { classNames } from '../../../utils';
 
 import styles from './SkeletonTable.module.css';
-import tableStyles from '../../../theme/placeholders/table.module.css';
+import tableStyles from '../../../theme/table.module.css';
 
 export type Column = {
   width?: number | string;

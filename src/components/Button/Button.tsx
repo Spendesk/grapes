@@ -4,7 +4,7 @@ import { classNames } from '../../utils';
 import { Icon, type IconName } from '../Icon';
 
 import styles from './Button.module.css';
-import commonStyles from '../../theme/placeholders/common.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type ButtonVariant =
   | 'primaryBrand'

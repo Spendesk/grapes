@@ -2,7 +2,7 @@ import React, { type MouseEventHandler, type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
 import styles from './DeprecatedPreview.module.css';
-import commonStyles from '../../theme/placeholders/common.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type DeprecatedPreviewProps = {
   /**

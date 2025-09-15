@@ -11,7 +11,7 @@ import { colors } from '../../../colors';
 import { useTranslate } from '../../../hooks/useTranslate';
 
 import styles from './Combobox.module.css';
-import commonStyles from '../../../theme/placeholders/common.module.css';
+import commonStyles from '../../../theme/common.module.css';
 
 export const Combobox = <T extends ComboboxOption>(
   props: ComboboxWithDropdownProps<T>,

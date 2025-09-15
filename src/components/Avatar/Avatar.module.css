@@ -1,5 +1,3 @@
-@use '../../theme/exports/css-variables.scss';
-
 .avatar {
   color-scheme: light;
   position: relative;
@@ -59,31 +57,31 @@
 }
 
 .apricot {
-  --_bg: #{css-variables.$color-apricot-20};
+  --_bg: var(--_grapes-color-apricot-20);
 }
 .lemon {
-  --_bg: #{css-variables.$color-lemon-bright};
+  --_bg: var(--_grapes-color-lemon-bright);
 }
 .peach {
-  --_bg: #{css-variables.$color-peach-bright};
+  --_bg: var(--_grapes-color-peach-bright);
 }
 .blue {
-  --_bg: #{css-variables.$color-blue-20};
+  --_bg: var(--_grapes-color-blue-20);
 }
 .pink {
-  --_bg: #{css-variables.$color-pink-bright};
+  --_bg: var(--_grapes-color-pink-bright);
 }
 .ocean {
-  --_bg: #{css-variables.$color-ocean-bright};
+  --_bg: var(--_grapes-color-ocean-bright);
 }
 .forest {
-  --_bg: #{css-variables.$color-forest-bright};
+  --_bg: var(--_grapes-color-forest-bright);
 }
 .emerald {
-  --_bg: #{css-variables.$color-emerald-20};
+  --_bg: var(--_grapes-color-emerald-20);
 }
 .raspberry {
-  --_bg: #{css-variables.$color-raspberry-20};
+  --_bg: var(--_grapes-color-raspberry-20);
 }
 
 .avatarBadge {

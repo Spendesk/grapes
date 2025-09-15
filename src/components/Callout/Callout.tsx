@@ -4,7 +4,7 @@ import { classNames } from '../../utils';
 import { Icon, type IconName } from '../Icon';
 import { useId } from '../../hooks/useId';
 
-import styles from './Callout.module.scss';
+import styles from './Callout.module.css';
 
 export type CalloutVariant = 'alert' | 'info' | 'success' | 'warning';
 

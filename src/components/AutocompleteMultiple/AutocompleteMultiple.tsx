@@ -15,7 +15,7 @@ import {
 import { classNames, type Placement } from '../../utils';
 
 import styles from './AutocompleteMultiple.module.css';
-import commonStyles from '../../theme/placeholders/common.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 const { stateChangeTypes: comboboxStateChangeTypes } = useCombobox;
 

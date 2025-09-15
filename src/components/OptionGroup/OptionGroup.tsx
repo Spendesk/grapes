@@ -5,7 +5,7 @@ import { useFormFieldContext } from '../FormField/FormFieldContext';
 import { Icon, type IconName } from '../Icon';
 
 import styles from './OptionGroup.module.css';
-import commonStyles from '../../theme/placeholders/common.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 type CommonProps<K extends string | boolean> = {
   /**

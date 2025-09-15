@@ -1,5 +1,3 @@
-@use '../../theme/exports/css-variables.scss';
-
 .callout {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -48,6 +46,6 @@
 
 .calloutContent {
   font: var(--grapes-body-m);
-  color: css-variables.$color-carbon-100;
+  color: var(--_grapes-color-carbon-100);
   grid-column-start: 2;
 }

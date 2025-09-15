@@ -11,7 +11,7 @@ import './styles.css';
  * Manually import CSS variable as we don't use the entry point
  * of Grapes in the Storybook
  */
-import '../src/theme/exports/css-variables.scss';
+import '../src/theme/css-variables.css';
 
 const withMargin = (Story) => {
   const hideFocusRing = process.env.IS_CHROMATIC

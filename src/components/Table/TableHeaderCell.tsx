@@ -6,8 +6,8 @@ import { SortIcon } from './SortIcon';
 import { useTableHeaderCellContext } from './TableProvider';
 
 import styles from './Table.module.css';
-import commonStyles from '../../theme/placeholders/common.module.css';
-import tableStyles from '../../theme/placeholders/table.module.css';
+import commonStyles from '../../theme/common.module.css';
+import tableStyles from '../../theme/table.module.css';
 
 type Props<T extends object> = {
   column: TableColumn<T>;

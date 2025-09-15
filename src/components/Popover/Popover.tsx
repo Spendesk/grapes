@@ -7,7 +7,7 @@ import { useWindowEvent } from '../../hooks/useWindowEvent';
 import { useAnimationState } from '../../hooks/useAnimationState';
 
 import styles from './Popover.module.css';
-import commonStyles from '../../theme/placeholders/common.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type TriggerProps = {
   'aria-expanded': boolean;

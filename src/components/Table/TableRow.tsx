@@ -6,7 +6,7 @@ import { TableCell } from './TableCell';
 import { useTableRowContext } from './TableProvider';
 
 import styles from './Table.module.css';
-import tableStyles from '../../theme/placeholders/table.module.css';
+import tableStyles from '../../theme/table.module.css';
 
 type Props<T extends object> = {
   row: T;
