@@ -10,7 +10,7 @@
 :where(.tableHeaderCell) {
   font: var(--grapes-body-m);
   color: var(--grapes-color-content-secondary-bg-primary);
-  height: var(--grapes-unit-40);
+  height: var(--unit-40);
   box-sizing: border-box;
   padding: 0 var(--grapes-unit-16);
   border-bottom: 1px solid var(--grapes-color-border-default);
@@ -22,6 +22,15 @@
 
 .tableBodyRow:not(:last-child) .tableBodyCell {
   border-bottom: 1px solid var(--grapes-color-border-default);
+}
+
+.tableBodyRow:last-child {
+  .tableBodyCell:first-child {
+    border-radius: 0 0 0 var(--grapes-border-radius-12);
+  }
+  .tableBodyCell:last-child {
+    border-radius: 0 0 var(--grapes-border-radius-12) 0;
+  }
 }
 
 :where(.tableBodyCell) {

@@ -78,10 +78,6 @@
   border-bottom: 1px solid var(--grapes-color-border-default);
 }
 
-.tableBodyRow:last-of-type .tableBodyCell {
-  border-radius: 0 0 0 var(--grapes-border-radius-8);
-}
-
 .tableBodyRow {
   display: table;
   table-layout: fixed;
@@ -106,10 +102,6 @@
   .warningTableBodyCell {
     background-color: var(--grapes-color-background-secondary-warning-default);
   }
-}
-
-.tableBodyRow:last-child {
-  border-radius: 0 0 var(--grapes-border-radius-8) var(--grapes-border-radius-8);
 }
 
 .clickableTableBodyRow:hover {
