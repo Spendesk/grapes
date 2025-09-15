@@ -1,6 +1,4 @@
 :root {
-  color-scheme: light;
-
   /* Primitive token to use in Grapes */
   --_grapes-color-apricot-10: #f8eee9;
   --_grapes-color-apricot-20: #facfb8;
@@ -602,12 +600,4 @@
       rgb(25 27 27 / 0.6)
     );
   }
-}
-
-:root[data-theme='dark'] {
-  color-scheme: dark;
-}
-
-:root[data-theme='system'] {
-  color-scheme: light dark;
 }
