@@ -67,7 +67,7 @@ export const WithLeftAddon: Story = {
   args: {
     leftAddon: (
       <div style={{ marginLeft: '8px', marginTop: '4px' }}>
-        <Icon name="robot" aria-label="Robot" />
+        <Icon name="sparkle" aria-label="sparkle" />
       </div>
     ),
   },
