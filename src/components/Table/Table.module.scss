@@ -18,7 +18,6 @@
 
 .tableHeaderCell {
   @extend %table-header-cell;
-  @extend %ellipsis;
 }
 
 .borderedTableHeaderCell:not(:last-child) {

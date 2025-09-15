@@ -4,7 +4,8 @@ import { classNames } from '../../utils';
 import { useFormFieldContext } from '../FormField/FormFieldContext';
 import { Icon, type IconName } from '../Icon';
 
-import styles from './OptionGroup.module.scss';
+import styles from './OptionGroup.module.css';
+import commonStyles from '../../theme/placeholders/common.module.css';
 
 type CommonProps<K extends string | boolean> = {
   /**
@@ -104,7 +105,7 @@ export const OptionGroup = <K extends string | boolean>({
             <input
               name={name}
               type="radio"
-              className={styles.optionGroupInput}
+              className={commonStyles.visuallyHidden}
               checked={isChecked}
               value={`${option.value}`}
               disabled={isDisabled}

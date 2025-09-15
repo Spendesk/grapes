@@ -12,8 +12,10 @@ import {
   type OptionGroup,
 } from './option';
 
-import styles from './AutocompleteMultiple.module.scss';
-import { type Placement } from '../../utils';
+import { classNames, type Placement } from '../../utils';
+
+import styles from './AutocompleteMultiple.module.css';
+import commonStyles from '../../theme/placeholders/common.module.css';
 
 const { stateChangeTypes: comboboxStateChangeTypes } = useCombobox;
 
@@ -258,7 +260,10 @@ export const AutocompleteMultiple = <T extends Option>({
         return (
           <button
             type="button"
-            className={styles.autocompleteMultipleSelected}
+            className={classNames(
+              styles.autocompleteMultipleSelected,
+              commonStyles.ellipsis,
+            )}
             onClick={() => {
               openMenu();
             }}

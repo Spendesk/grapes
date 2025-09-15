@@ -1,11 +1,5 @@
-@use '../../theme/placeholders';
-
 .parentFitLabel {
   width: 100%;
-}
-
-.hide {
-  @extend %visually-hidden;
 }
 
 .labelContainer {

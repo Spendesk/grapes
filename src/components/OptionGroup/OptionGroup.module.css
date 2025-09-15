@@ -48,10 +48,6 @@
   z-index: 3;
 }
 
-.optionGroupInput {
-  @extend %visually-hidden;
-}
-
 .optionGroupIndicator {
   position: absolute;
   box-sizing: border-box;

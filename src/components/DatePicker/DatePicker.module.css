@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .container {
   position: relative;
 }
@@ -8,13 +6,17 @@
   position: absolute;
   margin: 0;
   padding: var(--grapes-unit-24);
-  @extend %dropdown-content;
   width: 328px;
   opacity: 1;
   transform: translateY(0) scale(1);
   transition-property: opacity, transform;
   transition-duration: var(--grapes-transition-duration);
   transition-timing-function: var(--grapes-transition-timing-function);
+
+  &[data-closing='true'] {
+    animation: var(--grapes-transition-duration) datePickerOut
+      var(--grapes-transition-timing-function) forwards;
+  }
 }
 
 @starting-style {
@@ -22,11 +24,6 @@
     opacity: 0;
     transform: translateY(calc(-1 * var(--grapes-unit-16)));
   }
-}
-
-.calendar[data-closing='true'] {
-  animation: var(--grapes-transition-duration) datePickerOut
-    var(--grapes-transition-timing-function) forwards;
 }
 
 @keyframes datePickerOut {

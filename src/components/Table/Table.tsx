@@ -13,7 +13,6 @@ import type {
   TableVariant,
 } from './types';
 
-import styles from './Table.module.scss';
 import { TableEmptyState } from './TableEmptyState';
 import { TableHeaderCell } from './TableHeaderCell';
 import { TableHeaderCheckbox } from './TableHeaderCheckbox';
@@ -23,6 +22,8 @@ import { TableRow } from './TableRow';
 import { TableRowCheckbox } from './TableRowCheckbox';
 import { TableMini } from './TableMini';
 import { groupByFn } from '../ListBox/utils';
+
+import styles from './Table.module.scss';
 
 const NEXT_SORT_DIRECTIONS: NextSortDirection = {
   // when you click on an unsorted column, it goes to Descending order

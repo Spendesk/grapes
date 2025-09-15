@@ -4,13 +4,15 @@ import { DatePickerInput } from './DatePickerInput';
 import { Calendar } from '../Calendar';
 import { useWindowEvent } from '../../hooks/useWindowEvent';
 
-import styles from './DatePicker.module.scss';
 import { useId } from '../../hooks/useId';
 import { getDateInRange } from './utils/';
-import { type Placement, getStyleFromPlacement } from '../../utils';
+import { type Placement, classNames, getStyleFromPlacement } from '../../utils';
 import { useFormFieldContext } from '../FormField/FormFieldContext';
 import type { InputVariant } from '../Input';
 import { useAnimationState } from '../../hooks/useAnimationState';
+
+import styles from './DatePicker.module.css';
+import commonStyles from '../../../theme/placeholders/common.module.css';
 
 export type DatePickerProps = {
   /**
@@ -141,7 +143,10 @@ export const DatePicker = ({
   }
 
   return (
-    <div className={styles.container} ref={rootRef}>
+    <div
+      className={classNames(styles.container, commonStyles.dropdownContent)}
+      ref={rootRef}
+    >
       <DatePickerInput
         placeholder={placeholder}
         isInvalid={isInvalid}

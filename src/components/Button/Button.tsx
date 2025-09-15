@@ -4,6 +4,7 @@ import { classNames } from '../../utils';
 import { Icon, type IconName } from '../Icon';
 
 import styles from './Button.module.scss';
+import commonStyles from '../../theme/placeholders/common.module.css';
 
 export type ButtonVariant =
   | 'primaryBrand'
@@ -142,6 +143,7 @@ export const Button = /*@__PURE__*/ forwardRef<HTMLButtonElement, Props>(
     const buttonProps = {
       className: classNames(
         styles.button,
+        commonStyles.ellipsis,
         fit === 'parent' && styles.parentFitButton,
         internalIsLoading && !isLink(props) && styles.loadingButton,
         variant.startsWith('tertiary') &&

@@ -1,17 +1,15 @@
-$table-border-width: 1px;
-
 %table {
   font: var(--grapes-body-m);
   width: 100%;
   background-color: var(--grapes-color-background-primary-default);
-  border: $table-border-width solid var(--grapes-color-border-default);
+  border: 1px solid var(--grapes-color-border-default);
   border-spacing: 0;
   border-radius: var(--grapes-border-radius-12);
 }
 
 %table-header {
   color: var(--grapes-color-content-secondary-bg-primary);
-  border-bottom: $table-border-width solid var(--grapes-color-border-default);
+  border-bottom: 1px solid var(--grapes-color-border-default);
 }
 
 %table-header-cell {
@@ -22,11 +20,11 @@ $table-border-width: 1px;
 }
 
 %table-row-separator {
-  border-bottom: $table-border-width solid var(--grapes-color-border-default);
+  border-bottom: 1px solid var(--grapes-color-border-default);
 }
 
 %table-cell-separator {
-  border-right: $table-border-width solid var(--grapes-color-border-default);
+  border-right: 1px solid var(--grapes-color-border-default);
 }
 
 %table-body-cell {

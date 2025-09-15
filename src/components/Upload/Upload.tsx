@@ -4,6 +4,7 @@ import { classNames } from '../../utils';
 import { Icon } from '../Icon';
 
 import styles from './Upload.module.scss';
+import commonStyles from '../../theme/placeholders/common.module.css';
 
 export type UploadType = 'drag_and_drop' | 'selection';
 
@@ -126,7 +127,7 @@ export const Upload = ({
     >
       <input
         {...rest}
-        className={styles.uploadInput}
+        className={commonStyles.visuallyHidden}
         type="file"
         aria-invalid={isInvalid ? 'true' : 'false'}
         multiple={multiple}

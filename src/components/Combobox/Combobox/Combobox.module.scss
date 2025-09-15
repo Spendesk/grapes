@@ -44,7 +44,6 @@
 
 .comboboxInput {
   @extend %input-text;
-  @extend %ellipsis;
   flex: 1;
   border: none;
   background: none;

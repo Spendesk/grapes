@@ -1,8 +1,5 @@
-@use '../../theme/placeholders';
-
 .autocompleteMultipleSelected {
   font: var(--grapes-body-m);
-  @extend %ellipsis;
   flex: 1;
   border: none;
   color: var(--grapes-color-content-primary);

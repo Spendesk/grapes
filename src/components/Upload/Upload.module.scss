@@ -65,10 +65,6 @@
   transition: inherit;
 }
 
-.uploadInput {
-  @extend %visually-hidden;
-}
-
 :is(fieldset[disabled] .upload) {
   cursor: not-allowed;
 
