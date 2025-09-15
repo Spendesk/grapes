@@ -4,7 +4,7 @@ import { CheckboxInput } from '../CheckboxInput';
 import { classNames } from '../../utils';
 import { useTableHeaderCheckboxContext } from './TableProvider';
 
-import styles from './Table.module.scss';
+import styles from './Table.module.css';
 
 export const TableHeaderCheckbox = () => {
   const context = useTableHeaderCheckboxContext();

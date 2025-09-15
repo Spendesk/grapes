@@ -12,7 +12,7 @@ import type { InputVariant } from '../Input';
 import { useAnimationState } from '../../hooks/useAnimationState';
 
 import styles from './DatePicker.module.css';
-import commonStyles from '../../../theme/placeholders/common.module.css';
+import commonStyles from '../../theme/placeholders/common.module.css';
 
 export type DatePickerProps = {
   /**

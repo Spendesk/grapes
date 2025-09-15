@@ -14,7 +14,7 @@ import usePrevious from '../../hooks/usePrevious';
 import { useFormFieldContext } from '../FormField/FormFieldContext';
 
 import styles from './DropdownMenuContent.module.css';
-import commonStyles from '../../../theme/placeholders/common.module.css';
+import commonStyles from '../../theme/placeholders/common.module.css';
 
 type OptionGroup<T> = { key: string; label: string; options: T[] };
 

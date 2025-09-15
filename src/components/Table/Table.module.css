@@ -1,11 +1,4 @@
-@use '../../theme/placeholders';
-
-.table {
-  @extend %table;
-}
-
 .tableHeader {
-  @extend %table-header;
   display: table;
   width: 100%;
 }
@@ -14,14 +7,6 @@
   display: table;
   table-layout: fixed;
   width: 100%;
-}
-
-.tableHeaderCell {
-  @extend %table-header-cell;
-}
-
-.borderedTableHeaderCell:not(:last-child) {
-  @extend %table-cell-separator;
 }
 
 .tableHeaderCellContent {
@@ -83,10 +68,6 @@
   overflow: auto;
 }
 
-.tableBodyCell {
-  @extend %table-body-cell;
-}
-
 .tableBodyGroupedCell {
   min-height: var(--grapes-unit-32);
   box-sizing: border-box;
@@ -99,14 +80,6 @@
 
 .tableBodyRow:last-of-type .tableBodyCell {
   border-radius: 0 0 0 var(--grapes-border-radius-8);
-}
-
-.compactTableBodyCell {
-  @extend %table-body-cell-compact;
-}
-
-.borderedTableBodyCell:not(:last-child) {
-  @extend %table-cell-separator;
 }
 
 .tableBodyRow {
@@ -137,10 +110,6 @@
 
 .tableBodyRow:last-child {
   border-radius: 0 0 var(--grapes-border-radius-8) var(--grapes-border-radius-8);
-}
-
-.tableBodyRow:not(:last-child) .tableBodyCell {
-  @extend %table-row-separator;
 }
 
 .clickableTableBodyRow:hover {
@@ -210,11 +179,11 @@
 
 .tableCheckboxCell {
   padding: 0;
-  // Center the checkbox.
-  // Between the checkbox and the text of the next cell, we want a total of 16px.
-  // By default, it's 32px ( padding * 2 )
-  // And because we want the clickable region of the checbkox to be as big as possible,
-  // we're updating the padding of the next cell instead
+  /* Center the checkbox.
+  Between the checkbox and the text of the next cell, we want a total of 16px.
+  By default, it's 32px ( padding * 2 )
+  And because we want the clickable region of the checbkox to be as big as possible,
+  we're updating the padding of the next cell instead */
   & + th,
   & + td {
     padding-left: 0;

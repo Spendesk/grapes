@@ -5,8 +5,9 @@ import type { TableColumn, TableSortDirection } from './types';
 import { SortIcon } from './SortIcon';
 import { useTableHeaderCellContext } from './TableProvider';
 
-import styles from './Table.module.scss';
+import styles from './Table.module.css';
 import commonStyles from '../../theme/placeholders/common.module.css';
+import tableStyles from '../../theme/placeholders/table.module.css';
 
 type Props<T extends object> = {
   column: TableColumn<T>;
@@ -34,9 +35,9 @@ export function TableHeaderCell<T extends object>({ column }: Props<T>) {
     <th
       key={column.id}
       className={classNames(
-        styles.tableHeaderCell,
+        tableStyles.tableHeaderCell,
         commonStyles.ellipsis,
-        column.id !== 'checkboxes' && styles.borderedTableHeaderCell,
+        column.id !== 'checkboxes' && tableStyles.tableCellSeparator,
         column.className,
       )}
       style={{ width: column.width }}

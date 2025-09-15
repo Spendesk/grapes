@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Table.module.scss';
+import styles from './Table.module.css';
 
 type Props = {
   children: React.ReactNode;

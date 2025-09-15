@@ -1,4 +1,4 @@
-%table {
+:where(.table) {
   font: var(--grapes-body-m);
   width: 100%;
   background-color: var(--grapes-color-background-primary-default);
@@ -7,27 +7,24 @@
   border-radius: var(--grapes-border-radius-12);
 }
 
-%table-header {
-  color: var(--grapes-color-content-secondary-bg-primary);
-  border-bottom: 1px solid var(--grapes-color-border-default);
-}
-
-%table-header-cell {
+:where(.tableHeaderCell) {
   font: var(--grapes-body-m);
+  color: var(--grapes-color-content-secondary-bg-primary);
   height: var(--grapes-unit-40);
   box-sizing: border-box;
   padding: 0 var(--grapes-unit-16);
-}
-
-%table-row-separator {
   border-bottom: 1px solid var(--grapes-color-border-default);
 }
 
-%table-cell-separator {
+.tableCellSeparator:not(:last-child) {
   border-right: 1px solid var(--grapes-color-border-default);
 }
 
-%table-body-cell {
+.tableBodyRow:not(:last-child) .tableBodyCell {
+  border-bottom: 1px solid var(--grapes-color-border-default);
+}
+
+:where(.tableBodyCell) {
   position: relative;
   height: var(--grapes-unit-64);
   box-sizing: border-box;
@@ -35,6 +32,6 @@
   color: var(--grapes-color-content-primary);
 }
 
-%table-body-cell-compact {
+.tableBodyCellCompact {
   height: var(--grapes-unit-48);
 }

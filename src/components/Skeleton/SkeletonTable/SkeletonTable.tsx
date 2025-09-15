@@ -1,7 +1,8 @@
 import React, { type ReactNode } from 'react';
 import { classNames } from '../../../utils';
 
-import styles from './SkeletonTable.module.scss';
+import styles from './SkeletonTable.module.css';
+import tableStyles from '../../../theme/placeholders/table.module.css';
 
 export type Column = {
   width?: number | string;
@@ -53,24 +54,21 @@ export const SkeletonTable = ({
   withHeader,
 }: SkeletonTableProps) => {
   return (
-    <table className={classNames(styles.skeletonTable, className)}>
+    <table className={classNames(tableStyles.table, className)}>
       {!!withHeader && (
-        <thead className={styles.skeletonTableHeader} aria-hidden>
+        <thead aria-hidden>
           <tr>
             {(columns as (Column & { header?: ReactNode })[]).map(
               (column, index) => (
                 <th
                   key={`header-cell-${index}`}
                   className={classNames(
-                    styles.skeletonTableHeaderCell,
-                    withColumnSeparator &&
-                      styles.borderedSkeletonTableHeaderCell,
+                    tableStyles.tableHeaderCell,
+                    withColumnSeparator && tableStyles.tableCellSeparator,
                   )}
                   style={{ width: column.width || undefined }}
                 >
-                  <div className={styles.skeletonTableCellWrapper}>
-                    {column.header}
-                  </div>
+                  <div className={styles.cell}>{column.header}</div>
                 </th>
               ),
             )}
@@ -80,23 +78,20 @@ export const SkeletonTable = ({
       <tbody>
         {Array.from({ length: numberOfRows }, (_, index) => {
           return (
-            <tr key={index} className={styles.skeletonTableBodyRow}>
+            <tr key={index} className={tableStyles.tableBodyRow}>
               {(columns as (Column & { header?: ReactNode })[]).map(
                 (column, columnIndex) => (
                   <td
                     key={`body-cell-${columnIndex}`}
                     className={classNames(
-                      styles.skeletonTableBodyCell,
+                      tableStyles.tableBodyCell,
                       rowHeight === 'compact' &&
-                        styles.compactSkeletonTableBodyCell,
-                      withColumnSeparator &&
-                        styles.borderedSkeletonTableBodyCell,
+                        tableStyles.tableBodyCellCompact,
+                      withColumnSeparator && tableStyles.tableCellSeparator,
                     )}
                     style={{ width: column.width || undefined }}
                   >
-                    <div className={styles.skeletonTableCellWrapper}>
-                      {column.cell}
-                    </div>
+                    <div className={styles.cell}>{column.cell}</div>
                   </td>
                 ),
               )}
