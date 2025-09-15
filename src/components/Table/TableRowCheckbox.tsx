@@ -4,7 +4,7 @@ import { classNames } from '../../utils';
 import { CheckboxInput } from '../CheckboxInput';
 import { useTableRowCheckboxContext } from './TableProvider';
 
-import styles from './Table.module.scss';
+import styles from './Table.module.css';
 import { useId } from '../../hooks/useId';
 
 type Props<T extends object> = {

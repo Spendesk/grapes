@@ -8,8 +8,10 @@ import { Icon } from '../../Icon';
 import type { ComboboxWithDropdownProps, ComboboxOption } from '../types';
 import { colors } from '../../../colors';
 
-import styles from './Combobox.module.scss';
 import { useTranslate } from '../../../hooks/useTranslate';
+
+import styles from './Combobox.module.css';
+import commonStyles from '../../../theme/common.module.css';
 
 export const Combobox = <T extends ComboboxOption>(
   props: ComboboxWithDropdownProps<T>,
@@ -84,6 +86,7 @@ export const Combobox = <T extends ComboboxOption>(
             {...inputProps}
             className={classNames(
               styles.comboboxInput,
+              commonStyles.ellipsis,
               !isInputVisible && styles.hideComboboxInput,
             )}
             disabled={isDisabled}

@@ -8,7 +8,7 @@ import React, {
 import { Button } from '../../Button';
 import { IconButton } from '../../IconButton';
 
-import styles from './PanelEditableSection.module.scss';
+import styles from './PanelEditableSection.module.css';
 import { useTranslate } from '../../../hooks/useTranslate';
 
 const readOnlyState = {

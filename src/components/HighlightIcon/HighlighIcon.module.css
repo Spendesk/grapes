@@ -1,0 +1,98 @@
+.highlightIcon {
+  color-scheme: light;
+  display: inline-grid;
+  place-items: center;
+  border-radius: var(--_border-radius, var(--grapes-border-radius-12));
+  box-sizing: border-box;
+  height: var(--_size, var(--grapes-unit-56));
+  width: var(--_size, var(--grapes-unit-56));
+  color: var(--grapes-color-content-primary);
+
+  &[data-size='24'] {
+    --_size: var(--grapes-unit-24);
+    --_border-radius: var(--grapes-border-radius-4);
+  }
+
+  &[data-size='32'] {
+    --_size: var(--grapes-unit-32);
+    --_border-radius: var(--grapes-border-radius-8);
+  }
+
+  &[data-size='40'] {
+    --_size: var(--grapes-unit-40);
+    --_border-radius: var(--grapes-border-radius-8);
+  }
+
+  &[data-size='56'] {
+    --_size: var(--grapes-unit-56);
+    --_border-radius: var(--grapes-border-radius-12);
+  }
+
+  &[data-variant='alert'] {
+    color: var(--grapes-color-content-alert-default);
+    background-color: var(--grapes-color-background-secondary-alert-default);
+  }
+
+  &[data-variant='info'] {
+    color: var(--grapes-color-content-info-default);
+    background: var(--grapes-color-background-secondary-info-default);
+  }
+
+  &[data-variant='success'] {
+    color: var(--grapes-color-content-success-default);
+    background-color: var(--grapes-color-background-secondary-success-default);
+  }
+
+  &[data-variant='warning'] {
+    color: var(--grapes-color-content-warning-default);
+    background-color: var(--grapes-color-background-secondary-warning-default);
+  }
+
+  &[data-variant='neutral'] {
+    background-color: var(--grapes-color-background-secondary-default);
+  }
+
+  &[data-variant='apricot'] {
+    background-color: var(--_grapes-color-apricot-20);
+  }
+
+  &[data-variant='blue'] {
+    background-color: var(--_grapes-color-blue-20);
+  }
+
+  &[data-variant='carbon'] {
+    background-color: var(--_grapes-color-carbon-7);
+  }
+
+  &[data-variant='emerald'] {
+    background-color: var(--_grapes-color-emerald-20);
+  }
+
+  &[data-variant='forest'] {
+    background-color: var(--_grapes-color-forest-bright);
+  }
+
+  &[data-variant='grolive'] {
+    background-color: var(--_grapes-color-grolive-bright);
+  }
+
+  &[data-variant='lemon'] {
+    background-color: var(--_grapes-color-lemon-bright);
+  }
+
+  &[data-variant='ocean'] {
+    background-color: var(--_grapes-color-ocean-bright);
+  }
+
+  &[data-variant='pink'] {
+    background-color: var(--_grapes-color-pink-bright);
+  }
+
+  &[data-variant='peach'] {
+    background-color: var(--_grapes-color-peach-bright);
+  }
+
+  &[data-variant='purple'] {
+    background-color: var(--_grapes-color-purple-20);
+  }
+}

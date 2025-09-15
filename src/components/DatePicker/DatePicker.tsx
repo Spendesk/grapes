@@ -4,13 +4,15 @@ import { DatePickerInput } from './DatePickerInput';
 import { Calendar } from '../Calendar';
 import { useWindowEvent } from '../../hooks/useWindowEvent';
 
-import styles from './DatePicker.module.scss';
 import { useId } from '../../hooks/useId';
 import { getDateInRange } from './utils/';
-import { type Placement, getStyleFromPlacement } from '../../utils';
+import { type Placement, classNames, getStyleFromPlacement } from '../../utils';
 import { useFormFieldContext } from '../FormField/FormFieldContext';
 import type { InputVariant } from '../Input';
 import { useAnimationState } from '../../hooks/useAnimationState';
+
+import styles from './DatePicker.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type DatePickerProps = {
   /**
@@ -158,7 +160,7 @@ export const DatePicker = ({
       {isVisible && (
         <div
           id={calendarId}
-          className={styles.calendar}
+          className={classNames(styles.calendar, commonStyles.dropdownContent)}
           role="dialog"
           aria-labelledby={formFieldContext?.labelId}
           style={getStyleFromPlacement(placement)}

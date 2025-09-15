@@ -3,8 +3,10 @@ import React from 'react';
 import type { TableColumn, TableVariant } from './types';
 import { classNames } from '../../utils';
 
-import styles from './Table.module.scss';
 import { useTableCellContext } from './TableProvider';
+
+import styles from './Table.module.css';
+import tableStyles from '../../theme/table.module.css';
 
 type Props<T extends object> = {
   column: TableColumn<T>;
@@ -51,9 +53,9 @@ export function TableCell<T extends object>({
     <td
       key={`cell-${column.id}-${getRowId?.(row) ?? columnIndex}`}
       className={classNames(
-        styles.tableBodyCell,
-        rowHeight === 'compact' && styles.compactTableBodyCell,
-        column.id !== 'checkboxes' && styles.borderedTableBodyCell,
+        tableStyles.tableBodyCell,
+        rowHeight === 'compact' && tableStyles.tableBodyCellCompact,
+        column.id !== 'checkboxes' && tableStyles.tableCellSeparator,
         !isRowDisabled && getCellVariantClassName(cellVariant),
         column.className,
       )}

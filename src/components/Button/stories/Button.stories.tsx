@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { action } from 'storybook/actions';
 import React from 'react';
 
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
@@ -8,6 +9,11 @@ import { Button } from '../Button';
 const meta: Meta<typeof Button> = {
   title: 'Interaction/Button',
   component: Button,
+  args: {
+    onClick: () => {
+      action('onClick')();
+    },
+  },
 };
 
 export default meta;

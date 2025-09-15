@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
-import styles from './Table.module.scss';
 import type { TableVariant } from './types';
 import { classNames } from '../../utils';
 import { TableCell } from './TableCell';
 import { useTableRowContext } from './TableProvider';
+
+import styles from './Table.module.css';
+import tableStyles from '../../theme/table.module.css';
 
 type Props<T extends object> = {
   row: T;
@@ -55,6 +57,7 @@ export function TableRow<T extends object>({ row, rowIndex }: Props<T>) {
       }}
       className={classNames(
         styles.tableBodyRow,
+        tableStyles.tableBodyRow,
         !isRowDisabled && onRowClick && styles.clickableTableBodyRow,
         !isRowDisabled && isRowActive && styles.activeTableBodyRow,
         !isRowDisabled && !isRowActive && getRowVariantClassName(rowVariant),

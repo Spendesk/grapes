@@ -1,0 +1,14 @@
+.autocompleteMultipleSelected {
+  font: var(--grapes-body-m);
+  flex: 1;
+  border: none;
+  color: var(--grapes-color-content-primary);
+  text-align: left;
+  background: none;
+  cursor: text;
+  padding: 0;
+
+  &:active {
+    outline: none;
+  }
+}

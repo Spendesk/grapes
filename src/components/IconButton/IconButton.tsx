@@ -3,7 +3,7 @@ import { classNames } from '../../utils';
 
 import { Icon, type IconName } from '../Icon/Icon';
 
-import styles from './IconButton.module.scss';
+import styles from './IconButton.module.css';
 
 export type IconButtonVariant =
   | 'primaryBrand'

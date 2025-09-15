@@ -10,9 +10,11 @@ import type { GetPropsCommonOptions, GetMenuPropsOptions } from 'downshift';
 import { DropdownMenuContentList } from './DropdownMenuContentList';
 import { classNames, getStyleFromPlacement, type Placement } from '../../utils';
 
-import styles from './DropdownMenuContent.module.scss';
 import usePrevious from '../../hooks/usePrevious';
 import { useFormFieldContext } from '../FormField/FormFieldContext';
+
+import styles from './DropdownMenuContent.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 type OptionGroup<T> = { key: string; label: string; options: T[] };
 
@@ -83,6 +85,7 @@ export const DropdownMenuContent = <T extends Option>({
       })}
       className={classNames(
         isOpen && styles.enter,
+        commonStyles.dropdownContent,
         styles.dropdownMenuContentWrapper,
         className,
       )}

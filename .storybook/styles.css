@@ -1,3 +1,10 @@
+:root {
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
 /**
 * Change the default font family, font size, font weight and line height
 * Change the default text color

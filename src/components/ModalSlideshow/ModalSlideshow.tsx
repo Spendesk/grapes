@@ -8,7 +8,7 @@ import React, {
 import { ModalBody, ModalOverlay } from '../Modal';
 import type { ModalSlideshowSlide } from './types';
 
-import styles from './ModalSlideshow.module.scss';
+import styles from './ModalSlideshow.module.css';
 import { IconButton } from '../IconButton';
 import { useTranslate } from '../../hooks/useTranslate';
 import { useId } from '../../hooks/useId';

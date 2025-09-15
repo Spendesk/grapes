@@ -9,7 +9,7 @@ import { Icon, type IconName } from '../Icon';
 import { useId } from '../../hooks/useId';
 import { useTranslate } from '../../hooks/useTranslate';
 
-import styles from './Tag.module.scss';
+import styles from './Tag.module.css';
 
 export type TagVariant =
   | 'neutral'

@@ -1,0 +1,46 @@
+:where(.table) {
+  font: var(--grapes-body-m);
+  width: 100%;
+  background-color: var(--grapes-color-background-primary-default);
+  border: 1px solid var(--grapes-color-border-default);
+  border-spacing: 0;
+  border-radius: var(--grapes-border-radius-12);
+}
+
+:where(.tableHeaderCell) {
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-secondary-bg-primary);
+  height: var(--unit-40);
+  box-sizing: border-box;
+  padding: 0 var(--grapes-unit-16);
+  border-bottom: 1px solid var(--grapes-color-border-default);
+}
+
+.tableCellSeparator:not(:last-child) {
+  border-right: 1px solid var(--grapes-color-border-default);
+}
+
+.tableBodyRow:not(:last-child) .tableBodyCell {
+  border-bottom: 1px solid var(--grapes-color-border-default);
+}
+
+.tableBodyRow:last-child {
+  .tableBodyCell:first-child {
+    border-radius: 0 0 0 var(--grapes-border-radius-12);
+  }
+  .tableBodyCell:last-child {
+    border-radius: 0 0 var(--grapes-border-radius-12) 0;
+  }
+}
+
+:where(.tableBodyCell) {
+  position: relative;
+  height: var(--grapes-unit-64);
+  box-sizing: border-box;
+  padding: 0 var(--grapes-unit-16);
+  color: var(--grapes-color-content-primary);
+}
+
+.tableBodyCellCompact {
+  height: var(--grapes-unit-48);
+}

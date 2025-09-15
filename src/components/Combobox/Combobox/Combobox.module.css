@@ -1,0 +1,107 @@
+.comboboxWrapper {
+  position: relative;
+}
+
+.combobox {
+  height: var(--grapes-unit-40);
+  align-items: center;
+  box-sizing: border-box;
+  padding: var(--grapes-unit-8);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-8);
+  background-color: var(--grapes-color-background-primary-default);
+  display: inline-grid;
+  grid-template-columns: 1fr var(--grapes-unit-40);
+  padding: 0;
+
+  &:not(:focus-within, .invalidCombobox):hover {
+    border-color: var(--grapes-color-border-hover);
+  }
+
+  &:focus-within {
+    outline: var(--grapes-focus-ring);
+    border-color: var(--grapes-color-border-default);
+    outline-offset: var(--grapes-focus-ring-offset);
+  }
+
+  &.invalidCombobox {
+    border-color: var(--grapes-color-border-alert);
+
+    &:focus-within {
+      border-color: var(--grapes-color-border-default);
+    }
+  }
+}
+
+.combobox[data-variant='magicGradient'] {
+  border: 1px solid transparent;
+  background: var(--grapes-color-gradient-magic);
+}
+
+.comboboxInputContainer {
+  display: flex;
+  padding-left: var(--grapes-unit-8);
+  overflow: hidden;
+  height: 100%;
+}
+
+.parentFitCombobox {
+  width: 100%;
+}
+
+.comboboxInput {
+  color: var(--grapes-color-content-primary);
+  font: var(--grapes-body-m);
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--grapes-color-content-secondary-bg-primary);
+  }
+  &:disabled {
+    pointer-events: none;
+    color: var(--grapes-color-content-secondary-bg-secondary);
+    -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
+  }
+}
+
+.hideComboboxInput {
+  display: none;
+}
+
+.comboboxToggleButton {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--grapes-color-content-secondary-bg-primary);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.loadingItem {
+  margin: var(--grapes-unit-8) var(--grapes-unit-8) 0;
+  width: calc(100% - 2 * var(--grapes-unit-8));
+}
+
+.comboboxWrapper:has(.comboboxInput:disabled) {
+  cursor: not-allowed;
+
+  .combobox {
+    pointer-events: none;
+    background-color: var(--grapes-color-background-primary-disabled);
+    border: 1px solid var(--grapes-color-border-default);
+    box-shadow: none;
+  }
+}

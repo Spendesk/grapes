@@ -1,7 +1,7 @@
 import React, { type ChangeEventHandler } from 'react';
 import { classNames } from '../../utils';
 
-import styles from './RadioInput.module.scss';
+import styles from './RadioInput.module.css';
 import { useRadioState } from './useRadioState';
 
 export type RadioInputProps = Readonly<{

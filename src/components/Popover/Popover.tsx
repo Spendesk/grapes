@@ -4,8 +4,10 @@ import { classNames, getStyleFromPlacement, type Placement } from '../../utils';
 import { useId } from '../../hooks/useId';
 import { useWindowEvent } from '../../hooks/useWindowEvent';
 
-import styles from './Popover.module.scss';
 import { useAnimationState } from '../../hooks/useAnimationState';
+
+import styles from './Popover.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type TriggerProps = {
   'aria-expanded': boolean;
@@ -90,7 +92,7 @@ export const Popover = ({
       {isVisible && (
         <div
           id={dialogId}
-          className={styles.popover}
+          className={classNames(styles.popover, commonStyles.dropdownContent)}
           style={getStyleFromPlacement(placement)}
           role="dialog"
           tabIndex={-1}

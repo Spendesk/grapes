@@ -1,0 +1,114 @@
+@use '../../theme/placeholders';
+
+.optionGroup {
+  --_border-size: 1px;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: repeat(var(--options), 1fr);
+  background-color: var(--grapes-color-background-primary-disabled);
+  border: var(--_border-size) solid
+    var(--grapes-color-background-primary-disabled);
+  border-radius: var(--grapes-border-radius-8);
+}
+
+.optionGroupOption {
+  font: var(--grapes-body-m);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% + 2px);
+  height: var(--grapes-unit-40);
+  color: var(--grapes-color-content-secondary-bg-secondary);
+  border: var(--_border-size) solid transparent;
+  border-radius: var(--grapes-border-radius-8);
+  margin: calc(-1 * var(--_border-size));
+  padding: 0 var(--grapes-unit-8);
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.selectedOptionGroupOption {
+    color: var(--grapes-color-content-selected);
+    cursor: default;
+  }
+
+  &:is(:hover, :focus-within):not(.selectedOptionGroupOption) {
+    border-color: var(--grapes-color-border-default);
+    background-color: var(--grapes-color-background-primary-hover);
+  }
+}
+
+.optionGroupOptionLabel {
+  position: relative;
+  z-index: 3;
+}
+
+.optionGroupIndicator {
+  position: absolute;
+  box-sizing: border-box;
+  top: calc(-1 * var(--_border-size));
+  left: calc(-1 * var(--_border-size));
+  transition:
+    transform var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function),
+    width var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function);
+  will-change: transform;
+  border: var(--_border-size) solid var(--grapes-color-border-default);
+  height: calc(100% + 2 * var(--_border-size));
+  background-color: var(--grapes-color-background-primary-default);
+  border-radius: var(--grapes-border-radius-8);
+  width: calc(100% / var(--options) + 2 * var(--_border-size));
+  transform: translateX(calc((100% - 2 * var(--_border-size)) * var(--index)));
+  z-index: 2;
+}
+
+:is(.optionGroup[aria-disabled='true'], fieldset[disabled] .optionGroup) {
+  cursor: not-allowed;
+
+  &::before {
+    content: '';
+    position: absolute;
+    border-radius: var(--grapes-border-radius-8);
+    inset: -1px;
+    z-index: 1;
+  }
+
+  .optionGroupOption::after {
+    z-index: 1;
+  }
+  .optionGroupOption {
+    pointer-events: none;
+    color: var(--grapes-color-content-secondary-bg-secondary);
+  }
+
+  .optionGroupIndicator {
+    background-color: var(--grapes-color-background-primary-readonly);
+    border-color: var(--grapes-color-border-default);
+  }
+}
+
+.optionGroup[aria-invalid='true'] {
+  border-color: transparent;
+
+  .optionGroupOption {
+    pointer-events: initial;
+  }
+  .optionGroupOption.selectedOptionGroupOption {
+    color: var(--grapes-color-content-alert-default);
+  }
+}
+
+.optionGroupInvalidBorder {
+  position: absolute;
+  pointer-events: none;
+  inset: -1px;
+  border: 1px solid var(--grapes-color-border-alert);
+  border-radius: var(--grapes-border-radius-8);
+  z-index: 3;
+}

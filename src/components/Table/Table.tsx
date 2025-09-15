@@ -13,7 +13,6 @@ import type {
   TableVariant,
 } from './types';
 
-import styles from './Table.module.scss';
 import { TableEmptyState } from './TableEmptyState';
 import { TableHeaderCell } from './TableHeaderCell';
 import { TableHeaderCheckbox } from './TableHeaderCheckbox';
@@ -23,6 +22,9 @@ import { TableRow } from './TableRow';
 import { TableRowCheckbox } from './TableRowCheckbox';
 import { TableMini } from './TableMini';
 import { groupByFn } from '../ListBox/utils';
+
+import styles from './Table.module.css';
+import tableStyles from '../../theme/table.module.css';
 
 const NEXT_SORT_DIRECTIONS: NextSortDirection = {
   // when you click on an unsorted column, it goes to Descending order
@@ -196,7 +198,7 @@ function Table<T extends object>({
       onRowSelectionChange={onRowSelectionChange}
       onAllRowsSelectionChange={onAllRowsSelectionChange}
     >
-      <table className={classNames(styles.table, className)} {...rest}>
+      <table className={classNames(tableStyles.table, className)} {...rest}>
         <thead ref={theadRef} className={styles.tableHeader}>
           <tr className={styles.tableHeaderRow}>
             {memoizedColumns.map((column) => (
@@ -216,7 +218,13 @@ function Table<T extends object>({
             ? Object.entries(groupedData).map(
                 ([key, aggregatedRows]: [string, T[]]) => {
                   return [
-                    <tr key={key} className={styles.tableBodyRow}>
+                    <tr
+                      key={key}
+                      className={classNames(
+                        styles.tableBodyRow,
+                        tableStyles.tableBodyRow,
+                      )}
+                    >
                       <td
                         colSpan={columns.length}
                         className={styles.tableBodyGroupedCell}

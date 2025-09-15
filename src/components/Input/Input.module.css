@@ -1,0 +1,99 @@
+.inputContainer {
+  height: var(--grapes-unit-40);
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: var(--grapes-unit-8);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-8);
+  background-color: var(--grapes-color-background-primary-default);
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+
+  &:hover {
+    border-color: var(--grapes-color-border-hover);
+  }
+
+  &:focus-within {
+    outline: var(--grapes-focus-ring);
+    border-color: var(--grapes-color-border-default);
+    outline-offset: var(--grapes-focus-ring-offset);
+  }
+
+  &.invalidInputContainer {
+    border-color: var(--grapes-color-border-alert);
+
+    &:focus-within {
+      border-color: var(--grapes-color-border-default);
+    }
+  }
+}
+
+.inputContainer:has(.input:disabled) {
+  pointer-events: none;
+  background-color: var(--grapes-color-background-primary-disabled);
+  border: 1px solid var(--grapes-color-border-default);
+  box-shadow: none;
+}
+
+.inputContainer:has(.input:read-only) {
+  background-color: var(--grapes-color-background-primary-readonly);
+}
+
+.inputContainer[data-variant='magicGradient'] {
+  border: 1px solid transparent;
+  background: var(--grapes-color-gradient-magic);
+}
+
+.inputContainer .leftAddon > button,
+.inputContainer .rightAddon > button {
+  height: calc(var(--grapes-unit-40) - 6px);
+  border-radius: 6px;
+}
+
+.inputContainer .leftAddon > button {
+  margin-left: 2px;
+}
+
+.inputContainer .rightAddon > button {
+  margin-right: 2px;
+}
+
+.parentFitInputContainer {
+  width: 100%;
+}
+
+.input {
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-primary);
+  height: 100%;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--grapes-unit-8);
+  border: none;
+  background: none;
+
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: var(--grapes-color-content-secondary-bg-primary);
+  }
+  &:disabled {
+    pointer-events: none;
+    color: var(--grapes-color-content-secondary-bg-secondary);
+    -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
+  }
+}
+
+.leftAddon,
+.rightAddon {
+  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
