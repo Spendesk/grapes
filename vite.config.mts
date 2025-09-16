@@ -49,10 +49,9 @@ export default defineConfig({
     target: 'esnext',
     emptyOutDir: false,
     sourcemap: false,
+    cssCodeSplit: true,
     lib: {
-      entry: 'src/index.ts',
-      fileName: 'index',
-      cssFileName: 'style',
+      entry: { index: 'src/index.ts', token: 'src/theme/css-variables.css' },
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
