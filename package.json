@@ -23,7 +23,8 @@
       "require": "./dist/index.js"
     },
     "./tailwind": "./dist/tailwind-grapes.css",
-    "./style": "./dist/style.css"
+    "./style": "./dist/index.css",
+    "./token": "./dist/token.css"
   },
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
