@@ -25,6 +25,9 @@
 }
 
 .tableBodyRow:last-child {
+  border-radius: 0 0 var(--grapes-border-radius-12)
+    var(--grapes-border-radius-12);
+
   .tableBodyCell:first-child {
     border-radius: 0 0 0 var(--grapes-border-radius-12);
   }
