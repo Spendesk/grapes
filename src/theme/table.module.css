@@ -10,7 +10,7 @@
 :where(.tableHeaderCell) {
   font: var(--grapes-body-m);
   color: var(--grapes-color-content-secondary-bg-primary);
-  height: var(--unit-40);
+  height: var(--grapes-unit-40);
   box-sizing: border-box;
   padding: 0 var(--grapes-unit-16);
   border-bottom: 1px solid var(--grapes-color-border-default);
