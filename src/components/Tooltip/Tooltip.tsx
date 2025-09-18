@@ -33,6 +33,11 @@ export type TooltipProps = {
    * @default false
    */
   isDisabled?: boolean;
+  /**
+   * The offset of the tooltip from its trigger on the x-axis.
+   * @default 0
+   */
+  xOffset?: number;
 } & TooltipOptions;
 
 /**
@@ -45,6 +50,7 @@ export function Tooltip({
   triggerAsChild = false,
   maxWidth = 232,
   isDisabled = false,
+  xOffset,
   ...options
 }: TooltipProps) {
   const tooltip = useTooltip(options);
@@ -56,7 +62,11 @@ export function Tooltip({
   return (
     <TooltipContext.Provider value={tooltip}>
       <TooltipTrigger asChild={triggerAsChild}>{children}</TooltipTrigger>
-      <TooltipContent maxWidth={maxWidth} isDisabled={isDisabled}>
+      <TooltipContent
+        maxWidth={maxWidth}
+        isDisabled={isDisabled}
+        marginLeft={`${xOffset}px`}
+      >
         {content}
       </TooltipContent>
     </TooltipContext.Provider>
