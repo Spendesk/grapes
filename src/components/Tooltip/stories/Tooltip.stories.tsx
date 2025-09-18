@@ -142,3 +142,14 @@ export const TriggerAsChild: Story = {
     </Tooltip>
   ),
 };
+
+export const XOffset: Story = {
+  args: {
+    xOffset: -30,
+  },
+  render: (args) => (
+    <Tooltip {...args}>
+      <Button variant="primaryBrand" text="X offset" />
+    </Tooltip>
+  ),
+};
