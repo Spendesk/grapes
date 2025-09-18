@@ -1,5 +1,3 @@
-@use '../../theme/placeholders';
-
 .optionGroup {
   --_border-size: 1px;
   position: relative;
