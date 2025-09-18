@@ -50,7 +50,7 @@ export function Tooltip({
   triggerAsChild = false,
   maxWidth = 232,
   isDisabled = false,
-  xOffset,
+  xOffset = 0,
   ...options
 }: TooltipProps) {
   const tooltip = useTooltip(options);
