@@ -39,6 +39,11 @@ export type TooltipOptions = {
    * @default 10
    */
   offset?: number;
+  /**
+   * Padding around the viewport
+   * @default 8px
+   */
+  paddingBoundary?: number;
 };
 
 export const useTooltip = ({
@@ -47,6 +52,7 @@ export const useTooltip = ({
   isOpen: controlledOpen,
   onOpenChange: setControlledOpen,
   offset: tooltipOffset = 10,
+  paddingBoundary = 8,
 }: TooltipOptions = {}) => {
   const [uncontrolledOpen, setUncontrolledOpen] = useState(isInitialOpen);
   const arrowRef = useRef(null);
@@ -61,8 +67,12 @@ export const useTooltip = ({
     whileElementsMounted: autoUpdate,
     middleware: [
       offset(tooltipOffset),
-      flip(),
-      shift(),
+      flip({
+        padding: paddingBoundary,
+      }),
+      shift({
+        padding: paddingBoundary,
+      }),
       arrow({
         element: arrowRef,
       }),

@@ -19,7 +19,7 @@ export type TooltipProps = {
   content: ReactNode | ReactNode[];
   /**
    * Whether the trigger is a custom element
-   * @see {@link storybook.spendesk.design/index.html?path=/docs/feedback-tooltip--docs#triggeraschild-and-forwardref} for more information.
+   * @see https://grapes.spendesk.design/docs/components/tooltip#triggeraschild-and-forwardref
    * @default false
    */
   triggerAsChild?: boolean;
@@ -33,11 +33,6 @@ export type TooltipProps = {
    * @default false
    */
   isDisabled?: boolean;
-  /**
-   * The offset of the tooltip from its trigger on the x-axis.
-   * @default 0
-   */
-  xOffset?: number;
 } & TooltipOptions;
 
 /**
@@ -50,7 +45,6 @@ export function Tooltip({
   triggerAsChild = false,
   maxWidth = 232,
   isDisabled = false,
-  xOffset = 0,
   ...options
 }: TooltipProps) {
   const tooltip = useTooltip(options);
@@ -62,11 +56,7 @@ export function Tooltip({
   return (
     <TooltipContext.Provider value={tooltip}>
       <TooltipTrigger asChild={triggerAsChild}>{children}</TooltipTrigger>
-      <TooltipContent
-        maxWidth={maxWidth}
-        isDisabled={isDisabled}
-        marginLeft={`${xOffset}px`}
-      >
+      <TooltipContent maxWidth={maxWidth} isDisabled={isDisabled}>
         {content}
       </TooltipContent>
     </TooltipContext.Provider>

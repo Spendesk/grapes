@@ -145,7 +145,7 @@ export const TriggerAsChild: Story = {
 
 export const XOffset: Story = {
   args: {
-    xOffset: -30,
+    paddingBoundary: 50,
   },
   render: (args) => (
     <Tooltip {...args}>
