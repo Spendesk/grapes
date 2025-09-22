@@ -31,8 +31,8 @@
 .content {
   display: block;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: var(--_size);
+  height: var(--_size);
   object-fit: cover;
 }
 
