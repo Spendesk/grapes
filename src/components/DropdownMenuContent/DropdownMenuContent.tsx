@@ -29,6 +29,7 @@ export type Props<T extends Option> = {
   placement?: Placement;
   maxHeight?: string;
   options: (T | OptionGroup<T>)[];
+  renderSearchBar?: () => ReactNode;
   getItemProps(options: { item: T; index: number }): HTMLProps<HTMLLIElement>;
   getMenuProps(
     options?: GetMenuPropsOptions,
@@ -54,6 +55,7 @@ export const DropdownMenuContent = <T extends Option>({
   renderOptionGroup,
   renderNoOptions,
   renderLoadingOptions,
+  renderSearchBar,
 }: Props<T>) => {
   const [visible, setVisible] = useState(isOpen);
   const refTimeout = useRef<NodeJS.Timeout>();
@@ -99,15 +101,18 @@ export const DropdownMenuContent = <T extends Option>({
       }}
     >
       {visible ? (
-        <DropdownMenuContentList
-          options={options}
-          getItemProps={getItemProps}
-          renderOption={renderOption}
-          renderOptionGroup={renderOptionGroup}
-          renderNoOptions={renderNoOptions}
-          renderLoadingOptions={renderLoadingOptions}
-          isLoading={isLoading}
-        />
+        <>
+          {renderSearchBar && renderSearchBar()}
+          <DropdownMenuContentList
+            options={options}
+            getItemProps={getItemProps}
+            renderOption={renderOption}
+            renderOptionGroup={renderOptionGroup}
+            renderNoOptions={renderNoOptions}
+            renderLoadingOptions={renderLoadingOptions}
+            isLoading={isLoading}
+          />
+        </>
       ) : null}
     </ul>
   );

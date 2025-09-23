@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import type { Option } from './option';
@@ -269,6 +269,100 @@ describe('Select', () => {
       expect(onSelect).not.toHaveBeenCalled();
       expect(screen.getByRole('combobox', { name: /Choose/ })).toHaveValue(
         'option 1',
+      );
+    });
+  });
+
+  describe('Given a search bar has search bar in dropdown enabeld', () => {
+    it('shows a dropdown search bar and focuses it on open', async () => {
+      const Wrapper = () => {
+        const [selected, setSelected] = React.useState<Option | undefined>();
+        const [opts, setOpts] = React.useState(options);
+        return (
+          <FormField label="Choose">
+            <Select
+              hasSearchBar
+              value={selected}
+              options={opts}
+              onSelect={setSelected}
+              searchPlaceholder="Search"
+              onSearch={(q) => {
+                if (!q) return setOpts(options);
+                const lower = q.toLowerCase();
+                setOpts(
+                  options.filter((o) => o.label.toLowerCase().includes(lower)),
+                );
+              }}
+            />
+          </FormField>
+        );
+      };
+
+      render(
+        <GrapesProvider locale="en-US" localesDefinition={LOCALES}>
+          <Wrapper />
+        </GrapesProvider>,
+      );
+
+      await userEvent.click(
+        screen.getByRole('button', { name: /show options/i }),
+      );
+      const listbox = await screen.findByRole('listbox');
+      const searchInput = within(listbox).getByPlaceholderText(/search/i);
+      expect(searchInput).toHaveFocus();
+    });
+
+    it('navigates the options with arrow keys when the search bar is used selects the option with Enter', async () => {
+      const Wrapper = () => {
+        const [opts, setOpts] = React.useState(options);
+        const [selected, setSelected] = React.useState<Option | undefined>();
+        return (
+          <FormField label="Choose">
+            <Select
+              hasSearchBar
+              value={selected}
+              options={opts}
+              onSelect={setSelected}
+              searchPlaceholder="Search"
+              onSearch={(q) => {
+                if (!q) return setOpts(options);
+                const lower = q.toLowerCase();
+                setOpts(
+                  options.filter((o) => o.label.toLowerCase().includes(lower)),
+                );
+              }}
+            />
+          </FormField>
+        );
+      };
+
+      render(
+        <GrapesProvider locale="en-US" localesDefinition={LOCALES}>
+          <Wrapper />
+        </GrapesProvider>,
+      );
+
+      // Open and type
+      await userEvent.click(
+        screen.getByRole('button', { name: /show options/i }),
+      );
+      const listbox = await screen.findByRole('listbox');
+      const searchInput = within(listbox).getByPlaceholderText(/search/i);
+      const optionsEls = within(listbox).getAllByRole('option');
+      await userEvent.type(searchInput, 'option');
+
+      // ArrowDown highlights first
+      await userEvent.keyboard('{ArrowDown}');
+      expect(optionsEls[0]).toHaveAttribute('aria-selected', 'true');
+
+      // ArrowDown moves to second
+      await userEvent.keyboard('{ArrowDown}');
+      expect(optionsEls[1]).toHaveAttribute('aria-selected', 'true');
+
+      // Enter selects the option by pressing enter
+      await userEvent.keyboard('{Enter}');
+      expect(screen.getByRole('combobox', { name: /Choose/ })).toHaveValue(
+        'option 2',
       );
     });
   });

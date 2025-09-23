@@ -1,16 +1,25 @@
-import React, { type FocusEventHandler, type ReactNode } from 'react';
+import React, {
+  type FocusEventHandler,
+  type ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { useCombobox } from 'downshift';
 import { classNames, type Placement } from '../../utils';
 
 import { Combobox } from '../Combobox';
+import { TextInput, type TextInputProps } from '../TextInput';
+import { Icon } from '../Icon';
 import { DropdownItem } from '../DropdownItem';
+import { colors } from '../../colors';
 import type { Option, OptionGroup } from './option';
 
 import styles from './Select.module.css';
 
 export type SelectProps<T extends Option> = {
   /**
-   * className for the element.
+   * className forfor the element.
    */
   className?: string;
   /**
@@ -76,6 +85,22 @@ export type SelectProps<T extends Option> = {
    * Function to render option group.
    */
   renderOptionGroup?(optionGroup: OptionGroup<T>): ReactNode;
+  /**
+   * Render when no options are available; receives the current search value.
+   */
+  renderNoOptions?(rawValue: string): ReactNode;
+  /**
+   * Enable a search bar inside the dropdown. Field becomes a button trigger.
+   */
+  hasSearchBar?: boolean;
+  /**
+   * Called when the dropdown search value changes. Consumer should filter options.
+   */
+  onSearch?(value: string | undefined): void;
+  /**
+   * The placeholder for the search bar.
+   */
+  searchPlaceholder?: string;
 };
 
 export const Select = <T extends Option>({
@@ -93,9 +118,14 @@ export const Select = <T extends Option>({
   onSelect,
   renderOption,
   renderOptionGroup,
+  renderNoOptions,
+  onSearch,
+  searchPlaceholder,
   placement,
+  hasSearchBar = false,
   ...rest
 }: SelectProps<T>) => {
+  const [searchValue, setSearchValue] = useState<string | undefined>();
   const {
     isOpen,
     getInputProps,
@@ -118,6 +148,13 @@ export const Select = <T extends Option>({
     },
     isItemDisabled: (item) => item?.disabled === true,
   });
+
+  useEffect(() => {
+    if (!isOpen && searchValue !== undefined) {
+      onSearch?.(undefined);
+      setSearchValue(undefined);
+    }
+  }, [isOpen, onSearch, searchValue]);
 
   return (
     <Combobox
@@ -161,7 +198,62 @@ export const Select = <T extends Option>({
         getToggleButtonProps,
       }}
       placement={placement}
+      renderSearchBar={
+        hasSearchBar
+          ? ({ getInputProps }) => {
+              const downshiftInputProps = getInputProps();
+              return (
+                <SearchBar
+                  onKeyDown={(e) => {
+                    // Allow selecting option with keyboard
+                    downshiftInputProps.onKeyDown?.(e);
+                  }}
+                  placeholder={searchPlaceholder}
+                  value={searchValue}
+                  onSearch={(value) => {
+                    setSearchValue(value);
+                    onSearch?.(value ? value : undefined);
+                  }}
+                />
+              );
+            }
+          : undefined
+      }
+      renderNoOptions={() =>
+        renderNoOptions ? renderNoOptions(searchValue ?? '') : null
+      }
       {...rest}
+    />
+  );
+};
+
+const SearchBar = ({
+  value,
+  onSearch,
+  ...rest
+}: {
+  value: string | undefined;
+  onSearch: (value: string) => void;
+} & TextInputProps) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  // Focus the input when the dropdown is opened
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+  return (
+    <TextInput
+      {...rest}
+      value={value ?? ''}
+      fit="parent"
+      ref={inputRef}
+      onChange={(e) => onSearch(e.target.value)}
+      className={styles.searchBar}
+      leftAddon={
+        <Icon name="magnifying-glass" color={colors.contentDecorativeIcon} />
+      }
     />
   );
 };

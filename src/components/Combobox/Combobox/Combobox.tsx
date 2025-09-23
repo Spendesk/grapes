@@ -28,6 +28,7 @@ export const Combobox = <T extends ComboboxOption>(
     isLoading = false,
     inputVariant = 'default',
     hideToggleButton = false,
+    renderSearchBar,
     onClearSelection,
     renderSelected = () => null,
     onFocus,
@@ -128,6 +129,9 @@ export const Combobox = <T extends ComboboxOption>(
       <DropdownMenuContent
         isOpen={isMenuOpen}
         isLoading={isLoading}
+        renderSearchBar={
+          renderSearchBar ? () => renderSearchBar({ getInputProps }) : undefined
+        }
         maxHeight={dropdownMenuContentMaxHeight ?? '152px'}
         options={options}
         getItemProps={getItemProps}
