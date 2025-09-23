@@ -365,5 +365,49 @@ describe('Select', () => {
         'option 2',
       );
     });
+
+    it('should have message when no options are found', async () => {
+      const Wrapper = () => {
+        const [opts, setOpts] = React.useState(options);
+        return (
+          <FormField label="Choose">
+            <Select
+              hasSearchBar
+              value={options[0]}
+              options={opts}
+              onSelect={vi.fn()}
+              searchPlaceholder="Search"
+              renderNoOptions={(q) => (
+                <span data-testid="no-results">No results for {q}</span>
+              )}
+              onSearch={(q) => {
+                if (!q) return setOpts(options);
+                const lower = q.toLowerCase();
+                setOpts(
+                  options.filter((o) => o.label.toLowerCase().includes(lower)),
+                );
+              }}
+            />
+          </FormField>
+        );
+      };
+
+      render(
+        <GrapesProvider locale="en-US" localesDefinition={LOCALES}>
+          <Wrapper />
+        </GrapesProvider>,
+      );
+
+      await userEvent.click(
+        screen.getByRole('button', { name: /show options/i }),
+      );
+      const listbox = await screen.findByRole('listbox');
+      const searchInput = within(listbox).getByPlaceholderText(/search/i);
+      await userEvent.type(searchInput, 'something'); // yields no matches
+      await waitFor(() =>
+        expect(within(listbox).queryAllByRole('option')).toHaveLength(0),
+      );
+      expect(await within(listbox).findByTestId('no-results')).toBeVisible();
+    });
   });
 });
