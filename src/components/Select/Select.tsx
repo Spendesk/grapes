@@ -19,7 +19,7 @@ import styles from './Select.module.css';
 
 export type SelectProps<T extends Option> = {
   /**
-   * className forfor the element.
+   * className for the element.
    */
   className?: string;
   /**

@@ -409,5 +409,56 @@ describe('Select', () => {
       );
       expect(await within(listbox).findByTestId('no-results')).toBeVisible();
     });
+
+    it('resets the search query when the dropdown closes', async () => {
+      const Wrapper = () => {
+        const [opts, setOpts] = React.useState(options);
+        const [value, setValue] = React.useState<Option | undefined>();
+        return (
+          <FormField label="Choose">
+            <Select
+              hasSearchBar
+              value={value}
+              options={opts}
+              onSelect={setValue}
+              searchPlaceholder="Search"
+              onSearch={(q) => {
+                if (!q) return setOpts(options);
+                const lower = q.toLowerCase();
+                setOpts(
+                  options.filter((o) => o.label.toLowerCase().includes(lower)),
+                );
+              }}
+            />
+          </FormField>
+        );
+      };
+
+      render(
+        <GrapesProvider locale="en-US" localesDefinition={LOCALES}>
+          <Wrapper />
+        </GrapesProvider>,
+      );
+
+      // Open and type
+      await userEvent.click(
+        screen.getByRole('button', { name: /show options/i }),
+      );
+      let listbox = await screen.findByRole('listbox');
+      const input = within(listbox).getByPlaceholderText(/search/i);
+      await userEvent.type(input, '2');
+
+      // Close with Escape
+      await userEvent.keyboard('{Escape}');
+      const toggle = screen.getByRole('button', { name: /show options/i });
+      await waitFor(() =>
+        expect(toggle).toHaveAttribute('aria-expanded', 'false'),
+      );
+
+      // Re-open: query should be cleared
+      await userEvent.click(toggle);
+      listbox = await screen.findByRole('listbox');
+      expect(within(listbox).getByPlaceholderText(/search/i)).toHaveValue('');
+    });
   });
 });
