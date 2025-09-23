@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import { DropdownItem } from '../../DropdownItem';
 import { Select } from '../Select';
 import type { Option } from '../option';
+import { AutocompleteNoOptions } from '../../AutocompleteNoOptions';
 
 type CostCenter = Option & {
   owner: string;
@@ -139,6 +140,42 @@ export const WithCustomOptionRenderer: Story = {
         />
       );
     },
+  },
+};
+
+export const WithSearchBar: Story = {
+  ...Default,
+  args: {
+    hasSearchBar: true,
+  },
+  render: (args) => {
+    const [selectedOption, setSelectedOption] = useState<Option>();
+    const [options, setOptions] = useState<Option[]>(costCenters);
+
+    return (
+      <Select
+        {...args}
+        options={options}
+        value={selectedOption}
+        onSelect={setSelectedOption}
+        searchPlaceholder="Search a cost center"
+        onSearch={(q) => {
+          if (!q) {
+            setOptions(costCenters);
+            return;
+          }
+          const lower = q.toLowerCase();
+          setOptions(
+            costCenters.filter((o) => o.label.toLowerCase().includes(lower)),
+          );
+        }}
+        renderNoOptions={(rawValue) => (
+          <AutocompleteNoOptions>
+            <div>There are no results for {rawValue}</div>
+          </AutocompleteNoOptions>
+        )}
+      />
+    );
   },
 };
 
