@@ -1,10 +1,10 @@
 import React, {
-  forwardRef,
   type ChangeEventHandler,
   type ClipboardEventHandler,
   type FocusEventHandler,
   type KeyboardEventHandler,
   type ReactNode,
+  type Ref,
 } from 'react';
 import { classNames } from '../../utils';
 import Cleave from 'cleave.js/react';
@@ -17,6 +17,7 @@ import styles from './Input.module.css';
 export type InputVariant = 'default' | 'magicGradient';
 
 export type InputProps = {
+  ref?: Ref<HTMLInputElement>;
   /**
    * className for the element.
    */
@@ -144,81 +145,75 @@ export type InputProps = {
   onWheel?: React.WheelEventHandler<HTMLInputElement>;
 };
 
-export const Input = /*@__PURE__*/ forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      className,
-      fit = 'content',
-      type = 'text',
-      id,
-      isInvalid,
-      isReadOnly,
-      isDisabled,
-      leftAddon,
-      rightAddon,
-      maskOptions,
-      textAlign = 'left',
-      variant = 'default',
-      onChange,
-      onFocus,
-      onBlur,
-      onCopy,
-      onKeyDown,
-      onWheel,
-      ...rest
-    }: InputProps,
-    ref,
-  ) => {
-    const context = useFormFieldContext();
+export const Input = ({
+  className,
+  fit = 'content',
+  type = 'text',
+  id,
+  isInvalid,
+  isReadOnly,
+  isDisabled,
+  leftAddon,
+  rightAddon,
+  maskOptions,
+  textAlign = 'left',
+  variant = 'default',
+  onChange,
+  onFocus,
+  onBlur,
+  onCopy,
+  onKeyDown,
+  onWheel,
+  ref,
+  ...rest
+}: InputProps) => {
+  const context = useFormFieldContext();
 
-    const isInputInvalid =
-      isInvalid === undefined ? context.isInvalid : isInvalid;
-    const shouldFitParent = context.fit !== undefined || fit === 'parent';
-    const inputProps = {
-      className: styles.input,
-      id: id ?? context.inputId,
-      type,
-      readOnly: isReadOnly,
-      disabled: isDisabled,
-      style: {
-        textAlign,
-      },
-      onChange,
-      onFocus,
-      onBlur,
-      onCopy,
-      onKeyDown,
-      onWheel,
-      'aria-describedby': context.descriptionId,
-      'aria-invalid': isInputInvalid ? ('true' as const) : ('false' as const),
-      ...(isInputInvalid && { ['aria-errormessage']: context.errorMessageId }),
-      ...rest,
-    };
+  const isInputInvalid =
+    isInvalid === undefined ? context.isInvalid : isInvalid;
+  const shouldFitParent = context.fit !== undefined || fit === 'parent';
+  const inputProps = {
+    className: styles.input,
+    id: id ?? context.inputId,
+    type,
+    readOnly: isReadOnly,
+    disabled: isDisabled,
+    style: {
+      textAlign,
+    },
+    onChange,
+    onFocus,
+    onBlur,
+    onCopy,
+    onKeyDown,
+    onWheel,
+    'aria-describedby': context.descriptionId,
+    'aria-invalid': isInputInvalid ? ('true' as const) : ('false' as const),
+    ...(isInputInvalid && { ['aria-errormessage']: context.errorMessageId }),
+    ...rest,
+  };
 
-    return (
-      <div
-        data-variant={variant}
-        className={classNames(
-          styles.inputContainer,
-          isInputInvalid &&
-            variant === 'default' &&
-            styles.invalidInputContainer,
-          shouldFitParent && styles.parentFitInputContainer,
-          className,
-        )}
-      >
-        {leftAddon && <div className={styles.leftAddon}>{leftAddon}</div>}
-        {maskOptions ? (
-          <Cleave
-            {...inputProps}
-            key={JSON.stringify(maskOptions)}
-            options={maskOptions}
-          />
-        ) : (
-          <input {...inputProps} ref={ref} />
-        )}
-        {rightAddon && <div className={styles.rightAddon}>{rightAddon}</div>}
-      </div>
-    );
-  },
-);
+  return (
+    <div
+      data-variant={variant}
+      className={classNames(
+        styles.inputContainer,
+        isInputInvalid && variant === 'default' && styles.invalidInputContainer,
+        shouldFitParent && styles.parentFitInputContainer,
+        className,
+      )}
+    >
+      {leftAddon && <div className={styles.leftAddon}>{leftAddon}</div>}
+      {maskOptions ? (
+        <Cleave
+          {...inputProps}
+          key={JSON.stringify(maskOptions)}
+          options={maskOptions}
+        />
+      ) : (
+        <input {...inputProps} ref={ref} />
+      )}
+      {rightAddon && <div className={styles.rightAddon}>{rightAddon}</div>}
+    </div>
+  );
+};

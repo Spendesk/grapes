@@ -8,7 +8,7 @@ import { createPortal } from 'react-dom';
 import { useSetInert } from '../GrapesProvider/hooks/useInert';
 
 import styles from './Modal.module.css';
-import { classNames, supportInert } from '../../utils';
+import { classNames } from '../../utils';
 
 export type ModalOverlayProps = {
   /**
@@ -91,13 +91,7 @@ export const ModalOverlay = ({
   }
 
   const modalContainer = isVisible ? (
-    <div
-      {...rest}
-      className={styles.modalContainer}
-      /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
-      /* @ts-ignore Typescript and React doesn't play nice with inert https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert*/
-      inert={supportInert(!isOpen)}
-    >
+    <div {...rest} className={styles.modalContainer} inert={!isOpen}>
       <div
         className={classNames(styles.modalOverlay, className)}
         data-closing={isOpen === false}

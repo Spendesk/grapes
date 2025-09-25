@@ -1,10 +1,10 @@
-import type { ReactChild } from 'react';
+import type { ReactNode } from 'react';
 
 export type TableSortDirection = 'ascending' | 'descending' | 'none';
 
 export type TableColumn<T> = {
   id: string;
-  header: ReactChild;
+  header: ReactNode;
   width?: number | string;
   align?: 'left' | 'right' | 'center';
   getSortValue?: (item: T) => string | number | null | undefined;
@@ -14,7 +14,7 @@ export type TableColumn<T> = {
       isRowHovered: boolean;
       isCheckboxDisabled?: boolean;
     },
-  ): ReactChild;
+  ): ReactNode;
   getCellVariant?(row: T): TableVariant | undefined;
   className?: string;
 };

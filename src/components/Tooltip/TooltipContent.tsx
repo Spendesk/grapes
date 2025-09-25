@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { type Ref } from 'react';
 import {
   useMergeRefs,
   FloatingArrow,
@@ -10,16 +10,22 @@ import { colors } from '../../colors';
 
 import styles from './Tooltip.module.css';
 
-export const TooltipContent = /*@__PURE__*/ forwardRef<
-  HTMLDivElement,
-  React.HTMLProps<HTMLDivElement> & {
-    maxWidth: number;
-    isDisabled: boolean;
-  }
->(({ style, children, maxWidth, isDisabled, ...props }, propRef) => {
+type TooltipContentProps = React.HTMLProps<HTMLDivElement> & {
+  ref?: Ref<HTMLDivElement>;
+  maxWidth: number;
+  isDisabled: boolean;
+};
+export const TooltipContent = ({
+  style,
+  children,
+  maxWidth,
+  isDisabled,
+  ref,
+  ...props
+}: TooltipContentProps) => {
   const { floatingStyles, isOpen, refs, arrowRef, context, getFloatingProps } =
     useTooltipContext();
-  const ref = useMergeRefs([refs.setFloating, propRef]);
+  const mergeRefs = useMergeRefs([refs.setFloating, ref]);
 
   if (isDisabled || !isOpen) {
     return null;
@@ -28,7 +34,7 @@ export const TooltipContent = /*@__PURE__*/ forwardRef<
   return (
     <FloatingPortal>
       <div
-        ref={ref}
+        ref={mergeRefs}
         style={{
           ...floatingStyles,
           ...style,
@@ -51,4 +57,4 @@ export const TooltipContent = /*@__PURE__*/ forwardRef<
       </div>
     </FloatingPortal>
   );
-});
+};

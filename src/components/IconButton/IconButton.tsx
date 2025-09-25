@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { type Ref } from 'react';
 import { classNames } from '../../utils';
 
 import { Icon, type IconName } from '../Icon/Icon';
@@ -25,6 +25,7 @@ export type IconButtonVariant =
   | 'tertiaryAlert';
 
 export type IconButtonProps = {
+  ref?: Ref<HTMLButtonElement>;
   /**
    * The icon to display in the button
    */
@@ -69,48 +70,41 @@ export type IconButtonProps = {
  * This should be added using the `aria-label` prop.
  * @see https://grapes.spendesk.design/docs/components/icon-button
  */
-export const IconButton = /*@__PURE__*/ forwardRef<
-  HTMLButtonElement,
-  IconButtonProps
->(
-  (
-    {
-      className,
-      iconName,
-      isDisabled = false,
-      variant = 'tertiaryNeutral',
-      hasNegativeMargins = false,
-      onClick,
-      iconColor,
-      ...rest
-    },
-    ref,
-  ) => {
-    return (
-      <button
-        ref={ref}
-        type="button"
-        className={classNames(
-          styles.iconButton,
-          variant.startsWith('tertiary') &&
-            hasNegativeMargins &&
-            styles.withNegativeMarginsIconButton,
-          className,
-        )}
-        data-variant={variant}
-        disabled={isDisabled}
-        onClick={onClick}
-        title={rest['aria-label']}
-        {...rest}
-      >
-        <Icon
-          className={styles.iconButtonIcon}
-          size="m"
-          name={iconName}
-          color={iconColor}
-          aria-hidden="true"
-        />
-      </button>
-    );
-  },
-);
+export const IconButton = ({
+  className,
+  iconName,
+  isDisabled = false,
+  variant = 'tertiaryNeutral',
+  hasNegativeMargins = false,
+  onClick,
+  iconColor,
+  ref,
+  ...rest
+}: IconButtonProps) => {
+  return (
+    <button
+      ref={ref}
+      type="button"
+      className={classNames(
+        styles.iconButton,
+        variant.startsWith('tertiary') &&
+          hasNegativeMargins &&
+          styles.withNegativeMarginsIconButton,
+        className,
+      )}
+      data-variant={variant}
+      disabled={isDisabled}
+      onClick={onClick}
+      title={rest['aria-label']}
+      {...rest}
+    >
+      <Icon
+        className={styles.iconButtonIcon}
+        size="m"
+        name={iconName}
+        color={iconColor}
+        aria-hidden="true"
+      />
+    </button>
+  );
+};
