@@ -22,7 +22,7 @@ export const useTabListContext = () => {
   return context;
 };
 
-export type TabRef = React.MutableRefObject<HTMLButtonElement | null>;
+export type TabRef = React.RefObject<HTMLButtonElement | null>;
 
 export type TabListProps = {
   /**

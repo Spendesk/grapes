@@ -1,11 +1,12 @@
-import React, { forwardRef } from 'react';
+import React, { type Ref } from 'react';
 
 import { iconMap } from '../../icons';
 
 export type IconName = keyof typeof iconMap;
 export type IconSize = 's' | 'm' | 'l' | 'xl';
 
-export type IconProps = Readonly<{
+export type IconProps = {
+  ref?: Ref<SVGSVGElement>;
   /**
    * className for the element.
    */
@@ -24,7 +25,7 @@ export type IconProps = Readonly<{
    * The icon to display.
    */
   name: IconName;
-}>;
+};
 
 const getIconSize = (iconSize: IconSize): 14 | 16 | 24 | 32 => {
   switch (iconSize) {
@@ -39,28 +40,33 @@ const getIconSize = (iconSize: IconSize): 14 | 16 | 24 | 32 => {
   }
 };
 
-export const Icon = /*@__PURE__*/ forwardRef<SVGSVGElement, IconProps>(
-  ({ className, size = 'm', color = 'currentColor', name, ...rest }, ref) => {
-    const IconComponent = iconMap[name];
+export const Icon = ({
+  className,
+  size = 'm',
+  color = 'currentColor',
+  name,
+  ref,
+  ...rest
+}: IconProps) => {
+  const IconComponent = iconMap[name];
 
-    if (IconComponent === undefined) {
-      throw new Error(`Unknown icon name: ${name}`);
-    }
+  if (IconComponent === undefined) {
+    throw new Error(`Unknown icon name: ${name}`);
+  }
 
-    const iconSize = getIconSize(size);
+  const iconSize = getIconSize(size);
 
-    return (
-      <IconComponent
-        ref={ref}
-        role="img"
-        className={className}
-        height={iconSize}
-        width={iconSize}
-        data-icon={name}
-        viewBox="0 0 20 20"
-        color={color}
-        {...rest}
-      />
-    );
-  },
-);
+  return (
+    <IconComponent
+      ref={ref}
+      role="img"
+      className={className}
+      height={iconSize}
+      width={iconSize}
+      data-icon={name}
+      viewBox="0 0 20 20"
+      color={color}
+      {...rest}
+    />
+  );
+};

@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { type Ref } from 'react';
 import { classNames } from '../../utils';
 import { Icon, type IconName } from '../Icon';
 
@@ -25,6 +25,7 @@ export type HighlightIconVariant =
 type Size = 24 | 32 | 40 | 56;
 
 export type HighlightIconProps = {
+  ref?: Ref<SVGSVGElement>;
   /**
    * className for the element.
    */
@@ -57,10 +58,14 @@ const getIconSize = (highlightIconSize: Size): IconSize => {
   }
 };
 
-export const HighlightIcon = /*@__PURE__*/ forwardRef<
-  SVGSVGElement,
-  HighlightIconProps
->(({ className, name, size = 56, variant = 'warning', ...rest }, ref) => {
+export const HighlightIcon = ({
+  className,
+  name,
+  size = 56,
+  variant = 'warning',
+  ref,
+  ...rest
+}: HighlightIconProps) => {
   return (
     <div
       data-variant={variant}
@@ -70,4 +75,4 @@ export const HighlightIcon = /*@__PURE__*/ forwardRef<
       <Icon ref={ref} name={name} size={getIconSize(size)} {...rest} />
     </div>
   );
-});
+};

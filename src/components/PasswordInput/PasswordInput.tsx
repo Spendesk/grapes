@@ -2,7 +2,7 @@ import React, {
   type ChangeEventHandler,
   type FocusEventHandler,
   type KeyboardEventHandler,
-  forwardRef,
+  type Ref,
   useState,
 } from 'react';
 import { classNames } from '../../utils';
@@ -17,6 +17,7 @@ import { PasswordValidator } from './PasswordValidator/PasswordValidator';
 import { colors } from '../../colors';
 
 export type PasswordInputProps = {
+  ref?: Ref<HTMLInputElement>;
   /**
    * className for the element.
    */
@@ -69,76 +70,69 @@ export type PasswordInputProps = {
   onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 };
 
-export const PasswordInput = /*@__PURE__*/ forwardRef<
-  HTMLInputElement,
-  PasswordInputProps
->(
-  (
-    {
-      className,
-      rules = [],
-      fit = 'content',
-      id,
-      isDisabled,
-      name,
-      placeholder,
-      value,
-      onChange,
-      onFocus,
-      onBlur,
-      onKeyDown,
-      ...rest
-    },
-    ref,
+export const PasswordInput = ({
+  className,
+  rules = [],
+  fit = 'content',
+  id,
+  isDisabled,
+  name,
+  placeholder,
+  value,
+  onChange,
+  onFocus,
+  onBlur,
+  onKeyDown,
+  ref,
+  ...rest
+}: PasswordInputProps) => {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const t = useTranslate();
+
+  const areAllPasswordRulesValid = (
+    password: string,
+    rules: PasswordRule[],
   ) => {
-    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-    const t = useTranslate();
+    return rules.every((rule) => !!rule.validate(password));
+  };
 
-    const areAllPasswordRulesValid = (
-      password: string,
-      rules: PasswordRule[],
-    ) => {
-      return rules.every((rule) => !!rule.validate(password));
-    };
-
-    return (
-      <div
-        className={classNames(
-          styles.passwordInputWrapper,
-          fit === 'parent' && styles.parentFitPasswordInputWrapper,
-          className,
-        )}
-      >
-        <Input
-          {...rest}
-          autoComplete={rules.length ? 'new-password' : 'current-password'}
-          fit={fit}
-          id={id}
-          name={name}
-          ref={ref}
-          placeholder={placeholder}
-          isDisabled={isDisabled}
-          isInvalid={!!value && !areAllPasswordRulesValid(value, rules)}
-          onChange={onChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onKeyDown={onKeyDown}
-          type={isPasswordVisible ? 'text' : 'password'}
-          value={value ?? ''}
-          rightAddon={
-            <IconButton
-              iconName="eye"
-              iconColor={colors.contentSecondaryBgPrimary}
-              aria-label={isPasswordVisible ? t('hide') : t('show')}
-              onClick={() => setIsPasswordVisible(!isPasswordVisible)}
-              isDisabled={isDisabled}
-            />
-          }
-        />
-        {rules?.length > 0 && (
-          <PasswordValidator rules={rules} password={value} />
-        )}
-      </div>
-    );
-  },
-);
+  return (
+    <div
+      className={classNames(
+        styles.passwordInputWrapper,
+        fit === 'parent' && styles.parentFitPasswordInputWrapper,
+        className,
+      )}
+    >
+      <Input
+        {...rest}
+        autoComplete={rules.length ? 'new-password' : 'current-password'}
+        fit={fit}
+        id={id}
+        name={name}
+        ref={ref}
+        placeholder={placeholder}
+        isDisabled={isDisabled}
+        isInvalid={!!value && !areAllPasswordRulesValid(value, rules)}
+        onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        onKeyDown={onKeyDown}
+        type={isPasswordVisible ? 'text' : 'password'}
+        value={value ?? ''}
+        rightAddon={
+          <IconButton
+            iconName="eye"
+            iconColor={colors.contentSecondaryBgPrimary}
+            aria-label={isPasswordVisible ? t('hide') : t('show')}
+            onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+            isDisabled={isDisabled}
+          />
+        }
+      />
+      {rules?.length > 0 && (
+        <PasswordValidator rules={rules} password={value} />
+      )}
+    </div>
+  );
+};

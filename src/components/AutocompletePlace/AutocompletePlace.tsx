@@ -1,4 +1,4 @@
-import React, { type ReactChild, useEffect, useState } from 'react';
+import React, { type ReactNode, useEffect, useState } from 'react';
 
 import { useDebounce } from '../../hooks/useDebounce';
 import {
@@ -41,7 +41,7 @@ export type AutocompletePlaceProps<T extends ComboboxOption> = Omit<
   renderNoOptions: (
     value: string,
     debouncedSearchValue: string | undefined,
-  ) => ReactChild;
+  ) => ReactNode;
 };
 
 const MIN_TEXT_SEARCH_LENGTH = 3;
