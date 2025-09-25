@@ -3,7 +3,7 @@ import type { OptionVariant } from './ListBox';
 import { type DirectionKey, getIndexFromDirectionKey } from './utils';
 
 type Context<T extends object> = {
-  listBoxRef: React.RefObject<HTMLUListElement>;
+  listBoxRef: React.RefObject<HTMLUListElement | null>;
   options: T[];
   rowHeight: 'normal' | 'compact';
   renderOption: (option: T, titleId: string) => ReactNode;
