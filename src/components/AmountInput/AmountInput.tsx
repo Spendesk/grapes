@@ -1,5 +1,6 @@
 import React, {
   type ChangeEvent,
+  type ClipboardEventHandler,
   type FocusEventHandler,
   type KeyboardEventHandler,
   type ReactNode,
@@ -82,6 +83,10 @@ export type AmountInputProps = {
    * Handler that is called when a key is pressed.
    */
   onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
+  /**
+   * Handler called when clipboard content is pasted into the amount field.
+   */
+  onPaste?: ClipboardEventHandler<HTMLInputElement>;
 } & (
   | // If the `AmountInput` has en editable currency, both props should always be passed
   {
