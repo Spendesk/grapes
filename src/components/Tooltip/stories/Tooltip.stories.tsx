@@ -132,7 +132,7 @@ export const TriggerAsChild: Story = {
     docs: {
       description: {
         story:
-          'To use any as the trigger (the component around which the tooltip will go), a `div` has been added around it. To avoid having this div around the trigger (this can be useful for ellipsis for example), you can use the `triggerAsChild` prop to do so. This will remove the div but you will need to add `forwardRef` to your custom component.',
+          'To use any as the trigger (the component around which the tooltip will go), a `div` has been added around it. To avoid having this div around the trigger (this can be useful for ellipsis for example), you can use the `triggerAsChild` prop to do so. This will remove the div but you will need to add a `ref` to your custom component.',
       },
     },
   },

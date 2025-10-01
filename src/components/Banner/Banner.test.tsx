@@ -11,7 +11,7 @@ describe('Banner component', () => {
     render(
       <Banner
         title="Hello world"
-        illustration={<img src="" alt="nothing" />}
+        illustration={<img src={undefined} alt="nothing" />}
         actions={
           <Button
             variant="secondaryNeutral"
@@ -41,7 +41,7 @@ describe('Banner component', () => {
     render(
       <Banner
         title="Hello world"
-        illustration={<img src="" alt="nothing" />}
+        illustration={<img src={undefined} alt="nothing" />}
         actions={
           <>
             <Button

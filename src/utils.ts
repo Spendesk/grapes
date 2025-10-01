@@ -64,11 +64,3 @@ export class UnknownSizeError extends Error {
     super(`Unknown size: ${size}`);
   }
 }
-
-export function supportInert(shouldBeInert: boolean): unknown {
-  // @ts-expect-error "use" only exists in React 19
-  if (typeof React.use === 'function') {
-    return shouldBeInert;
-  }
-  return shouldBeInert ? '' : undefined;
-}
