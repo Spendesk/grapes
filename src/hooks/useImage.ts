@@ -8,12 +8,12 @@ export const Status = {
 type Status = (typeof Status)[keyof typeof Status];
 
 export default function useImage(
-  ref: RefObject<HTMLElement>,
+  ref: RefObject<HTMLElement | null>,
   src?: string,
   lazyLoading = true,
 ): Status {
   const [status, setStatus] = useState<Status>(Status.Loading);
-  const imageRef = useRef<HTMLImageElement | null>();
+  const imageRef = useRef<HTMLImageElement | null>(null);
 
   function cleanup() {
     if (imageRef.current) {

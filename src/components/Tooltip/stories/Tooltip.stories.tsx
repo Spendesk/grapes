@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import { Tooltip } from '../Tooltip';
 import { Button } from '../../Button';
@@ -132,15 +132,18 @@ export const TriggerAsChild: Story = {
     docs: {
       description: {
         story:
-          'To use any as the trigger (the component around which the tooltip will go), a `div` has been added around it. To avoid having this div around the trigger (this can be useful for ellipsis for example), you can use the `triggerAsChild` prop to do so. This will remove the div but you will need to add `forwardRef` to your custom component.',
+          'To use any as the trigger (the component around which the tooltip will go), a `div` has been added around it. To avoid having this div around the trigger (this can be useful for ellipsis for example), you can use the `triggerAsChild` prop to do so. This will remove the div but you will need to add a `ref` to your custom component.',
       },
     },
   },
-  render: (args) => (
-    <Tooltip {...args}>
-      <Button variant="primaryBrand" text="Trigger as child" />
-    </Tooltip>
-  ),
+  render: (args) => {
+    const ref = useRef(null);
+    return (
+      <Tooltip {...args}>
+        <Button ref={ref} variant="primaryBrand" text="Trigger as child" />
+      </Tooltip>
+    );
+  },
 };
 
 export const XOffset: Story = {
