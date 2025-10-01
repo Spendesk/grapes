@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import { Tooltip } from '../Tooltip';
 import { Button } from '../../Button';
@@ -136,11 +136,14 @@ export const TriggerAsChild: Story = {
       },
     },
   },
-  render: (args) => (
-    <Tooltip {...args}>
-      <Button variant="primaryBrand" text="Trigger as child" />
-    </Tooltip>
-  ),
+  render: (args) => {
+    const ref = useRef(null);
+    return (
+      <Tooltip {...args}>
+        <Button ref={ref} variant="primaryBrand" text="Trigger as child" />
+      </Tooltip>
+    );
+  },
 };
 
 export const XOffset: Story = {

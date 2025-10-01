@@ -20,16 +20,17 @@ export const TooltipTrigger = ({
 }: TooltipTriggerProps) => {
   const { refs, getReferenceProps } = useTooltipContext();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const childrenRef = (children as any).ref;
+  const childrenRef = (children as any)?.props?.ref;
+
   const mergeRefs = useMergeRefs([refs.setReference, ref, childrenRef]);
 
   if (asChild && isValidElement(children)) {
     return cloneElement(
       children,
       getReferenceProps({
-        ref: mergeRefs,
         ...props,
         ...(children.props as Record<string, unknown>),
+        ref: mergeRefs,
       }),
     );
   }
