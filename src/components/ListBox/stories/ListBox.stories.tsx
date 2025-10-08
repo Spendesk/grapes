@@ -28,7 +28,6 @@ type Story = StoryObj<typeof ListBox<Data>>;
 
 export const Primary: Story = {
   render: (props) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [activeOption, setActiveOption] = useState<string | undefined>();
 
     return (
@@ -242,11 +241,9 @@ export const SelectOption: Story = {
     header: <p className={styles.header}>Employee</p>,
   },
   render: (props) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [optionsSelected, setOptionSelected] = useState<string[]>(
       props.checkedOptionIds || [],
     );
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [activeOption, setActiveOption] = useState<string | undefined>();
 
     return (

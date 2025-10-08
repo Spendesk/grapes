@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
 import { action } from 'storybook/actions';
 import type { Meta, StoryObj } from '@storybook/react';
