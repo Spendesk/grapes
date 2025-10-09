@@ -14,12 +14,6 @@ export const isAllOption = (option: Option | null | undefined): boolean => {
   return option?.key === ALL_KEY;
 };
 
-export const isDisabledOption = (
-  option: Option | null | undefined,
-): boolean => {
-  return !!option?.props?.isDisabled;
-};
-
 export const getIsOptionSelected = <T extends Option>(
   selectedOptions: T[],
   option: T,
