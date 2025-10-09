@@ -211,17 +211,6 @@ export const WithGroups: Story = {
           {
             key: 'legal',
             label: 'Legal',
-            props: {
-              isDisabled: true,
-              prefix: (
-                <Avatar
-                  variant="circle"
-                  size={24}
-                  src="https://placedog.net/401"
-                  text="A dog"
-                />
-              ),
-            },
           },
         ],
       },
@@ -270,7 +259,7 @@ export const DisabledItem: Story = {
       {
         key: 'mickael-murphy',
         label: 'Mickael Murphy',
-        props: {
+        dropDownItemProps: {
           isDisabled: true,
         },
       },
@@ -285,7 +274,7 @@ export const withPrefix: Story = {
       {
         key: 'mickael-murphy',
         label: 'Mickael Murphy',
-        props: {
+        dropDownItemProps: {
           prefix: (
             <Avatar
               variant="circle"

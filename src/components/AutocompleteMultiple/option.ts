@@ -5,7 +5,7 @@ export type OptionGroup<T> = { key: string; label: string; options: T[] };
 export type Option = {
   key: string;
   label: string;
-  props?: Omit<DropdownItemProps, 'label'>;
+  dropDownItemProps?: Omit<DropdownItemProps, 'label'>;
 };
 
 export const ALL_KEY = 'all';

@@ -145,7 +145,7 @@ export const AutocompleteMultiple = <T extends Option>({
     if (isAllOption(selectedItem)) {
       return internalOptions
         .flatMap((option) => ('options' in option ? option.options : option))
-        .filter((option) => !option.props?.isDisabled);
+        .filter((option) => !option.dropDownItemProps?.isDisabled);
     }
     const newSelectedOptions = [...internalSelectedOptions, selectedItem];
     return newSelectedOptions;
@@ -162,7 +162,7 @@ export const AutocompleteMultiple = <T extends Option>({
   };
 
   const handleOnSelect = (selectedItem: T) => {
-    if (selectedItem.props?.isDisabled) {
+    if (selectedItem.dropDownItemProps?.isDisabled) {
       return;
     }
     const isOptionSelected = getIsOptionSelected(
@@ -283,13 +283,13 @@ export const AutocompleteMultiple = <T extends Option>({
             key={option.key}
             label={option.label}
             isSelected={isSelected}
-            {...option.props}
+            {...option.dropDownItemProps}
             prefix={
               <div
                 className={styles.autocompleteMultipleDropdownPrefixContainer}
               >
                 <CheckboxInput isChecked={isSelected} onChange={() => {}} />
-                {option.props?.prefix}
+                {option.dropDownItemProps?.prefix}
               </div>
             }
           />
