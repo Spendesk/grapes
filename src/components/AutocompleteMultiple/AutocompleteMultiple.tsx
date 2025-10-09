@@ -141,9 +141,9 @@ export const AutocompleteMultiple = <T extends Option>({
 
   const addSelectedOption = (selectedItem: T) => {
     if (isAllOption(selectedItem)) {
-      return internalOptions.flatMap((option) =>
-        'options' in option ? option.options : option,
-      );
+      return internalOptions
+        .flatMap((option) => ('options' in option ? option.options : option))
+        .filter((option) => !option.props?.isDisabled);
     }
     const newSelectedOptions = [...internalSelectedOptions, selectedItem];
     return newSelectedOptions;
@@ -160,6 +160,9 @@ export const AutocompleteMultiple = <T extends Option>({
   };
 
   const handleOnSelect = (selectedItem: T) => {
+    if (selectedItem.props?.isDisabled) {
+      return;
+    }
     const isOptionSelected = getIsOptionSelected(
       internalSelectedOptions,
       selectedItem,
@@ -275,9 +278,14 @@ export const AutocompleteMultiple = <T extends Option>({
             key={option.key}
             label={option.label}
             isSelected={isSelected}
-            // TODO: we shouldn't use the checkbox component only for visual clue (but a simple icon)
+            {...option.props}
             prefix={
-              <CheckboxInput isChecked={isSelected} onChange={() => {}} />
+              <div
+                className={styles.autocompleteMultipleDropdownPrefixContainer}
+              >
+                <CheckboxInput isChecked={isSelected} onChange={() => {}} />
+                {option.props?.prefix}
+              </div>
             }
           />
         );

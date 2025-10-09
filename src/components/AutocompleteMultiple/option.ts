@@ -1,11 +1,23 @@
+import type { DropdownItemProps } from '../DropdownItem';
+
 export type OptionGroup<T> = { key: string; label: string; options: T[] };
 
-export type Option = { key: string; label: string };
+export type Option = {
+  key: string;
+  label: string;
+  props?: Omit<DropdownItemProps, 'label'>;
+};
 
 export const ALL_KEY = 'all';
 
 export const isAllOption = (option: Option | null | undefined): boolean => {
   return option?.key === ALL_KEY;
+};
+
+export const isDisabledOption = (
+  option: Option | null | undefined,
+): boolean => {
+  return !!option?.props?.isDisabled;
 };
 
 export const getIsOptionSelected = <T extends Option>(

@@ -6,6 +6,7 @@ import {
   type AutocompleteMultipleProps,
 } from '../AutocompleteMultiple';
 import { userEvent, within } from 'storybook/test';
+import { Avatar } from '../../Avatar';
 
 const costCenterOptions = [
   { key: '1', label: 'Marketing' },
@@ -210,6 +211,17 @@ export const WithGroups: Story = {
           {
             key: 'legal',
             label: 'Legal',
+            props: {
+              isDisabled: true,
+              prefix: (
+                <Avatar
+                  variant="circle"
+                  size={24}
+                  src="https://placedog.net/401"
+                  text="A dog"
+                />
+              ),
+            },
           },
         ],
       },
@@ -246,6 +258,43 @@ export const WithGroups: Story = {
             label: 'Recruitment',
           },
         ],
+      },
+    ],
+  },
+};
+
+export const DisabledItem: Story = {
+  ...Default,
+  args: {
+    options: [
+      {
+        key: 'mickael-murphy',
+        label: 'Mickael Murphy',
+        props: {
+          isDisabled: true,
+        },
+      },
+    ],
+  },
+};
+
+export const withPrefix: Story = {
+  ...Default,
+  args: {
+    options: [
+      {
+        key: 'mickael-murphy',
+        label: 'Mickael Murphy',
+        props: {
+          prefix: (
+            <Avatar
+              variant="circle"
+              size={24}
+              src="https://placedog.net/401"
+              text="A dog"
+            />
+          ),
+        },
       },
     ],
   },
