@@ -6,7 +6,7 @@ import { isBetween } from './utils/isBetween';
 import { useLocale } from '../GrapesProvider';
 import type { DateRange } from './CalendarRange';
 
-import styles from './CalendarGrid.module.scss';
+import styles from './CalendarGrid.module.css';
 
 export type CalendarGridProps = {
   /**

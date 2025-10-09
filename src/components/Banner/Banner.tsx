@@ -1,7 +1,7 @@
 import React, { type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
-import styles from './Banner.module.scss';
+import styles from './Banner.module.css';
 import { useId } from '../../hooks/useId';
 
 export type BannerVariant = 'brand' | 'neutral';
@@ -58,12 +58,12 @@ export const Banner = ({
     >
       {illustration}
       <div className={styles.container}>
-        <h1 className={styles.title} id={titleId}>
+        <h2 className={styles.title} id={titleId}>
           {title}
-        </h1>
-        <p className={styles.description} id={descriptionId}>
+        </h2>
+        <div className={styles.description} id={descriptionId}>
           {children}
-        </p>
+        </div>
         <div className={styles.actions}>{actions}</div>
       </div>
     </aside>

@@ -1,3 +1,8 @@
 .select > input {
   cursor: pointer;
 }
+
+.searchBar {
+  margin-bottom: var(--grapes-unit-8);
+  padding-left: var(--grapes-unit-8);
+}

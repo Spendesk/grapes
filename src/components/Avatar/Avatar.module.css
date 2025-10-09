@@ -1,0 +1,92 @@
+.avatar {
+  color-scheme: light;
+  position: relative;
+  display: inline-block;
+  width: var(--_size);
+  height: var(--_size);
+  color: var(--grapes-color-content-primary);
+  text-transform: uppercase;
+}
+.avatar[data-size='16'] {
+  font: var(--grapes-title-s);
+  --_size: var(--grapes-unit-16);
+}
+.avatar[data-size='24'] {
+  font: var(--grapes-title-s);
+  --_size: var(--grapes-unit-24);
+}
+.avatar[data-size='32'] {
+  font: var(--grapes-title-m);
+  --_size: var(--grapes-unit-32);
+}
+.avatar[data-size='40'] {
+  font: var(--grapes-title-l);
+  --_size: var(--grapes-unit-40);
+}
+.avatar[data-size='56'] {
+  font: var(--grapes-title-xl);
+  --_size: var(--grapes-unit-56);
+}
+
+.content {
+  display: block;
+  overflow: hidden;
+  width: var(--_size);
+  height: var(--_size);
+  object-fit: cover;
+}
+
+.content[data-variant='circle'] {
+  clip-path: circle(50%);
+}
+
+.content[data-variant='square'] {
+  border-radius: var(--grapes-border-radius-8);
+}
+
+.content:has(+ .avatarBadge) {
+  border-bottom-right-radius: 16px;
+}
+
+.backgroundContainer {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  background: var(--_bg);
+  color: var(--_color);
+}
+
+.apricot {
+  --_bg: var(--_grapes-color-apricot-20);
+}
+.lemon {
+  --_bg: var(--_grapes-color-lemon-bright);
+}
+.peach {
+  --_bg: var(--_grapes-color-peach-bright);
+}
+.blue {
+  --_bg: var(--_grapes-color-blue-20);
+}
+.pink {
+  --_bg: var(--_grapes-color-pink-bright);
+}
+.ocean {
+  --_bg: var(--_grapes-color-ocean-bright);
+}
+.forest {
+  --_bg: var(--_grapes-color-forest-bright);
+}
+.emerald {
+  --_bg: var(--_grapes-color-emerald-20);
+}
+.raspberry {
+  --_bg: var(--_grapes-color-raspberry-20);
+}
+
+.avatarBadge {
+  position: absolute;
+  overflow: initial;
+  bottom: 0px;
+  right: 0px;
+}

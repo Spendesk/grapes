@@ -1,7 +1,7 @@
 import React, {
   type FocusEventHandler,
   type KeyboardEventHandler,
-  forwardRef,
+  type Ref,
   useRef,
 } from 'react';
 import { classNames } from '../../utils';
@@ -11,9 +11,10 @@ import { Input } from '../Input';
 import { CountrySelect } from './CountrySelect';
 import type { Country } from './country';
 
-import styles from './PhoneInput.module.scss';
+import styles from './PhoneInput.module.css';
 
 export type PhoneInputProps = {
+  ref?: Ref<HTMLInputElement>;
   /**
    * className for the element
    */
@@ -89,83 +90,74 @@ export type PhoneInputProps = {
   ) => string;
 };
 
-export const PhoneInput = /*@__PURE__*/ forwardRef<
-  HTMLInputElement,
-  PhoneInputProps
->(
-  (
-    {
-      className,
-      countries,
-      country,
-      callingCode,
-      fit = 'content',
-      id,
-      isDisabled,
-      isInvalid,
-      name,
-      placeholder,
-      value,
-      onChange,
-      onFocus,
-      onBlur,
-      onKeyDown,
-      onSelectCountry,
-      formatPhoneNumber,
-      ...rest
-    }: PhoneInputProps,
-    ref,
-  ) => {
-    const inputRef = useRef<HTMLDivElement>(null);
+export const PhoneInput = ({
+  className,
+  countries,
+  country,
+  callingCode,
+  fit = 'content',
+  id,
+  isDisabled,
+  isInvalid,
+  name,
+  placeholder,
+  value,
+  onChange,
+  onFocus,
+  onBlur,
+  onKeyDown,
+  onSelectCountry,
+  formatPhoneNumber,
+  ref,
+  ...rest
+}: PhoneInputProps) => {
+  const inputRef = useRef<HTMLDivElement>(null);
 
-    return (
-      <div
-        className={classNames(
-          styles.phoneInputWrapper,
-          fit === 'parent' && styles.parentFitPhoneInputWrapper,
-          className,
-        )}
-        ref={inputRef}
-      >
-        <Input
-          className={styles.phoneInput}
-          fit={fit}
-          id={id}
-          ref={ref}
-          name={name}
-          placeholder={placeholder}
-          isDisabled={isDisabled}
-          isInvalid={isInvalid}
-          onChange={(event) => {
-            onChange(`+${callingCode} ${event.target.value}`);
-          }}
-          onFocus={(event) => {
-            onFocus?.(event);
-          }}
-          onBlur={(event) => {
-            onBlur?.(event);
-          }}
-          onKeyDown={onKeyDown}
-          type="text"
-          value={value ? formatPhoneNumber(value, country, callingCode) : ''}
-          leftAddon={
-            <>
-              <CountrySelect
-                options={countries}
-                value={{ key: country, label: '' }}
-                isDisabled={isDisabled}
-                onSelect={(selectedCountry) => {
-                  onSelectCountry(selectedCountry);
-                }}
-              />
-              <div className={styles.phoneInputCallingCode}>
-                (+{callingCode})
-              </div>
-            </>
-          }
-          {...rest}
-        />
-      </div>
-    );
-  },
-);
+  return (
+    <div
+      className={classNames(
+        styles.phoneInputWrapper,
+        fit === 'parent' && styles.parentFitPhoneInputWrapper,
+        className,
+      )}
+      ref={inputRef}
+    >
+      <Input
+        className={styles.phoneInput}
+        fit={fit}
+        id={id}
+        ref={ref}
+        name={name}
+        placeholder={placeholder}
+        isDisabled={isDisabled}
+        isInvalid={isInvalid}
+        onChange={(event) => {
+          onChange(`+${callingCode} ${event.target.value}`);
+        }}
+        onFocus={(event) => {
+          onFocus?.(event);
+        }}
+        onBlur={(event) => {
+          onBlur?.(event);
+        }}
+        onKeyDown={onKeyDown}
+        type="text"
+        value={value ? formatPhoneNumber(value, country, callingCode) : ''}
+        leftAddon={
+          <>
+            <CountrySelect
+              options={countries}
+              value={{ key: country, label: '' }}
+              isDisabled={isDisabled}
+              onSelect={(selectedCountry) => {
+                onSelectCountry(selectedCountry);
+              }}
+            />
+            <div className={styles.phoneInputCallingCode}>(+{callingCode})</div>
+          </>
+        }
+        {...rest}
+      />
+    </div>
+  );
+};

@@ -8,7 +8,7 @@ import { ModalFooter } from '../Modal/ModalFooter';
 import type { DeprecatedModalSlideshowSlide } from './types';
 import { useId } from '../../hooks/useId';
 
-import styles from './DeprecatedModalSlideShowBody.module.scss';
+import styles from './DeprecatedModalSlideShowBody.module.css';
 
 export type DeprecatedModalSlideshowBodyProps = {
   /**

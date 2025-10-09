@@ -3,7 +3,7 @@ import { classNames } from '../../utils';
 
 import { SwitchInput } from '../SwitchInput';
 
-import styles from './SwitchField.module.scss';
+import styles from './SwitchField.module.css';
 import { useId } from '../../hooks/useId';
 
 export type SwitchFieldProps = Readonly<{

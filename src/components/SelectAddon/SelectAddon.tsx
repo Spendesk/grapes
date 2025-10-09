@@ -6,7 +6,7 @@ import { DropdownItem } from '../DropdownItem';
 import { Icon } from '../Icon';
 import { DropdownMenuContent } from '../DropdownMenuContent';
 
-import styles from './SelectAddon.module.scss';
+import styles from './SelectAddon.module.css';
 
 const { stateChangeTypes } = useSelect;
 

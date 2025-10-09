@@ -1,0 +1,22 @@
+.description {
+  font: var(--grapes-body-s);
+  padding-bottom: var(--grapes-unit-4);
+  margin: 0;
+  color: var(--grapes-color-content-secondary-bg-primary);
+}
+
+.formFieldMessage {
+  font: var(--grapes-body-m);
+  margin-top: var(--grapes-unit-4);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: var(--grapes-unit-8);
+
+  &[data-severity='alert'] {
+    color: var(--grapes-color-content-alert-default);
+  }
+  &[data-severity='warning'] {
+    color: var(--grapes-color-content-warning-default);
+  }
+}

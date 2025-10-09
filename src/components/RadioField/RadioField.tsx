@@ -4,7 +4,7 @@ import { classNames } from '../../utils';
 import { RadioInput } from '../RadioInput';
 import { useRadioCheckState } from '../RadioGroup/useRadioCheckState';
 
-import styles from './RadioField.module.scss';
+import styles from './RadioField.module.css';
 
 export type RadioFieldProps = Readonly<{
   /**

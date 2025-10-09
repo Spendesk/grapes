@@ -1,4 +1,4 @@
-import React, { type ReactChild } from 'react';
+import React, { type ReactNode } from 'react';
 
 import { DropdownItem } from '../../DropdownItem';
 import { Combobox } from '../../Combobox';
@@ -6,7 +6,7 @@ import type { AutocompleteProps } from '../Autocomplete';
 import type { Option } from '../option';
 import { useAutocompleteCombobox } from '../hooks';
 
-import styles from './AutocompleteWithAddOption.module.scss';
+import styles from './AutocompleteWithAddOption.module.css';
 
 export const addOptionItemKey = 'add-option-item';
 
@@ -14,7 +14,7 @@ export type Props<T extends Option> = AutocompleteProps<T> & {
   /**
    * Function to render the add option item. It should always return a DropdownItem component.
    */
-  renderAddOption(rawValue: string): ReactChild;
+  renderAddOption(rawValue: string): ReactNode;
   /**
    * Handler that is called when an option has been added.
    */

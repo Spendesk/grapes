@@ -1,0 +1,50 @@
+.timelineItem {
+  display: flex;
+  margin-bottom: var(--grapes-unit-16);
+}
+
+.contentGrow {
+  flex-grow: 1;
+}
+
+.timelineItemContent {
+  margin-left: var(--grapes-unit-16);
+}
+
+.timelineItemDate {
+  font: var(--grapes-body-s);
+  color: var(--grapes-color-content-secondary-bg-primary);
+  margin-bottom: var(--grapes-unit-8);
+
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.timelineItemEvent {
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-primary);
+}
+
+.timelineItemSeparator {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--grapes-unit-12);
+  padding-top: 2px;
+
+  &::after {
+    content: '';
+    width: 1px;
+    flex-grow: 1;
+    background-color: var(--grapes-color-border-default);
+  }
+}
+
+.timelineItemDot {
+  width: var(--grapes-unit-12);
+  height: var(--grapes-unit-12);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: 50%;
+  box-sizing: border-box;
+}

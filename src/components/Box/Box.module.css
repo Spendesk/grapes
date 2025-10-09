@@ -1,12 +1,12 @@
 .container {
-  padding: var(--unit-24);
-  border-radius: var(--border-radius-12);
+  padding: var(--grapes-unit-24);
+  border-radius: var(--grapes-border-radius-12);
 }
 
 .container[data-variant='secondary'] {
-  background-color: var(--color-background-secondary-default);
+  background-color: var(--grapes-color-background-secondary-default);
 }
 .container[data-variant='primary'] {
-  background-color: var(--color-background-primary-default);
-  border: 1px solid var(--color-border-default);
+  background-color: var(--grapes-color-background-primary-default);
+  border: 1px solid var(--grapes-color-border-default);
 }

@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.justifyBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.centeredJustifyBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  font: var(--grapes-title-m);
+  color: var(--grapes-color-content-primary);
+}
+
+.body {
+  font: var(--grapes-body-s);
+  color: var(--grapes-color-content-secondary-bg-primary);
+  margin-top: var(--grapes-unit-4);
+}

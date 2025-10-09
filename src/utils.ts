@@ -36,7 +36,7 @@ export function classNames(...names: Names[]) {
 
 export function getStyleFromPlacement(placement: Placement) {
   if (placement.startsWith('end')) {
-    const left = 'calc(100% + var(--popover-offset))';
+    const left = 'calc(100% + var(--grapes-popover-offset))';
     return placement.endsWith('bottom')
       ? { left, top: '0' }
       : { left, bottom: '0' };
@@ -47,10 +47,10 @@ export function getStyleFromPlacement(placement: Placement) {
   const left = isAtTheEnd ? 'initial' : 0;
 
   if (placement.startsWith('top')) {
-    return { right, left, bottom: 'calc(100% + var(--popover-offset))' };
+    return { right, left, bottom: 'calc(100% + var(--grapes-popover-offset))' };
   }
 
-  return { right, left, top: 'calc(100% + var(--popover-offset))' };
+  return { right, left, top: 'calc(100% + var(--grapes-popover-offset))' };
 }
 
 export class UnknownVariantError extends Error {
@@ -63,12 +63,4 @@ export class UnknownSizeError extends Error {
   constructor(size: never) {
     super(`Unknown size: ${size}`);
   }
-}
-
-export function supportInert(shouldBeInert: boolean): unknown {
-  // @ts-expect-error "use" only exists in React 19
-  if (typeof React.use === 'function') {
-    return shouldBeInert;
-  }
-  return shouldBeInert ? '' : undefined;
 }

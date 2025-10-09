@@ -1,14 +1,13 @@
 import React, {
   type MouseEventHandler,
   type ReactNode,
-  type Reducer,
   useReducer,
 } from 'react';
 
 import { Button } from '../../Button';
 import { IconButton } from '../../IconButton';
 
-import styles from './PanelEditableSection.module.scss';
+import styles from './PanelEditableSection.module.css';
 import { useTranslate } from '../../../hooks/useTranslate';
 
 const readOnlyState = {
@@ -142,10 +141,7 @@ export function PanelEditableSection({
 }: PanelEditableSectionProps) {
   const t = useTranslate();
 
-  const [state, dispatch] = useReducer<Reducer<State, Action>>(
-    reducer,
-    initialState,
-  );
+  const [state, dispatch] = useReducer<State, [Action]>(reducer, initialState);
 
   const handleAction =
     (action: MouseEventHandler<HTMLButtonElement>) =>

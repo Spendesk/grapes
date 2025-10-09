@@ -5,7 +5,7 @@ import type { IconName } from '../Icon';
 import { HighlightIcon, type HighlightIconVariant } from '../HighlightIcon';
 import { useId } from '../../hooks/useId';
 
-import styles from './EmptyState.module.scss';
+import styles from './EmptyState.module.css';
 
 export type EmptyStateProps = {
   /**

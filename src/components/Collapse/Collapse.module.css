@@ -7,8 +7,9 @@
     height: 0px;
     overflow-y: clip;
     transition:
-      height var(--transition-duration-long) var(--transition-timing-function),
-      content-visibility var(--transition-duration-long) allow-discrete;
+      height var(--grapes-transition-duration-long)
+        var(--grapes-transition-timing-function),
+      content-visibility var(--grapes-transition-duration-long) allow-discrete;
   }
 
   .details[open]::details-content {
@@ -21,7 +22,7 @@
   cursor: pointer;
 
   &:focus-visible {
-    background-color: var(--color-background-primary-hover);
+    background-color: var(--grapes-color-background-primary-hover);
   }
 }
 

@@ -8,7 +8,7 @@ import { SkeletonText } from '../../Skeleton';
 import type { ComboboxNoDropdownProps, ComboboxOption } from '../types';
 import { colors } from '../../../colors';
 
-import styles from './ComboboxNoDropdown.module.scss';
+import styles from './ComboboxNoDropdown.module.css';
 
 export const ComboboxNoDropdown = <T extends ComboboxOption>(
   props: ComboboxNoDropdownProps<T>,

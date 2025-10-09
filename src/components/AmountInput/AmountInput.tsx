@@ -1,5 +1,6 @@
 import React, {
   type ChangeEvent,
+  type ClipboardEventHandler,
   type FocusEventHandler,
   type KeyboardEventHandler,
   type ReactNode,
@@ -13,7 +14,7 @@ import { useLocale } from '../GrapesProvider';
 import { CurrencySelect } from './CurrencySelect';
 import type { AmountInputCurrency } from './currency';
 
-import styles from './AmountInput.module.scss';
+import styles from './AmountInput.module.css';
 
 export type AmountInputProps = {
   /**
@@ -67,7 +68,7 @@ export type AmountInputProps = {
    */
   value: number | null;
   /**
-   * Handler that is called when the value changes.
+   * Handler that is called when the value changes. When reading the new value, it is recommended to use the 'newValue' parameter rather than event.target.valueAsNumber to ensure the value is correctly formatted.
    */
   onChange: (event: ChangeEvent<HTMLInputElement>, newValue: number) => void;
   /**
@@ -82,6 +83,10 @@ export type AmountInputProps = {
    * Handler that is called when a key is pressed.
    */
   onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
+  /**
+   * Handler called when clipboard content is pasted into the amount field.
+   */
+  onPaste?: ClipboardEventHandler<HTMLInputElement>;
 } & (
   | // If the `AmountInput` has en editable currency, both props should always be passed
   {

@@ -5,8 +5,9 @@ import type { IconName } from '../Icon';
 import { RadioInput } from '../RadioInput';
 import { useRadioCheckState } from '../RadioGroup/useRadioCheckState';
 
-import styles from './RadioBox.module.scss';
+import styles from './RadioBox.module.css';
 import { HighlightIcon } from '../HighlightIcon';
+import type { HighlightIconVariant } from '../HighlightIcon';
 
 export type RadioBoxProps<K> = {
   /**
@@ -25,6 +26,11 @@ export type RadioBoxProps<K> = {
    * The icon to display in the button
    */
   iconName?: IconName;
+  /**
+   * The variant of the icon background.
+   * @default purple
+   */
+  iconVariant?: HighlightIconVariant;
   /**
    * Whether the RadioBox should be disabled.
    * @default false
@@ -48,6 +54,7 @@ export const RadioBox = <K extends string | boolean>({
   className,
   isDisabled = false,
   iconName,
+  iconVariant = 'purple',
   value,
   label,
   description,
@@ -74,7 +81,12 @@ export const RadioBox = <K extends string | boolean>({
         aria-describedby={description ? descriptionId : undefined}
       />
       {iconName ? (
-        <HighlightIcon name={iconName} size={32} variant="purple" aria-hidden />
+        <HighlightIcon
+          name={iconName}
+          size={32}
+          variant={iconVariant}
+          aria-hidden
+        />
       ) : null}
       <div>
         <div className={styles.label} id={labelId}>

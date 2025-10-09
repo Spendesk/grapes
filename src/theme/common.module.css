@@ -1,0 +1,37 @@
+.visuallyHidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdownContent {
+  box-shadow: var(--grapes-elevation-l);
+  background-color: var(--grapes-color-background-primary-default);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-12);
+  z-index: var(--grapes-z-index-dropdown);
+  box-sizing: border-box;
+}
+
+.disabledContainer {
+  pointer-events: none;
+  background-color: var(--grapes-color-background-primary-disabled);
+  border: 1px solid var(--grapes-color-border-default);
+  box-shadow: none;
+}
+
+.disabledText {
+  pointer-events: none;
+  color: var(--grapes-color-content-secondary-bg-secondary);
+  -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
+}

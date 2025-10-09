@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from '../../Icon';
 import type { PasswordRule } from '../passwordRule';
-import styles from './PasswordValidator.module.scss';
+import styles from './PasswordValidator.module.css';
 import { classNames } from '../../../utils';
 
 type Props = {

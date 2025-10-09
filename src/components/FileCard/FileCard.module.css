@@ -1,0 +1,91 @@
+.fileCard {
+  display: grid;
+  /* Always leave white space in case the delete icon appears. iconbutton size + left margin + right margin */
+  grid-template-columns: 1fr calc(
+      var(--grapes-unit-40) + var(--grapes-unit-8) + var(--grapes-unit-16)
+    );
+  align-items: center;
+  border-radius: var(--grapes-border-radius-8);
+  color: var(--grapes-color-content-primary);
+  border: 1px solid var(--grapes-color-border-default);
+
+  &.clickableFileCard {
+    &:has(.fileCardButton:focus-visible) {
+      outline: var(--grapes-focus-ring);
+      outline-offset: var(--grapes-focus-ring-offset);
+    }
+
+    &:has(.fileCardButton:active) {
+      outline: none;
+      background-color: var(--grapes-color-background-secondary-brand-default);
+    }
+
+    &:hover {
+      border-color: var(--grapes-color-border-hover);
+    }
+  }
+
+  &:hover .fileCardDeleteIcon {
+    opacity: 1;
+  }
+}
+
+.fileCardButton {
+  font: var(--grapes-body-m);
+  outline: none;
+  background-color: transparent;
+  border: none;
+  display: grid;
+  align-items: center;
+  grid-template-columns: var(--grapes-unit-32) minmax(0, 1fr);
+  gap: var(--grapes-unit-16);
+  text-align: left;
+  padding: var(--grapes-unit-12) var(--grapes-unit-16);
+  color: inherit;
+
+  &:hover {
+    border: none;
+    outline: none;
+  }
+}
+
+.clickableFileCardButton {
+  cursor: pointer;
+}
+
+.fileCard[data-variant='neutral'] {
+  background-color: var(--grapes-color-background-primary-default);
+}
+
+.fileCard[data-variant='alert'] {
+  background-color: var(--grapes-color-background-secondary-alert-default);
+  border-color: transparent;
+
+  &.clickableFileCard:hover {
+    border-color: var(--grapes-color-border-alert);
+  }
+}
+
+.fileCard[data-variant='highlight'] {
+  background-color: var(--grapes-color-background-primary-selected);
+  border-color: var(--grapes-color-border-selected);
+}
+
+.fileCardTitle {
+  line-break: anywhere;
+}
+
+.fileCardDescription {
+  font: var(--grapes-body-s);
+  color: var(--grapes-color-content-secondary-bg-primary);
+  margin-top: var(--grapes-unit-4);
+}
+
+.fileCardDeleteIcon {
+  opacity: 0;
+  margin-left: var(--grapes-unit-8);
+
+  &:focus-visible {
+    opacity: 1;
+  }
+}

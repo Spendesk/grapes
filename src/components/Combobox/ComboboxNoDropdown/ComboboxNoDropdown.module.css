@@ -1,0 +1,104 @@
+.ComboboxNoDropdownContainer {
+  padding-top: var(--grapes-unit-8);
+}
+
+.combobox {
+  height: var(--grapes-unit-40);
+  padding: var(--grapes-unit-8);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-8);
+  background-color: var(--grapes-color-background-primary-default);
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  &:not(:focus-within, .invalidCombobox):hover {
+    border-color: var(--grapes-color-border-hover);
+  }
+
+  &.disabledCombobox {
+    pointer-events: none;
+    background-color: var(--grapes-color-background-primary-disabled);
+    border: 1px solid var(--grapes-color-border-default);
+    box-shadow: none;
+  }
+
+  &:focus-within {
+    outline: var(--grapes-focus-ring);
+    border-color: var(--grapes-color-border-default);
+    outline-offset: var(--grapes-focus-ring-offset);
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  overflow-y: auto;
+  margin-top: var(--grapes-unit-8);
+}
+
+.invalidCombobox {
+  border-color: var(--grapes-color-border-alert);
+
+  &:focus-within {
+    border-color: var(--grapes-color-border-default);
+  }
+}
+
+.parentFitCombobox {
+  width: 100%;
+}
+
+.inputContainer {
+  padding: 0 var(--grapes-unit-8);
+  &.disabledInputContainer {
+    cursor: not-allowed;
+  }
+}
+
+.comboboxInput {
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-primary);
+  flex: 1;
+  border: none;
+  background: none;
+
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: var(--grapes-color-content-secondary-bg-primary);
+  }
+  &:disabled {
+    pointer-events: none;
+    color: var(--grapes-color-content-secondary-bg-secondary);
+    -webkit-text-fill-color: var(--grapes-color-content-secondary-bg-secondary);
+  }
+}
+
+.hideComboboxInput {
+  display: none;
+}
+
+.comboboxToggleButton {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin: calc(-1 * var(--grapes-unit-8));
+  padding: var(--grapes-unit-8);
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.loadingItem {
+  margin: var(--grapes-unit-8) var(--grapes-unit-8) 0;
+  width: calc(100% - 2 * var(--grapes-unit-8));
+}

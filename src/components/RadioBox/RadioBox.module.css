@@ -1,0 +1,69 @@
+.radioBox {
+  width: 100%;
+  padding: var(--grapes-unit-16);
+  background-color: var(--grapes-color-background-primary-default);
+  border: 1px solid var(--grapes-color-border-default);
+  border-radius: var(--grapes-border-radius-8);
+  cursor: pointer;
+  transition: border var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
+  display: grid;
+  grid-template-columns: var(--grapes-unit-16) auto;
+  align-items: center;
+  align-content: start;
+  gap: var(--grapes-unit-16);
+  box-sizing: border-box;
+  --_color-description: var(--grapes-color-content-secondary-bg-primary);
+
+  &:hover {
+    background-color: var(--grapes-color-background-primary-hover);
+    border: 1px solid var(--grapes-color-border-selected);
+    --_color-description: var(--grapes-color-content-secondary-bg-secondary);
+  }
+
+  &:has(:focus-visible) {
+    background-color: var(--grapes-color-background-primary-default);
+    outline: var(--grapes-focus-ring);
+    outline-offset: var(--grapes-focus-ring-offset);
+
+    input[type='radio'] {
+      outline: 0;
+    }
+  }
+
+  &:has(svg) {
+    grid-template-columns: var(--grapes-unit-32) auto var(--grapes-unit-16);
+
+    .radioInput {
+      order: 3;
+    }
+  }
+
+  &:has(:checked),
+  &:has(:checked):is(:hover, :focus-within) {
+    background-color: var(--grapes-color-background-primary-selected);
+    border: 1px solid var(--grapes-color-border-selected);
+    --_color-description: var(--grapes-color-content-secondary-bg-secondary);
+    cursor: default;
+  }
+
+  &:has(:disabled),
+  &:has(:disabled):is(:hover, :focus-within) {
+    cursor: not-allowed;
+    background-color: var(--grapes-color-background-primary-disabled);
+    border: 1px solid var(--grapes-color-border-default);
+    --_color-description: var(--grapes-color-content-secondary-bg-secondary);
+    outline: none;
+  }
+}
+
+.label {
+  font: var(--grapes-title-m);
+  color: var(--grapes-color-content-primary);
+}
+
+.description {
+  font: var(--grapes-body-s);
+  color: var(--_color-description);
+  margin-top: var(--grapes-unit-8);
+}

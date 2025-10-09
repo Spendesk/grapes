@@ -1,0 +1,47 @@
+.checkboxField {
+  transition:
+    background-color var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function),
+    color var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function);
+  font: var(--grapes-body-m);
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--grapes-unit-8);
+  text-align: left;
+  padding: var(--grapes-unit-8);
+  margin: 0 calc(-1 * var(--grapes-unit-8));
+  border-radius: var(--grapes-border-radius-8);
+  color: var(--grapes-color-content-primary);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--grapes-color-background-primary-hover);
+  }
+
+  &:has(:focus-visible) {
+    background-color: var(--grapes-color-background-primary-default);
+    outline: var(--grapes-focus-ring);
+    outline-offset: var(--grapes-focus-ring-offset);
+
+    input[type='checkbox'] {
+      outline: 0;
+    }
+  }
+
+  &:has(:disabled) {
+    color: var(--grapes-color-content-secondary-bg-primary);
+    cursor: not-allowed;
+    background-color: transparent;
+  }
+
+  &[data-fit='parent'] {
+    display: flex;
+  }
+}
+
+.checkboxField .checkboxFieldText {
+  flex: 1 1 auto;
+}

@@ -5,6 +5,8 @@ import styles from './ActionBar.module.css';
 import type { IconName } from '../Icon';
 import { Button } from '../Button';
 import { useId } from '../../hooks/useId';
+import type { Placement } from '@floating-ui/react';
+import { Tooltip } from '../Tooltip';
 
 export type Action = {
   text: string;
@@ -12,6 +14,8 @@ export type Action = {
   iconName?: IconName;
   isDisabled?: boolean;
   isLoading?: boolean;
+  tooltipContent?: string;
+  tooltipPlacement?: Placement;
 };
 
 export type ActionBarProps = {
@@ -20,7 +24,7 @@ export type ActionBarProps = {
    */
   className?: string;
   /**
-   * Content positionned on the left side of the ActionBar
+   * Content positioned on the left side of the ActionBar
    */
   children: ReactNode;
   /**
@@ -47,14 +51,21 @@ export const ActionBar = ({ className, children, actions }: ActionBarProps) => {
         {actions.map((action) => {
           return (
             <li key={action.text}>
-              <Button
-                text={action.text}
-                variant="tertiaryComplementary"
-                onClick={action.onClick}
-                iconName={action.iconName}
-                isDisabled={action.isDisabled}
-                isLoading={action.isLoading}
-              />
+              <Tooltip
+                placement={action.tooltipPlacement || 'top'}
+                content={action.tooltipContent || ''}
+                isDisabled={!action.isDisabled}
+                offset={16}
+              >
+                <Button
+                  text={action.text}
+                  variant="tertiaryComplementary"
+                  onClick={action.onClick}
+                  iconName={action.iconName}
+                  isDisabled={action.isDisabled}
+                  isLoading={action.isLoading}
+                />
+              </Tooltip>
             </li>
           );
         })}

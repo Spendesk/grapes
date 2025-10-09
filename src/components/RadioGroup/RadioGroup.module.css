@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0 var(--unit-24);
-}
+  gap: 0 var(--grapes-unit-24);
 
-.radioGroup[aria-orientation='vertical'] {
-  flex-direction: column;
-  align-items: flex-start;
+  &[aria-orientation='vertical'] {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

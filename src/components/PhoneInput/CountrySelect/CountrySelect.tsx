@@ -3,7 +3,7 @@ import React from 'react';
 import type { Country } from '../country';
 import { SelectAddon } from '../../SelectAddon';
 
-import styles from './CountrySelect.module.scss';
+import styles from './CountrySelect.module.css';
 
 type Props = {
   options: Country[];

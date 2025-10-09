@@ -1,0 +1,9 @@
+.dropdownItemGroup {
+  font: var(--grapes-title-s);
+  color: var(--grapes-color-content-secondary-bg-secondary);
+  padding: var(--grapes-unit-4) var(--grapes-unit-8);
+  background-color: var(--grapes-color-background-secondary-default);
+  pointer-events: none;
+  text-transform: uppercase;
+  min-height: var(--grapes-unit-32);
+}

@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-columns: 600px;
+  transition: transform var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
+  transform: translateX(calc(var(--_slide, 0) * -1 * 600px));
+}
+
+.subgrid {
+  display: grid;
+  grid-row: 1 / -1;
+  grid-template-rows: subgrid;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}

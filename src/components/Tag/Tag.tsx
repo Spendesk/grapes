@@ -1,15 +1,11 @@
-import React, {
-  forwardRef,
-  type MouseEventHandler,
-  type ReactNode,
-} from 'react';
+import React, { type MouseEventHandler, type ReactNode, type Ref } from 'react';
 import { classNames } from '../../utils';
 
 import { Icon, type IconName } from '../Icon';
 import { useId } from '../../hooks/useId';
 import { useTranslate } from '../../hooks/useTranslate';
 
-import styles from './Tag.module.scss';
+import styles from './Tag.module.css';
 
 export type TagVariant =
   | 'neutral'
@@ -28,6 +24,7 @@ export type TagVariant =
   | 'white';
 
 export type TagProps = {
+  ref?: Ref<HTMLSpanElement>;
   /**
    * className for the element
    */
@@ -55,37 +52,40 @@ export type TagProps = {
  * Compact element to display information about an entity.
  * @see https://grapes.spendesk.design/docs/components/tag
  */
-export const Tag = /*@__PURE__*/ forwardRef<HTMLSpanElement, TagProps>(
-  (
-    { className, variant = 'carbon', children, iconName, onClose, ...rest },
-    ref,
-  ) => {
-    const textId = useId();
-    const t = useTranslate();
+export const Tag = ({
+  className,
+  variant = 'carbon',
+  children,
+  iconName,
+  onClose,
+  ref,
+  ...rest
+}: TagProps) => {
+  const textId = useId();
+  const t = useTranslate();
 
-    return (
-      <span
-        ref={ref}
-        className={classNames(styles.tag, className)}
-        role="status"
-        data-variant={variant}
-        aria-labelledby={textId}
-        {...rest}
-      >
-        <span className={styles.tagContent} id={textId}>
-          {iconName && <Icon name={iconName} size="s" aria-hidden="true" />}
-          {children}
-          {onClose && (
-            <button
-              className={styles.tagCloseButton}
-              onClick={onClose}
-              aria-label={t('close')}
-            >
-              <Icon name="cross" size="s" aria-hidden="true" />
-            </button>
-          )}
-        </span>
+  return (
+    <span
+      ref={ref}
+      className={classNames(styles.tag, className)}
+      role="status"
+      data-variant={variant}
+      aria-labelledby={textId}
+      {...rest}
+    >
+      <span className={styles.tagContent} id={textId}>
+        {iconName && <Icon name={iconName} size="s" aria-hidden="true" />}
+        {children}
+        {onClose && (
+          <button
+            className={styles.tagCloseButton}
+            onClick={onClose}
+            aria-label={t('close')}
+          >
+            <Icon name="cross" size="s" aria-hidden="true" />
+          </button>
+        )}
       </span>
-    );
-  },
-);
+    </span>
+  );
+};

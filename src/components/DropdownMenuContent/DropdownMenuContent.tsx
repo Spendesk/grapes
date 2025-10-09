@@ -10,9 +10,11 @@ import type { GetPropsCommonOptions, GetMenuPropsOptions } from 'downshift';
 import { DropdownMenuContentList } from './DropdownMenuContentList';
 import { classNames, getStyleFromPlacement, type Placement } from '../../utils';
 
-import styles from './DropdownMenuContent.module.scss';
 import usePrevious from '../../hooks/usePrevious';
 import { useFormFieldContext } from '../FormField/FormFieldContext';
+
+import styles from './DropdownMenuContent.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 type OptionGroup<T> = { key: string; label: string; options: T[] };
 
@@ -27,6 +29,7 @@ export type Props<T extends Option> = {
   placement?: Placement;
   maxHeight?: string;
   options: (T | OptionGroup<T>)[];
+  renderSearchBar?: () => ReactNode;
   getItemProps(options: { item: T; index: number }): HTMLProps<HTMLLIElement>;
   getMenuProps(
     options?: GetMenuPropsOptions,
@@ -52,9 +55,10 @@ export const DropdownMenuContent = <T extends Option>({
   renderOptionGroup,
   renderNoOptions,
   renderLoadingOptions,
+  renderSearchBar,
 }: Props<T>) => {
   const [visible, setVisible] = useState(isOpen);
-  const refTimeout = useRef<NodeJS.Timeout>();
+  const refTimeout = useRef<NodeJS.Timeout>(undefined);
   const previousOpenState = usePrevious(isOpen);
 
   const context = useFormFieldContext();
@@ -83,6 +87,7 @@ export const DropdownMenuContent = <T extends Option>({
       })}
       className={classNames(
         isOpen && styles.enter,
+        commonStyles.dropdownContent,
         styles.dropdownMenuContentWrapper,
         className,
       )}
@@ -96,15 +101,18 @@ export const DropdownMenuContent = <T extends Option>({
       }}
     >
       {visible ? (
-        <DropdownMenuContentList
-          options={options}
-          getItemProps={getItemProps}
-          renderOption={renderOption}
-          renderOptionGroup={renderOptionGroup}
-          renderNoOptions={renderNoOptions}
-          renderLoadingOptions={renderLoadingOptions}
-          isLoading={isLoading}
-        />
+        <>
+          {renderSearchBar && renderSearchBar()}
+          <DropdownMenuContentList
+            options={options}
+            getItemProps={getItemProps}
+            renderOption={renderOption}
+            renderOptionGroup={renderOptionGroup}
+            renderNoOptions={renderNoOptions}
+            renderLoadingOptions={renderLoadingOptions}
+            isLoading={isLoading}
+          />
+        </>
       ) : null}
     </ul>
   );

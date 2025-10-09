@@ -11,7 +11,7 @@ import {
 } from '../DatePicker/utils/';
 import { useTranslate } from '../../hooks/useTranslate';
 
-import styles from './Calendar.module.scss';
+import styles from './Calendar.module.css';
 import { colors } from '../../colors';
 
 export type CalendarProps = {

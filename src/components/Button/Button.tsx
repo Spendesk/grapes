@@ -1,9 +1,10 @@
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { useEffect, useState, type Ref } from 'react';
 import { classNames } from '../../utils';
 
 import { Icon, type IconName } from '../Icon';
 
-import styles from './Button.module.scss';
+import styles from './Button.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type ButtonVariant =
   | 'primaryBrand'
@@ -26,6 +27,7 @@ export type ButtonVariant =
   | 'tertiaryComplementary';
 
 interface CommonBase {
+  ref?: Ref<HTMLButtonElement>;
   /**
    * className for the element
    */
@@ -114,119 +116,118 @@ function isButtonType(type?: string): type is ButtonType {
  * Buttons allow users to perform an action.
  * @see https://grapes.spendesk.design/docs/components/button
  */
-export const Button = /*@__PURE__*/ forwardRef<HTMLButtonElement, Props>(
-  (props, ref) => {
-    const {
+export const Button = (props: Props) => {
+  const {
+    className,
+    fit = 'content',
+    iconName,
+    iconPosition = 'left',
+    isDisabled = false,
+    isLoading = false,
+    text,
+    variant = 'primaryBrand',
+    hasNegativeMargins = false,
+    hasNoHorizontalPadding = false,
+    isDropdown = false,
+    ...rest
+  } = props;
+  const [internalIsLoading, setInternalIsLoading] = useState<boolean>(
+    isLoading ?? false,
+  );
+  const internalIsDisabled = isDisabled || internalIsLoading;
+
+  useEffect(() => {
+    setInternalIsLoading(isLoading ?? false);
+  }, [isLoading]);
+
+  const buttonProps = {
+    className: classNames(
+      styles.button,
+      commonStyles.ellipsis,
+      fit === 'parent' && styles.parentFitButton,
+      internalIsLoading && !isLink(props) && styles.loadingButton,
+      variant.startsWith('tertiary') &&
+        hasNegativeMargins &&
+        styles.negativeMarginsButton,
+      variant.startsWith('tertiary') &&
+        hasNoHorizontalPadding &&
+        styles.noHorizontalPaddingButton,
       className,
-      fit = 'content',
-      iconName,
-      iconPosition = 'left',
-      isDisabled = false,
-      isLoading = false,
-      text,
-      variant = 'primaryBrand',
-      hasNegativeMargins = false,
-      hasNoHorizontalPadding = false,
-      isDropdown = false,
-      ...rest
-    } = props;
-    const [internalIsLoading, setInternalIsLoading] = useState<boolean>(
-      isLoading ?? false,
-    );
-    const internalIsDisabled = isDisabled || internalIsLoading;
+    ),
+    ...rest,
+  };
 
-    useEffect(() => {
-      setInternalIsLoading(isLoading ?? false);
-    }, [isLoading]);
+  const buttonContent = (
+    <>
+      {iconName && iconPosition === 'left' && (
+        <Icon
+          className={styles.leftButtonInnerIcon}
+          size="m"
+          name={iconName}
+          aria-hidden="true"
+        />
+      )}
+      {text}
+      {isDropdown && (
+        <Icon
+          className={styles.rightButtonInnerIcon}
+          size="m"
+          name="chevron-down"
+          aria-hidden="true"
+        />
+      )}
+      {!isDropdown && iconName && iconPosition === 'right' && (
+        <Icon
+          className={styles.rightButtonInnerIcon}
+          size="m"
+          name={iconName}
+          aria-hidden="true"
+        />
+      )}
+    </>
+  );
 
-    const buttonProps = {
-      className: classNames(
-        styles.button,
-        fit === 'parent' && styles.parentFitButton,
-        internalIsLoading && !isLink(props) && styles.loadingButton,
-        variant.startsWith('tertiary') &&
-          hasNegativeMargins &&
-          styles.negativeMarginsButton,
-        variant.startsWith('tertiary') &&
-          hasNoHorizontalPadding &&
-          styles.noHorizontalPaddingButton,
-        className,
-      ),
-      ...rest,
-    };
-
-    const buttonContent = (
-      <>
-        {iconName && iconPosition === 'left' && (
-          <Icon
-            className={styles.leftButtonInnerIcon}
-            size="m"
-            name={iconName}
-            aria-hidden="true"
-          />
-        )}
-        {text}
-        {isDropdown && (
-          <Icon
-            className={styles.rightButtonInnerIcon}
-            size="m"
-            name="chevron-down"
-            aria-hidden="true"
-          />
-        )}
-        {!isDropdown && iconName && iconPosition === 'right' && (
-          <Icon
-            className={styles.rightButtonInnerIcon}
-            size="m"
-            name={iconName}
-            aria-hidden="true"
-          />
-        )}
-      </>
-    );
-
-    function handleOnClick<T>(onClick?: React.MouseEventHandler<T>) {
-      return onClick
-        ? async (event: React.MouseEvent<T>) => {
-            setInternalIsLoading(true);
-            try {
-              await onClick(event);
-            } finally {
-              setInternalIsLoading(false);
-            }
+  function handleOnClick<T>(onClick?: React.MouseEventHandler<T>) {
+    return onClick
+      ? async (event: React.MouseEvent<T>) => {
+          setInternalIsLoading(true);
+          try {
+            await onClick(event);
+          } finally {
+            setInternalIsLoading(false);
           }
-        : undefined;
-    }
+        }
+      : undefined;
+  }
 
-    if (isLink(props) && isLink(buttonProps)) {
-      return (
-        <a
-          {...buttonProps}
-          rel={props.rel}
-          href={!isDisabled ? props.href : undefined}
-          target={props.target}
-          onClick={handleOnClick(props.onClick)}
-          data-variant={variant}
-        >
-          {buttonContent}
-        </a>
-      );
-    }
-
+  if (isLink(props) && isLink(buttonProps)) {
     return (
-      <button
-        ref={ref}
-        // Type assertion needed because our type is complex enough for TS to not be able to default "not link, so button"
-        {...(buttonProps as CommonBase & ButtonProps)}
-        type={isButtonType(props.type) ? props.type : 'button'}
-        disabled={internalIsDisabled}
-        onClick={handleOnClick(
-          props.onClick as React.MouseEventHandler<HTMLButtonElement>,
-        )}
+      <a
+        {...buttonProps}
+        rel={props.rel}
+        href={!isDisabled ? props.href : undefined}
+        target={props.target}
+        onClick={handleOnClick(props.onClick)}
         data-variant={variant}
       >
         {buttonContent}
-      </button>
+      </a>
     );
-  },
-);
+  }
+
+  return (
+    <button
+      ref={props.ref}
+      // Type assertion needed because our type is complex enough for TS to not be able to default "not link, so button"
+      {...(buttonProps as CommonBase & ButtonProps)}
+      type={isButtonType(props.type) ? props.type : 'button'}
+      disabled={internalIsDisabled}
+      onClick={handleOnClick(
+        props.onClick as React.MouseEventHandler<HTMLButtonElement>,
+      )}
+      data-variant={variant}
+    >
+      {buttonContent}
+    </button>
+  );
+};

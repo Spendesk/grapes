@@ -19,7 +19,7 @@ export type TooltipProps = {
   content: ReactNode | ReactNode[];
   /**
    * Whether the trigger is a custom element
-   * @see {@link storybook.spendesk.design/index.html?path=/docs/feedback-tooltip--docs#triggeraschild-and-forwardref} for more information.
+   * @see https://grapes.spendesk.design/docs/components/tooltip#triggeraschild-and-forwardref
    * @default false
    */
   triggerAsChild?: boolean;

@@ -1,7 +1,7 @@
 import React, { type ChangeEventHandler } from 'react';
 import { classNames } from '../../utils';
 
-import styles from './SwitchInput.module.scss';
+import styles from './SwitchInput.module.css';
 
 export type SwitchInputProps = {
   /**

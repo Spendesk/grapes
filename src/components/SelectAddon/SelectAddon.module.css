@@ -1,0 +1,93 @@
+.selectAddon {
+  transition: background-color var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--grapes-unit-8) var(--grapes-unit-8) var(--grapes-unit-8) 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: var(--grapes-border-radius-8);
+  height: 100%;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: var(--grapes-color-background-primary-hover);
+  }
+
+  &.openSelectAddon {
+    background-color: var(--grapes-color-background-secondary-default);
+
+    .selectAddonCaret {
+      transition: color var(--grapes-transition-duration)
+        var(--grapes-transition-timing-function);
+      color: var(--grapes-color-content-primary);
+    }
+  }
+
+  &::before {
+    transition: opacity var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function);
+    content: '';
+    position: absolute;
+    background-color: var(--grapes-color-background-secondary-default);
+    height: 18px;
+    width: 1px;
+    opacity: 0;
+  }
+
+  &:not(:hover, .openSelectAddon)::before {
+    opacity: 1;
+  }
+
+  &.rightSelectAddon {
+    margin-right: 1px;
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  &.leftSelectAddon {
+    margin-left: 1px;
+
+    &::before {
+      right: 0;
+    }
+  }
+}
+
+.selectAddonCaret {
+  margin-left: var(--grapes-unit-8);
+  color: var(--grapes-color-content-secondary-bg-primary);
+}
+
+:is(.disabledSelectAddonCaret, fieldset[disabled] .selectAddonCaret) {
+  color: var(--grapes-color-content-disabled);
+}
+
+.selectAddonToggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: calc(-1 * var(--grapes-unit-8));
+  margin-left: 0;
+  padding: var(--grapes-unit-8);
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.selectAddonDropdownMenu {
+  max-height: 152px;
+  top: var(--grapes-unit-4);
+}
+
+.selectAddonDropdownMenu:focus-visible {
+  outline: none;
+}

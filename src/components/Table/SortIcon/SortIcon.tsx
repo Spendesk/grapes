@@ -5,7 +5,7 @@ import { Icon } from '../../Icon';
 
 import type { SortState, TableColumn } from '../types';
 
-import styles from '../Table.module.scss';
+import styles from '../Table.module.css';
 
 type Props<T extends object> = {
   column: TableColumn<T>;

@@ -7,6 +7,8 @@ import { Table } from '../Table';
 import { IconButton } from '../../IconButton';
 import type { TableColumn } from '../types';
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
+import { Select } from '../../Select';
+import { action } from 'storybook/actions';
 
 interface DataRow {
   id: number;
@@ -439,4 +441,51 @@ export const Snapshot: Story = {
       meta={meta}
     />
   ),
+};
+
+const suppliers = [
+  { key: 'Mailchimp', label: 'Mailchimp' },
+  { key: 'Apple', label: 'Apple' },
+  { key: 'Deloitte', label: 'Deloitte' },
+  { key: 'Deloitte GmbH', label: 'Deloitte GmbH' },
+  { key: 'Airbnb', label: 'Airbnb' },
+];
+
+export const WithDropdownInside: Story = {
+  args: {
+    columns: [
+      {
+        id: 'supplierName',
+        header: 'Supplier Name',
+        renderCell: ({ supplierName }) => (
+          <div
+            style={{
+              padding: '16px',
+              minWidth: '400px',
+            }}
+          >
+            <Select
+              value={{ key: supplierName, label: supplierName }}
+              onSelect={action('onSelect')}
+              options={suppliers}
+            />
+          </div>
+        ),
+      },
+      {
+        id: 'accountPayable',
+        header: 'Account payable',
+        renderCell: ({ accountPayable }) => accountPayable,
+      },
+      {
+        id: 'amount',
+        header: 'Amount',
+        align: 'right',
+        width: '20%',
+        renderCell(row) {
+          return <span style={{ fontWeight: 500 }}>{row.amount}</span>;
+        },
+      },
+    ],
+  },
 };

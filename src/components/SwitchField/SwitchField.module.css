@@ -1,0 +1,57 @@
+.switchField {
+  transition:
+    background-color var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function),
+    color var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function);
+  display: inline-grid;
+  grid-template-columns: 1fr var(--grapes-size-switch);
+  gap: var(--grapes-unit-4) var(--grapes-unit-8);
+  align-items: center;
+  text-align: left;
+  padding: var(--grapes-unit-8);
+  margin: 0 calc(-1 * var(--grapes-unit-8));
+  border-radius: var(--grapes-border-radius-8);
+  color: var(--grapes-color-content-primary);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--grapes-color-background-primary-hover);
+
+    .switchFieldHelpText {
+      color: var(--grapes-color-content-secondary-bg-secondary);
+    }
+  }
+  &:has(:focus-visible) {
+    background-color: var(--grapes-color-background-primary-default);
+    outline: var(--grapes-focus-ring);
+    outline-offset: var(--grapes-focus-ring-offset);
+
+    & input[type='checkbox'] {
+      outline: 0;
+    }
+  }
+
+  &:has(:checked) {
+    color: var(--grapes-color-content-primary);
+  }
+
+  &:has(:disabled) {
+    cursor: not-allowed;
+    color: var(--grapes-color-content-secondary-bg-primary);
+    background-color: transparent;
+  }
+
+  &[data-fit='parent'] {
+    display: grid;
+  }
+}
+
+.switchFieldText {
+  font: var(--grapes-title-m);
+}
+
+.switchFieldHelpText {
+  font: var(--grapes-body-m);
+  color: var(--grapes-color-content-secondary-bg-primary);
+}

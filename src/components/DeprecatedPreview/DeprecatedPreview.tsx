@@ -1,7 +1,8 @@
 import React, { type MouseEventHandler, type ReactNode } from 'react';
 import { classNames } from '../../utils';
 
-import styles from './DeprecatedPreview.module.scss';
+import styles from './DeprecatedPreview.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type DeprecatedPreviewProps = {
   /**
@@ -51,9 +52,21 @@ export const DeprecatedPreview = ({
       {...rest}
     >
       <span className={styles.previewContent}>
-        <span className={styles.previewPrimaryText}>{primaryText}</span>
+        <span
+          className={classNames(
+            styles.previewPrimaryText,
+            commonStyles.ellipsis,
+          )}
+        >
+          {primaryText}
+        </span>
         {!!secondaryText && (
-          <span className={styles.previewSecondaryText}>
+          <span
+            className={classNames(
+              styles.previewSecondaryText,
+              commonStyles.ellipsis,
+            )}
+          >
             <span className={styles.previewSeparator}>|</span>
             {secondaryText}
           </span>

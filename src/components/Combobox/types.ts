@@ -59,6 +59,14 @@ export type BaseComboboxProps<T extends ComboboxOption> = {
    * Whether the Combobox is loading.
    */
   isLoading?: boolean;
+  /**
+   * Function to render the search bar inside the dropdown header.
+   * Provides Downshift's getInputProps so the header input supports
+   * keyboard navigation (arrow keys, enter, etc.).
+   */
+  renderSearchBar?: (args: {
+    getInputProps: PropsGetters<T>['getInputProps'];
+  }) => ReactNode;
 
   onClearSelection?(): void;
   /**

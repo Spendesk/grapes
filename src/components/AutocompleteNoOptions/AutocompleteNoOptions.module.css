@@ -1,0 +1,14 @@
+.autocompleteNoOptions {
+  font: var(--grapes-body-m);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--grapes-unit-24);
+  text-align: center;
+  color: var(--grapes-color-content-primary);
+}
+
+.autocompleteNoOptionsIcon {
+  margin-bottom: var(--grapes-unit-16);
+}

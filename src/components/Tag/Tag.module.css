@@ -1,0 +1,99 @@
+.tag {
+  color-scheme: light;
+  font: var(--grapes-body-m);
+  display: inline-block;
+  height: var(--grapes-unit-24);
+  color: var(--grapes-color-content-primary);
+  border-radius: var(--grapes-border-radius-12);
+  padding: 0 var(--grapes-unit-8);
+
+  &:has(.tagCloseButton) {
+    padding-right: var(--grapes-unit-4);
+  }
+  &[data-variant='neutral'] {
+    color: var(--grapes-color-content-secondary-bg-secondary);
+    background-color: var(--grapes-color-background-secondary-default);
+  }
+  &[data-variant='info'] {
+    color: var(--grapes-color-content-info-default);
+    background-color: var(--grapes-color-background-secondary-info-default);
+  }
+  &[data-variant='success'] {
+    color: var(--grapes-color-content-success-default);
+    background-color: var(--grapes-color-background-secondary-success-default);
+  }
+  &[data-variant='warning'] {
+    color: var(--grapes-color-content-warning-default);
+    background-color: var(--grapes-color-background-secondary-warning-default);
+  }
+  &[data-variant='alert'] {
+    color: var(--grapes-color-content-alert-default);
+    background-color: var(--grapes-color-background-secondary-alert-default);
+  }
+
+  &[data-variant='carbon'] {
+    background-color: var(--_grapes-color-carbon-7);
+  }
+  &[data-variant='grolive'] {
+    background-color: var(--_grapes-color-grolive-bright);
+  }
+  &[data-variant='forest'] {
+    background-color: var(--_grapes-color-forest-bright);
+  }
+  &[data-variant='lemon'] {
+    background-color: var(--_grapes-color-lemon-bright);
+  }
+  &[data-variant='ocean'] {
+    background-color: var(--_grapes-color-ocean-bright);
+  }
+  &[data-variant='purple'] {
+    background-color: var(--_grapes-color-purple-20);
+  }
+  &[data-variant='pink'] {
+    background-color: var(--_grapes-color-pink-bright);
+  }
+  &[data-variant='peach'] {
+    background-color: var(--_grapes-color-peach-bright);
+  }
+  &[data-variant='white'] {
+    background-color: var(--grapes-color-background-primary-default);
+  }
+}
+
+.tagContent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  gap: var(--grapes-unit-4);
+}
+
+.tagCloseButton {
+  cursor: pointer;
+  background-color: var(--grapes-color-background-primary-default);
+  outline: none;
+  border: none;
+  height: var(--grapes-unit-16);
+  width: var(--grapes-unit-16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+  color: inherit;
+
+  &:focus {
+    outline: 0;
+  }
+  &:focus-visible {
+    outline: var(--grapes-focus-ring);
+    outline-offset: var(--grapes-focus-ring-offset);
+  }
+  &:hover {
+    background-color: var(--grapes-color-background-primary-hover);
+  }
+  &:active {
+    background-color: var(--grapes-color-background-primary-pressed);
+  }
+}

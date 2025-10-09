@@ -3,7 +3,8 @@ import { classNames } from '../../utils';
 
 import { InfoTip } from '../InfoTip';
 
-import styles from './Label.module.scss';
+import styles from './Label.module.css';
+import commonStyles from '../../theme/common.module.css';
 
 export type LabelProps = {
   /**
@@ -59,7 +60,7 @@ export const Label = ({
       className={classNames(
         styles.labelContainer,
         fit === 'parent' && !visuallyHideLabel && styles.parentFitLabel,
-        visuallyHideLabel && styles.hide,
+        visuallyHideLabel && commonStyles.visuallyHidden,
         className,
       )}
     >

@@ -1,5 +1,6 @@
 ![grapes](https://user-images.githubusercontent.com/37290761/165259641-068e675a-a24a-4bc0-9021-9a69f95475c8.jpeg)
 
+[![npm package](https://img.shields.io/npm/v/@dev-spendesk/grapes.svg)](https://npmjs.com/package/@dev-spendesk/grapes)
 [![storybook](https://shields.io/badge/storybook-grey?logo=storybook&style=flat)](https://storybook.spendesk.design) [![CI](https://github.com/Spendesk/grapes/actions/workflows/build-test-and-lint.yml/badge.svg)](https://github.com/Spendesk/grapes/actions/workflows/build-test-and-lint.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/spendesk/grapes/blob/main/.github/CONTRIBUTING.md)
 
 # :grapes: Grapes
@@ -16,14 +17,13 @@ For full documentation, visit [our documentation website](https://grapes.spendes
 
 Pull requests are welcome. See the [contributing guidelines](CONTRIBUTING.md) for more information.
 
-## Authors
-
-- Pauline Ménage ([@pmenage](https://github.com/pmenage))
-- Thibault Patois ([@drplop](https://github.com/drplop))
-
 ## Resources
 
-- [Storybook](https://storybook.spendesk.design)
+[Storybook](https://storybook.spendesk.design)
+
+## License
+
+[MIT](LICENSE).
 
 ---
 

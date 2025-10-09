@@ -1,10 +1,10 @@
 .panel {
-  --_unit-panel-padding: var(--unit-24);
-  --_heading-panel: var(--heading-l);
+  --_unit-panel-padding: var(--grapes-unit-24);
+  --_heading-panel: var(--grapes-heading-l);
 
-  border: 1px solid var(--color-border-default);
-  background-color: var(--color-background-primary-default);
-  border-radius: var(--border-radius-8);
+  border: 1px solid var(--grapes-color-border-default);
+  background-color: var(--grapes-color-background-primary-default);
+  border-radius: var(--grapes-border-radius-8);
   width: 368px;
   height: 100%;
   display: flex;
@@ -13,18 +13,18 @@
 }
 
 .sidePanel {
-  --_unit-panel-padding: var(--unit-32);
-  --_heading-panel: var(--heading-xl);
+  --_unit-panel-padding: var(--grapes-unit-32);
+  --_heading-panel: var(--grapes-heading-xl);
 
   display: flex;
   flex-direction: column;
-  width: var(--size-side-panel);
+  width: var(--grapes-size-side-panel);
   box-sizing: border-box;
-  border-left: 1px solid var(--color-border-default);
-  background-color: var(--color-background-primary-default);
-  box-shadow: var(--elevation-l);
+  border-left: 1px solid var(--grapes-color-border-default);
+  background-color: var(--grapes-color-background-primary-default);
+  box-shadow: var(--grapes-elevation-l);
   position: fixed;
-  z-index: var(--z-index-side-panel);
+  z-index: var(--grapes-z-index-side-panel);
   inset-block: 0;
   inset-inline-end: 0;
 }
@@ -33,24 +33,24 @@
   max-height: 100%;
   flex-grow: 1;
   overflow: auto;
-  border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
+  border-radius: var(--grapes-border-radius-8) var(--grapes-border-radius-8) 0 0;
 }
 
 .panelScrolling .panelNavigation {
-  border-color: var(--color-border-default);
+  border-color: var(--grapes-color-border-default);
 }
 
 .panelNavigation {
   display: grid;
   grid-template-columns:
-    [lslot-start] 1fr [lslot-end close-start] var(--unit-40)
+    [lslot-start] 1fr [lslot-end close-start] var(--grapes-unit-40)
     [close-end];
   align-items: center;
   position: sticky;
   z-index: 10;
   top: 0;
   padding: var(--_unit-panel-padding);
-  background-color: var(--color-background-primary-default);
+  background-color: var(--grapes-color-background-primary-default);
   border-bottom: 1px solid transparent;
 }
 
@@ -64,13 +64,13 @@
 
 .panelNavigationTitle {
   font: var(--_heading-panel);
-  color: var(--color-content-primary);
+  color: var(--grapes-color-content-primary);
   margin: 0;
 }
 
 .panelHeader {
-  padding: var(--unit-8) var(--_unit-panel-padding) var(--_unit-panel-padding)
-    var(--_unit-panel-padding);
+  padding: var(--grapes-unit-8) var(--_unit-panel-padding)
+    var(--_unit-panel-padding) var(--_unit-panel-padding);
 }
 
 .panelArea {
@@ -93,16 +93,16 @@
   content: '';
   display: block;
   width: 100%;
-  border-bottom: 1px solid var(--color-border-default);
-  margin: var(--unit-24) 0;
+  border-bottom: 1px solid var(--grapes-color-border-default);
+  margin: var(--grapes-unit-24) 0;
 }
 
 .panelFooter {
   flex-shrink: 0;
-  padding: var(--unit-16) var(--_unit-panel-padding);
-  border-top: 1px solid var(--color-border-default);
-  background-color: var(--color-background-primary-default);
-  border-radius: 0 0 var(--border-radius-8) var(--border-radius-8);
+  padding: var(--grapes-unit-16) var(--_unit-panel-padding);
+  border-top: 1px solid var(--grapes-color-border-default);
+  background-color: var(--grapes-color-background-primary-default);
+  border-radius: 0 0 var(--grapes-border-radius-8) var(--grapes-border-radius-8);
 }
 
 .sidePanel .panelFooter {
@@ -110,12 +110,12 @@
 }
 
 .panelFooterAccordion {
-  padding: var(--unit-16) var(--_unit-panel-padding);
-  border-top: 1px solid var(--color-border-default);
-  background-color: var(--color-background-secondary-default);
-  border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
+  padding: var(--grapes-unit-16) var(--_unit-panel-padding);
+  border-top: 1px solid var(--grapes-color-border-default);
+  background-color: var(--grapes-color-background-secondary-default);
+  border-radius: var(--grapes-border-radius-8) var(--grapes-border-radius-8) 0 0;
 }
 
 .panelFooterAccordionWithoutFooter {
-  border-radius: var(--border-radius-8);
+  border-radius: var(--grapes-border-radius-8);
 }

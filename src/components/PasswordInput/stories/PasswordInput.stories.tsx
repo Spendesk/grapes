@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import { PasswordInput } from '../PasswordInput';
 import { getConfirmPasswordRule, passwordRules } from './passwordRules';
-import styles from './PasswordInput.stories.module.scss';
+import styles from './PasswordInput.stories.module.css';
 import { SnapshotContainer } from '../../../test-utils/SnapshotsContainer';
 
 const meta: Meta<typeof PasswordInput> = {

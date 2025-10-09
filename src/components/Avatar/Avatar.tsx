@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { classNames } from '../../utils';
 import { Icon, type IconName } from '../Icon';
 
-import styles from './Avatar.module.scss';
+import styles from './Avatar.module.css';
 import useImage, { Status } from '../../hooks/useImage';
 import type { IconSize } from '../Icon/Icon';
 

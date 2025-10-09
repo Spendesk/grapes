@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react';
 
-import styles from './Table.module.scss';
+import styles from './Table.module.css';
 
 type Props = {
   emptyState?: {

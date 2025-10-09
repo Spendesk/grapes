@@ -34,6 +34,16 @@ export type TooltipOptions = {
    * Allows to control when the tooltip is open
    */
   onOpenChange?: (isOpen: boolean) => void;
+  /**
+   * The offset of the tooltip from its trigger.
+   * @default 10
+   */
+  offset?: number;
+  /**
+   * Padding around the viewport
+   * @default 8px
+   */
+  paddingBoundary?: number;
 };
 
 export const useTooltip = ({
@@ -41,6 +51,8 @@ export const useTooltip = ({
   placement = 'top',
   isOpen: controlledOpen,
   onOpenChange: setControlledOpen,
+  offset: tooltipOffset = 10,
+  paddingBoundary = 8,
 }: TooltipOptions = {}) => {
   const [uncontrolledOpen, setUncontrolledOpen] = useState(isInitialOpen);
   const arrowRef = useRef(null);
@@ -54,9 +66,13 @@ export const useTooltip = ({
     onOpenChange: setIsOpen,
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset(10),
-      flip(),
-      shift(),
+      offset(tooltipOffset),
+      flip({
+        padding: paddingBoundary,
+      }),
+      shift({
+        padding: paddingBoundary,
+      }),
       arrow({
         element: arrowRef,
       }),

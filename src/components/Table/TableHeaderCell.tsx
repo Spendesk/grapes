@@ -1,10 +1,13 @@
 import React from 'react';
 
 import { classNames } from '../../utils';
-import styles from './Table.module.scss';
 import type { TableColumn, TableSortDirection } from './types';
 import { SortIcon } from './SortIcon';
 import { useTableHeaderCellContext } from './TableProvider';
+
+import styles from './Table.module.css';
+import commonStyles from '../../theme/common.module.css';
+import tableStyles from '../../theme/table.module.css';
 
 type Props<T extends object> = {
   column: TableColumn<T>;
@@ -32,8 +35,9 @@ export function TableHeaderCell<T extends object>({ column }: Props<T>) {
     <th
       key={column.id}
       className={classNames(
-        styles.tableHeaderCell,
-        column.id !== 'checkboxes' && styles.borderedTableHeaderCell,
+        tableStyles.tableHeaderCell,
+        commonStyles.ellipsis,
+        column.id !== 'checkboxes' && tableStyles.tableCellSeparator,
         column.className,
       )}
       style={{ width: column.width }}

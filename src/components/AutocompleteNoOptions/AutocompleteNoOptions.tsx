@@ -4,7 +4,7 @@ import { classNames } from '../../utils';
 import type { IconName } from '../Icon';
 import { HighlightIcon } from '../HighlightIcon';
 
-import styles from './AutocompleteNoOptions.module.scss';
+import styles from './AutocompleteNoOptions.module.css';
 
 export type AutocompleteNoOptionsProps = {
   /**

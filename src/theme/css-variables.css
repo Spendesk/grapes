@@ -1,0 +1,603 @@
+:root {
+  /* Primitive token to use in Grapes */
+  --_grapes-color-apricot-10: #f8eee9;
+  --_grapes-color-apricot-20: #facfb8;
+  --_grapes-color-apricot-30: #f0b494;
+  --_grapes-color-apricot-40: #eca179;
+  --_grapes-color-apricot-50: #e78855;
+  --_grapes-color-apricot-60: #db611f;
+  --_grapes-color-apricot-70: #b54509;
+  --_grapes-color-apricot-80: #9c3b08;
+  --_grapes-color-apricot-90: #833206;
+  --_grapes-color-apricot-100: #412301;
+  --_grapes-color-blue-10: #eff1fe;
+  --_grapes-color-blue-20: #dae0ff;
+  --_grapes-color-blue-30: #c1cafb;
+  --_grapes-color-blue-40: #b3bffa;
+  --_grapes-color-blue-50: #9696ee;
+  --_grapes-color-blue-60: #7d7dde;
+  --_grapes-color-blue-70: #5d5dc2;
+  --_grapes-color-blue-80: #4a4aba;
+  --_grapes-color-blue-90: #4040aa;
+  --_grapes-color-blue-100: #222263;
+  --_grapes-color-carbon-3: #f8f8f8;
+  --_grapes-color-carbon-3-80: rgb(248 248 248 / 80%);
+  --_grapes-color-carbon-5: #f3f4f4;
+  --_grapes-color-carbon-7: #efefef;
+  --_grapes-color-carbon-10: #e8e8e8;
+  --_grapes-color-carbon-15: #dddddd;
+  --_grapes-color-carbon-20: #d1d1d1;
+  --_grapes-color-carbon-30: #babbbb;
+  --_grapes-color-carbon-40: #a3a4a4;
+  --_grapes-color-carbon-50: #8c8d8d;
+  --_grapes-color-carbon-60: #757676;
+  --_grapes-color-carbon-70: #5e5f5f;
+  --_grapes-color-carbon-80: #474949;
+  --_grapes-color-carbon-90: #303232;
+  --_grapes-color-carbon-100: #191b1b;
+  --_grapes-color-emerald-10: #e9f6ec;
+  --_grapes-color-emerald-20: #c7eace;
+  --_grapes-color-emerald-30: #9bdaa7;
+  --_grapes-color-emerald-40: #91d69f;
+  --_grapes-color-emerald-50: #56b369;
+  --_grapes-color-emerald-60: #3a984c;
+  --_grapes-color-emerald-70: #2d763c;
+  --_grapes-color-emerald-80: #266432;
+  --_grapes-color-emerald-90: #1f5129;
+  --_grapes-color-emerald-100: #073310;
+  --_grapes-color-forest-light: #f0f5e6;
+  --_grapes-color-forest-bright: #d7e8b2;
+  --_grapes-color-forest-mid: #b9d67a;
+  --_grapes-color-forest-deep: #576e26;
+  --_grapes-color-forest-dark: #213000;
+  --_grapes-color-grolive-light: #f3f4ef;
+  --_grapes-color-grolive-bright: #e0e2d7;
+  --_grapes-color-grolive-mid: #caceb9;
+  --_grapes-color-grolive-deep: #626555;
+  --_grapes-color-grolive-dark: #2b2c26;
+  --_grapes-color-lemon-light: #f6f6e5;
+  --_grapes-color-lemon-bright: #e4e6a2;
+  --_grapes-color-lemon-mid: #ced25d;
+  --_grapes-color-lemon-deep: #686427;
+  --_grapes-color-lemon-dark: #2e2c00;
+  --_grapes-color-ocean-light: #e5f5f5;
+  --_grapes-color-ocean-bright: #c0ecec;
+  --_grapes-color-ocean-mid: #7dd5d5;
+  --_grapes-color-ocean-deep: #176e6e;
+  --_grapes-color-ocean-dark: #003333;
+  --_grapes-color-peach-light: #faf2f1;
+  --_grapes-color-peach-bright: #ffd5cc;
+  --_grapes-color-peach-mid: #f4ab9b;
+  --_grapes-color-peach-deep: #a4422d;
+  --_grapes-color-peach-dark: #551507;
+  --_grapes-color-pink-light: #f7effb;
+  --_grapes-color-pink-bright: #edd8f8;
+  --_grapes-color-pink-mid: #dfaff7;
+  --_grapes-color-pink-deep: #8644a6;
+  --_grapes-color-pink-dark: #460e62;
+  --_grapes-color-purple-10: #f3f0ff;
+  --_grapes-color-purple-20: #e4ddff;
+  --_grapes-color-purple-30: #dad1ff;
+  --_grapes-color-purple-40: #c5b6ff;
+  --_grapes-color-purple-50: #9276f0;
+  --_grapes-color-purple-60: #845aed;
+  --_grapes-color-purple-70: #7136ed;
+  --_grapes-color-purple-80: #601dd3;
+  --_grapes-color-purple-90: #4f03ba;
+  --_grapes-color-purple-100: #331e61;
+  --_grapes-color-raspberry-10: #faf0f3;
+  --_grapes-color-raspberry-20: #f9d7df;
+  --_grapes-color-raspberry-30: #fbbccb;
+  --_grapes-color-raspberry-40: #faabbf;
+  --_grapes-color-raspberry-50: #f07f9b;
+  --_grapes-color-raspberry-60: #e05779;
+  --_grapes-color-raspberry-70: #bf3255;
+  --_grapes-color-raspberry-80: #aa2c4b;
+  --_grapes-color-raspberry-90: #962742;
+  --_grapes-color-raspberry-100: #5c051b;
+  --_grapes-color-white-100: #ffffff;
+
+  --grapes-color-background-primary-default: var(--_grapes-color-white-100);
+  --grapes-color-background-primary-hover: var(--_grapes-color-carbon-3-80);
+  --grapes-color-background-primary-pressed: rgb(232 232 232 / 80%);
+  --grapes-color-background-primary-selected: var(--_grapes-color-purple-10);
+  --grapes-color-background-primary-disabled: var(--_grapes-color-carbon-5);
+  --grapes-color-background-primary-readonly: var(--_grapes-color-carbon-3);
+  --grapes-color-background-secondary-default: var(--_grapes-color-carbon-3);
+  --grapes-color-background-secondary-hover: var(--_grapes-color-carbon-3-80);
+  --grapes-color-background-tertiary-default: var(--_grapes-color-carbon-10);
+  --grapes-color-background-tertiary-hover: rgb(239 239 239 / 15%);
+  --grapes-color-background-tertiary-pressed: rgb(232 232 232 / 25%);
+  --grapes-color-background-complementary-default: var(
+    --_grapes-color-carbon-100
+  );
+  --grapes-color-background-complementary-hover: var(--_grapes-color-carbon-80);
+  --grapes-color-background-complementary-pressed: var(
+    --_grapes-color-carbon-90
+  );
+  --grapes-color-background-complementary-disabled: var(
+    --_grapes-color-carbon-100
+  );
+  --grapes-color-background-primary-brand-default: var(
+    --_grapes-color-purple-70
+  );
+  --grapes-color-background-primary-brand-hover: var(--_grapes-color-purple-80);
+  --grapes-color-background-primary-brand-pressed: var(
+    --_grapes-color-purple-90
+  );
+  --grapes-color-background-primary-info-default: var(--_grapes-color-blue-70);
+  --grapes-color-background-primary-info-hover: var(--_grapes-color-blue-80);
+  --grapes-color-background-primary-info-pressed: var(--_grapes-color-blue-90);
+  --grapes-color-background-primary-success-default: var(
+    --_grapes-color-emerald-70
+  );
+  --grapes-color-background-primary-success-hover: var(
+    --_grapes-color-emerald-80
+  );
+  --grapes-color-background-primary-success-pressed: var(
+    --_grapes-color-emerald-90
+  );
+  --grapes-color-background-primary-warning-default: var(
+    --_grapes-color-apricot-70
+  );
+  --grapes-color-background-primary-warning-hover: var(
+    --_grapes-color-apricot-80
+  );
+  --grapes-color-background-primary-warning-pressed: var(
+    --_grapes-color-apricot-90
+  );
+  --grapes-color-background-primary-alert-default: var(
+    --_grapes-color-raspberry-70
+  );
+  --grapes-color-background-primary-alert-hover: var(
+    --_grapes-color-raspberry-80
+  );
+  --grapes-color-background-primary-alert-pressed: var(
+    --_grapes-color-raspberry-90
+  );
+  --grapes-color-background-secondary-brand-default: var(
+    --_grapes-color-purple-10
+  );
+  --grapes-color-background-secondary-brand-hover: rgb(243 240 255 / 80%);
+  --grapes-color-background-secondary-brand-pressed: rgb(228 221 255 / 80%);
+  --grapes-color-background-secondary-info-default: var(
+    --_grapes-color-blue-10
+  );
+  --grapes-color-background-secondary-info-hover: rgb(239 241 254 / 80%);
+  --grapes-color-background-secondary-info-pressed: rgb(218 224 255 / 80%);
+  --grapes-color-background-secondary-success-default: var(
+    --_grapes-color-emerald-10
+  );
+  --grapes-color-background-secondary-success-hover: rgb(233 246 236 / 80%);
+  --grapes-color-background-secondary-success-pressed: rgb(199 234 206 / 80%);
+  --grapes-color-background-secondary-warning-default: var(
+    --_grapes-color-apricot-10
+  );
+  --grapes-color-background-secondary-warning-hover: rgb(248 238 233 / 80%);
+  --grapes-color-background-secondary-warning-pressed: rgb(250 207 184 / 80%);
+  --grapes-color-background-secondary-alert-default: var(
+    --_grapes-color-raspberry-10
+  );
+  --grapes-color-background-secondary-alert-hover: rgb(250 240 243 / 80%);
+  --grapes-color-background-secondary-alert-pressed: rgb(239 215 223 / 80%);
+  --grapes-color-background-navigation-item-active: var(
+    --_grapes-color-carbon-7
+  );
+  --grapes-color-background-navigation-item-hover: var(
+    --_grapes-color-carbon-5
+  );
+
+  --grapes-color-content-primary: var(--_grapes-color-carbon-100);
+  --grapes-color-content-secondary-bg-primary: var(--_grapes-color-carbon-60);
+  --grapes-color-content-secondary-bg-secondary: var(--_grapes-color-carbon-70);
+  --grapes-color-content-decorative-icon: var(--_grapes-color-carbon-50);
+  --grapes-color-content-complementary: var(--_grapes-color-white-100);
+  --grapes-color-content-selected: var(--_grapes-color-purple-70);
+  --grapes-color-content-disabled: var(--_grapes-color-carbon-20);
+  --grapes-color-content-brand-default: var(--_grapes-color-purple-70);
+  --grapes-color-content-brand-hover: var(--_grapes-color-purple-90);
+  --grapes-color-content-brand-pressed: var(--_grapes-color-purple-90);
+  --grapes-color-content-info-default: var(--_grapes-color-blue-70);
+  --grapes-color-content-success-default: var(--_grapes-color-emerald-70);
+  --grapes-color-content-warning-default: var(--_grapes-color-apricot-70);
+  --grapes-color-content-alert-default: var(--_grapes-color-raspberry-70);
+
+  --grapes-color-border-default: var(--_grapes-color-carbon-15);
+  --grapes-color-border-hover: var(--_grapes-color-purple-90);
+  --grapes-color-border-selected: var(--_grapes-color-purple-70);
+  --grapes-color-border-complementary: var(--_grapes-color-carbon-90);
+  --grapes-color-border-info: var(--_grapes-color-blue-70);
+  --grapes-color-border-success: var(--_grapes-color-emerald-70);
+  --grapes-color-border-warning: var(--_grapes-color-apricot-70);
+  --grapes-color-border-alert: var(--_grapes-color-raspberry-70);
+
+  --grapes-color-backdrop: rgb(23 17 78 / 0.7);
+  --grapes-color-skeleton: rgb(230 230 233 / 0.5);
+  --grapes-color-gradient-magic:
+    linear-gradient(
+        var(--grapes-color-background-primary-default),
+        var(--grapes-color-background-primary-default)
+      )
+      padding-box,
+    linear-gradient(90deg, #6f86ff, #e473ff 50%, #41d9cc 100%) border-box;
+
+  --grapes-border-radius-4: 4px;
+  --grapes-border-radius-8: 8px;
+  --grapes-border-radius-12: 12px;
+
+  --grapes-focus-ring: 2px solid var(--_grapes-color-purple-40);
+  --grapes-focus-ring-offset: 2px;
+
+  --grapes-font-size-12: 12px;
+  --grapes-font-size-14: 14px;
+  --grapes-font-size-16: 16px;
+  --grapes-font-size-20: 20px;
+  --grapes-font-size-24: 24px;
+  --grapes-font-size-32: 32px;
+  --grapes-font-size-40: 40px;
+  --grapes-ff-base: 'Inter', Helvetica, sans-serif;
+  --grapes-ff-heading: 'Roobert', Helvetica, sans-serif;
+  --grapes-fw-medium: 500;
+  --grapes-fw-semibold: 600;
+  --grapes-body-s: var(--grapes-fw-medium) var(--grapes-font-size-12) /
+    var(--grapes-lh-16) var(--grapes-ff-base);
+  --grapes-body-m: var(--grapes-fw-medium) var(--grapes-font-size-14) /
+    var(--grapes-lh-20) var(--grapes-ff-base);
+  --grapes-body-l: var(--grapes-fw-medium) var(--grapes-font-size-16) /
+    var(--grapes-lh-24) var(--grapes-ff-base);
+  --grapes-body-xl: var(--grapes-fw-medium) var(--grapes-font-size-20) /
+    var(--grapes-lh-24) var(--grapes-ff-base);
+  --grapes-body-xxl: var(--grapes-fw-medium) var(--grapes-font-size-32) /
+    var(--grapes-lh-40) var(--grapes-ff-base);
+  --grapes-title-s: var(--grapes-fw-semibold) var(--grapes-font-size-12) /
+    var(--grapes-lh-16) var(--grapes-ff-base);
+  --grapes-title-m: var(--grapes-fw-semibold) var(--grapes-font-size-14) /
+    var(--grapes-lh-20) var(--grapes-ff-base);
+  --grapes-title-l: var(--grapes-fw-semibold) var(--grapes-font-size-16) /
+    var(--grapes-lh-24) var(--grapes-ff-base);
+  --grapes-title-xl: var(--grapes-fw-semibold) var(--grapes-font-size-20) /
+    var(--grapes-lh-24) var(--grapes-ff-base);
+  --grapes-title-xxl: var(--grapes-fw-semibold) var(--grapes-font-size-32) /
+    var(--grapes-lh-40) var(--grapes-ff-base);
+  --grapes-heading-m: var(--grapes-fw-medium) var(--grapes-font-size-20) /
+    var(--grapes-lh-24) var(--grapes-ff-heading);
+  --grapes-heading-l: var(--grapes-fw-medium) var(--grapes-font-size-24) /
+    var(--grapes-lh-32) var(--grapes-ff-heading);
+  --grapes-heading-xl: var(--grapes-fw-medium) var(--grapes-font-size-32) /
+    var(--grapes-lh-40) var(--grapes-ff-heading);
+  --grapes-heading-xxl: var(--grapes-fw-medium) var(--grapes-font-size-40) /
+    var(--grapes-lh-48) var(--grapes-ff-heading);
+  --grapes-transition-duration: 0.2s;
+  --grapes-transition-duration-long: 0.3s;
+  --grapes-transition-timing-function: ease-in-out;
+  --grapes-z-index-tooltip: 10000;
+  --grapes-z-index-modal: 9000;
+  --grapes-z-index-side-panel: 8000;
+  --grapes-z-index-floating-action-bar: 7000;
+  --grapes-z-index-dropdown: 10;
+  --grapes-lh-16: 16px;
+  --grapes-lh-20: 20px;
+  --grapes-lh-24: 24px;
+  --grapes-lh-32: 32px;
+  --grapes-lh-40: 40px;
+  --grapes-lh-48: 48px;
+  --grapes-unit-4: 4px;
+  --grapes-unit-8: 8px;
+  --grapes-unit-12: 12px;
+  --grapes-unit-16: 16px;
+  --grapes-unit-20: 20px;
+  --grapes-unit-24: 24px;
+  --grapes-unit-32: 32px;
+  --grapes-unit-40: 40px;
+  --grapes-unit-48: 48px;
+  --grapes-unit-56: 56px;
+  --grapes-unit-64: 64px;
+
+  --grapes-unit-container-lg: 1000px;
+  --grapes-unit-container-md: 632px;
+
+  --grapes-elevation-xs: 0px 1px 2px rgb(25 27 27 / 0.05);
+  --grapes-elevation-s:
+    0px 1px 2px rgb(25 27 27 / 0.06), 0px 1px 3px rgb(25 27 27 / 0.1);
+  --grapes-elevation-m:
+    0px 2px 4px -1px rgb(25 27 27 / 0.06), 0px 4px 6px -1px rgb(25 27 27 / 0.1);
+  --grapes-elevation-l:
+    0px 4px 6px -2px rgb(25 27 27 / 0.05),
+    0px 10px 15px -3px rgb(25 27 27 / 0.1);
+  --grapes-elevation-xl:
+    0px 10px 10px -5px rgb(25 27 27 / 0.04),
+    0px 20px 25px -5px rgb(25 27 27 / 0.1);
+
+  --grapes-size-switch: 30px;
+  --grapes-size-toast: clamp(464px, 25vw, 600px);
+  --grapes-size-side-panel: 576px;
+  --grapes-popover-offset: var(--grapes-unit-8);
+}
+
+@supports (background-color: light-dark(#fff, #eee)) {
+  :root {
+    --grapes-color-background-primary-default: light-dark(
+      var(--_grapes-color-white-100),
+      var(--_grapes-color-carbon-90)
+    );
+    --grapes-color-background-primary-hover: light-dark(
+      var(--_grapes-color-carbon-3-80),
+      var(--_grapes-color-carbon-80)
+    );
+    --grapes-color-background-primary-pressed: light-dark(
+      rgb(232 232 232 / 80%),
+      var(--_grapes-color-carbon-70)
+    );
+    --grapes-color-background-primary-selected: light-dark(
+      var(--_grapes-color-purple-10),
+      var(--_grapes-color-purple-70)
+    );
+    --grapes-color-background-primary-disabled: light-dark(
+      var(--_grapes-color-carbon-5),
+      var(--_grapes-color-carbon-90)
+    );
+    --grapes-color-background-primary-readonly: light-dark(
+      var(--_grapes-color-carbon-3),
+      var(--_grapes-color-carbon-100)
+    );
+    --grapes-color-background-secondary-default: light-dark(
+      var(--_grapes-color-carbon-3),
+      var(--_grapes-color-carbon-80)
+    );
+    --grapes-color-background-secondary-hover: light-dark(
+      var(--_grapes-color-carbon-3-80),
+      var(--_grapes-color-carbon-70)
+    );
+    --grapes-color-background-tertiary-default: light-dark(
+      var(--_grapes-color-carbon-10),
+      var(--_grapes-color-carbon-90)
+    );
+    --grapes-color-background-tertiary-hover: light-dark(
+      rgb(239 239 239 / 15%),
+      var(--_grapes-color-carbon-80)
+    );
+    --grapes-color-background-tertiary-pressed: light-dark(
+      rgb(232 232 232 / 25%),
+      var(--_grapes-color-carbon-90)
+    );
+    --grapes-color-background-complementary-default: light-dark(
+      var(--_grapes-color-carbon-100),
+      var(--_grapes-color-white-100)
+    );
+    --grapes-color-background-complementary-hover: light-dark(
+      var(--_grapes-color-carbon-3-80),
+      var(--_grapes-color-carbon-80)
+    );
+    --grapes-color-background-complementary-pressed: light-dark(
+      var(--_grapes-color-carbon-90),
+      var(--_grapes-color-carbon-3-80)
+    );
+    --grapes-color-background-complementary-disabled: light-dark(
+      var(--_grapes-color-carbon-100),
+      var(--_grapes-color-carbon-5)
+    );
+    --grapes-color-background-primary-brand-default: light-dark(
+      var(--_grapes-color-purple-70),
+      var(--_grapes-color-purple-40)
+    );
+    --grapes-color-background-primary-brand-hover: light-dark(
+      var(--_grapes-color-purple-80),
+      var(--_grapes-color-purple-20)
+    );
+    --grapes-color-background-primary-brand-pressed: light-dark(
+      var(--_grapes-color-purple-90),
+      var(--_grapes-color-purple-10)
+    );
+    --grapes-color-background-primary-info-default: light-dark(
+      var(--_grapes-color-blue-70),
+      var(--_grapes-color-blue-40)
+    );
+    --grapes-color-background-primary-info-hover: light-dark(
+      var(--_grapes-color-blue-80),
+      var(--_grapes-color-blue-20)
+    );
+    --grapes-color-background-primary-info-pressed: light-dark(
+      var(--_grapes-color-blue-90),
+      var(--_grapes-color-blue-30)
+    );
+    --grapes-color-background-primary-success-default: light-dark(
+      var(--_grapes-color-emerald-70),
+      var(--_grapes-color-emerald-40)
+    );
+    --grapes-color-background-primary-success-hover: light-dark(
+      var(--_grapes-color-emerald-80),
+      var(--_grapes-color-emerald-20)
+    );
+    --grapes-color-background-primary-success-pressed: light-dark(
+      var(--_grapes-color-emerald-90),
+      var(--_grapes-color-emerald-30)
+    );
+    --grapes-color-background-primary-warning-default: light-dark(
+      var(--_grapes-color-apricot-70),
+      var(--_grapes-color-apricot-40)
+    );
+    --grapes-color-background-primary-warning-hover: light-dark(
+      var(--_grapes-color-apricot-80),
+      var(--_grapes-color-apricot-20)
+    );
+    --grapes-color-background-primary-warning-pressed: light-dark(
+      var(--_grapes-color-apricot-90),
+      var(--_grapes-color-apricot-30)
+    );
+    --grapes-color-background-primary-alert-default: light-dark(
+      var(--_grapes-color-raspberry-70),
+      var(--_grapes-color-raspberry-40)
+    );
+    --grapes-color-background-primary-alert-hover: light-dark(
+      var(--_grapes-color-raspberry-80),
+      var(--_grapes-color-raspberry-20)
+    );
+    --grapes-color-background-primary-alert-pressed: light-dark(
+      var(--_grapes-color-raspberry-90),
+      var(--_grapes-color-raspberry-30)
+    );
+    --grapes-color-background-secondary-brand-default: light-dark(
+      var(--_grapes-color-purple-10),
+      var(--_grapes-color-purple-30)
+    );
+    --grapes-color-background-secondary-brand-hover: light-dark(
+      rgb(243 240 255 / 80%),
+      var(--_grapes-color-purple-10)
+    );
+    --grapes-color-background-secondary-brand-pressed: light-dark(
+      rgb(228 221 255 / 80%),
+      var(--_grapes-color-purple-20)
+    );
+    --grapes-color-background-secondary-info-default: light-dark(
+      var(--_grapes-color-blue-10),
+      var(--_grapes-color-blue-30)
+    );
+    --grapes-color-background-secondary-info-hover: light-dark(
+      rgb(239 241 254 / 80%),
+      var(--_grapes-color-blue-10)
+    );
+    --grapes-color-background-secondary-info-pressed: light-dark(
+      rgb(218 224 255 / 80%),
+      var(--_grapes-color-blue-20)
+    );
+    --grapes-color-background-secondary-success-default: light-dark(
+      var(--_grapes-color-emerald-10),
+      var(--_grapes-color-emerald-30)
+    );
+    --grapes-color-background-secondary-success-hover: light-dark(
+      rgb(233 246 236 / 80%),
+      var(--_grapes-color-emerald-10)
+    );
+    --grapes-color-background-secondary-success-pressed: light-dark(
+      rgb(199 234 206 / 80%),
+      var(--_grapes-color-emerald-20)
+    );
+    --grapes-color-background-secondary-warning-default: light-dark(
+      var(--_grapes-color-apricot-10),
+      var(--_grapes-color-apricot-30)
+    );
+    --grapes-color-background-secondary-warning-hover: light-dark(
+      rgb(248 238 233 / 80%),
+      var(--_grapes-color-apricot-10)
+    );
+    --grapes-color-background-secondary-warning-pressed: light-dark(
+      rgb(250 207 184 / 80%),
+      var(--_grapes-color-apricot-20)
+    );
+    --grapes-color-background-secondary-alert-default: light-dark(
+      var(--_grapes-color-raspberry-10),
+      var(--_grapes-color-raspberry-30)
+    );
+    --grapes-color-background-secondary-alert-hover: light-dark(
+      rgb(250 240 243 / 80%),
+      var(--_grapes-color-raspberry-10)
+    );
+    --grapes-color-background-secondary-alert-pressed: light-dark(
+      rgb(239 215 223 / 80%),
+      var(--_grapes-color-raspberry-20)
+    );
+    --grapes-color-background-navigation-item-active: light-dark(
+      var(--_grapes-color-carbon-7),
+      rgb(48 50 50 / 0.4)
+    );
+    --grapes-color-background-navigation-item-hover: light-dark(
+      var(--_grapes-color-carbon-5),
+      rgb(48 50 50 / 0.7)
+    );
+
+    --grapes-color-content-primary: light-dark(
+      var(--_grapes-color-carbon-100),
+      var(--_grapes-color-white-100)
+    );
+    --grapes-color-content-secondary-bg-primary: light-dark(
+      var(--_grapes-color-carbon-60),
+      var(--_grapes-color-carbon-20)
+    );
+    --grapes-color-content-secondary-bg-secondary: light-dark(
+      var(--_grapes-color-carbon-70),
+      var(--_grapes-color-carbon-30)
+    );
+    --grapes-color-content-decorative-icon: light-dark(
+      var(--_grapes-color-carbon-50),
+      var(--_grapes-color-carbon-60)
+    );
+    --grapes-color-content-complementary: light-dark(
+      var(--_grapes-color-white-100),
+      var(--_grapes-color-carbon-100)
+    );
+    --grapes-color-content-selected: light-dark(
+      var(--_grapes-color-purple-70),
+      var(--_grapes-color-purple-30)
+    );
+    --grapes-color-content-disabled: light-dark(
+      var(--_grapes-color-carbon-20),
+      var(--_grapes-color-carbon-20)
+    );
+    --grapes-color-content-brand-default: light-dark(
+      var(--_grapes-color-purple-70),
+      var(--_grapes-color-purple-40)
+    );
+    --grapes-color-content-brand-hover: light-dark(
+      var(--_grapes-color-purple-90),
+      var(--_grapes-color-purple-10)
+    );
+    --grapes-color-content-brand-pressed: light-dark(
+      var(--_grapes-color-purple-90),
+      var(--_grapes-color-purple-20)
+    );
+    --grapes-color-content-info-default: light-dark(
+      var(--_grapes-color-blue-70),
+      var(--_grapes-color-blue-40)
+    );
+    --grapes-color-content-success-default: light-dark(
+      var(--_grapes-color-emerald-70),
+      var(--_grapes-color-emerald-40)
+    );
+    --grapes-color-content-warning-default: light-dark(
+      var(--_grapes-color-apricot-70),
+      var(--_grapes-color-apricot-40)
+    );
+    --grapes-color-content-alert-default: light-dark(
+      var(--_grapes-color-raspberry-70),
+      var(--_grapes-color-raspberry-40)
+    );
+
+    --grapes-color-border-default: light-dark(
+      var(--_grapes-color-carbon-15),
+      var(--_grapes-color-carbon-80)
+    );
+    --grapes-color-border-hover: light-dark(
+      var(--_grapes-color-purple-90),
+      var(--_grapes-color-purple-20)
+    );
+    --grapes-color-border-selected: light-dark(
+      var(--_grapes-color-purple-70),
+      var(--_grapes-color-purple-40)
+    );
+    --grapes-color-border-complementary: light-dark(
+      var(--_grapes-color-carbon-90),
+      var(--_grapes-color-carbon-10)
+    );
+    --grapes-color-border-info: light-dark(
+      var(--_grapes-color-blue-70),
+      var(--_grapes-color-blue-40)
+    );
+    --grapes-color-border-success: light-dark(
+      var(--_grapes-color-emerald-70),
+      var(--_grapes-color-emerald-40)
+    );
+    --grapes-color-border-warning: light-dark(
+      var(--_grapes-color-apricot-70),
+      var(--_grapes-color-apricot-40)
+    );
+    --grapes-color-border-alert: light-dark(
+      var(--_grapes-color-raspberry-70),
+      var(--_grapes-color-raspberry-40)
+    );
+
+    --grapes-color-backdrop: light-dark(
+      rgb(23 17 78 / 0.7),
+      rgb(25 27 27 / 0.6)
+    );
+  }
+}

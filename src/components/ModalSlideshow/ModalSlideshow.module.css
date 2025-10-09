@@ -1,0 +1,94 @@
+.modal {
+  --_modal-width: 864px;
+  --_modal-height: 560px;
+
+  box-shadow: var(--grapes-elevation-l);
+  position: relative;
+  background-color: var(--grapes-color-background-primary-default);
+  margin: var(--grapes-unit-48) 0;
+  border-radius: var(--grapes-unit-12);
+  width: var(--_modal-width);
+  height: var(--_modal-height);
+  transform: translateY(0) scale(1);
+  transition: transform var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
+  overflow: hidden;
+}
+
+@starting-style {
+  .modal {
+    transform: translateY(var(--grapes-unit-16)) scale(0.97);
+  }
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: var(--grapes-unit-16);
+  right: var(--grapes-unit-16);
+  z-index: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-columns: var(--_modal-width);
+  height: 100%;
+  transition: transform var(--grapes-transition-duration)
+    var(--grapes-transition-timing-function);
+  --_grid-translate-x: calc(var(--_slide, 0) * -1 * var(--_modal-width));
+  transform: translateX(var(--_grid-translate-x));
+}
+
+.subgrid {
+  display: grid;
+  grid-row: 1 / -1;
+  grid-template-columns: 1fr 1fr;
+  height: var(--_modal-height);
+}
+
+.leftSide {
+  display: grid;
+  grid-template-rows: 1fr max-content;
+  align-items: center;
+  gap: var(--grapes-unit-16);
+  height: calc(var(--_modal-height) - 2 * var(--grapes-unit-32));
+}
+
+.title {
+  font: var(--grapes-heading-l);
+  color: var(--grapes-color-content-primary);
+  margin: 0 0 var(--grapes-unit-24);
+}
+
+.content {
+  text-align: left;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.contentFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: var(--grapes-unit-12);
+}
+
+.modalIllustration {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.modalIllustration > img {
+  width: auto;
+  height: 100%;
+  margin: auto;
+}

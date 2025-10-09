@@ -1,7 +1,7 @@
 import React, { type ReactNode } from 'react';
 import { useId } from '../../hooks/useId';
 
-import styles from './ListBox.module.scss';
+import styles from './ListBox.module.css';
 import { useGroupedOptionContext } from './ListBoxProvider';
 
 export type ListBoxGroup<T extends object> = {

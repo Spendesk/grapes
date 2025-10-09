@@ -1,7 +1,6 @@
 import React, { type ReactNode, useState } from 'react';
 
 import type { TranslationDefinition } from '../../hooks/useTranslate';
-import { supportInert } from '../../utils';
 
 import { GrapesContext, type GrapesContextType } from './GrapesContext';
 
@@ -43,9 +42,7 @@ export const GrapesProvider = ({
 
   return (
     <GrapesContext.Provider value={context}>
-      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-      {/* @ts-ignore Typescript and React doesn't play nice with inert https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert*/}
-      <div inert={supportInert(inert)}>{children}</div>
+      <div inert={inert}>{children}</div>
     </GrapesContext.Provider>
   );
 };

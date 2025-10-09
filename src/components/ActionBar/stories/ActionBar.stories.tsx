@@ -104,6 +104,26 @@ export const LoadingAction: Story = {
   },
 };
 
+export const DisabledActionWithTooltip: Story = {
+  args: {
+    className: 'myClassName',
+    children: '1 selected',
+    actions: [
+      {
+        text: 'Label 1',
+        onClick: action('Label 1 onChange'),
+        isDisabled: true,
+        tooltipContent: 'This action is disabled',
+        tooltipPlacement: 'bottom',
+      },
+      {
+        text: 'Label 2',
+        onClick: action('Label 2 onChange'),
+      },
+    ],
+  },
+};
+
 export const Floating: Story = {
   args: {
     className: 'myClassName',
@@ -131,6 +151,7 @@ export const Snapshot: Story = {
         SingleAction,
         DisabledAction,
         LoadingAction,
+        DisabledActionWithTooltip,
         Floating,
       ]}
       meta={meta}

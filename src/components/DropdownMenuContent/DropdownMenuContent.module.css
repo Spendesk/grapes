@@ -1,0 +1,29 @@
+.dropdownMenuContentWrapper {
+  list-style: none;
+  overflow-y: auto;
+  margin: 0;
+  transition:
+    opacity var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function),
+    transform var(--grapes-transition-duration)
+      var(--grapes-transition-timing-function);
+  opacity: 0;
+  transform: translateY(calc(var(--orientation, -1) * var(--grapes-unit-16)));
+  position: absolute;
+  padding: var(--grapes-unit-8);
+  min-width: max(180px, 100%);
+
+  &:empty {
+    padding: 0;
+    border-width: 0px;
+  }
+
+  &[data-placement^='top-'] {
+    --orientation: 1;
+  }
+}
+
+.enter {
+  opacity: 1;
+  transform: translateY(0);
+}

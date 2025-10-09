@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Label } from '../Label';
 import { Icon } from '../../Icon';
+import { colors } from '../../..';
 
 const meta: Meta<typeof Label> = {
   title: 'Form/Label',
@@ -26,11 +27,11 @@ export const Hint: Story = {
   },
 };
 
-export const MarvinHint: Story = {
+export const AISparkleHint: Story = {
   args: {
     fit: 'parent',
     label: 'My label',
-    hint: <Icon name="robot" />,
+    hint: <Icon name="sparkle" color={colors.contentBrandDefault} />,
   },
 };
 
