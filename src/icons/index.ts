@@ -111,6 +111,7 @@ import { MinusIcon } from './minus.tsx';
 import { MotorcycleIcon } from './motorcycle.tsx';
 import { MouseSquareStackIcon } from './mouse-square-stack.tsx';
 import { PaperPlaneIcon } from './paper-plane.tsx';
+import { PasswordIcon } from './password.tsx';
 import { PdfIcon } from './pdf.tsx';
 import { PenIcon } from './pen.tsx';
 import { PersonGroupIcon } from './person-group.tsx';
@@ -271,6 +272,7 @@ export const iconMap = {
   motorcycle: MotorcycleIcon,
   'mouse-square-stack': MouseSquareStackIcon,
   'paper-plane': PaperPlaneIcon,
+  password: PasswordIcon,
   pdf: PdfIcon,
   pen: PenIcon,
   'person-group': PersonGroupIcon,
