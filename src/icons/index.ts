@@ -111,6 +111,7 @@ import { MinusIcon } from './minus.tsx';
 import { MotorcycleIcon } from './motorcycle.tsx';
 import { MouseSquareStackIcon } from './mouse-square-stack.tsx';
 import { PaperPlaneIcon } from './paper-plane.tsx';
+import { PasswordIcon } from './password.tsx';
 import { PdfIcon } from './pdf.tsx';
 import { PenIcon } from './pen.tsx';
 import { PersonGroupIcon } from './person-group.tsx';
@@ -153,6 +154,7 @@ import { TaxiIcon } from './taxi.tsx';
 import { TicketIcon } from './ticket.tsx';
 import { TruckIcon } from './truck.tsx';
 import { TriangleWarningIcon } from './triangle-warning.tsx';
+import { UsbKeyIcon } from './usb-key.tsx';
 import { ViewColumnsIcon } from './view-columns.tsx';
 import { ViewfinderDotIcon } from './viewfinder-dot.tsx';
 import { WalletIcon } from './wallet.tsx';
@@ -271,6 +273,7 @@ export const iconMap = {
   motorcycle: MotorcycleIcon,
   'mouse-square-stack': MouseSquareStackIcon,
   'paper-plane': PaperPlaneIcon,
+  password: PasswordIcon,
   pdf: PdfIcon,
   pen: PenIcon,
   'person-group': PersonGroupIcon,
@@ -314,6 +317,7 @@ export const iconMap = {
   ticket: TicketIcon,
   'triangle-warning': TriangleWarningIcon,
   truck: TruckIcon,
+  'usb-key': UsbKeyIcon,
   'view-columns': ViewColumnsIcon,
   'viewfinder-dot': ViewfinderDotIcon,
   wallet: WalletIcon,
