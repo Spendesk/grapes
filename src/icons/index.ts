@@ -154,6 +154,7 @@ import { TaxiIcon } from './taxi.tsx';
 import { TicketIcon } from './ticket.tsx';
 import { TruckIcon } from './truck.tsx';
 import { TriangleWarningIcon } from './triangle-warning.tsx';
+import { UsbKeyIcon } from './usb-key.tsx';
 import { ViewColumnsIcon } from './view-columns.tsx';
 import { ViewfinderDotIcon } from './viewfinder-dot.tsx';
 import { WalletIcon } from './wallet.tsx';
@@ -316,6 +317,7 @@ export const iconMap = {
   ticket: TicketIcon,
   'triangle-warning': TriangleWarningIcon,
   truck: TruckIcon,
+  'usb-key': UsbKeyIcon,
   'view-columns': ViewColumnsIcon,
   'viewfinder-dot': ViewfinderDotIcon,
   wallet: WalletIcon,
