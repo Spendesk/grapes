@@ -91,7 +91,7 @@ export const Avatar = ({
       {...badgeProps}
       lazyLoad={lazyLoad}
       className={styles.avatarBadge}
-      size={size === 40 ? 24 : 16}
+      size={size >= 40 ? 24 : 16}
     />
   );
 
