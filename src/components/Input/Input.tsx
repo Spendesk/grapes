@@ -7,7 +7,8 @@ import React, {
   type Ref,
 } from 'react';
 import { classNames } from '../../utils';
-import Cleave from 'cleave.js/react';
+// @ts-expect-error make the import cleave work with vitest
+import Cleave from 'cleave.js/react.js';
 import type { CleaveOptions } from 'cleave.js/options';
 
 import { useFormFieldContext } from '../FormField/FormFieldContext';
