@@ -69,6 +69,8 @@ export type AvatarProps = {
  * The Avatar component is used to represent a user or a entity.
  * It displays a picture or a fallback to initials.
  * @see https://grapes.spendesk.design/docs/components/avatar
+ *
+ * Avatars bigger than 40 px will automatically get bigger badges
  */
 export const Avatar = ({
   text,
