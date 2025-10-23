@@ -14,7 +14,7 @@
   display: inline-flex;
   border-radius: var(--grapes-border-radius-12);
   padding: var(--grapes-unit-8);
-  background-color: var(--grapes-color-background-complementary-default);
+  background-color: var(--grapes-color-content-primary-default);
 }
 
 .container,
@@ -56,6 +56,6 @@
     display: block;
     inline-size: var(--_inline-size-separator);
     block-size: var(--_block-size-separator);
-    background-color: var(--grapes-color-border-complementary);
+    background-color: var(--grapes-color-content-primary-default);
   }
 }
