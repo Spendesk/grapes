@@ -87,7 +87,6 @@ export const useAutocompleteCombobox = <T extends ComboboxOption>({
         reset();
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   return {

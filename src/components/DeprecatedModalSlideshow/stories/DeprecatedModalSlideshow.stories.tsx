@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 import { within, userEvent } from 'storybook/test';
