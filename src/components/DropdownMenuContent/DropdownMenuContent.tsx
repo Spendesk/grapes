@@ -58,7 +58,7 @@ export const DropdownMenuContent = <T extends Option>({
   renderSearchBar,
 }: Props<T>) => {
   const [visible, setVisible] = useState(isOpen);
-  const refTimeout = useRef<NodeJS.Timeout>(undefined);
+  const refTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
   const previousOpenState = usePrevious(isOpen);
 
   const context = useFormFieldContext();
