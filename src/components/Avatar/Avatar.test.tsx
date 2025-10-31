@@ -3,9 +3,9 @@ import { render, screen, act } from '@testing-library/react';
 
 import { Avatar } from './';
 
-const originalImage = global.Image;
+const originalImage = window.Image;
 function restoreImage() {
-  global.Image = originalImage;
+  window.Image = originalImage;
 }
 
 /**
@@ -23,7 +23,7 @@ function mockImage() {
   };
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
-  global.Image = class Image {
+  window.Image = class Image {
     src = '';
     onload = () => {
       new Error('onload is not defined on the targeted Image');
