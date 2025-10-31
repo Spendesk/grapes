@@ -42,7 +42,7 @@
     "play": "vite",
     "storybook": "storybook dev -p 6006",
     "test": "vitest",
-    "test:ci": "vitest --run --coverage --silent --no-color --maxWorkers 2 --minWorkers 1",
+    "test:ci": "vitest --run --coverage --silent --no-color --maxWorkers 2",
     "typecheck": "tsc --noEmit",
     "precommit": "lint-staged",
     "prepare": "husky",
