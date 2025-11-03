@@ -5,6 +5,7 @@ import dts from 'vite-plugin-dts';
 import fs from 'node:fs';
 import tailwindcss from '@tailwindcss/vite';
 import { getReducedClassName } from './tooling/getReducedClassName.mjs';
+import { coverageConfigDefaults } from 'vitest/config';
 
 const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 const externalDependencies = [
@@ -42,6 +43,10 @@ export default defineConfig({
         '!**/AutocompletePlace/countryCodeToCoordinates.ts',
         '!**/AutocompleteWithAddOption/**',
         '!**/ComboboxNoDropdown/**',
+      ],
+      exclude: [
+        ...coverageConfigDefaults.exclude, // Keep Vitest defaults
+        '**/icons/**', // Exclude all icon files
       ],
     },
   },
