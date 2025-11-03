@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
+import { defineConfig, coverageConfigDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import fs from 'node:fs';
@@ -35,14 +35,15 @@ export default defineConfig({
         functions: 98,
         lines: 98,
       },
-      include: [
-        'src/components/*/**/*.{ts,tsx}',
-        '!**/stories/**',
-        '!**/Skeleton/**',
-        '!**/AutocompletePlace/countryCodeToCoordinates.ts',
-        '!**/AutocompleteWithAddOption/**',
-        '!**/ComboboxNoDropdown/**',
-        '!**/icons/**',
+      include: ['src/components/*/**/*.{ts,tsx}'],
+      exclude: [
+        ...coverageConfigDefaults.exclude,
+        '**/stories/**',
+        '**/Skeleton/**',
+        '**/AutocompletePlace/countryCodeToCoordinates.ts',
+        '**/AutocompleteWithAddOption/**',
+        '**/ComboboxNoDropdown/**',
+        '**/icons/**',
       ],
     },
   },
