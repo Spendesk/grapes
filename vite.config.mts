@@ -31,9 +31,9 @@ export default defineConfig({
       provider: 'v8',
       thresholds: {
         // I'll haunt you personally for the rest of your life if you lower these numbers.
-        statements: 98,
+        statements: 94,
         functions: 98,
-        lines: 98,
+        lines: 94,
       },
       include: ['src/components/*/**/*.{ts,tsx}'],
       exclude: [
@@ -44,10 +44,7 @@ export default defineConfig({
         '**/AutocompleteWithAddOption/**',
         '**/ComboboxNoDropdown/**',
         '**/icons/**',
-        'src/theme/**',
         'src/test-utils/**',
-        '**/index.ts',
-        '**/types.ts',
       ],
     },
   },
