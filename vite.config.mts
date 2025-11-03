@@ -43,11 +43,6 @@ export default defineConfig({
         '!**/AutocompleteWithAddOption/**',
         '!**/ComboboxNoDropdown/**',
       ],
-      exclude: [
-        '!**/test-utils/**', // Exclude test utilities
-        '!**/*.test.{ts,tsx}', // Exclude test files
-        '!**/theme/**/*.css', // Exclude CSS modules
-      ],
     },
   },
   build: {
