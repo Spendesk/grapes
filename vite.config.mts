@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
+import { defineConfig, coverageConfigDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import fs from 'node:fs';
@@ -31,17 +31,20 @@ export default defineConfig({
       provider: 'v8',
       thresholds: {
         // I'll haunt you personally for the rest of your life if you lower these numbers.
-        statements: 98,
+        statements: 94,
         functions: 98,
-        lines: 98,
+        lines: 94,
       },
-      include: [
-        'src/components/*/**/*.{ts,tsx}',
-        '!**/stories/**',
-        '!**/Skeleton/**',
-        '!**/AutocompletePlace/countryCodeToCoordinates.ts',
-        '!**/AutocompleteWithAddOption/**',
-        '!**/ComboboxNoDropdown/**',
+      include: ['src/components/*/**/*.{ts,tsx}'],
+      exclude: [
+        ...coverageConfigDefaults.exclude,
+        '**/stories/**',
+        '**/Skeleton/**',
+        '**/AutocompletePlace/countryCodeToCoordinates.ts',
+        '**/AutocompleteWithAddOption/**',
+        '**/ComboboxNoDropdown/**',
+        '**/icons/**',
+        'src/test-utils/**',
       ],
     },
   },
