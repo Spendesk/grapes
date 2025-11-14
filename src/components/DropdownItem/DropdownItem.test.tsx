@@ -42,4 +42,30 @@ describe('DropdownItem component', () => {
       expect(screen.getByText(helpText)).toBeVisible();
     });
   });
+
+  describe('given a complex `helpText` props', () => {
+    beforeEach(() => {
+      vi.spyOn(console, 'error').mockClear();
+    });
+
+    it('renders the given react node', () => {
+      render(
+        <DropdownItem
+          label=""
+          helpText={
+            <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+            </ul>
+          }
+        />,
+      );
+
+      expect(console.error).not.toHaveBeenCalled();
+      expect(screen.getByText('item 1')).toBeVisible();
+      expect(screen.getByText('item 2')).toBeVisible();
+      expect(screen.getByText('item 3')).toBeVisible();
+    });
+  });
 });
