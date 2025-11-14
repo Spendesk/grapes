@@ -66,7 +66,7 @@ export const DropdownItem = ({
       {prefix && <div className={styles.prefix}>{prefix}</div>}
       <span className={styles.label}>{label}</span>
       {suffix && <div className={styles.suffix}>{suffix}</div>}
-      {helpText && <p className={styles.helpText}>{helpText}</p>}
+      {helpText && <div className={styles.helpText}>{helpText}</div>}
     </div>
   );
 };
