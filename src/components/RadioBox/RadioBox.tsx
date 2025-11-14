@@ -67,13 +67,17 @@ export const RadioBox = <K extends string | boolean>({
   return (
     <label
       key={`${value}`}
-      className={classNames(styles.radioBox, className)}
+      className={classNames(
+        styles.radioBox,
+        iconName && styles.withIcon,
+        className,
+      )}
       htmlFor={id}
       {...rest}
     >
       <RadioInput
         id={id}
-        className={classNames(styles.radioInput, iconName && styles.withIcon)}
+        className={styles.radioInput}
         isChecked={isChecked}
         value={`${value}`}
         isDisabled={isDisabled}
