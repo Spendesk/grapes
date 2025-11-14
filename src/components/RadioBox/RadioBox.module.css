@@ -31,7 +31,7 @@
     }
   }
 
-  &:has(svg) {
+  &.withIcon {
     grid-template-columns: var(--grapes-unit-32) auto var(--grapes-unit-16);
 
     .radioInput {
