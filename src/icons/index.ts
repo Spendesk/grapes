@@ -159,6 +159,7 @@ import { ViewColumnsIcon } from './view-columns.tsx';
 import { ViewfinderDotIcon } from './viewfinder-dot.tsx';
 import { WalletIcon } from './wallet.tsx';
 import { WrenchIcon } from './wrench.tsx';
+import { BedIcon } from './bed.tsx';
 
 export const iconMap = {
   'adjustments-horizontal': AdjustmentsHorizontalIcon,
@@ -183,6 +184,7 @@ export const iconMap = {
   banknote: BanknoteIcon,
   'bars-3': Bars3Icon,
   'bars-arrow-down': BarsArrowDownIcon,
+  bed: BedIcon,
   'bell-desk': BellDeskIcon,
   bell: BellIcon,
   bike: BikeIcon,
