@@ -27,7 +27,7 @@ jobs:
           cache: 'npm'
 
       - name: Compare size
-        uses: preactjs/compressed-size-action@v2
+        uses: preactjs/compressed-size-action@v3
         with:
           pattern: './dist/*.{mjs,css}'
           minimum-change-threshold: 100
