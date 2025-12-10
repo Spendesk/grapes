@@ -58,4 +58,23 @@ describe('PageModal component', () => {
       screen.getByRole('dialog', { name: 'Title' }),
     ).toHaveAccessibleDescription('Content');
   });
+
+  describe('given a `className` props', () => {
+    it("adds it to the component's classnames", () => {
+      renderWithGrapesProvider(
+        <PageModal
+          isOpen
+          onClose={vi.fn()}
+          title="Title"
+          className="MyPageModal"
+        >
+          <div>Content</div>
+        </PageModal>,
+      );
+
+      expect(screen.getByRole('dialog', { name: 'Title' })).toHaveClass(
+        'MyPageModal',
+      );
+    });
+  });
 });
