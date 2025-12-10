@@ -6,6 +6,7 @@ import { IconButton } from '../IconButton';
 
 import styles from './PageModal.module.css';
 import { ModalOverlay } from '../Modal';
+import { classNames } from '../../utils';
 
 export type PageModalProps = {
   /**
@@ -35,6 +36,10 @@ export type PageModalProps = {
    * The title to display in the PageModal.
    */
   title: ReactNode;
+  /**
+   * className for the element
+   */
+  className?: string;
 };
 
 export const PageModal = ({
@@ -44,6 +49,7 @@ export const PageModal = ({
   portalContainer,
   onClose,
   title,
+  className,
   ...rest
 }: PageModalProps) => {
   const t = useTranslate();
@@ -60,7 +66,7 @@ export const PageModal = ({
       noAnimation={noAnimation}
     >
       <div
-        className={styles.pageModalModal}
+        className={classNames(styles.pageModalModal, className)}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
