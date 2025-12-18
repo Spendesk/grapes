@@ -5,7 +5,6 @@ on: [push]
 concurrency: ci-${{ github.ref }}
 env:
   NODE_VERSION: 22
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN_RW }}
 
 jobs:
   main:
