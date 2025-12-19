@@ -5,6 +5,7 @@ on: [push]
 concurrency: ci-${{ github.ref }}
 env:
   NODE_VERSION: 22
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN_RW }}
 
 jobs:
   main:
@@ -116,4 +117,3 @@ jobs:
         run: npx -p semantic-release@^23 -p conventional-changelog-conventionalcommits@^7 -c semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ env.NPM_TOKEN }}
