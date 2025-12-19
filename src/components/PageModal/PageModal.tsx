@@ -37,7 +37,7 @@ export type PageModalProps = {
    */
   title: ReactNode;
   /**
-   * className for the element
+   * className for the main modal div
    */
   className?: string;
 };

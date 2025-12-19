@@ -59,7 +59,7 @@ describe('PageModal component', () => {
     ).toHaveAccessibleDescription('Content');
   });
 
-  describe('given a `className` props', () => {
+  describe('given a className property is provided', () => {
     it("adds it to the component's classnames", () => {
       renderWithGrapesProvider(
         <PageModal
