@@ -117,4 +117,3 @@ jobs:
         run: npx -p semantic-release@^23 -p conventional-changelog-conventionalcommits@^7 -c semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ env.NPM_TOKEN }}
