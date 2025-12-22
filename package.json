@@ -82,7 +82,7 @@
     "eslint": "9.39.1",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "6.1.1",
+    "eslint-plugin-react-hooks": "7.0.1",
     "husky": "9.1.7",
     "jsdom": "26.1.0",
     "libphonenumber-js": "1.12.24",
