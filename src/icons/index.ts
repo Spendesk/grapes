@@ -92,6 +92,7 @@ import { ForkKnifeIcon } from './fork-knife.tsx';
 import { FuelPumpIcon } from './fuel-pump.tsx';
 import { FullscreenIcon } from './fullscreen.tsx';
 import { FunnelIcon } from './funnel.tsx';
+import { HeadsetIcon } from './headset.tsx';
 import { HexagoneCrossIcon } from './hexagone-cross.tsx';
 import { HouseIcon } from './house.tsx';
 import { InboxStackIcon } from './inbox-stack.tsx';
@@ -256,8 +257,9 @@ export const iconMap = {
   'fuel-pump': FuelPumpIcon,
   fullscreen: FullscreenIcon,
   funnel: FunnelIcon,
-  'hexagone-cross': HexagoneCrossIcon,
   'globe-eu-africa': GlobeEuAfricaIcon,
+  headset: HeadsetIcon,
+  'hexagone-cross': HexagoneCrossIcon,
   house: HouseIcon,
   'inbox-stack': InboxStackIcon,
   inbox: InboxIcon,
